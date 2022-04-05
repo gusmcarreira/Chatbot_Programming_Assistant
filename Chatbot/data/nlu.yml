@@ -1,0 +1,117 @@
+version: "3.1"
+
+nlu:
+# ---------------- RASA EXAMPLE INTENTS --------------
+- intent: greet
+  examples: |
+    - olá
+    - oi
+    - bom dia
+    - boa tarde
+    - boas
+    - alô
+    - coé
+    - fala
+    - fala aí
+
+- intent: goodbye
+  examples: |
+    - adeus
+    - tchau
+    - até amanhã
+    - xau
+    - tem um bom dia
+    - até logo
+    - até mais tarde
+    - até já
+    - foi um prazer te conhecer
+    - prazer em te conhecer
+    - até mais
+    - valeu
+    - falou
+    - tchauzinho
+    - tchau
+    - vou vazar
+    - tô vazando
+    - estou fora
+    - vou Nessa
+
+- intent: affirm
+  examples: |
+    - yap
+    - sim
+    - s
+    - claro
+    - parece-me bem
+    - correto
+    - yes
+    - y
+    - oui
+    - isso
+    - afirmativo
+    - certo
+    - com certeza
+    - de acordo
+
+- intent: deny
+  examples: |
+    - não
+    - nop
+    - no
+    - nah
+    - n
+    - nunca
+    - não me parece
+    - nem pensar
+    - nem por isso
+    - nao
+    - some answer
+    - não sei
+
+- intent: bot_challenge
+  examples: |
+    - estou a falar com uma pessoa?
+    - estou a falar com um humano?
+    - estou a falar com uma mulher?
+    - estou a falar com um homem?
+    - estou a falar com um robô?
+    - estou a falar com um chatbot?
+    - estou a falar com um chatterbot?
+    - és uma pessoa?
+    - és um humano?
+    - és uma mulher?
+    - és um homem?
+    - és um robõ?
+    - és um chatbot?
+    - és um chatterbot?
+# ----------------------------------------------------
+
+- intent: ask_question
+  examples: |
+    - o que é uma [variável](answer_concept_wanted) ?
+    - o que é um [for loop](answer_concept_wanted) ?
+    - o que é um [while loop](answer_concept_wanted) ?
+    - o que é um [if statement](answer_concept_wanted) ?
+    - o que é [elif](answer_concept_wanted) ?
+    - o que é [else](answer_concept_wanted) ?
+    - o que é uma [condição](answer_concept_wanted) ?
+    - o que é uma [variável](answer_concept_wanted)?
+
+- intent: ask_example
+  examples: |
+    - me dê um exemplo de uma [variável](answer_concept_wanted) ?
+    - me dê um exemplo de um [for loop](answer_concept_wanted) ?
+    - me dê um exemplo de um [while loop](answer_concept_wanted) ?
+    - me dê um exemplo de um [if statement](answer_concept_wanted) ?
+    - como se inicializa uma [variável](answer_concept_wanted) ?
+    - como se inicializa um [for loop](answer_concept_wanted) ?
+    - como se inicializa um [while loop](answer_concept_wanted) ?
+    - como se inicializa um [if statement](answer_concept_wanted) ?
+    - como se cria uma [variável](answer_concept_wanted) ?
+    - como se cria uma [for loop](answer_concept_wanted) ?
+    - como se cria uma [while loop](answer_concept_wanted) ?
+    - como se cria uma [if statement](answer_concept_wanted) ?
+
+# ---- EXTERNAL INTENTS (sent by the application) ----
+- intent: EXTERNAL_ERROR_MESSAGE
+# ----------------------------------------------------

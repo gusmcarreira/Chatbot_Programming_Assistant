@@ -1,0 +1,5 @@
+Pergunta:O seu erro parece ser na declaração de uma variável com número decimal, digamos que queriamos declara a variavel var1, com o decumal 10,2 como o faria?
+Opções:var1 = 10,2// var1 = 10 2// var2 = 10.2
+Resposta:var1 = 10.2
+-#-
+Checkpoint: É algo comum, principalmente no começo, de nos esquecermos qeue Python segue a regra Americana ao usar um . (ponto) em vez de uma , (vírgula) para declarar números decimais. Veja se talvez esse tenha sido o seu problema.

@@ -1,0 +1,111 @@
+Uma variável em Python é uma forma de associar um nome a um valor. Pense em cada variável como uma caixa que guarda algo e que podemos a qualquer momento ir nela para recuperá-lo. Na programação, o que será guardado nas variáveis são dados necessários aos nossos programas.
+
+Exemplo:
+
+	base = 2
+	altura = 5
+	area = (base * altura) / 2
+	print(area)
+
+	5.0
+
+No exemplo acima, criamos uma variável chamada base à qual atribuímos o valor 2, uma variável altura, à qual atribuímos o valor 5, e uma variável area, à qual atribuímos um cálculo envolvendo a base e a altura. 
+
+O sinal de igualdade é necessário para dar a entender ao computador que você deseja criar uma variável e armazenar um dado nela.
+
+-#-
+
+O tipo de uma variável é dado pela função type().
+
+Exemplo:
+
+    x = 5
+    print(type(5))
+
+    <class 'int'>
+
+-#-
+
+Uma variável pode ter um nome pequeno (como x, ou y), ou, mais recomendado, uma nome mais descritivo (altura, idade).
+
+O nome das variáveis deve seguir algumas regras, nomeadamente:
+<ul>
+    <li>Deve começar com uma letra ou com o caracter _</li>
+    <li>NÃO pode começar com um número</li>
+    <li>Pode apenas conter caracteres alfanuméricos e underscores (A-z, 0-9 e _ )</li>
+    <li>São sensíveis em termos de letras maiúsculas e minúsculas, ou seja, idade, Idade, e IDADE, são três variáveis diferentes</li>
+    <li>NÃO podem ter o mesmo nome que palavras reservadas (como, and, if, while)</li>
+</ul>
+
+-#-
+
+Palavras reservadas são palavras (em Python) que fazem parte do vocabulário da linguagem e, portanto, não podem ser usadas como nomes de variáveis. As palavras reservadas são: and, as, assert, break, class, continue, def, del, elif, else, except, exec, finally, for, global, if, import, in, is, lambda, not, or, pass, raise, return, try, while, with, yield.
+
+-#-
+
+Variáveis globais são variáveis criadas fora de uma função. Variáveis globais podem ser usadas tanto dentro como fora das funções.
+
+Exemplo:
+
+    x = "chatbot"
+
+    def exFunc():
+        print("Eu sou um " + x)
+
+    exFunc()
+
+
+    Eu sou um chatbot
+
+
+Se uma variável local for criada com o mesmo nome de uma global, ao alterar a mesma, esta apenas será alterada dentro dessa função.
+-#-
+Uma variável local é uma variável que foi criada dentro da função e, portanto, apenas pode ser usada dentro da mesma.
+
+Exemplo:
+
+    def exFunc():
+        x = "chatbot"
+        print("Eu sou um " + x)
+
+    exFunc()
+
+
+    Eu sou um chatbot
+
+
+Se uma variável local for criada com o mesmo nome de uma global, ao alterar a mesma, esta apenas será alterada dentro dessa função.
+-#-
+Para criar um variável global dentro de uma função pode ser usada a palavra global.
+
+Exemplo:
+
+    def exFunc():
+	global x
+        x = "chatbot"
+
+    exFunc()
+    
+    print("Eu sou um " + x)
+
+    
+    Eu sou um chatbot
+-#-
+
+Para mudar o valor de uma variável global dentro de uma função pode ser usada a palavra global.
+
+Exemplo:
+
+    x = "humano"
+
+    def exFunc():
+	global x
+        x = "chatbot"
+
+    exFunc()
+    
+    print("Eu sou um " + x)
+
+    
+    Eu sou um chatbot
+

@@ -1,0 +1,124 @@
+version: "3.1"
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"""
+# !!!!!!!! ERROR GUIDANCE !!!!!!!!"""
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"""
+
+rules:
+
+# -------------------> INITIAL RULE  <------------------
+- rule: (EG) Activate - Prompt start error guidance?
+  condition:
+    - active_loop: null
+  steps:
+  - intent: EXTERNAL_ERROR_MESSAGE
+  - action: form_eg_start
+  - active_loop: form_eg_start
+# ------------------------------------------------------
+
+# ----------------> DOES NOT WANT HELP <----------------
+- rule: (EG) Exit Form - Student does not want to start error guidance (confirms)
+  condition:
+  - active_loop: form_eg_start
+  - slot_was_set:
+    - slot_eg_start: false
+  steps:
+  - action: form_eg_start
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+
+- rule: (EG) Say what when the student wants to ask anything else (if they say yes)
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: affirm
+  - action: utter_what_else
+
+- rule: (EG) Say goodbye when the student does not want to ask anything else
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: deny
+  - action: utter_goodbye
+# ------------------------------------------------------
+
+# --------------------> WANTS HELP <--------------------
+- rule: (EG) Exit Form - Student wants help
+  condition:
+  - active_loop: form_eg_start
+  - slot_was_set:
+    - slot_eg_start: true
+  steps:
+  - action: form_eg_start
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_eg_start
+  - action: action_eg_reset_slot_start
+
+- rule: (EG) Activate - Start asking questions
+  condition:
+    - active_loop: null
+  steps:
+  - action: action_eg_start
+  - action: action_eg_reset_slot_start
+  - action: form_eg_answer
+  - active_loop: form_eg_answer
+
+- rule: (EG) Stop asking questions (I)
+  condition:
+  - active_loop: form_eg_answer
+  steps:
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+
+- rule: (EG) Stop asking questions (II)
+  condition:
+  - active_loop: form_eg_answer
+  steps:
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: deny
+  - action: utter_goodbye
+
+
+- rule: (EG) Check answer
+  condition:
+  - active_loop: form_eg_answer
+  steps:
+  - action: form_eg_answer
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_eg_check_answer
+
+- rule: (EG) Activate - Followup questions
+  condition:
+    - active_loop: null
+  steps:
+  - action: action_eg_followup_concept
+  - action: form_eg_answer
+  - active_loop: form_eg_answer
+
+- rule: (EG) Answer from Button
+  condition:
+    - active_loop: null
+  steps:
+  - action: action_eg_check_options
+  - action: form_eg_answer
+  - active_loop: form_eg_answer
+
+# ------------------------------------------------------

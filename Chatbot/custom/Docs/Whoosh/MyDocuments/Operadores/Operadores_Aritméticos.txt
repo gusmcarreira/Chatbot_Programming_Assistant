@@ -1,0 +1,123 @@
+Em Python os operadores aritméticos são:
+
+<table>
+ 	 <tr>
+    		<th>+</th>
+   	 	<th>soma dois valores</th>
+   		<th>5 + 7 resulta em 7</th>
+  	</tr>
+	<tr>
+   		 <th>-</th>
+   		 <th>subtrai dois valores</th>
+   		 <th>5 - 2 resulta em 3</th>
+  	</tr>
+	<tr>
+    		<th>*</th>
+    		<th>multiplica dois valores</th>
+    		<th>5 * 2 resulta em 10</th>
+  	</tr>
+	<tr>
+    		<th>/</th>
+    		<th>divide dois valores (sem arredondar)</th>
+    		<th>5 / 2 resulta em 2.5</th>
+  	</tr>
+	<tr>
+    		<th>//</th>
+    		<th>divide dois valores (arredondando para baixo)</th>
+    		<th>5 // 2 resulta em 2</th>
+  	</tr>
+	<tr>
+    		<th>%</th>
+    		<th>resto da divisão</th>
+    		<th>5 % 2 resulta em 1</th>
+  	</tr>
+	<tr>
+		<th>**</th>
+    		<th>exponenciação</th>
+    		<th>5 ** 2 resulta em 25</th>
+	</tr>
+</table>
+-#-
+A soma é feita com o operador +
+
+Exemplo:
+	
+	numero1 = 10
+	numero2 = 2.5
+	resultado = numero1 + numero2
+	
+	print(resultado)
+
+	12.5
+-#-
+A subtração é feita com o operador -
+
+Exemplo:
+	
+	numero1 = 10
+	numero2 = 8.5
+	resultado = numero1 - numero2
+	
+	print(resultado)
+
+	1.5
+-#-
+A multiplicação é feita com o operador *
+
+Exemplo:
+	
+	numero1 = 5
+	numero2 = 2
+	resultado = numero1 * numero2
+	
+	print(resultado)
+
+	10
+-#-
+A divisão é feita com o operador /
+
+Exemplo:
+	
+	numero1 = 5
+	numero2 = 2
+	resultado = numero1 / numero2
+	
+	print(resultado)
+
+	2.5
+-#-
+A divisão ARREDONDANDO PARA BAIXO é feita com o operador //
+
+Exemplo:
+	
+	numero1 = 5
+	numero2 = 2
+	resultado = numero1 // numero2
+	
+	print(resultado)
+
+	2
+-#-
+O resto da divisão é obtido com o operador %
+
+Exemplo:
+	
+	numero1 = 5
+	numero2 = 2
+	resultado = numero1 ** numero2
+	
+	print(resultado)
+
+	1
+-#-
+A exponenciação é feita com o operador **
+
+Exemplo:
+	
+	numero1 = 5
+	numero2 = 2
+	resultado = numero1 ** numero2
+	
+	print(resultado)
+
+	25

@@ -1,0 +1,150 @@
+version: "3.1"
+
+session_config:
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: false
+
+# ------------------ INTENTS ------------------
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_question
+  - ask_example
+  - EXTERNAL_ERROR_MESSAGE
+# ------------------ ENTITIES -----------------
+entities:
+## ERROR GUIDANCE ##
+- error_type
+- error_message
+- answer_concept_wanted
+######################
+# ------------------- SLOTS -------------------
+slots:
+  ## ERROR GUIDANCE ##
+  slot_eg_start:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+  slot_eg_message:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: error_message
+
+  slot_eg_concept:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: error_type
+
+  slot_eg_question_index:
+    type: float
+    initial_value: 0
+    influence_conversation: false
+    mappings:
+    - type: custom
+    max_value: 10.0
+    min_value: 0.0
+
+  slot_eg_questions_list:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  slot_eg_answer:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_eg_answer
+
+  # Check if answer was given from a button
+  slot_eg_answer_from_option:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  slot_eg_more_questions:
+    type: bool
+    initial_value: true
+    influence_conversation: true
+    mappings:
+      - type: custom
+  ######################
+# ------------------- FORMS -------------------
+forms:
+  ## ERROR GUIDANCE ##
+  form_eg_start:
+    required_slots:
+        - slot_eg_start
+
+  form_eg_answer:
+    required_slots:
+        - slot_eg_answer
+  ######################
+# ------------------ RESPONSES ------------------
+responses:
+  utter_greet:
+  - text: "Olá 👋! Em que posso ajudar?"
+  - text: "Olá 👋! Em que posso ser útil?"
+
+  utter_did_that_help:
+  - text: "A resposta foi esclarecedora?"
+  - text: "A resposta ajudou?"
+
+  utter_what_else:
+  - text: "Em que mais lhe posso ser útil?"
+
+  utter_goodbye:
+  - text: "Adeus 👋"
+  - text: "Até já 👋"
+  - text: "Até logo 👋"
+
+  utter_iamabot:
+  - text: "Na verdade sou um Chatbot!"
+  - text: "Nenhum humano aqui! Apenas um simpático chatbot!"
+
+  utter_anything_else:
+    - text: "Algo mais em que possa ser útil?"
+    - text: "Posso ajudá-lo em algo mais?"
+
+  utter_please_rephrase:
+  - text: "Desculpe não entendi, pode reformular?"
+
+  utter_congratulate:
+  - text: "Boa, continue assim!"
+  - text: "Isso mesmo!"
+
+  utter_refresh_memory:
+  - text: "Talvez as seguintes opções lhe refresquem a memória:"
+
+  utter_present_answer:
+  - text: "Qual é?"
+
+  # utter_ask_<form_name>_<slot_name>
+  utter_ask_form_eg_start_slot_eg_start:
+    - text: "Parece estar com alguns problemas, gostaria de uma ajudinha? (sim/não)"
+
+  utter_are_you_sure:
+  - text: "Tem a certeza?"
+
+# ------------------ ACTIONS ------------------
+actions:
+- action_eg_reset_slot_start
+- action_eg_start
+- action_eg_check_answer
+- action_eg_followup_concept
+- action_eg_check_options
+- action_answer_questions
+- validate_form_eg_start

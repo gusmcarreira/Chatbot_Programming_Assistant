@@ -1,0 +1,7 @@
+Você já vem usando o principal operador de atribuição do Python (o operador =), mas existem outros operadores desse tipo:
+
+<ul>
+	<li>=: operador de atribuição. Dada uma variável x, ao fazermos x = valor atribuímos o valor à variável x. Deste momento em diante, x é um sinônimo de valor. Por exemplo, se fizermos x = 5, ao imprimir x, o valor 5 será impresso.<\li>
+	<li>+=: é equivalente a fazer x = x + valor. Por exemplo, se x valer 10 e fizermos x += 2, x passará a ter o valor 12.<\li>
+	<li>-=, =, /=, //=, %=, *=: funcionam da mesma forma que o +=. Por exemplo, se x valer 5 e fizermos x *= 3 obteremos o valor 15. Na prática, o funcionamento desses operadores é o seguinte: x op= valor é equivalente a x = x op valor, em que op é algum dos operadores listados anteriormente.<\li>
+<\ul>

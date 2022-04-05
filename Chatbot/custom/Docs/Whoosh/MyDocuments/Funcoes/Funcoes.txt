@@ -1,0 +1,14 @@
+Em Python uma função é definida pela palavra-chave def.
+
+Exemplo:
+
+	def funcao_exemplo():
+   		print("Olá de dentro da função") 
+
+	funcao_exemplo()
+
+	Olá de dentro da função
+
+A função apenas é realizada ao chamar a mesma, o que é feito pelo nome da função seguido de parêntesis. 
+-#-
+Informação pode ser passada a funções como argumentos. 

@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer question anytime the user asks one
+  steps:
+  - intent: ask_question
+  - action: action_answer_questions
+
+- rule: Give example anytime the user asks for one
+  steps:
+  - intent: ask_example
+  - action: action_answer_questions
