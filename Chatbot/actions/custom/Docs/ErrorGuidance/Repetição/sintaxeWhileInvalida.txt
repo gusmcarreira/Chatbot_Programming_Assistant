@@ -1,0 +1,14 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Digamos que temos o seguinte código:
+
+<code>
+x = 0
+
+while :
+  print(x)
+  x += 1
+</code>
+
+O que lhe parece estar em falta?|end|
+Resposta:Se disse a comparação, então acertou!|end|
+-#-
+Checkpoint:Uma repetição while precisa de incluir uma comparação que no caso acima seria, por exemplo, "while x < 4": ou "while x <= 3:". Verifique, tendo atenção se segue esta sintaxe no seu algoritmo.|end|

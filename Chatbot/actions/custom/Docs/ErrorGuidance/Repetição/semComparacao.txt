@@ -1,0 +1,24 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Dado o código:
+
+<code>
+x = 0
+
+while <= :
+  print(x)
+  x += 1
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>
+0
+1
+2
+
+Qual é o primeiro elemento que lhe parece estar em falta?|end|
+Resposta:x|end|
+-#-
+Pergunta:E qual é o segundo dado que está em falta?|end|
+Resposta:3|end|
+-#-
+Checkpoint:Quando declaramos um while, precisamos de fazer uma repetição entre DOIS dados. Veja se segue essa sintaxe no seu código!|end|

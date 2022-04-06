@@ -1,0 +1,22 @@
+Comentários podem ser usados para explicar código, tornar código mais legível, ou apenas para prevenir a execução de um dado código.
+
+Comentários em Python são feitos com o símbolo #, o que fará com que Python ignore essa LINHA.
+
+Exemplo:
+
+<code>
+#Isto é um comentário
+print("Olá, Mundo!")
+</code>
+-#-
+Para comentar várias linhas, em vez de começar cada uma com o símbolo #, pode fazer uso de aspas duplas (") ou aspas simples ('), em que o inicio e o final é marcado pelo uso de 3 destes símbolos.
+
+Exemplo:
+
+<code>
+"""
+Isto é um comentário
+Escrito em mais que uma linha
+"""
+print("Olá, Mundo!")
+</code>

@@ -89,29 +89,159 @@ nlu:
 - intent: ask_question
   examples: |
     - o que é uma [variável](answer_concept_wanted) ?
-    - o que é um [for loop](answer_concept_wanted) ?
-    - o que é um [while loop](answer_concept_wanted) ?
-    - o que é um [if statement](answer_concept_wanted) ?
-    - o que é [elif](answer_concept_wanted) ?
-    - o que é [else](answer_concept_wanted) ?
-    - o que é uma [condição](answer_concept_wanted) ?
-    - o que é uma [variável](answer_concept_wanted)?
+    - como se obtém o [tipo de uma variável](answer_concept_wanted) ?
+    - que nomes podemos dar a uma [variável](answer_concept_wanted) ?
+    - o que são [palavras reservadas](answer_concept_wanted) ?
+    - o que é uma [variável global](answer_concept_wanted) ?
+    - o que é uma [variável local](answer_concept_wanted) ?
+    - como se cria uma [variável global](answer_concept_wanted) dentro de uma função ?
+    - como se muda o valor de uma [variável global](answer_concept_wanted) dentro de uma função?
+    - quais são os [tipos de variáveis](answer_concept_wanted) ?
+    - o que é um [inteiro](answer_concept_wanted) ?
+    - como se converte uma [string em inteiro](answer_concept_wanted) ?
+    - o que é um [float](answer_concept_wanted) ?
+    - como se converte um [inteiro em float](answer_concept_wanted) ?
+    - o que é uma [string](answer_concept_wanted) ?
+    - como se converte um [inteiro em string](answer_concept_wanted) ?
+    - o que é uma [variável booleana](answer_concept_wanted) ?
+    - o que é uma [lista](answer_concept_wanted) ?
+    - o que é [indentação](answer_concept_wanted) ?
+    - para que serve a [indentação](answer_concept_wanted) ?
+    - quantos espaços é a [indentação](answer_concept_wanted) ?
+    - para que servem os [comentários](answer_concept_wanted) ?
+    - como se fazem [comentários](answer_concept_wanted) ?
+    - como podemos [comentar](answer_concept_wanted) várias linhas ao mesmo tempo?
+    - quais são os [operadores aritméticos](answer_concept_wanted)?
+    - como se faz a [soma](answer_concept_wanted)?
+    - como se faz a [subtração](answer_concept_wanted)?
+    - como se faz a [multiplicação](answer_concept_wanted)?
+    - como se faz a [divisão](answer_concept_wanted)?
+    - como se faz a [divisão](answer_concept_wanted) arredondano para baixo?
+    - como se faz o resto da [divisão](answer_concept_wanted)?
+    - como se faz a [exponenciação](answer_concept_wanted)?
+    - quais são os [operadores de atribuição](answer_concept_wanted)?
+    - quais são os [operadores lógicos](answer_concept_wanted)?
+    - como se usa o [and](answer_concept_wanted)?
+    - como se usa o [or](answer_concept_wanted)?
+    - como se usa o [not](answer_concept_wanted)?
+    - quais são os [operadores relacionais](answer_concept_wanted)?
+    - porque devemos aprender a [programar](answer_concept_wanted)?
+    - para que serve [Python](answer_concept_wanted)?
+    - porque devemos aprender [Python](answer_concept_wanted)?
+    - o que é uma [função](answer_concept_wanted)?
+    - como se define uma [função](answer_concept_wanted)?
+    - o que são [parâmetros](answer_concept_wanted)?
+    - o que é o [retorno](answer_concept_wanted) de uma função?
+    - o que é o [NameError](answer_concept_wanted)?
+    - quando occorre o [NameError](answer_concept_wanted)?
+    - o que é o [SyntaxError](answer_concept_wanted)?
+    - quando occorre o [SyntaxError](answer_concept_wanted)?
+    - o que é o [TypeError](answer_concept_wanted)?
+    - quando occorre o [TypeError](answer_concept_wanted)?
+    - o que é uma [condição](answer_concept_wanted)?
+    - para que servem as [condições](answer_concept_wanted)?
+    - quais são as [operações de comparação](answer_concept_wanted)?
+    - qual a sintaxe de uma [condição](answer_concept_wanted)?
+    - para que serve a instrução [else](answer_concept_wanted)?
+    - para que serve a instrução [elif](answer_concept_wanted)?
+    - o que é uma [repetição](answer_concept_wanted)?
+    - quais são os tipos de [repetições](answer_concept_wanted)?
+    - o que é a instrução [while](answer_concept_wanted)?
+    - o que é a instrução [for](answer_concept_wanted)?
 
 - intent: ask_example
   examples: |
     - me dê um exemplo de uma [variável](answer_concept_wanted) ?
+    - me dê um exemplo de um [variáveis](answer_concept_wanted) ?
     - me dê um exemplo de um [for loop](answer_concept_wanted) ?
+    - me dê um exemplo de uma instrução [for](answer_concept_wanted) ?
+    - me dê um exemplo de uma repetição [for](answer_concept_wanted) ?
     - me dê um exemplo de um [while loop](answer_concept_wanted) ?
+    - me dê um exemplo de uma instrução [while](answer_concept_wanted) ?
+    - me dê um exemplo de uma repetição [while](answer_concept_wanted) ?
     - me dê um exemplo de um [if statement](answer_concept_wanted) ?
+    - me dê um exemplo de uma [condição](answer_concept_wanted) ?
+    - me dê um exemplo de uma [função](answer_concept_wanted) ?
+    - me dê um exemplo de uma [soma](answer_concept_wanted) ?
+    - me dê um exemplo de uma [divisão](answer_concept_wanted) ?
+    - me dê um exemplo de uma [subtração](answer_concept_wanted) ?
+    - me dê um exemplo de uma [divisão](answer_concept_wanted) ?
+    - me dê um exemplo de uma [exponenciação](answer_concept_wanted) ?
+    - me dê um exemplo do [and](answer_concept_wanted) ?
+    - me dê um exemplo do [or](answer_concept_wanted) ?
+    - me dê um exemplo do [not](answer_concept_wanted) ?
+    - me dê um exemplo de um [comentário](answer_concept_wanted) ?
+    - me dê um exemplo de um [inteiro](answer_concept_wanted) ?
+    - me dê um exemplo de um [float](answer_concept_wanted) ?
+    - me dê um exemplo de uma [string](answer_concept_wanted) ?
+    - me dê um exemplo de um [lista](answer_concept_wanted) ?
     - como se inicializa uma [variável](answer_concept_wanted) ?
+    - como se inicializam [variáveis](answer_concept_wanted) ?
     - como se inicializa um [for loop](answer_concept_wanted) ?
+    - como se inicializa uma instrução [for](answer_concept_wanted) ?
+    - como se inicializa uma repetição [for](answer_concept_wanted) ?
     - como se inicializa um [while loop](answer_concept_wanted) ?
-    - como se inicializa um [if statement](answer_concept_wanted) ?
+    - como se inicializa uma instrução [while](answer_concept_wanted) ?
+    - como se inicializa uma repetição [while](answer_concept_wanted) ?
+    - como se inicializa um [if statement](answer_concept_wanted)?
+    - como se inicializa uma [condição](answer_concept_wanted)?
+    - como se inicializa um [if](answer_concept_wanted)?
+    - como se inicializa um [elif statement](answer_concept_wanted)?
+    - como se inicializa uma [condição](answer_concept_wanted) elif?
+    - como se inicializa um [elif](answer_concept_wanted)?
+    - como se inicializa um [else statement](answer_concept_wanted)?
+    - como se inicializa uma [condição](answer_concept_wanted) else?
+    - como se inicializa um [else](answer_concept_wanted)?
+    - como se inicializa uma [função](answer_concept_wanted)?
+    - como se inicializam [funções](answer_concept_wanted)?
     - como se cria uma [variável](answer_concept_wanted) ?
-    - como se cria uma [for loop](answer_concept_wanted) ?
-    - como se cria uma [while loop](answer_concept_wanted) ?
-    - como se cria uma [if statement](answer_concept_wanted) ?
+    - como se criam [variáveis](answer_concept_wanted) ?
+    - como se cria um [for loop](answer_concept_wanted) ?
+    - como se cria uma instrução [for](answer_concept_wanted) ?
+    - como se cria uma repetição [for](answer_concept_wanted) ?
+    - como se cria um [while loop](answer_concept_wanted) ?
+    - como se cria uma instrução [while](answer_concept_wanted) ?
+    - como se cria uma repetição [while](answer_concept_wanted) ?
+    - como se cria um [if statement](answer_concept_wanted) ?
+    - como se cria uma [condição](answer_concept_wanted) ?
+    - como se criam [condições](answer_concept_wanted) ?
+    - como se cria um [if](answer_concept_wanted) ?
+    - como se cria um [else statement](answer_concept_wanted) ?
+    - como se cria uma [condição](answer_concept_wanted) else?
+    - como se criam [condições](answer_concept_wanted) else?
+    - como se cria um [else](answer_concept_wanted) ?
+    - como se cria um [elif statement](answer_concept_wanted) ?
+    - como se cria uma [condição](answer_concept_wanted) elif?
+    - como se criam [condições](answer_concept_wanted) elif?
+    - como se cria um [elif](answer_concept_wanted) ?
+    - como se cria uma [função](answer_concept_wanted) ?
+    - como se criam [funções](answer_concept_wanted) ?
 
 # ---- EXTERNAL INTENTS (sent by the application) ----
 - intent: EXTERNAL_ERROR_MESSAGE
+#  examples: |
+#    - [Variável](error_type) [Faltou uma aspas na string:](error_message)
+#    - [Variável](error_type) [Número decimal com vírgula](error_message)
+#    - [Variável](error_type) [Declaração variável com duas igualdades](error_message)
+#    - [Variável](error_type) [Uso de espaço no nome da variável](error_message)
+#    - [Variável](error_type) [Utilizou uma variável não declarada](error_message)
+#    - [Repetição](error_type) [Falta dois pontos](error_message)
+#    - [Repetição](error_type) [Repetição sem comparação](error_message)
+#    - [Repetição](error_type) [Operador lógico maiúsculo](error_message)
+#    - [Repetição](error_type) [Apenas um dado na comparação](error_message)
+#    - [Repetição](error_type) [Falta dois pontos na repetição](error_message)
+#    - [Repetição](error_type) [Apenas uma igualdade na repetição](error_message)
+#    - [Repetição](error_type) [Faltou operador in](error_message)
+#    - [Repetição](error_type) [Faltou um par de dados para o operador in](error_message)
+#    - [Repetição](error_type) [Sintaxe do while sem comparação](error_message)
+#    - [Repetição](error_type) [Faltou um parêntesis de abertura ou fechamento](error_message)
+#    - [Função](error_type) [Faltou parêntesis](error_message)
+#    - [Função](error_type) [Faltou vírgula para separar argumentos](error_message)
+#    - [Função](error_type) [Faltou utilizar :](error_message)
+#    - [Condição](error_type) [Condição sem comparação](error_message)
+#    - [Condição](error_type) [Operador lógico maiúsculo](error_message)
+#    - [Condição](error_type) [Apenas um dado na comparação](error_message)
+#    - [Condição](error_type) [Falta dois pontos na condição](error_message)
+#    - [Condição](error_type) [Apenas uma igualdade na condição](error_message)
+#    - [Condição](error_type) [Comparação no else](error_message)
 # ----------------------------------------------------

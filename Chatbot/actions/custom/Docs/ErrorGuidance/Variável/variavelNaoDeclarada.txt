@@ -1,0 +1,18 @@
+Pergunta:O seu erro parece referir-se às variáveis, digamos que lhe apresento o código abaixo:
+
+<code>
+var1="Olá"
+print(var1, var2)
+</code>
+
+Estou a pedir para imprimir a variavél "var1", no entanto o que lhe parece faltar?|end|
+Resposta:Explicação:Se respondeu, a sua declaração, então é isso mesmo!|end|
+-#-
+Checkpoint:Estou-lhe a pedir para imprimir uma variável, no entanto ela não existe. Veja no seu código se existe alguma variável que esteja a utilizar mas não exista, por vezes isto também se deve a um erro de escrita tenha atenção nisso, por exemplo:
+
+<code>
+var1 = "Olá"
+print(var_1)
+</code>
+
+Veja como são variáveis diferentes.|end|

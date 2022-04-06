@@ -1,0 +1,11 @@
+Condição sem comparação-->Condição/semComparacao.txt
+-#-
+Operador lógico maiúsculo-->Condição/andOrMaiusculo.txt
+-#-
+Apenas um dado na comparação-->Condição/apenasUmParComparacao.txt
+-#-
+Falta dois pontos na condição-->Condição/faltaDoisPontosCondicao.txt
+-#-
+Apenas uma igualdade na condição-->Condição/comparacaoApenasUmaIgualdade.txt
+-#-
+Comparação no else-->Condição/comparacaoElse.txt

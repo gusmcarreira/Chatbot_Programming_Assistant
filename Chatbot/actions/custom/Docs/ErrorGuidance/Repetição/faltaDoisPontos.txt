@@ -1,0 +1,12 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Digamos que temos o seguinte código, veja se consegue decifrar o pequeno pormenos que está em falta:
+
+<code>
+x = 4
+
+while x < 4
+  print(x)
+  x += 1
+</code>|end|
+Resposta::|end|
+-#-
+Checkpoint:Como na declaração de funções e condições, a declaração de uma repetição deve acabar com : (dois pontos), no exemplo acima seria então "while x < 4:". Veja se seguiu essa sintaxe no seu código.|end|

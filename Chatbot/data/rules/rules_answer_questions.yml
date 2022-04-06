@@ -2,16 +2,35 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Answer question anytime the user asks one
   condition:
     - active_loop: null
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: ask_question
+  - action: action_answer_questions
+  - action: utter_did_that_help
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Give example anytime the user asks for one
   condition:
     - active_loop: null
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: ask_example
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Ask the student if they would like further help
+  condition:
+    - active_loop: null
+  steps:
+  - action: action_answer_questions
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_for_help
+
+- rule: Student wants further helo
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_ask_for_help
+  - intent: affirm
+  - action: utter_wants_help

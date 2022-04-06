@@ -1,0 +1,18 @@
+Pergunta:O seu erro parece estar numa condição. Vou-lhe propor um desafio! Digamos que temos o seguinte código:
+
+<code>
+x = 0
+
+if x ==  :
+  print("É verdade!")
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>
+É verdade!
+
+Qual é o detalhe que está em falta?|end|
+Resposta:0|end|
+-#-
+Checkpoint:Quando fazemos uma comparação necessitamos de dois dados, no caso do exemplo temos o x e o número 0! Veja se utilizou sempre dois dados nas suas comparações.|end|

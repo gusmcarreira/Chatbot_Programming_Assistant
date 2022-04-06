@@ -1,9 +1,0 @@
-Pergunta: Parece encontrar-se com erros na declaração de uma variável com uma string. Para declarar uma String, sabe qual é o elemento essencial? 
-Resposta: Foi quase, na verdade são as aspas (“Sou um exemplo de uma String”)
-Opções: () (parêntesis)//: (dois pontos)// “” (aspas)
--#-
-Então e se eu lhe pedisse agora para declarar uma variável com o nome carro, e o valor Volvo, seria capaz de o fazer?
-Resposta: carro = “Volvo”
-Opções: carro = “Volvo//carro = Volvo”//carro = “Volvo”
--#- 
-O esquecimento das aspas, ou mais especificamente, de uma delas, é algo normal para quem está a começar a programação, e ate para alguns dotados de mais experiência. Agora que discutimos um pouco sobre o assunto, terá sido esse o seu problema?

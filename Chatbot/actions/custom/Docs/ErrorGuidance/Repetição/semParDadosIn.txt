@@ -1,0 +1,25 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição for. Dado o código:
+
+<code>
+frutas = ["maçã", "banana", "laranja"]
+
+for in :
+  print(x)
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>
+maçã
+banana
+laranja
+
+Qual é o primeiro elemento que lhe parece estar em falta?|end|
+Resposta:x|end|
+Explicação:O primeiro dado que falta no código, é uma variável de indexação, neste caso x.|end|
+-#-
+Pergunta:E qual é o segundo dado que está em falta?|end|
+Resposta:frutas|end|
+Explicação:Neste caso, o que nos falta é o objeto que desejamos iterar, neste caso o array "frutas".|end|
+-#-
+Checkpoint:É importante que a declaração de um for loop siga alguma determinada comparação em que de um lado temos a variaveis de indexação e do outro o objeto que desejamos iterar. Veja, tendo em atenção neste aspeto, se segue esta sintaxe no seu algoritmo.|end|

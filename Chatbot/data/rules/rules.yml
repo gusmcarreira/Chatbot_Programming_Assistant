@@ -2,12 +2,16 @@ version: "3.1"
 
 rules:
 
-- rule: Answer question anytime the user asks one
+- rule: Say goodbye anytime the user says goodbye
+  condition:
+    - active_loop: null
   steps:
-  - intent: ask_question
-  - action: action_answer_questions
+  - intent: goodbye
+  - action: utter_goodbye
 
-- rule: Give example anytime the user asks for one
+- rule: Say 'I am a bot' anytime the user challenges
+  condition:
+    - active_loop: null
   steps:
-  - intent: ask_example
-  - action: action_answer_questions
+  - intent: bot_challenge
+  - action: utter_iamabot

@@ -1,0 +1,5 @@
+Pergunta:O seu erro parece estar especificamente no operador and/or. Digamos que tem as seguintes variações do operador "and", qual diria que é a que está correta?|end|
+Opções_Iniciais:AND//and//And|end|
+Resposta:and|end|
+-#-
+Checkpoint:Os operadores "and" e "or" devem ser sempre escritos com letras minúsculas! Veja se segue essa sintaxe no seu algoritmo.|end|

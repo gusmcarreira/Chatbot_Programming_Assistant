@@ -1,0 +1,11 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição for. Digamos que temos o seguinte código, veja se consegue decifrar o que falta:
+
+<code>
+cores = ["vermelho", "preto", "azul"]
+
+for x  cores:
+  print(x)
+</code>|end|
+Resposta:in|end|
+-#-
+Checkpoint:A declaração de uma repetição for segue algumas regras, nomeadamente uma variável de indexação (o nosso x), um array, range, lista ou string que está a ser indexada (as nossas cores), e ENTRE estes dois deve estar o operadore in. O nosso exemplo seria então "for x in cores:". Veja se segue essa sintaxe no seu algoritmo.|end|

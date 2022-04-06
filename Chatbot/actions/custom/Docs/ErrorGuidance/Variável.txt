@@ -1,0 +1,9 @@
+Faltou uma aspas na string:-->Variável/stringSemAspas.txt
+-#-
+Número decimal com vírgula-->Variável/numeroDecimalComVirgula.txt
+-#-
+Declaração variável com duas igualdades-->Variável/declaracaoVariavelComDoisIguais.txt
+-#-
+Uso de espaço no nome da variável-->Variável/espacoNoNomeVariavel.txt
+-#-
+Utilizou uma variável não declarada-->Variável/variavelNaoDeclarada.txt

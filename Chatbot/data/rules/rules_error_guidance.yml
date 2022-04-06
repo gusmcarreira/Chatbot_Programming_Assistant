@@ -37,7 +37,7 @@ rules:
   - action: utter_anything_else
   - action: action_eg_reset_slot_start
   - intent: affirm
-  - action: utter_what_else
+  - action: utter_ask
 
 - rule: (EG) Say goodbye when the student does not want to ask anything else
   condition:

@@ -103,17 +103,14 @@ responses:
   - text: "A resposta foi esclarecedora?"
   - text: "A resposta ajudou?"
 
-  utter_what_else:
-  - text: "Em que mais lhe posso ser útil?"
-
   utter_goodbye:
   - text: "Adeus 👋"
   - text: "Até já 👋"
   - text: "Até logo 👋"
 
   utter_iamabot:
-  - text: "Na verdade sou um Chatbot!"
-  - text: "Nenhum humano aqui! Apenas um simpático chatbot!"
+  - text: "Na verdade sou um Chatbot 🤖!"
+  - text: "Nenhum humano aqui! Apenas um simpático chatbot 🤖!"
 
   utter_anything_else:
     - text: "Algo mais em que possa ser útil?"
@@ -124,13 +121,13 @@ responses:
 
   utter_congratulate:
   - text: "Boa, continue assim!"
-  - text: "Isso mesmo!"
+  - text: "Isso mesmo 😎!"
 
   utter_refresh_memory:
   - text: "Talvez as seguintes opções lhe refresquem a memória:"
 
   utter_present_answer:
-  - text: "Qual é?"
+  - text: "Pode pergunta! 😁"
 
   # utter_ask_<form_name>_<slot_name>
   utter_ask_form_eg_start_slot_eg_start:
@@ -139,6 +136,16 @@ responses:
   utter_are_you_sure:
   - text: "Tem a certeza?"
 
+  utter_ask_for_help:
+  - text: "Desculpe, vou treinar para a próxima conseguir ajudar 😔. Gostaria de mandar mensagem ao professor com a sua dúvida?"
+  - text: "Desculpe, vou estudar mais para a próxima conseguir ajudar 😔. Gostaria de mandar mensagem ao professor com a sua dúvida?"
+
+  utter_wants_help:
+  - text: "Acima do editor de programação tem um botão chamado 'Pedir ajuda' clique nele e é só escrever a sua dúvida!"
+
+  utter_ask:
+  - text: "Força farei o meu melhor para conseguir ajudar!"
+  - text: "Chute! Farei o meu melhor para conseguir ajudar!"
 # ------------------ ACTIONS ------------------
 actions:
 - action_eg_reset_slot_start

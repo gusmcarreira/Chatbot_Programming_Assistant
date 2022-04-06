@@ -1,0 +1,20 @@
+Pergunta:O seu erro parece estar numa condição. Vou-lhe propor um desafio! Digamos que temos o seguinte código:
+
+<code>
+x = 0
+
+if:
+  print("X é igual a 0!")
+else:
+  print("X não é igual a 0!")
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>
+X é igual a 0!
+
+Sabe dizer o que está em falta?|end|
+Resposta:Se disse x == 0, então está certo!|end|
+-#-
+Checkpoint:Ao contrário da instrução else, quando usamos uma instrução if ou elif, necessitamos de incluir uma comparação, no exemplo a cima seria então "if x == 0:". Veja se segue essa sintaxe no seu código!|end|

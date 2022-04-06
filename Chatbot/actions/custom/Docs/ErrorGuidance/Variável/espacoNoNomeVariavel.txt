@@ -1,0 +1,5 @@
+Pergunta:O seu erro parece ser na declaração de uma variável. O nome de uma variável segue algumas regras, das abaixo, qual é aquela que lhe parece errada?|end|
+Opções_Iniciais:Pode começar com uma letra//Não pode começar com um número//Pode conter espaços|end|
+Resposta:Pode conter espaços|end|
+-#-
+Checkpoint:Uma variável não pode conter espaços no seu nome. Veja se talvez tenha sido esse o seu erro.|end|

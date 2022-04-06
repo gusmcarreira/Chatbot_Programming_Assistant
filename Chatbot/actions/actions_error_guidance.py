@@ -4,7 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, FollowupAction, AllSlotsReset
 
-from paths import guide_docs_dir
+from actions.paths import guide_docs_dir
 
 # VARIABLES
 action_eg_start = "action_eg_start"
@@ -42,10 +42,11 @@ class ActionEgStart(Action):
 
         # -- Error information --
         error_concept = tracker.get_slot(slot_eg_concept)
-        error_message = tracker.get_slot(slot_eg_message).replace(" ", "_") + ".txt"
+        error_message = tracker.get_slot(slot_eg_message)
+        print(error_message)
         # -----------------------
         # Path_to_file
-        path_to_error_guidance_file = guide_docs_dir + error_concept + "/" + error_message
+        path_to_error_guidance_file = returnFilePath(error_concept, error_message)
         # File text list (divided by questions/checkpoint --> -#-)
         text_doc = open(path_to_error_guidance_file, "r").read().split("-#-")
         # Get current index (which is 0, since it is the first)
@@ -53,6 +54,13 @@ class ActionEgStart(Action):
         # Send the first question to the user
         dispatcher.utter_message(text="Lembre-se se a qualquer momento quiser parar, diga PARAR")
         dispatcher.utter_message(text=returnParameter("Pergunta:", text_doc[question_index]))
+        # Check for initial options
+        if returnParameter("Opções_Iniciais", text_doc[question_index]):
+            buttons = []
+            for option in returnParameter("Opções_Iniciais", text_doc[question_index]).split("//"):
+                payload = ('"' + option + '"')
+                buttons.append({"title": option, "payload": payload})
+                dispatcher.utter_message(buttons=buttons)
         # Store the text from the file (clarifying_concept_text) and increment the index (clarifying_concept_index)
         return [SlotSet(slot_eg_question_list, text_doc)]
 
@@ -126,7 +134,7 @@ class ActionEgCheckOptions(Action):
                 buttons.append({"title": option, "payload": payload})
             dispatcher.utter_message(response="utter_refresh_memory", buttons=buttons)
 
-            return [SlotSet(slot_eg_answer_from_option, True), FollowupAction(action_eg_followup_concept)]
+            return [SlotSet(slot_eg_answer_from_option, True)]
 
         # ------- THERE ARE NO OPTIONS THEREFORE GIVE ANSWER -------
         else:
@@ -158,6 +166,13 @@ class ActionEgFollowUpConcept(Action):
         # THERE ARE MORE QUESTIONS
         if returnParameter("Pergunta:", wanted_question):
             dispatcher.utter_message(text=returnParameter("Pergunta:", tracker.get_slot(slot_eg_question_list)[question_index]))
+            # Check for initial options
+            if returnParameter("Opções_Iniciais", tracker.get_slot(slot_eg_question_list)[question_index]):
+                buttons = []
+                for option in returnParameter("Opções_Iniciais", tracker.get_slot(slot_eg_question_list)[question_index]).split("//"):
+                    payload = ('"' + option + '"')
+                    buttons.append({"title": option, "payload": payload})
+                    dispatcher.utter_message(buttons=buttons)
             return [SlotSet(slot_eg_question_index, question_index)]
 
         # LAST QUESTION --> CHECKPOINT
@@ -171,14 +186,27 @@ class ActionEgFollowUpConcept(Action):
 # Function to check if the answer is in the user's message
 def findWholeWord(real_answer, user_answer):
     for i in real_answer.split(" "):
-        if i not in user_answer.split(" "):
-            return False
-    return True
+        if i in user_answer:
+            return True
+    return False
 
 
 # Get wanted parameter from string (i.e, Pergunta, Opções, Resposta, Explicação)
 def returnParameter(parameter, wanted_string):
     wanted_info = parameter
-    for x in wanted_string.split("\n"):
+    for x in wanted_string.split("|end|"):
         if wanted_info in x:
             return x.replace(wanted_info, '')
+
+
+def returnFilePath(error_concept, error_string):
+    mainPath = guide_docs_dir
+    text_doc = open(mainPath + error_concept + ".txt", "r").read().split("-#-")
+
+    for j, item in enumerate(text_doc):
+        text_doc[j] = item.replace('\n', '')
+        line = text_doc[j].split("-->")
+        if line[0] == error_string:
+            print(line[1])
+            return mainPath + line[1]
+

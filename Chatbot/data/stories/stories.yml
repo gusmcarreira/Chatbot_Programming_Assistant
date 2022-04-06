@@ -1,11 +1,63 @@
-#version: "3.1"
+version: "3.1"
 
-#stories:
-#
-#- story: happy path
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: mood_great
-#  - action: utter_happy
+stories:
 
+- story: Answer Question/Example
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - or:
+    - intent: ask_question
+    - intent: ask_example
+  - action: action_answer_questions
+  - action: utter_did_that_help
+  - checkpoint: checkpoint_answer_question
+
+- story: Answer helped, nothing else
+  steps:
+  - checkpoint: checkpoint_answer_question
+  - intent: affirm
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Answer helped, ask something else
+  steps:
+  - checkpoint: checkpoint_answer_question
+  - intent: affirm
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: affirm
+  - action: utter_ask
+
+- story: Answer did not help
+  steps:
+  - checkpoint: checkpoint_answer_question
+  - intent: deny
+  - action: utter_ask_for_help
+  - checkpoint: checkpoint_more_help
+
+- story: Does not want further help, nothing else
+  steps:
+  - checkpoint: checkpoint_more_help
+  - intent: deny
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Does not want further help, somthing else
+  steps:
+  - checkpoint: checkpoint_more_help
+  - intent: deny
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: affirm
+  - action: utter_ask
+
+- story: Wants further help
+  steps:
+  - checkpoint: checkpoint_more_help
+  - intent: affirm
+  - action: utter_wants_help

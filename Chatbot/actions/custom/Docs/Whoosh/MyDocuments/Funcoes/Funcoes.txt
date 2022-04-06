@@ -1,0 +1,51 @@
+Em Python uma função é definida pela palavra-chave def.
+
+Exemplo:
+
+<code>
+def funcao_exemplo():
+  print("Olá de dentro da função")
+
+funcao_exemplo()
+</code>
+
+<code_print>Olá de dentro da função
+
+A função apenas é realizada ao chamar a mesma, o que é feito pelo nome da função seguido de parêntesis. 
+-#-
+Informação pode ser passada a funções como parâmetros. Parâmetros são especificados depois do nome da função (dentro dos parêntesis).
+
+Podem ser usados quantos argumentos quiser, mas tenha o cuidado dos separa com uma , (vírgula).
+
+Exemplo:
+
+<code>
+def exemplo_func(var1, var2):
+  print(var1 + var2)
+
+exemplo_func("Eu sou um ", "Chatbot")
+</code>
+
+<code_print>Eu sou um Chatbot
+
+O exemplo acima é de uma função com dois parâmetros (var1 e var2). Quando a função é chamada passamos os dois argumentos que podem depois ser usados dentro da função.
+
+Cuidado:Se tentar chamar a função, dando-lhe menos parâmetros que definiu na sua declaração, python retornará um erro.
+-#-
+O retorno de uma função é quando queremos que esta devolve um valor, que é feito através da palavra-chave "return".
+
+Exemplo:
+
+<code>
+def exemplo_func(var1):
+  var2 = 1 + var1
+  return var2
+
+print(1 + exemplo_func(1))
+</code>
+
+<code_print>3
+
+No exemplo acima estamos a imprimir o resultado de 1 + 2 (2, pois na função retornamos o valor do parâmetro + 1).
+
+Nota: O exemplo acima só é possivel pois estamos a RETORNAR o valor que queremos usar para podermos usar fora da função.

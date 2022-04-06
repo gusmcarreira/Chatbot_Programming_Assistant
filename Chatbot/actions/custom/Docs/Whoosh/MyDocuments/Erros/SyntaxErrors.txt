@@ -1,0 +1,52 @@
+SyntaxError é quando você tenta escrever uma instrução incorretamente, violando alguma das regras da linguagem de programação. Como consequência o Python não conseguirá executar o seu algoritmo e irá notificá-lo que houve um erro de sintaxe.
+-#-
+SyntaxError ocorre quando você escreve uma instrução incorretamente, violando alguma das regras da linguagem de programação. Como consequência o Python não conseguirá executar o seu algoritmo e irá notificá-lo que houve um erro de sintaxe.
+
+#Faltará : (dois pontos) em condições, repetições, ou função?
+
+Exemplo:
+
+<code>
+while True
+  print("Essa instrução não irá executar")
+</code>
+
+Ao esquecer de utilizar o : na linha em que a repetição ou condição é declarada. Lembre-se, o : indica que o que virá a seguir é o escopo desses recursos, sem ele o Python não conseguirá compreender essa informação e notificará do problema.
+
+#Estará a declarar uma String sem aspas de abertura OU fechamento?
+
+Exemplo:
+
+<code>nome = "Leonardo</code>
+
+As Strings precisam de ser declaradas com aspas no fim E no inicio.
+
+#Estará a esquecer-se dos parêntesis de fechamento ou abertura?
+
+Exemplo:
+
+<code>print("Frase de exemplo"</code>
+
+Cada parêntesis de abertura precisa ter o seu parêntesis de fechamento, e vice-versa.
+
+#Estará a esquecer-se de incluir uma vírgula para separar elementos de um array?
+
+Exemplo:
+
+<code>x = [1 2]</code>
+
+Cada elemento pertencente a um array deve ser separado por vírgulas.
+
+Solução:
+
+<code>
+x = [1, 2]
+</code>
+
+#Estará a esquecer-se de incluir números numa operação matemática?
+
+Exemplo:
+
+<code>x = 2 +</code>
+
+As operações matemáticas devem ser realizadas entre PARES de valores/variáveis. No exemplo acima faltou um desses dados.
