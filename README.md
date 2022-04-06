@@ -3,11 +3,11 @@
 ## Chatbot Widget
 O modulo/serviço/componente está na pasta Chatbot-Widget, com as respetivas imagens.
 ### A mudar
-* O id para passar ao rasa (estou a gerar de forma aleatória em chat-widget.component.ts linha 135)
-* o url no file chat-widget.component.ts linha 25
+* O id para passar ao rasa (estou a gerar de forma aleatória no ficheiro --> chat-widget.component.ts linha 135)
+* o url no file --> chat-widget.component.ts linha 25
 ### A ter em atenção
 * Não ter o chatbot disponível quando o estudante está a responder às outras perguntas de carácter teórico.
-* Store das conversas para análise posterior e melhoramento dos dados de treino (não preocupar muito com isto agora).
+* Store das conversas para análise posterior e para completar os dados de treino (não preocupar muito com isto agora).
     * O store seria (provavelmente) da informação no array wholeConversation no chat-widget.component.ts
 ### Mandar o erro ao rasa
 ```
