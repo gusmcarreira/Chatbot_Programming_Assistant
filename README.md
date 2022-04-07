@@ -1,37 +1,77 @@
 # Chatbot_Programming_Assistant
 
 ## Chatbot Widget
-O modulo/serviço/componente está na pasta Chatbot-Widget, com as respetivas imagens.
-### A mudar
-* O id para passar ao rasa (estou a gerar de forma aleatória no ficheiro __chat-widget.component.ts__ linha 135)
-* o url no file __chat-widget.component.ts__ linha 25
-### A ter em atenção
-* Não ter o chatbot disponível quando o estudante está a responder às outras perguntas de carácter teórico.
-* Store das conversas para análise posterior e para completar os dados de treino (não preocupar muito com isto agora).
-    * O store seria (provavelmente) da informação no array wholeConversation no chat-widget.component.ts
-### Mandar o erro ao rasa
-```
-this.chatbotService
-      // Manda mensagem ao RASA --> chatbot.service.ts
-      .sendMessage(this.url, this.userName, { contexto, mensagem })
-}
-```
-A função acima encontra-se no ficheiro __Chatbot-Widget/chatbot/chatbot.service.ts__, sendo que depois ele emite um evento ao __chat-widget.component.ts__ para fazer update da conversa.
-* O url para em que o rasa se vai conectar
-* O id para passar ao rasa (estou a gerar de forma aleatória no file __chat-widget.component.ts__ linha 135)
-* A mensagem para passar ao rasa 
-    * contexto -> "Função" || "Condição" || "Repetição" || "Variável"
-    * mensagem -> mensagens simplificadas dos ficheiros tiposErros....ts
-* CUIDADO, a localização dos ficheiros consoante o tipo/erro pode ser encontrado em __Chatbot/actions/custon/Docs/ErrorGuidance/....txt__, ou seja o que é passado tem de coincidir exatamente com o que está no ficheiro, sendo que a categoria do erro também tem de coincidir com o nome da pasta.
-## Chatbot
-###Correr:
+Ver em:
+* https://github.com/gusmcarreira/Chatbot_Front_End
 
+## Perguntas feitas consoante o erro
+###Estrutura:
+* __Pergunta:__ (Obrigatório) Respetiva pergunta
+* __Resposta:__ (Obrigatório) Respetiva resposta
+* __Opções Iniciais:__ (Opcional) Opções a mostrar independentemente se o aluno sabe/não sabe a resposata
+* __Opções:__ (Opcional) Opções que são apenas mostradas se o aluno disser que não sabe, ou se responder de forma incorreta
+* __Explicação:__ (Opcional) Explicação que será mostrada caso o aluno dê a resposta incorreta
+* __-#-__ (Obrigatório)
+  * Separa os blocos de informações de cada pergunta
+  * Também separa as perguntas do checkpoint
+* __Checkpoint:__ (Obrigatório) Resumo do guia (simboliza o final da ajuda)
+
+###Organização:
+* A localização dos ficheiros, consoante o tópico (Função, Repetição, Condição, Variável), pode ser encontrado nos ficheiros dos mesmos nomes em:
+    * Chatbot/actions/custom/Docs/ErrorGuidance/ ou https://github.com/gusmcarreira/Chatbot_Programming_Assistant/tree/main/Chatbot/actions/custom/Docs/ErrorGuidance
+        * ErrorGuidance/Condição.txt
+        * ErrorGuidance/Função.txt
+        * ErrorGuidance/Repetição.txt
+        * ErrorGuidance/Variável.txt
+      
+* Ter em atenção que o tópico do erro deve coincidir exatamente com o título dos ficheiros e pastas em ErrorGuidance/, tal como o erro dado tem de coincidir exatamente com as mensagens nos 4 ficheiros mencionados atrás.
+* As perguntas elaboradas para cada erro econtram-se dentro de cada uma das pastas respetivas ao tópico em questão, dentro das pasta ErrorGuidance/
+        * ErrorGuidance/Condição/...txt
+        * ErrorGuidance/Função/...txt
+        * ErrorGuidance/Repetição/...txt
+        * ErrorGuidance/Variável/...txt
+
+## Instalação
+### Manual:
+* Instalar Rasa
 ```
+python -m pip install rasa
+```
+
+* Instalar outras libraries:
+```
+pip install Transformers
+pip install Whoosh
+```
+* Clonar o git
+```
+git clone https://github.com/gusmcarreira/Chatbot_Programming_Assistant.git
+```
+* Mudar para a pasta do Chatbot
+```
+cd Chatbot
+```
+* Correr o RASA de maneira a permitir integração em website
+```
+rasa run --enable-api --cors="*"
+```
+* Correr também o servidos das ações
+```
+rasa run actions
+```
+###Com docker-compose:
+* Clonar o git
+```
+git clone https://github.com/gusmcarreira/Chatbot_Programming_Assistant.git
+```
+* Correr o docker-compose
+```
+cd Chatbot
 docker-compose up
 ```
 
-###Problemas/TODO:
-* Está a dar erro quando se pede exemplo/definição devido ao modelo de resposta automática
+##Problemas/TODO:
+* Está a dar erro quando se pede exemplo/definição devido ao modelo de resposta automática (docker-compose)
 * Guião de perguntas (na resoulução de problemas) deve ser melhorado
+* Estilo das mensagens (deve ser melhorado, principalmete do quando o display é código)
 * Erros lógicos...
-* Estilo das mensagens (deve ser melhorado, principalmete do código)
