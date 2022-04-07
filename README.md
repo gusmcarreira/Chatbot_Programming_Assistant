@@ -51,6 +51,10 @@ git clone https://github.com/gusmcarreira/Chatbot_Programming_Assistant.git
 ```
 cd Chatbot
 ```
+* Treinar Modelo
+```
+rasa train
+```
 * Correr o RASA de maneira a permitir integração em website
 ```
 rasa run --enable-api --cors="*"
