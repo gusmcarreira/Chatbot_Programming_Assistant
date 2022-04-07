@@ -51,6 +51,11 @@ git clone https://github.com/gusmcarreira/Chatbot_Programming_Assistant.git
 ```
 cd Chatbot
 ```
+* Verificar que o url do action_endpoint corresponde ao seguinte
+```
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+```
 * Treinar Modelo
 ```
 rasa train
@@ -68,9 +73,17 @@ rasa run actions
 ```
 git clone https://github.com/gusmcarreira/Chatbot_Programming_Assistant.git
 ```
-* Correr o docker-compose
+* Mudar para pasta:
 ```
 cd Chatbot
+```
+* Verificar que o url do action_endpoint corresponde ao seguinte
+```
+action_endpoint:
+  url: "http://app:5055/webhook"
+```
+* Correr o docker-compose
+```
 docker-compose up
 ```
 
