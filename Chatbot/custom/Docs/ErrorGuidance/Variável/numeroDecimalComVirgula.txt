@@ -1,0 +1,11 @@
+Pergunta:O seu erro parece ser na declaração de uma variável. Das seguintes opções qual diria que é a CORRETA?<end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:var1 = 10,2<sep>var1 = 10 2<sep>var2 = 10.2<end>
+----------------------------------------------------------------------------------<end>
+Resposta:var1 = 10.2<end>
+----------------------------------------------------------------------------------<end>
+Explicação:É algo comum, principalmente no começo, de nos esquecermos qeue Python segue a regra Americana ao usar um . (ponto) em vez de uma , (vírgula) para declarar números decimais.<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Olhando agora para o seu algoritmos, veja se talvez esse tenha sido o seu erro.<end>
