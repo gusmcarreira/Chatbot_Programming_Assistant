@@ -224,6 +224,9 @@ __Só copiar o ficheiro e correr__
 Atenção o ficheiro faz clone do git
 ```
 sh deploy.sh
+
+# ou com ambiente virtual
+sh deploy_venv.sh
 ```
 
 <a id="problemas"></a>
