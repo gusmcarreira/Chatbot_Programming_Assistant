@@ -18,7 +18,7 @@ rules:
   - action: action_answer_questions
   - action: utter_did_that_help
 
-- rule: Ask the student if they would like further help
+- rule: Student was not clarified
   condition:
     - active_loop: null
   steps:
@@ -27,7 +27,17 @@ rules:
   - intent: deny
   - action: utter_ask_for_help
 
-- rule: Student wants further helo
+- rule: Student was clarified
+  condition:
+    - active_loop: null
+  steps:
+  - action: action_answer_questions
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+
+- rule: Student wants further help
   condition:
     - active_loop: null
   steps:

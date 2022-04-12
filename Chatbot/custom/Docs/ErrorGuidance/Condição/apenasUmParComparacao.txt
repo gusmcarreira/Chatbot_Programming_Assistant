@@ -1,0 +1,24 @@
+Pergunta:O seu erro parece estar numa condição. Vou-lhe propor um desafio! Dado o seguinte código:
+
+<code>
+x = 0
+
+if x ==  :
+  print("É verdade!")
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>É verdade!
+
+Qual é o detalhe que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:0<sep>um zero<sep>zero<end>
+----------------------------------------------------------------------------------<end>
+Explicação:No código acima falta o segundo dado da comparação, que neste caso é um 0!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Quando fazemos uma comparação necessitamos de dois dados, no caso do exemplo temos o x e o número 0!
+
+Agora olhando para o seu algoritmo veja se sempre usou dois dados nas suas comparações e não se esqueceu te nenhum!<end>

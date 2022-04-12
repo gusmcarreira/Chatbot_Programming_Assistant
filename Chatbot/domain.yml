@@ -117,7 +117,8 @@ responses:
     - text: "Posso ajudá-lo em algo mais?"
 
   utter_please_rephrase:
-  - text: "Desculpe não entendi, pode reformular?"
+  - text: "Desculpe, estou com dificuldade em entender o que quer. Tente escrever de forma diferente, e lembre-se que eu o consigo
+  ajudar em perguntas sobre conceitos, tais como, 'o que é um if?', ou de dar exemplos, por exemplo 'me dê um exemplo de um for loop'."
 
   utter_congratulate:
   - text: "Boa, continue assim!"
@@ -146,12 +147,12 @@ responses:
   utter_ask:
   - text: "Força farei o meu melhor para conseguir ajudar!"
   - text: "Chute! Farei o meu melhor para conseguir ajudar!"
+
 # ------------------ ACTIONS ------------------
 actions:
 - action_eg_reset_slot_start
 - action_eg_start
 - action_eg_check_answer
 - action_eg_followup_concept
-- action_eg_check_options
 - action_answer_questions
 - validate_form_eg_start

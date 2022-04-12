@@ -1,0 +1,40 @@
+Pergunta:O seu erro parece estar numa condição. Dado o seguinte código:
+
+<code>x = 4
+
+if x 4 :
+  print("É verdade!")</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>É verdade!
+
+Consegue decifrar o que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:operador de comparação<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Se disse um operadore de comparação, então está correto!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+Pergunta:E, talvez um pouco mais complicado, qual é o pormenor que está agora em falta?
+
+<code>
+x = 4
+
+if x 4 :
+  print("É verdade!")
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>É verdade!<end>
+----------------------------------------------------------------------------------<end>
+Resposta:==<sep>operadore de igualdade<sep>dois iguais<sep>duas igualdade<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Se disse == (duas igualdades) então está correto!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Por vezes é normal baralharmos ou esquecermo-nos de que enquanto, para associar uma variável a um dado, usamos apenas UM sinal de igualdade, nas comparações usamos DOIS!
+
+Olhe agora para o seu algoritmo e veja se sempre seguiu essa sintaxe.<end>

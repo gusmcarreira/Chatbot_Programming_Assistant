@@ -1,0 +1,27 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição while, e parece ser algo bem normal de acontecer. Vou-lhe propor um desafio! Dado o seguinte código:
+
+<code>
+x = 0
+
+while x < (4 + 1 :
+  print(x)
+  x += 1
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>0
+1
+2
+3
+4
+
+Qual é o detalhe que está em falta? Um...<end>
+----------------------------------------------------------------------------------<end>
+Resposta:)<sep>parêtesis<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Se olharmos com atenção vemos que falta um parêtesis, mais especificamente o de fechamento antes dois dois pontos, seria então "while x < (4 + 1) :"<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:É normal que ás vezes nos escapem um ou outro parêtesis. Quando não estiver a ver onde possa estar o erro, tente procurar por um desses diabinhos 😈! Verifique agora no seu código se lhe estará a faltar algum!<end>

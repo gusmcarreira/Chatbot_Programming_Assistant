@@ -1,0 +1,33 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Dado o código:
+
+<code>
+x = 0
+
+while <= :
+  print(x)
+  x += 1
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>0
+1
+2
+
+Qual é o primeiro elemento que lhe parece estar em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:x<end>
+----------------------------------------------------------------------------------<end>
+Resposta:Em falta está a varável "x".<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Pergunta:E qual é o outro elemento que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:3<sep>três<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Por fim, falta-nos o nosso outro dado da comparação, ou seja o 3.<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Quando declaramos um while, precisamos de fazer uma comparação entre DOIS dados. Veja agora, olhando para o seu código, se sempre faz isso.<end>

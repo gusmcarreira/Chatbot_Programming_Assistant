@@ -3,10 +3,10 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-from actions.custom.modelqa import answer_questions_model
-from actions.custom.search_documents import search_in_documents
-from actions.custom.get_whole_answer import get_wanted_whole_answer
-from actions.paths import doc_idx_directory
+from custom.modelqa import answer_questions_model
+from custom.search_documents import search_in_documents
+from custom.get_whole_answer import get_wanted_whole_answer
+from paths import doc_idx_directory
 
 
 # Action to answer general questions
@@ -38,6 +38,10 @@ class ActionAnswerQuestions(Action):
                 wanted_answer = "Um exemplo seria:\n" + wanted_answer.split("Exemplo:")[1]
             else:
                 wanted_answer = "Desculpe, de momento não me lembro de nenhum exemplo!"
+
+        else:
+            if len(wanted_answer) == 0:
+                wanted_answer = "Desculpe estou com dificuldades a responder 😥! Vou treinar para a próxima conseguir ajudar!"
 
         dispatcher.utter_message(text=wanted_answer)
 

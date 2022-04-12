@@ -1,0 +1,21 @@
+Pergunta:O seu erro estar na declaração de uma função. Para declarar uma função é necessário a palavra-chave "def" e o nome da função. Para além disso diga (por ordem e todos seguidos) quais os sinais de pontuação que seguem o nome da função?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:():<end>
+----------------------------------------------------------------------------------<end>
+Opções:();<sep>:;<sep>():<sep>(),<end>
+----------------------------------------------------------------------------------<end>
+Explicação:A palavra chave "def" e o nome da função são seguidos pelo uso de () dois parêtesis (abertura e fechamento) e de : dois pontos.<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Pergunta:Agora dando como exemplo o nome "nome_funcao", como faria a sua declaração?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:def nome_funcao():<end>
+----------------------------------------------------------------------------------<end>
+Opções:def nome_funcao()<sep>def nome_funcao(:<sep>def nome_funcao(:<sep>def nome_funcao():<end>
+----------------------------------------------------------------------------------<end>
+Explicação:A opção correta seria "def nome_funcao():"<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Veja agora no seu código se segue esta sintaxe. Tenha especial atenção na utilização dos dois parêtesis, é normal que por vezes nos esqueçamos deles, ou ainda mais comum, de usar o de fechamento.<end>

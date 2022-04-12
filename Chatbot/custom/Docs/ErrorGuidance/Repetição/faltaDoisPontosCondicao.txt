@@ -1,0 +1,18 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição. Veja com atenção e tente decifrar o que falta no seguinte código:
+
+<code>
+cores = ["vermelho", "preto", "azul"]
+
+for x in cores
+  print(x)
+</code>
+
+Consegue decifrar o pequeno pormenor que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta::<sep>dois pontos<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Estão em falta os dois pontos depois de "for x in cores", seria então "for x in cores:"<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Como na declaração de funções e condições, a declaração de uma repetição deve acabar com : (dois pontos). Agora olhando para o seu algoritmo, veja se sempre segue esta sintaxe.<end>

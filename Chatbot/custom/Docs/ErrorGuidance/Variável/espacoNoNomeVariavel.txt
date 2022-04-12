@@ -1,0 +1,11 @@
+Pergunta:O seu erro parece ser na declaração de uma variável. O nome de uma variável segue algumas regras, parece ERRADA?<end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:Pode começar com uma letra<sep>Não pode começar com um número<sep>Pode conter espaços<end>
+----------------------------------------------------------------------------------<end>
+Resposta:Pode conter espaços<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Uma variável não pode conter espaços no seu nome!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint: Por vezes nem nos apercebemos que deixamos um espaço entre as palavras do nome da nossa variável. Veja se talvez tenha sido esse o seu erro.<end>

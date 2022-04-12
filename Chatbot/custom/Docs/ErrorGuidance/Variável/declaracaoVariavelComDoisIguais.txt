@@ -1,0 +1,11 @@
+Pergunta:O seu erro parece ser na declaração de uma variável, digamos que queriamos declara a variavel var1, com a string Olá, como o faria?<end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:var1 = "Olá"<sep>var1: "Olá"<sep>var2 == "Olá"<end>
+----------------------------------------------------------------------------------<end>
+Resposta:var1 = "Olá"<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Por vezes podemos criar alguma confusão quando criamos uma variável com as comparações. Nas variaveis apenas uma igualade é usada!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Olhando agora para o seu algoritmos, veja se talvez esse tenha sido o seu erro.<end>

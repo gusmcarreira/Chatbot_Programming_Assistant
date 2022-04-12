@@ -94,7 +94,6 @@ rules:
   - intent: deny
   - action: utter_goodbye
 
-
 - rule: (EG) Check answer
   condition:
   - active_loop: form_eg_answer
@@ -112,13 +111,4 @@ rules:
   - action: action_eg_followup_concept
   - action: form_eg_answer
   - active_loop: form_eg_answer
-
-- rule: (EG) Answer from Button
-  condition:
-    - active_loop: null
-  steps:
-  - action: action_eg_check_options
-  - action: form_eg_answer
-  - active_loop: form_eg_answer
-
 # ------------------------------------------------------

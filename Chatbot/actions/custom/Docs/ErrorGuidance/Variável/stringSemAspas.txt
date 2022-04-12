@@ -1,5 +1,0 @@
-Pergunta:O seu erro parece ser na declaração de uma variável, digamos que queriamos declara a variavel var1, com a string Olá, como o faria?|end|
-Opções:var1 = Olá// var1 = "Olá"// var2 = "Olá//var1 = Olá"|end|
-Resposta:var1 = "Olá"|end|
--#-
-Checkpoint: A diferença entre cada uma das opções está nas aspas, um erro bastante comum é esquecermo-nos de usar as aspas, ou ainda mais comum, uma delas, veja agora se talvez esse tenha sido o seu erro.|end|

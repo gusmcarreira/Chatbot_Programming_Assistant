@@ -1,0 +1,11 @@
+Pergunta:O seu erro parece ser na declaração de uma variável, digamos que queriamos declara a variavel var1, com a string Olá, como o faria?<end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:var1 = Olá<sep>var1 = "Olá"<sep>var1 = "Olá<sep>var1 = Olá"<end>
+----------------------------------------------------------------------------------<end>
+Resposta:var1 = "Olá"<end>
+----------------------------------------------------------------------------------<end>
+Explicação:A diferença entre cada uma das opções está nas aspas, um erro bastante comum é esquecermo-nos de usar as aspas, ou ainda mais comum, uma delas. A resposta correta é aquela que envolve (dos dois lados) a string em aspas "Olá".<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Olhando com atenção para o seu algoritmo veja se não lhe terá escpado um desses diabinhos 😈!<end>

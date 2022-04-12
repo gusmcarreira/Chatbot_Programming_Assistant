@@ -1,0 +1,41 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Dado o seguinte código:
+
+<code>
+x = 4
+
+while x 4 :
+  print(x)
+  x += 1
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>maçã
+banana
+laranja
+
+Consegue decifrar o que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:Operador de comparação<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Se disse um operadore de comparação, então acertou!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Pergunta:E, talvez um pouco mais complicado, qual é o pormenor que está agora em falta?
+
+<code>
+x = 4
+
+while x = 4 :
+  print(x)
+  x += 1
+</code><end>
+----------------------------------------------------------------------------------<end>
+Resposta:=<sep>igual<sep>igualdade<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Se disse um = (igualdade) entã acertou!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Por vezes é normal baralharmos ou esquecermo-nos de que enquanto, para associar uma variável a um dado, usamos apenas UM sinal de igualdade, nas comparações usamos DOIS! Agora olhando para o seu algoritmo, veja se sempre segue esta sintaxe!<end>

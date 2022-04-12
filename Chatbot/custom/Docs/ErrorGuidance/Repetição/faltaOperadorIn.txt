@@ -1,0 +1,18 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição for. Dado o seguinte código:
+
+<code>
+cores = ["vermelho", "preto", "azul"]
+
+for x  cores:
+  print(x)
+</code>
+
+Sabe dizer o que falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:in<sep>operador in<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Em falta está o operador "in", depois do "x" e anted de "cores", a forma correta seria então "for x in cores:"<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:A declaração de uma repetição for segue algumas regras, nomeadamente uma variável de indexação (o nosso x), o objeto que desejamos iterar (as nossas cores), e ENTRE ESTES DOIS deve estar o operadore in. Olhando agora para o seu algoritmo, veja se sempre segue esta sintaxe!.<end>

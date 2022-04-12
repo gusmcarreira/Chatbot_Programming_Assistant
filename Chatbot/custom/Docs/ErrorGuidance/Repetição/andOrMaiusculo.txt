@@ -1,0 +1,11 @@
+Pergunta:O seu erro parece estar especificamente no operador and/or. Digamos que tem as seguintes variações do operador "and", qual diria ser a correta?<end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:AND<sep>and<sep>And<end>
+----------------------------------------------------------------------------------<end>
+Resposta:and<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Os operadores "and" e "or" devem ser sempre escritos com letras minúsculas!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Atentado agora no seu código veja se terá sempre seguido esta sintaxe.<end>

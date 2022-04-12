@@ -1,5 +1,0 @@
-Faltou parêntesis-->Função/faltaParentesis.txt
--#-
-Faltou vírgula para separar argumentos-->Função/faltaVirgula.txt
--#-
-Faltou utilizar :-->Função/faltaDoisPontosFuncao.txt

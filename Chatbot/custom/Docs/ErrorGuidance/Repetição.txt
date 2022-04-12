@@ -1,0 +1,19 @@
+Falta dois pontos-->Repetição/faltaDoisPontos.txt
+-###-
+Repetição sem comparação-->Repetição/semComparacao.txt
+-###-
+Operador lógico maiúsculo-->Repetição/andOrMaiusculo.txt
+-###-
+Apenas um dado na comparação-->Repetição/apenasUmParComparacao.txt
+-###-
+Falta dois pontos na repetição-->Repetição/faltaDoisPontosCondicao.txt
+-###-
+Apenas uma igualdade na repetição-->Repetição/comparacaoApenasUmaIgualdade.txt
+-###-
+Faltou operador in-->Repetição/faltaOperadorIn.txt
+-###-
+Faltou um par de dados para o operador in-->Repetição/semParDadosIn.txt
+-###-
+Sintaxe do while sem comparação-->Repetição/sintaxeWhileInvalida.txt
+-###-
+Faltou um parêntesis de abertura ou fechamento-->Repetição/faltaParentesis.txt

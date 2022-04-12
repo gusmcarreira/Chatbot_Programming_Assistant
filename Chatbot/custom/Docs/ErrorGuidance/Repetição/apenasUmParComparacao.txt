@@ -1,0 +1,27 @@
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Vou-lhe propor um desafio! Dado o seguinte código:
+
+<code>
+x = 0
+
+while x <= :
+  print(x)
+  x += 1
+</code>
+
+Que é suposto gerar a seguinte saida:
+
+<code_print>0
+1
+2
+3
+4
+
+Qual é o detalhe que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta:4<sep>quatro<end>
+----------------------------------------------------------------------------------<end>
+Explicação:O pormenor que está em falta é o segundo dado da comparação, que neste caso é o número 4!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Quando usamos um while, é necessário fazer uma comparação entre dois dados, no caso do exemplo, entre o x e o número 4! Veja se sempre seguiu essa sintaxe no seu código.<end>

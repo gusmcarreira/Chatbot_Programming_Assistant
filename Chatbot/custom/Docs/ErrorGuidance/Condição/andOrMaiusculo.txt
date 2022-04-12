@@ -1,0 +1,11 @@
+Pergunta:O seu erro parece residir no operador lógico. Das opções abaixo qual diria ser a correta?<end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:AND<sep>and<sep>And<end>
+----------------------------------------------------------------------------------<end>
+Resposta:and<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Os operadores "and" e "or" devem ser sempre escritos com letras minúsculas!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Veja se segue essa sintaxe no seu algoritmo.<end>

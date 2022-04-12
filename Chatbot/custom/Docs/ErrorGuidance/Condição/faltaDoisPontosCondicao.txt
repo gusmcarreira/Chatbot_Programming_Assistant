@@ -1,0 +1,20 @@
+Pergunta:O seu erro parece estar na declaração de uma condição. Dado o seguinte código:
+
+<code>
+x = 4
+
+if x == 4
+  print("X é igual a 4")
+</code>
+
+Consegue descobrir o pequeno pormenor que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta::<sep>dois pontos<end>
+----------------------------------------------------------------------------------<end>
+Explicação:A resposta seria os dois pontos!<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Como na declaração de funções e repetições, a declaração de uma condição deve acabar com : (dois pontos), no exemplo a forma correta seria "if x == 4:".
+
+Veja agora no seu código se esse pormenor lhe terá escapado!<end>

@@ -1,0 +1,19 @@
+Pergunta:O seu erro parece ser na declaração de uma repetição while. Dado o seguinte código:
+
+<code>
+x = 4
+
+while x < 4
+  print(x)
+  x += 1
+</code>
+
+Consegue decifrar o pequeno pormenor que está em falta?<end>
+----------------------------------------------------------------------------------<end>
+Resposta::<sep>dois pontos<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Estão em falta os dois pontos depois do "while x < 4", seria então "while x < 4:"<end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:Como na declaração de funções e condições, a declaração de uma repetição deve acabar com : (dois pontos). Agora olhando para o seu algoritmo, veja se sempre segue esta sintaxe.<end>
