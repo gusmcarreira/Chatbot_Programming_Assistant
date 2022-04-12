@@ -84,7 +84,7 @@ São os ficheiros de texto que estão __dentro das pastas__ na pasta __ErrorGuid
 <a id="errors_sintaxe_explicacao"></a>
 ### 3.2 Explicação dos ficheiros
 * A alteração das perguntas não tem qualquer implicação no código nem no chatbot (ou seja não precisa de ser treinado), desde que siga as regras explicadas [aqui](#ficheiros_perguntas)
-* Se alterar a escrita de uma mensagem de error, terá de alterar também o ficheiro onde aponta para o caminho das suas perguntas [aqui](#ficheiros_caminhos)
+* Se alterar a escrita de uma mensagem de erro, terá de alterar também o ficheiro onde aponta para o caminho das suas perguntas [aqui](#ficheiros_caminhos)
 
 <a id="ficheiros_caminhos"></a>
 #### 3.2.1 Ficheiros com os caminhos
