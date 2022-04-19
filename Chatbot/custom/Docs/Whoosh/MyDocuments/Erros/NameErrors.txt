@@ -1,5 +1,3 @@
-O erro NameError é um que ocorre, dentre outros motivos, durante o uso ou declaração incorreta de variáveis.
--#-
 O erro NameError ocorre, dentre outros motivos, durante o uso ou declaração incorreta de variáveis.
 
 <code_print>#Estará a tentar utilizar uma variável inexistente?
@@ -22,6 +20,8 @@ primt("Olá")
 </code>
 
 Os nomes das funções precisam ser escritos de forma igual à sua declaração. Observe que no código acima nós escrevemos PRIMT ao invés de PRINT, e por isso o Python não localizou isso, uma vez que ele não foi definido.
+
+Sugestões:Quando ocorrem os SyntaxErrors<sep>Quando ocorrem os TypeErrors
 
 
 

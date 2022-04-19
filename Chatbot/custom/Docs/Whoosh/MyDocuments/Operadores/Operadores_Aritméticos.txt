@@ -1,46 +1,54 @@
-Em Python os operadores aritméticos são:
+Além de armazenarem dados, um dos grandes ganhos no uso de variáveis é poder realizar operações em seus dados.
+
+Exemplo:
 
 <code>
-+
-soma dois valores
-5 + 7 resulta em 7
+x = 2
+y = 3
+resultado = x + y
+</code>
+
+Onde na primeira linha nós criamos uma variável de nome x e guardamos o valor 2, na segunda linha criamos uma variável de valor 3, e por fim, criamos uma variável resultado que guardará o resultado da operação matemática de soma de x com y (5).
+
+Em python existem algumas particularidade na hora de realizar operações matemáticas, por vezes não são utilizados os mesmos simbolos que estamos acostumados:
+
+<code>
+Operador matemárico: Soma
+Símbolo da matemática: +
+Simbolo em programação: +
 </code>
 
 <code>
--
-subtrai dois valores
-5 - 2 resulta em 3
+Operador matemárico: Subtração
+Símbolo da matemática: -
+Simbolo em programação: -
 </code>
 
 <code>
-*</th>
-multiplica dois valores
-5 * 2 resulta em 10
+Operador matemárico: Multiplicação
+Símbolo da matemática: x
+Simbolo em programação: *
 </code>
 
 <code>
-/
-divide dois valores (sem arredondar)
-5 / 2 resulta em 2.5
+Operador matemárico: Divisão
+Símbolo da matemática: ÷
+Simbolo em programação: /
 </code>
 
 <code>
-//
-divide dois valores (arredondando para baixo)
-5 // 2 resulta em 2
+Operador matemárico: Potência
+Símbolo da matemática:
+Simbolo em programação: **
 </code>
 
 <code>
-%
-resto da divisão
-5 % 2 resulta em 1
+Operador matemárico: Raiz
+Símbolo da matemática:
+Simbolo em programação: variavel**.5
 </code>
 
-<code>
-**
-exponenciação
-5 ** 2 resulta em 25
-</code>
+Sugestões:Como se faz a soma?<sep>Como se faz a subtração?<sep>Como se faz a divisão?<sep>Como se faz a multiplicação?
 -#-
 A soma é feita com o operador +
 
@@ -56,7 +64,7 @@ print(resultado)
 
 <code_print>12.5
 -#-
-A subtração é feita com o operador -
+Para subtrair usa-se o operador -
 
 Exemplo:
 	
@@ -70,7 +78,7 @@ print(resultado)
 
 <code_print>1.5
 -#-
-A multiplicação é feita com o operador *
+Para multiplicar usa-se o operador *
 
 Exemplo:
 
@@ -84,7 +92,7 @@ print(resultado)
 
 <code_print>10
 -#-
-A divisão é feita com o operador /
+Para dividir, diferente do nosso dia-a-dia, usa-se o operador /
 
 Exemplo:
 

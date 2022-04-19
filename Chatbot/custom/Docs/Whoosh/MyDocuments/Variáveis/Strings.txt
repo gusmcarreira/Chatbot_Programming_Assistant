@@ -1,0 +1,26 @@
+Strings são sequências (cadeias) de caracteres ou, de forma simples, textos. Noutras palavras, uma string é simplesmente uma sequência de zero ou mais letras juntas.
+
+Exemplo:
+
+<code>
+string_vazia = ''
+uma_letra = "a"
+frase = 'sou um chatbot'
+</code>
+
+Strings podem ser declaradas usando aspas simples ou duplas, o que é sempre necessário, se não for dessa forma o Python não compreenderá que você está armazenando um texto.
+
+Sugestões:Como converter um dado em string?<sep>Como obter o tipo de um dado?
+-#-
+Para converter um dado para string usa-se a função str().
+
+Exemplo:
+
+<code>
+# Converte inteiro para string
+x = 2
+s = str(x)
+print(s)
+</code>
+
+Sugestões:Como obter o tipo de um dado?

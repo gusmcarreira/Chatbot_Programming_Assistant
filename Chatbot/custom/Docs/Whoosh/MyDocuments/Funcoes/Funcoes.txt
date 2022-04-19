@@ -1,51 +1,95 @@
-Em Python uma função é definida pela palavra-chave def.
+Muitas das vezes existem situações nas quais uma dada porção do nosso programa será utilizada múltiplas vezes, em diferentes partes do programa, ou até mesmo por outros programas.
+
+Uma das principais formas de se criar componentes reusáveis nas linguagens de programação são as chamadas funções. Uma função é basicamente um trecho de código (um procedimento, um algoritmo) que pode ser usado várias vezes.
+
+A criação de uma função é dada pela seguinte sintaxeA sintaxe:
+
+<code_print> def nome_funcao():
 
 Exemplo:
 
 <code>
-def funcao_exemplo():
-  print("Olá de dentro da função")
-
-funcao_exemplo()
+1 def funcao_exemplo():
+2   print("Olá da função")
+3
+4 funcao_exemplo()
 </code>
 
-<code_print>Olá de dentro da função
+<code_print>Olá da função
 
-A função apenas é realizada ao chamar a mesma, o que é feito pelo nome da função seguido de parêntesis. 
+Importante notar que no exemplo temos a declaração de uma função "funcao_exemplo", o seu escopo (instruções a correr quando esta é chamada), deve estar marcada pelo devido espaçamento (linha 2).
+
+A função apenas é realizada ao chamar a mesma, o que é feito pelo nome da função seguida de parêntesis (linha 4).
+
+Sugestões:Função com parâmetros<sep>Escopo de uma função
 -#-
-Informação pode ser passada a funções como parâmetros. Parâmetros são especificados depois do nome da função (dentro dos parêntesis).
+Informação pode ser passada a funções como parâmetro/s. Parâmetros são especificados depois do nome da função (dentro dos parêntesis).
 
-Podem ser usados quantos argumentos quiser, mas tenha o cuidado dos separa com uma , (vírgula).
+<code_print>def nome_funcao(par1, par2):
+
+Podem ser usados quantos parâmetros quiser, mas tenha o cuidado dos separa com uma vírgula (,).
 
 Exemplo:
 
 <code>
-def exemplo_func(var1, var2):
-  print(var1 + var2)
+def exemplo_add_func(num1, num2):
+  print(num1 + num2)
 
-exemplo_func("Eu sou um ", "Chatbot")
+exemplo_add_func(1, 4)
 </code>
 
-<code_print>Eu sou um Chatbot
+<code_print>5
 
-O exemplo acima é de uma função com dois parâmetros (var1 e var2). Quando a função é chamada passamos os dois argumentos que podem depois ser usados dentro da função.
+O exemplo acima é de uma função "exemplo_add_func" com dois parâmetros "num1" e "num2". Quando a função é chamada, passamos dois argumentos, que podem depois ser usados dentro da função, no seu escopo.
 
 Cuidado:Se tentar chamar a função, dando-lhe menos parâmetros que definiu na sua declaração, python retornará um erro.
+
+A função acima não retorna nenhum dado, apenas imprime um.
+
+Sugestões:Retorno de uma função<sep>Escopo de uma função
 -#-
-O retorno de uma função é quando queremos que esta devolve um valor, que é feito através da palavra-chave "return".
+O retorno de uma função é quando queremos que a nossa função devolva um valor, que é feito através da palavra-chave "return".
 
 Exemplo:
 
 <code>
-def exemplo_func(var1):
-  var2 = 1 + var1
-  return var2
+def exemplo_func(num):
+  resultado_retornado = 1 + num
+  return resultado_retornado
 
-print(1 + exemplo_func(1))
+resultado_total = 1 + exemplo_func(1)
+
+print(resultado_total)
 </code>
 
 <code_print>3
 
-No exemplo acima estamos a imprimir o resultado de 1 + 2 (2, pois na função retornamos o valor do parâmetro + 1).
+No exemplo acima estamos a imprimir o resultado de 1 + o retorno da nossa função (que neste caso é 1 mais o parâmetro que lhe demos (1)).
 
 Nota: O exemplo acima só é possivel pois estamos a RETORNAR o valor que queremos usar para podermos usar fora da função.
+
+Sugestões:Escopo de uma função
+-#-
+O escopo de uma função é o bloco de código que será executado apenas quando esta é chamada.
+
+Este escopo é determinado pelo número de espaços (indentação) que vem depois da sua declaração, tendo de ser no MINIMO 1, no entanto, tem de ser SEMPRE O MESMO NÚMERO para os diferentes blocos de código.
+
+Exemplo:
+
+<code>
+num1 = 0
+
+def exemplo_func(num1):
+ #Escopo função
+ | if num1 < 3:
+ |  #Escopo do if da função
+ |  | print("Menor que 3")
+ | if num1 == 0:
+ |  #Escopo outro if
+ |  | print("Igual a 0")
+
+</code>
+
+Os escopos são portanto controlados pelo número de espaços. Sendo que o que está no escopo das condições/repetições apenas será executado se as suas condições forem verdadeiras.
+
+Nota: o simbolo (|), está presente meramente para demonstração dos diferentes escopos (indentações).

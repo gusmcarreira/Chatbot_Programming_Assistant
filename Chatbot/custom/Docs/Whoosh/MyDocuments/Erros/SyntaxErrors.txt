@@ -1,5 +1,3 @@
-SyntaxError é quando você tenta escrever uma instrução incorretamente, violando alguma das regras da linguagem de programação. Como consequência o Python não conseguirá executar o seu algoritmo e irá notificá-lo que houve um erro de sintaxe.
--#-
 SyntaxError ocorre quando você escreve uma instrução incorretamente, violando alguma das regras da linguagem de programação. Como consequência o Python não conseguirá executar o seu algoritmo e irá notificá-lo que houve um erro de sintaxe.
 
 #Faltará : (dois pontos) em condições, repetições, ou função?
@@ -50,3 +48,5 @@ Exemplo:
 <code>x = 2 +</code>
 
 As operações matemáticas devem ser realizadas entre PARES de valores/variáveis. No exemplo acima faltou um desses dados.
+
+Sugestões:Quando ocorrem os NameErrors<sep>Quando ocorrem os TypeErrors

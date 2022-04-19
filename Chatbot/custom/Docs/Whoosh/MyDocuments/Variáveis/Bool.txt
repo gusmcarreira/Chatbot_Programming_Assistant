@@ -1,0 +1,23 @@
+Variáveis do tipo booleano que são úteis para representar dados que assumem apenas dois valores.
+
+Pense em uma lâmpada, ela está acesa ou apagada. Você está com ou sem Internet. Em casos como esses, nós utilizamos os dados True ou False para representar a informação. Por exemplo, a lâmpada está acesa (True) ou apagada (False). Você está conectado (True) ou desconectado (False):
+
+Exemplo:
+
+<code>
+lampada_acesa = True
+conectado_internet = False
+</code>
+
+Vejamos mais alguns exemplos do uso de operações lógicas (booleanas):
+
+<code>
+a = 4 > 0
+print(a)
+</code>
+
+<code_print>True
+
+O resultado vem da comparação (4 > 0) que resulta em True (verdadeiro), pois 4 é maior que 0. Este dado é depois armazenado na nossa variável "a".
+
+Sugestões:Como obter o tipo de um dado?<sep>Quais são os operadores lógicos?<sep>Quais são os operadores lógicos?

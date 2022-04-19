@@ -10,8 +10,9 @@ from whoosh.index import create_in, open_dir
 from whoosh.lang.snowball.portugese import PortugueseStemmer
 from whoosh.analysis import StemmingAnalyzer, LowercaseFilter, CharsetFilter
 from whoosh.support.charset import accent_map
-from paths import doc_directory, index_directory
-
+# from paths import doc_directory, index_directory
+doc_directory = "MyDocuments"
+index_directory = "index"
 
 ########## 1st Create the schema ##############
 def create_schema_index(index_directory):
@@ -26,12 +27,9 @@ def create_schema_index(index_directory):
     )
 
     # ---------------- CREATING INDEX ---------------
-    # Delete directory if it already exists
     if os.path.isdir(index_directory):
         shutil.rmtree(index_directory)
-    # Create index directory
     os.mkdir(index_directory)
-    # Create index
     create_in(index_directory, schema)
     print("Index Schema Created")
 

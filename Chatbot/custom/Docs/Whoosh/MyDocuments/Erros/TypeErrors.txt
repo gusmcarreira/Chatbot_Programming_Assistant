@@ -1,6 +1,4 @@
-Um TypeError é um erro retornado quando se tenta realizar operações misturando tipos de variáveis diferentes.
--#-
-Os programas são formados por dados de diferentes tipos: números, booleanos, String, entre outros. TypeError é retornado quando se tenta realizar operações misturando tipos diferentes. 
+Os programas são formados por dados de diferentes tipos: números, booleanos, String, entre outros. TypeError é retornado quando se tenta realizar operações misturando tipos diferentes.
 
 #Estará a tentar realizar a soma entre números e Strings?
 
@@ -66,3 +64,5 @@ y()
 </code>
 
 Variáveis do tipo String, numéricas e boleanas, não devem ser usadas com o uso de parêntesis.
+
+Sugestões:Quando ocorrem os NameErrors<sep>Quando ocorrem os SyntaxErrors
