@@ -12,4 +12,4 @@ venv/bin/python3 -m pip install rasa==3.1
 venv/bin/pip3 install Transformers 
 venv/bin/pip3 install Whoosh
 # A iniciar o RASA (de maneira a perimitir a integração no website) e o servidor das ações (das funções do Python)
-venv/bin/rasa run --enable-api --cors="*" --endpoints "endpoints.yml" & venv/bin/rasa run actions
+venv/bin/rasa run --enable-api --cors="*" --endpoints "endpoints.yml" --debug --log-file logs/rasa_logs.log & venv/bin/rasa run actions -vv > logs/action_logs.log 2>&1
