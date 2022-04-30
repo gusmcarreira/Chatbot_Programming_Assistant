@@ -1,6 +1,6 @@
 from whoosh.index import open_dir
 from whoosh.qparser import QueryParser
-import spacy
+# import spacy
 from paths import index_directory, doc_idx_directory
 # doc_idx_directory = "Docs/Whoosh/"
 # index_directory = "index"
@@ -15,13 +15,13 @@ def search_in_documents(search_string):
     elif (("if" or "elif" or "else") in search_string) and not (("condição" or "instrução" or "condicional") in search_string):
         search_string = "condicional"
     # ------------- LEMMATIZATION OF SEARCH STRING -----------
-    new_search_string = ""
-    # Portuguese pipeline
-    nlp = spacy.load("pt_core_news_sm")
-    doc = nlp(search_string)
-    for token in doc:
-        if token.pos_ == 'NOUN' or "ADJ":
-            new_search_string = new_search_string + " " + token.lemma_
+    # new_search_string = ""
+    # # Portuguese pipeline
+    # nlp = spacy.load("pt_core_news_md")
+    # doc = nlp(search_string)
+    # for token in doc:
+    #     if token.pos_ == 'NOUN' or "ADJ":
+    #         new_search_string = new_search_string + " " + token.lemma_
     # ---------------- OPENING INDEX ---------------
     ix = open_dir(doc_idx_directory + index_directory)
     # -------------- SEARCH DOCUMENTS ---------------

@@ -11,7 +11,7 @@ def answer_questions_model(context, question):
     context = re.sub('Sugestões\:.+[\-\#\-]*', '', context)
     nlp = pipeline("question-answering", model=question_answering_model)
     result = nlp(question=question, context=context)
-    
+
     return [result['answer'], round(result['score'], 4)]
 
 

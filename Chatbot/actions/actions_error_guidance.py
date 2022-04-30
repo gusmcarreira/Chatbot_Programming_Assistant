@@ -30,7 +30,8 @@ class ActionEgResetSlotStart(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        return [SlotSet("slot_eg_start", None), SlotSet("slot_eg_answer", None), SlotSet("slot_eg_question_index", 0)]
+        return [SlotSet("slot_eg_start", None), SlotSet("slot_eg_answer", None), SlotSet("slot_eg_question_index", 0),
+                SlotSet("slot_eh_start", None)]
 
 
 # Function to START asking the questions

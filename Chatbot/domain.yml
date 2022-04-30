@@ -13,12 +13,16 @@ intents:
   - bot_challenge
   - ask_question
   - ask_example
+  - ask_help
   - EXTERNAL_ERROR_MESSAGE
+  - EXTERNAL_CODE_MESSAGE
 # ------------------ ENTITIES -----------------
 entities:
 ## ERROR GUIDANCE ##
 - error_type
 - error_message
+- code_message_answer
+- code_test_case
 - answer_concept_wanted
 ######################
 # ------------------- SLOTS -------------------
@@ -81,7 +85,57 @@ slots:
     influence_conversation: true
     mappings:
       - type: custom
+
   ######################
+  ### EXERCISE HELP ####
+  slot_eh_start:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  slot_eh_answer:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_eh_answer
+
+  slot_eh_code_answer:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: code_message_answer
+
+  slot_eh_situation:
+      type: text
+      mappings:
+        - type: custom
+
+  slot_eh_test_case:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: code_test_case
+
+  slot_eh_concepts_options:
+    type: list
+    mappings:
+      - type: custom
+
+  slot_eh_question_ask:
+    type: text
+    mappings:
+      - type: custom
+
+  slot_eh_second_try:
+    type: text
+    mappings:
+      - type: custom
+  ######################
+
 # ------------------- FORMS -------------------
 forms:
   ## ERROR GUIDANCE ##
@@ -93,6 +147,16 @@ forms:
     required_slots:
         - slot_eg_answer
   ######################
+  ## ERROR GUIDANCE ##
+  form_eh_start:
+    required_slots:
+      - slot_eh_start
+
+  form_eh_answer:
+    required_slots:
+      - slot_eh_answer
+  ######################
+
 # ------------------ RESPONSES ------------------
 responses:
   utter_greet:
@@ -134,6 +198,9 @@ responses:
   utter_ask_form_eg_start_slot_eg_start:
     - text: "Parece estar com alguns problemas, gostaria de uma ajudinha? (sim/não)"
 
+  utter_ask_form_eh_start_slot_eh_start:
+    - text: "Parece estar há algum tempo preso neste exercício, proponho um diálogo que talvez o ajude a perceber melhor o exercício e o que ele envolve, o que diz? (sim/não)"
+
   utter_are_you_sure:
   - text: "Tem a certeza?"
 
@@ -150,9 +217,17 @@ responses:
 
 # ------------------ ACTIONS ------------------
 actions:
-- action_eg_reset_slot_start
-- action_eg_start
-- action_eg_check_answer
-- action_eg_followup_concept
-- action_answer_questions
-- validate_form_eg_start
+- action_answer_questions                         #-> Answer student questions         # =========== GENERAL ==========
+- action_eg_reset_slot_start                      #-> Reset slots
+- validate_form_eg_start                          #-> Check for yes or no              # ======= ERROR GUIDANCE =======
+- action_eg_start                                 #-> Start error guidance
+- action_eg_check_answer                          #-> Check student answers
+- action_eg_followup_concept                      #-> Send following questions
+- validate_form_eh_start                          #-> Check for yes or no               # == EXERCISE COMPREHENSION ===
+- validate_form_eh_answer
+- action_eh_test_case                             #-> Check test case answer
+- action_eh_concepts_included                     #-> Ask what concepts are included
+- action_eh_questions                             #-> Start asking amount each concept (vars, inputs, ...)
+- action_eh_concepts_order                        #-> Ask the order of the concepts
+- action_eh_check_answer                          #-> Check the correctness of the student's answers
+- action_eh_further_help                          #-> Student was not clarified

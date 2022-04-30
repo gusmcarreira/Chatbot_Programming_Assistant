@@ -85,6 +85,18 @@ nlu:
     - és um chatbot?
     - és um chatterbot?
 # ----------------------------------------------------
+- intent: ask_help
+  examples: |
+    - preciso ajuda no exercicio
+    - me ajuda com o exercicio?
+    - como se faz o exercicio
+    - me ajuda
+    - nao sei fazer o exercicio
+    - não entendo o exercicio
+    - não percebo
+    - estou com dificuldade no exercicio
+    - não sei como fazer o algoritmo
+
 # Regex-> one word OR two words OR two words divided by one or more (que|a|o|uma|um|em|de)
 - regex: answer_concept_wanted
   examples: |
@@ -121,6 +133,7 @@ nlu:
     - como se faz a [soma](answer_concept_wanted)?
     - como se [soma](answer_concept_wanted)?
     - como se usa o [and](answer_concept_wanted)?
+    - como se definem as [funções](answer_concept_wanted)?
     - como se define uma [função](answer_concept_wanted)?
     - como definir uma [repetição while](answer_concept_wanted)?
     - como definir um [for](answer_concept_wanted)?
@@ -194,6 +207,4 @@ nlu:
 #    - [Condição](error_type) [Comparação no else](error_message)
 
 - intent: EXTERNAL_CODE_MESSAGE
-  examples: |
-    - [OI](code_message_student) [OI](code_message_answer)
 # ----------------------------------------------------

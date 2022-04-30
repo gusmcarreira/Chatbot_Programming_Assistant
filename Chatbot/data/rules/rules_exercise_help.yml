@@ -1,0 +1,64 @@
+version: "3.1"
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"""
+# !!!!!!!!! EXERCISE HELP !!!!!!!!"""
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"""
+
+rules:
+
+# -------------------> INITIAL RULE  <------------------
+- rule: (EH) Activate - Prompt start exercise help?
+  condition:
+    - active_loop: null
+  steps:
+  - intent: EXTERNAL_CODE_MESSAGE
+  - action: form_eh_start
+  - active_loop: form_eh_start
+# ------------------------------------------------------
+
+# ----------------> DOES NOT WANT HELP <----------------
+- rule: (EH) Exit Form - Student does not want to start exercise help
+  condition:
+  - active_loop: form_eh_start
+  - slot_was_set:
+    - slot_eh_start: false
+  steps:
+  - action: form_eh_start
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+# ------------------------------------------------------
+
+# --------------------> WANTS HELP <--------------------
+- rule: (EH) Exit Form - Student wants help
+  condition:
+  - active_loop: form_eh_start
+  - slot_was_set:
+    - slot_eh_start: true
+  steps:
+  - action: form_eh_start
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_eh_test_case
+  - action: action_eg_reset_slot_start
+
+- rule: (EH) Activate Answer Loop
+  condition:
+  - active_loop: null
+  steps:
+  - action: form_eh_answer
+  - active_loop: form_eh_answer
+
+- rule: (EH) Check answer
+  condition:
+  - active_loop: form_eh_answer
+  steps:
+  - action: form_eh_answer
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_eh_check_answer
+#----------------------------------------------------
