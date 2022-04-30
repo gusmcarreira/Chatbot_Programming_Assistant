@@ -1,5 +1,5 @@
 import ast
-import astor
+# import astor
 
 class CodeInformation(ast.NodeVisitor):
     def __init__(self):
