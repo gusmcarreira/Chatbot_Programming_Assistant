@@ -8,4 +8,4 @@ index_directory = "index"
 
 # LANGUAGE MODELS BEING USED
 # QUESTION ANSWERING MODEL-> custom/modelqa.py
-question_answering_model = "pierreguillou/bert-base-cased-squad-v1.1-portuguese"
+question_answering_model = "./custom/bert-base-cased-squad-v1.1-portuguese"
