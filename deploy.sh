@@ -5,7 +5,7 @@ git clone https://github.com/gusmcarreira/Chatbot_Programming_Assistant.git
 # Alterar pasta para a do Chatbot
 cd Chatbot_Programming_Assistant/Chatbot
 # Instalar o RASA
-python -m pip install rasa
+python -m pip install rasa==3.1.0
 # Instalar outras bibliotecas necessárias
 pip install Transformers 
 pip install Whoosh
