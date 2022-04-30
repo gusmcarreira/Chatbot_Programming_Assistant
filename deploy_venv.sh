@@ -7,7 +7,7 @@ cd Chatbot_Programming_Assistant/Chatbot
 # Criar ambiente virtual
 python3 -m venv venv
 # Instalar o RASA
-venv/bin/python3 -m pip install rasa==3.1
+venv/bin/python3 -m pip install rasa
 # Instalar outras bibliotecas necessárias
 venv/bin/pip3 install Transformers 
 venv/bin/pip3 install Whoosh
