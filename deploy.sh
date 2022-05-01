@@ -9,6 +9,10 @@ python -m pip install rasa==3.1.0
 # Instalar outras bibliotecas necessárias
 pip install Transformers 
 pip install Whoosh
+# Clone question answering model onto the "custom" directory
+sudo apt update
+sudo apt install git-lfs
+git lfs clone https://huggingface.co/pierreguillou/bert-base-cased-squad-v1.1-portuguese custom
 # pip install spacy
 # python -m spacy download pt_core_news_md
 # pip install astor
