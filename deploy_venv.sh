@@ -12,9 +12,11 @@ venv/bin/python -m pip install rasa==3.1.0
 venv/bin/pip install Transformers 
 venv/bin/pip install Whoosh
 # Clone question answering model onto the "custom" directory
+cd custom
 # sudo apt update
 # sudo apt install git-lfs
-git lfs clone https://huggingface.co/pierreguillou/bert-base-cased-squad-v1.1-portuguese custom
+git lfs clone https://huggingface.co/pierreguillou/bert-base-cased-squad-v1.1-portuguese
+cd ..
 # venv/bin/pip install spacy
 # venv/bin/python -m spacy download pt_core_news_md
 # A iniciar o RASA (de maneira a perimitir a integração no website) e o servidor das ações (das funções do Python)
