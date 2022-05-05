@@ -148,6 +148,7 @@ nlu:
     - qual a sintaxe de um [for loop](answer_concept_wanted)?
     - qual a sintaxe de um [while](answer_concept_wanted)?
     - sintaxe de uma [condição if](answer_concept_wanted)?
+    - sintaxe da [instrução if] (answer_concept_wanted)
     - sintaxe de um [while](answer_concept_wanted)?
     - sintaxe da [instrução else](answer_concept_wanted)
     - sintaxe de uma [instrução else](answer_concept_wanted)
@@ -162,6 +163,11 @@ nlu:
     - quantos espaços é a [indentação](answer_concept_wanted)?
     - quantos espaços pode ter o [escopo de uma função](answer_concept_wanted)?
     - quantos espaços para o [escopo de uma função](answer_concept_wanted)?
+    - [escopo de uma condição](answer_concept_wanted)
+    - quantos espaços para o [escopo de uma condição](answer_concept_wanted)
+    - quantos espaços podem ter os [escopos das condições](answer_concept_wanted)
+    - quantos espaços tem o [escopo de uma condição](answer_concept_wanted)
+    - quantos espaços pode ter o [escopo de uma condição](answer_concept_wanted)
 
 
 - intent: ask_example

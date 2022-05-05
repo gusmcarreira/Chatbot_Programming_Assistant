@@ -14,6 +14,7 @@ def search_in_documents(search_string):
 
     elif (("if" or "elif" or "else") in search_string) and not (("condição" or "instrução" or "condicional") in search_string):
         search_string = "condicional"
+
     # ------------- LEMMATIZATION OF SEARCH STRING -----------
     # new_search_string = ""
     # # Portuguese pipeline

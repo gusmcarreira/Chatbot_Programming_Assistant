@@ -120,16 +120,6 @@ slots:
       - type: from_entity
         entity: code_test_case
 
-  slot_eh_concepts_options:
-    type: list
-    mappings:
-      - type: custom
-
-  slot_eh_question_ask:
-    type: text
-    mappings:
-      - type: custom
-
   slot_eh_second_try:
     type: text
     mappings:
@@ -225,9 +215,6 @@ actions:
 - action_eg_followup_concept                      #-> Send following questions
 - validate_form_eh_start                          #-> Check for yes or no               # == EXERCISE COMPREHENSION ===
 - validate_form_eh_answer
-- action_eh_test_case                             #-> Check test case answer
-- action_eh_concepts_included                     #-> Ask what concepts are included
-- action_eh_questions                             #-> Start asking amount each concept (vars, inputs, ...)
 - action_eh_concepts_order                        #-> Ask the order of the concepts
 - action_eh_check_answer                          #-> Check the correctness of the student's answers
 - action_eh_further_help                          #-> Student was not clarified

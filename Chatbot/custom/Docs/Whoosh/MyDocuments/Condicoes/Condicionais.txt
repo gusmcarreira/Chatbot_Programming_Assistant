@@ -1,4 +1,4 @@
-Uma condição ou condicional é uma capacidade importantíssima de uma linguagem de programação, necessária em praticamente todo programa de computador, mais especificamente a capacidade de tomar decisões baseadas em certas condições.
+Uma condição ou condicional é uma capacidade importantíssima de uma linguagem de programação, pois é o que permite a capacidade de tomar decisões baseadas em certas condições.
 
 Por exemplo, o levantamento de dinheiro num multibanco passa por uma condição: o valor desejado deve ser menor ou igual ao saldo da conta. Em outras palavras, só pode levantar o que possui.
 
@@ -108,7 +108,7 @@ Não está limitado a uma única instrução elif, pode utilizar várias.
 
 Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução else<sep>Escopo de uma condição
 -#-
-O escopo de uma condição é o bloco de código que será executado quando a sua condição se verifica.
+O escopo (de uma condição) é o bloco de código que será executado quando a sua condição se verifica.
 
 Esse escopo é determinado pelo número de espaços (indentação) que vem depois da sua declaração, tendo de ser no MINIMO 1, no entanto, tem de ser SEMPRE O MESMO NÚMERO para os diferentes blocos de código.
 
