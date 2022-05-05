@@ -1,5 +1,4 @@
 import ast
-# import astor
 
 class CodeInformation(ast.NodeVisitor):
     def __init__(self):
@@ -30,22 +29,26 @@ class CodeInformation(ast.NodeVisitor):
     # =============================== VARIABLES ===============================
     def visit_Assign(self, node):
         var_name = node.targets[0].id
+        self.all_concepts_map.append("Declaração de variável")
+        if "Declaração de variável" not in self.concepts_map:
+            self.concepts_map.append("Declaração de variável")
+
         if isinstance(node.value, ast.BinOp):
             new_var_value = self.visit(node.value)
             left = new_var_value[0]
             op = new_var_value[1]
             right = new_var_value[2]
-            wanted_var = 0
-            if isinstance(left, int):
-                wanted_var = left
-            else:
-                wanted_var = right
-            meaning_str = self.operation_meaning1(op) + " por " + str(wanted_var) + " a variável existente"
+            meaning_str = ""
+
+            if (isinstance(left, str)) and (isinstance(right, str)) and (op == "Add()"):
+                meaning_str = "Concatenação"
+            elif (isinstance(left, int)) and (isinstance(right, str)):
+                meaning_str = self.operation_meaning1(op) + " por " + str(wanted_var) + " a variável existente"
+            elif (isinstance(left, str)) and (isinstance(right, int)):
+                meaning_str = self.operation_meaning1(op) + " por " + str(wanted_var) + " a variável existente"
+
             self.all_concepts_map.append(meaning_str)
         else:
-            self.all_concepts_map.append("Declaração de variável")
-            if "Declaração de variável" not in self.concepts_map:
-                self.concepts_map.append("Declaração de variável")
             new_var_value = self.visit(node.value)
 
         self.number_of_variables += 1
@@ -192,11 +195,11 @@ class CodeInformation(ast.NodeVisitor):
 
         # Check what operation is being conducted
         try:
-            left_value = self.var_map[value_left_name][0]
+            left_value = self.var_map[value_left_name]
         except:
             left_value = value_left_name
         try:
-            right_value = self.var_map[value_right_name][0]
+            right_value = self.var_map[value_right_name]
         except:
             right_value = value_right_name
 
