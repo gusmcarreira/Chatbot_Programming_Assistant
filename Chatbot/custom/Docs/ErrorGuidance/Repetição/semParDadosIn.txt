@@ -30,4 +30,9 @@ Explicação:Neste caso, o que nos falta é o objeto que desejamos iterar, neste
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:É importante que a declaração de um for loop siga alguma determinada comparação em que de um lado temos a variaveis de indexação e do outro o objeto que desejamos iterar. Veja, tendo em atenção neste aspeto, se segue esta sintaxe no seu algoritmo.<end>
+Checkpoint:É importante que a declaração de um for loop tenha uma determinada comparação em que:
+
+<code_print>-- de um lado temos a variaveis de indexação;
+-- e do outro o objeto que desejamos iterar.
+
+Veja, tendo em atenção neste aspeto, se segue esta sintaxe no seu algoritmo e se sempre tem dois dados de comparação.<end>

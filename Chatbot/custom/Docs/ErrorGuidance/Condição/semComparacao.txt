@@ -1,4 +1,4 @@
-Pergunta:O seu erro residir numa condição. Vou-lhe propor um desafio! Dado o código:
+Pergunta:O seu erro ser numa condição. Vou-lhe propor um desafio! Dado o código:
 
 <code>x = 0
 
@@ -19,6 +19,6 @@ Explicação:A resposta correta é a comparação, ou mais especificamente, x ==
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Ao contrário da instrução else, quando usamos uma instrução if ou elif, necessitamos incluir uma comparação, no exemplo a cima seria o correto seria "if x == 0:".
+Checkpoint:Ao contrário da instrução else, quando usamos uma instrução if ou elif, necessitamos incluir uma comparação, no exemplo acima o correto seria "if x == 0:".
 
 Veja agora no seu código se quando usou um if e/ou elif sempre usou uma comparação!<end>

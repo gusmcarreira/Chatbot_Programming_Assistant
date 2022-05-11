@@ -57,6 +57,12 @@ class ValidateFormEhAnswer(FormValidationAction):
     ) -> Dict[Text, Any]:
 
         wanted_situation = tracker.get_slot("slot_eh_situation")
-        student_answer = tracker.latest_message["text"]
+        if wanted_situation == "Conclusion":
+            wanted_intent = tracker.latest_message['intent'].get('name')
+            if wanted_intent != "affirm" or wanted_intent != "deny":
+                dispatcher.utter_message(text="Responda apenas sim ou não")
+                return {"slot_eg_start": None}
+        else:
+            student_answer = tracker.latest_message["text"]
 
         return {"slot_eh_answer": student_answer}

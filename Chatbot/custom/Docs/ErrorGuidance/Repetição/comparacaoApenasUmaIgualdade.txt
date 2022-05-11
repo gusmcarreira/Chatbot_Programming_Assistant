@@ -18,7 +18,7 @@ Consegue decifrar o que está em falta?<end>
 ----------------------------------------------------------------------------------<end>
 Resposta:Operador de comparação<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Se disse um operadore de comparação, então acertou!<end>
+Explicação:Se disse um operador de comparação, então acertou!<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
@@ -38,4 +38,6 @@ Explicação:Se disse um = (igualdade) entã acertou!<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Por vezes é normal baralharmos ou esquecermo-nos de que enquanto, para associar uma variável a um dado, usamos apenas UM sinal de igualdade, nas comparações usamos DOIS! Agora olhando para o seu algoritmo, veja se sempre segue esta sintaxe!<end>
+Checkpoint:Por vezes é normal baralharmos variáveis e comparações, não se esqueça que nas comparações usam-se DOIS sinais de igualdade (==)!
+
+Agora olhando para o seu algoritmo, veja se sempre segue esta sintaxe!<end>

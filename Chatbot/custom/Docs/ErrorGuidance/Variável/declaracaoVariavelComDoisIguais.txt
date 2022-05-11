@@ -4,8 +4,6 @@ Opções_Iniciais:var1 = "Olá"<sep>var1: "Olá"<sep>var2 == "Olá"<end>
 ----------------------------------------------------------------------------------<end>
 Resposta:var1 = "Olá"<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Por vezes podemos criar alguma confusão quando criamos uma variável com as comparações. Nas variaveis apenas uma igualade é usada!<end>
-----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Olhando agora para o seu algoritmos, veja se talvez esse tenha sido o seu erro.<end>
+Checkpoint:Por vezes pode haver uma certa confusão entre as variáveis e as condições, no que toca às igualdades. Nas variaveis apenas uma igualade é usada! Olhando agora para o seu algoritmos, veja se talvez esse tenha sido o seu erro.<end>

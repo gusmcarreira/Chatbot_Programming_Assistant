@@ -6,10 +6,7 @@ Exemplo:
 base = 2
 altura = 5
 area = (base * altura) / 2
-print(area)
 </code>
-
-<code_print> 5.0
 
 No exemplo acima, criamos uma variável chamada base à qual atribuímos o valor 2, uma variável altura, à qual atribuímos o valor 5, e uma variável area, à qual atribuímos um cálculo envolvendo a base e a altura. 
 

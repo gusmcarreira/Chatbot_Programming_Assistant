@@ -16,8 +16,6 @@ else:
   print("X é igual a 0!")
 </code>
 
-<code_print>X é igual a 0!
+Pense que no if como um "se", no elif é outro "se", e no else como um "resto", ou seja, se nenhum das outras condições é verdade, então corre o que está declarado no else.
 
-Pense que o if é um "se", o elif é outro "se", enquanto que o else é um "resto", ou seja se nenhum das outras condições é verdade então corre o que está declarado no else.
-
-Veja se no seu algoritmo segue essa sintaxe!<end>
+Veja então se terá cometido este erro e usado uma comparação no seu else!<end>

@@ -32,9 +32,11 @@ class ActionAnswerQuestions(Action):
 
         if context:
             # Get answer from the Whoosh document
-            answer = answer_questions_model(context[0], question)[0]
+            index_answer, answer, score = answer_questions_model(context[0], question)
+            # answer = answer_questions_model(context[0], question)[0]
             # Get the whole text of the answer
-            wanted_answer = get_wanted_whole_answer(answer, doc_idx_directory + context[1])
+            wanted_answer = get_wanted_whole_answer(index_answer, doc_idx_directory + context[1])
+            # wanted_answer = get_wanted_whole_answer(answer, doc_idx_directory + context[1])
             wanted_sugestions = ""
         else:
             wanted_answer = ""
@@ -60,7 +62,6 @@ class ActionAnswerQuestions(Action):
 
         # SEND ANSWER TO STUDENT
         dispatcher.utter_message(text=wanted_answer)
-
         # SEND SUGGESTIONS IF ANY
         if isinstance(suggestions, list):
             dispatcher.utter_message(text="Algumas sugestões de temas relacionados:")
@@ -74,7 +75,6 @@ class ActionAnswerQuestions(Action):
     
 def check_sugestions(wanted_answer):
     split_sugestions = wanted_answer.split("Sugestões:")
-
     if len(split_sugestions) == 2:
         return split_sugestions[0], split_sugestions[1]
     else:

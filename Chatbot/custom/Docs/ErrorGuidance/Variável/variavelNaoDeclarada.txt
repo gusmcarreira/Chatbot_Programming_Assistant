@@ -20,4 +20,4 @@ var1 = "Olá"
 print(var_1)
 </code>
 
-Veja como são "var1" e "var_1" variáveis diferentes, ou até mesmo se fosse "var1" e "vAr1", tenha cuidado com esse aspeto!<end>
+Veja como "var1" e "var_1"  são variáveis diferentes, ou até mesmo se fosse "var1" e "vAr1", tenha cuidado o nome das variáveis é muito sensível!<end>

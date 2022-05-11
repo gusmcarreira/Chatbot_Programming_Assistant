@@ -1,6 +1,10 @@
-def get_wanted_whole_answer(answer, file_path):
-    wanted_context = open(file_path, "r").read().split("-#-")
+# def get_wanted_whole_answer(answer, file_path):
+#     wanted_context = open(file_path, "r").read().split("-#-")
+#
+#     for i in wanted_context:
+#         if answer in i:
+#             return i
 
-    for i in wanted_context:
-        if answer in i:
-            return i
+def get_wanted_whole_answer(index, file_path):
+    wanted_context = open(file_path, "r").read().split("-#-")
+    return wanted_context[index]

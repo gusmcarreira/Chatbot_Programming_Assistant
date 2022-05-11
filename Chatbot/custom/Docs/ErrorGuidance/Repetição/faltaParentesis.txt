@@ -1,4 +1,4 @@
-Pergunta:O seu erro parece estar na declaração de uma repetição while, e parece ser algo bem normal de acontecer. Vou-lhe propor um desafio! Dado o seguinte código:
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Vou-lhe propor um desafio! Dado o seguinte código:
 
 <code>
 x = 0

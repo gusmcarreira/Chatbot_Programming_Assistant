@@ -4,8 +4,8 @@ Opções_Iniciais:AND<sep>and<sep>And<end>
 ----------------------------------------------------------------------------------<end>
 Resposta:and<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Os operadores "and" e "or" devem ser sempre escritos com letras minúsculas!<end>
-----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Atentado agora no seu código veja se terá sempre seguido esta sintaxe.<end>
+Checkpoint:Os operadores "and" e "or" devem ser sempre escritos com letras minúsculas!
+
+Atentado agora no seu código veja se terá sempre seguido esta sintaxe.<end>

@@ -24,4 +24,6 @@ Explicação:O pormenor que está em falta é o segundo dado da comparação, qu
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Quando usamos um while, é necessário fazer uma comparação entre dois dados, no caso do exemplo, entre o x e o número 4! Veja se sempre seguiu essa sintaxe no seu código.<end>
+Checkpoint:Quando usamos um while, é necessário fazer uma comparação entre DOIS dados, no caso do exemplo, entre o x e o número 4!
+
+Veja se sempre seguiu essa sintaxe no seu código.<end>

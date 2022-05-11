@@ -1,4 +1,4 @@
-Pergunta:O seu erro parece residir no operador lógico. Das opções abaixo qual diria ser a correta?<end>
+Pergunta:O seu erro parece ser no operador lógico. Das opções abaixo qual diria ser a correta?<end>
 ----------------------------------------------------------------------------------<end>
 Opções_Iniciais:AND<sep>and<sep>And<end>
 ----------------------------------------------------------------------------------<end>

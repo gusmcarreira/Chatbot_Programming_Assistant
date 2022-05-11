@@ -1,4 +1,4 @@
-Faltou uma aspas na string:-->Variável/stringSemAspas.txt
+Faltou uma aspas na string-->Variável/stringSemAspas.txt
 -###-
 Número decimal com vírgula-->Variável/numeroDecimalComVirgula.txt
 -###-

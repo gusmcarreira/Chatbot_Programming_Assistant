@@ -70,8 +70,9 @@ class ActionEhConceptsOrder(Action):
         
         # ------ Get all the concepts on the answer -------
         answer_code_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).all_concepts_map
-
-        dispatcher.utter_message(text="Muito bem, por fim proponho um desafio! Vou lhe dar todas as peças do meu algoritmo, selecione-as por ordem, sendo que o dado que uma variavel deve guardar, deve ser selecionado depois da declaração da mesma e o começo e final do escopo de uma condicional/repetição/função são começados e terminados pela opção [ESCOPO FOR] dependendo.")
+        answer_code_concepts = [concept for concept in answer_code_concepts if concept]
+        dispatcher.utter_message(text="Muito bem, por fim proponho um desafio! Vou lhe dar todas as peças do meu algoritmo, que não quer dizer que seja a única maneira de realizar o exercício!")
+        dispatcher.utter_message(text="Analise as peças, ex, menos variáveis pode significar que realizei uma conversão de uma dado do teclado num só passo, enquanto que com mais variáveis posso tê-lo feito em 2. Depois de analisar, preocupe-se em selecinar as opções pela ordem que devem ser implementadas!")
 
         dispatcher.utter_message(text=conceptsOptionsButtons(answer_code_concepts))
 
@@ -94,8 +95,9 @@ class ActionEhFurtherHelp(Action):
         #                          "5 - Ao usar a função range, lembre-se que esta começa no 0 acabando 1 número ANTES do que o escolhido, ex: range(3), irá ser do 0 ao 2</code>")
 
         dispatcher.utter_message(text="Se tiver dificuldade em algum conceito em especifico, clique no seu botão:")
-
-        dispatcher.utter_message(buttons=returnButtons(codeInformation(tracker.get_slot(slot_eh_answer_code)).concepts_map))
+        correct_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).concepts_map
+        correct_concepts = [concept for concept in correct_concepts if concept]
+        dispatcher.utter_message(buttons=returnButtons(correct_concepts))
         return []
 
 # ================================================= CHECK ANSWERS ======================================================
@@ -151,6 +153,7 @@ class ActionEhCheckAnswer(Action):
             second_try = tracker.get_slot(slot_eh_second_try) # Check if it is the second try
             # ----------- CORRECT ANSWER ---------
             correct_order = codeInformation(code_answer).all_concepts_map
+            correct_order = [concept for concept in correct_order if concept]
             # ------------------------------------
             # ----------- STUDENT ANSWER ---------
             student_answer = student_answer.split("<sep>") # Get each option
@@ -218,12 +221,12 @@ class ActionEhCheckAnswer(Action):
                         wanted_num_clues = round(len(wrong_choices) / 3) # To add a third of the wrong answers as a clue
                         if wanted_num_clues != 0:
                             dispatcher.utter_message(text="Não é bem isso, tente outra vez mas agora com uma ajudinha:")
-                            dispatcher.utter_message(text=conceptsOptionsButtons(correct_order))
                             dispatcher.utter_message(text=returnOptions(decision_arr, wanted_num_clues, correct_order))
+                            dispatcher.utter_message(text=conceptsOptionsButtons(correct_order))
                             if wanted_num_clues == 1:
-                                dispatcher.utter_message(text="Adicionei 1 peça aquelas que já tinha juntado, tente agora!")
+                                dispatcher.utter_message(text="Adicionei 1 peça aquelas que já tinha acertado, tente agora!")
                             else:
-                                dispatcher.utter_message(text="Adicionei " + str(wanted_num_clues) + " peças aquelas que já tinha, tente agora!")
+                                dispatcher.utter_message(text="Adicionei algumas peças aquelas que acertou, tente agora!")
                         else:
                             dispatcher.utter_message(text="Quase! A resposta correta seria: ")
                             show_answer = True
@@ -231,12 +234,12 @@ class ActionEhCheckAnswer(Action):
                         wanted_num_clues = round(len(wrong_choices) / 3)
                         if wanted_num_clues != 0:
                             dispatcher.utter_message(text="Está com algumas dificuldade, vá outra vez mas agora com uma ajudinha:")
-                            dispatcher.utter_message(text=conceptsOptionsButtons(correct_order))
                             dispatcher.utter_message(text=returnOptions(decision_arr, wanted_num_clues, correct_order))
+                            dispatcher.utter_message(text=conceptsOptionsButtons(correct_order))
                             if wanted_num_clues == 1:
                                 dispatcher.utter_message(text="Adicionei 1 peça, tente agora!")
                             else:
-                                dispatcher.utter_message(text="Adicionei " + str(wanted_num_clues) + " peças, tente agora!")
+                                dispatcher.utter_message(text="Adicionei algumas peças, tente agora!")
                         else:
                             dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
                             show_answer = True
@@ -254,7 +257,7 @@ class ActionEhCheckAnswer(Action):
             if (not second_try) and (not show_answer):
                 return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_second_try, "True")]
 
-            dispatcher.utter_message(text="Agora tente passar para código o que discutimos!")
+            dispatcher.utter_message(text="Agora tente passar para código o que discutimos! Mas lembre-se que o que estava na tela das suas escolhas não representava exatamente código Python, cabe-lhe a si tratar disso!")
             dispatcher.utter_message(text="A nossa conversa ajudou-o a saber como proceder? (sim, não)")
 
             return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_situation, "Conclusion")]
@@ -277,6 +280,12 @@ def returnButtons(options):
         buttons.append({"title": option, "payload": payload})
     return buttons
 
+dic_meaning_empty = {"Declaração de variável": "var",
+                     "Impressão (print) de ...": "print",
+                     "Conversão de dado para texto (string)": "conv",
+                     "Conversão de dado para inteiro (int)": "conv",
+                     "Conversão de dado para número decimal (float": "conv"}
+
 def returnOptions(rightArr, numAdd, arrAnswer):
     arrIndexes = []
     if numAdd > 0:
@@ -286,14 +295,12 @@ def returnOptions(rightArr, numAdd, arrAnswer):
         arrIndexes = random.sample(arrIndexes, numAdd)
 
     newArrOptions = []
+
     for index, decision in enumerate(rightArr):
         if decision == "right":
             newArrOptions.append(arrAnswer[index])
         else:
-            if arrAnswer[index] == "Declaração de variável":
-                newArrOptions.append("var")
-            else:
-                newArrOptions.append("")
+            newArrOptions.append("")
 
     for i in arrIndexes:
         newArrOptions[i] = arrAnswer[i]

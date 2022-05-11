@@ -1,10 +1,10 @@
-Parece encontrar-se com problemas na declaração de uma função com vários parêmatros.
+Pergunta:Parece encontrar-se com problemas na declaração de uma função com vários parêmatros.
 
-Indo por partes, digamos que temos uma função com o nome "funcao_exemplo" sem parâmetros, como a declararia?<end>
+Indo por partes, digamos que temos uma função com o nome "exemplo" sem parâmetros, como a declararia?<end>
 ----------------------------------------------------------------------------------<end>
-Opções:def funcao_exemplo()<sep>def funcao_exemplo(:<sep>def funcao_exemplo(:<sep>def funcao_exemplo():<end>
+Opções:def exemplo()<sep>def exemplo(:<sep>def exemplo(:<sep>def exemplo():<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:def funcao_exemplo():<end>
+Resposta:def exemplo():<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:A declaração de uma função é sempre inciada com a palavra-chave def, seguinda pelo nome da função, concluindo com o uso de dois parêtesis () e finalizando com dois pontos :<end>
 ----------------------------------------------------------------------------------<end>
@@ -12,20 +12,25 @@ Explicação:A declaração de uma função é sempre inciada com a palavra-chav
 ----------------------------------------------------------------------------------<end>
 Pergunta:E se essa função tivesse um parâmetro chamado "parametro_um"?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:def funcao_exemplo(parametro_um):<end>
+Resposta:def exemplo(parametro_um):<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Os parâmetros de uma função são introduzidos sempre entre os dois parêtesis.<end>
+Explicação:Os parâmetros de uma função são introduzidos sempre entre os dois parêtesis, ex:
+
+<code_print>def exemplo(parametro_um):<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
 Pergunta:E finalmente, se essa função tivesse também um outro parâmetro chamado "parametro_dois"?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:def funcao_exemplo(parametro_um, parametro_dois):<end>
+Resposta:def exemplo(parametro_um, parametro_dois):<end>
 ----------------------------------------------------------------------------------<end>
-Opções:def nome_funcao(parametro_um parametro_dois):<sep>def nome_funcao(parametro_um, parametro_dois):<end>
+Opções:def exemplo(parametro_um parametro_dois):<sep>def exemplo(parametro_um, parametro_dois):<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Os parâmetros de uma função, têm obrigatoriamente de ser separados por uma , (vírgula)<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Veja agora no seu código se segue esta sintaxe, tendo especial atenção nos sinais de pontuação, ou seja, vírgulas, parêtesis, e os dois pontos.<end>
+Checkpoint:Os parâmetros de uma função, têm obrigatoriamente de ser separados por uma , (vírgula), ex:
+
+<code_print>def exemplo(par1, par2):
+
+Veja agora no seu código se segue esta sintaxe, tendo especial atenção nos sinais de pontuação, ou seja, vírgulas, parêtesis, e os dois pontos.<end>

@@ -1,4 +1,4 @@
-Pergunta:O seu erro parece ser na declaração de uma variável. O nome de uma variável segue algumas regras, parece ERRADA?<end>
+Pergunta:O seu erro parece ser na declaração de uma variável. O nome de uma variável segue algumas regras, selecione a opção que lhe parece ERRADA:<end>
 ----------------------------------------------------------------------------------<end>
 Opções_Iniciais:Pode começar com uma letra<sep>Não pode começar com um número<sep>Pode conter espaços<end>
 ----------------------------------------------------------------------------------<end>

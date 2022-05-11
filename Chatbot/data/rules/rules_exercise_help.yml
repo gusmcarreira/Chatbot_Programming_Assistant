@@ -61,4 +61,5 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: action_eh_check_answer
+
 #----------------------------------------------------

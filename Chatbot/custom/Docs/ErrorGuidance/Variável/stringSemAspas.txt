@@ -4,8 +4,8 @@ Opções_Iniciais:var1 = Olá<sep>var1 = "Olá"<sep>var1 = "Olá<sep>var1 = Olá
 ----------------------------------------------------------------------------------<end>
 Resposta:var1 = "Olá"<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:A diferença entre cada uma das opções está nas aspas, um erro bastante comum é esquecermo-nos de usar as aspas, ou ainda mais comum, uma delas. A resposta correta é aquela que envolve (dos dois lados) a string em aspas "Olá".<end>
+Explicação:A resposta correta é aquela que envolve (dos dois lados) a string em aspas "Olá".<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Olhando com atenção para o seu algoritmo veja se não lhe terá escpado um desses diabinhos 😈!<end>
+Checkpoint:A diferença entre cada uma das opções está nas aspas, um erro bastante comum é esquecermo-nos de usar as aspas, ou ainda mais comum, uma delas. Olhando com atenção para o seu algoritmo veja se não lhe terá escapado um desses diabinhos 😈!<end>
