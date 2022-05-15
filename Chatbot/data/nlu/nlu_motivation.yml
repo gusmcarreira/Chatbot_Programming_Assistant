@@ -1,0 +1,28 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_motiv_programming
+  examples: |
+    - porque devo aprender a programar
+    - qais são as vantagens de aprender a programar
+    - que beneficios trazem a programação
+    - devo aprender a programar
+    - que beneficios trazem a programação
+
+- intent: ask_motiv_python
+  examples: |
+    - quais são as vantagens de usar python
+    - porque devo escolher python e não outra linguagem de programação
+    - devo usar python em vez de outra linguagem
+    - quais as vantagens de usar python
+    - quais as vantagens de python
+    - que beneficios tem python
+    - python é simples
+
+- intent: ask_motiv_python_applications
+  examples: |
+    - para que serve python
+    - o que posso fazer com python
+    - que aplicações podem ser desenvolvidas com python
+    - que posso desenvolver usando python

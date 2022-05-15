@@ -6,7 +6,7 @@ Exemplo:
 
 Note que na matemática do dia a dia usamos a virgula (,) para este efeito, no entanto Python segue a notação dos Estado Unidos em que se faz uso do ponto (.)
 
-Sugestões:Como converter um inteiro em número decimal?<sep>Como obter o tipo de um dado?
+Sugestões:Como converter um dado em número decimal?<sep>Como obter o tipo de um dado?
 -#-
 Para converter um inteiro para float usa-se a função float().
 

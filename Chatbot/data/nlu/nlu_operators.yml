@@ -108,6 +108,8 @@ nlu:
 
 - intent: ask_op_logic
   examples: |
+    - operadores lógicos
+    - quais os operadores lógicos
     - que são operadores lógicos
     - que operadores posso usar em com valores lógicos
 

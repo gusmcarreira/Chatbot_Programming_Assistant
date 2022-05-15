@@ -4,6 +4,8 @@ nlu:
 
 - intent: ask_func_general
   examples: |
+    - função sem parânetros
+    - função simples
     - o que é uma função
     - que quer dizer com função
     - para que servem as funções
@@ -50,6 +52,7 @@ nlu:
 
 - intent: ask_func_return
   examples: |
+    - retorno de uma função
     - o que é o retorno de uma função
     - me explica o que é o retorno de uma função
     - como retorno algo de uma função

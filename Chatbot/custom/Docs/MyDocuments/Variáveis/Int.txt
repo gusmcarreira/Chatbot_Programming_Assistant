@@ -4,7 +4,7 @@ Exemplo:
 
 <code>x = 20</code>
 
-Sugestões:Como converter uma string ou número decimal em inteiro?<sep>Como obter o tipo de um dado?
+Sugestões:Como converter um dado em inteiro?<sep>Como obter o tipo de um dado?
 -#-
 Para converter uma string ou uma float para um inteiro usa-se a função int().
 

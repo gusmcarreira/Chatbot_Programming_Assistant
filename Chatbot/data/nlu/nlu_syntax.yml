@@ -17,6 +17,7 @@ nlu:
 
 - intent: ask_multi_comments
   examples: |
+    - como se comenta várias linhas
     - dá para comentar várias linhas
     - como faço para comentar várias linhas
     - porque há várias linhas a verde

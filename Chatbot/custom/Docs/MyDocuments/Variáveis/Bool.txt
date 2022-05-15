@@ -20,4 +20,4 @@ print(a)
 
 O resultado vem da comparação (4 > 0) que resulta em True (verdadeiro), pois 4 é maior que 0. Este dado é depois armazenado na nossa variável "a".
 
-Sugestões:Como obter o tipo de um dado?<sep>Quais são os operadores lógicos?<sep>Quais são os operadores lógicos?
+Sugestões:Como obter o tipo de um dado?<sep>Quais os operadores lógicos?

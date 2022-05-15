@@ -23,7 +23,7 @@ x = 4
 
 if x 4 :
   print("É verdade!")
-</code>
+</code><end>
 ----------------------------------------------------------------------------------<end>
 Resposta:==<sep>operadore de igualdade<sep>dois iguais<sep>duas igualdade<end>
 ----------------------------------------------------------------------------------<end>

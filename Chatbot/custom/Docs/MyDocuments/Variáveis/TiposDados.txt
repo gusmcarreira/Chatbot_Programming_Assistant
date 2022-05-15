@@ -1,6 +1,6 @@
 Python possui vários tipos básicos ou fundamentais de variáveis: números inteiros (int, e.g., 2; 3; e 4), números de ponto flutuante (float, e.g., 5.2), textos (strings, e.g., "Olá") e informações booleanas (bool, True (Verdadeiro) e False (Falso))
 
-Sugestões:Como verificar o tipo de uma variável<sep>O que é uma string<sep>O que é um int<sep>O que é um float<sep>O que é uma variável booleana<sep>O que é uma lista
+Sugestões:Como obter o tipo de um dado?<sep>O que é uma string?<sep>O que é um int<sep>O que é um float<sep>O que é uma variável booleana<sep>O que é uma lista
 -#-
 O tipo de uma variável é dado pela função type().
 

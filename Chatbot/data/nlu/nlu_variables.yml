@@ -67,6 +67,7 @@ nlu:
 
 - intent: ask_question_var_get_type
   examples: |
+    - como obter o tipo de um dado
     - como se vê o tipo de uma variável
     - como ver de que tipo é um dado
     - como posso ver de que tipo é uma variável
@@ -97,6 +98,7 @@ nlu:
 
 - intent: ask_question_var_strings_convert
   examples: |
+    - como converter um dado em string
     - como converter dado em string
     - como se converte um float para string
     - como se convertem floats em strings
@@ -134,6 +136,7 @@ nlu:
 
 - intent: ask_question_var_ints_convert
   examples: |
+    - como converter um dado em inteiro
     - como converter dado em int
     - como se converte um float para inteiro
     - como se convertem strings em ints
@@ -173,6 +176,7 @@ nlu:
 
 - intent: ask_question_var_floats_convert
   examples: |
+    - como converter um dado em número decimal
     - como converter dado em float
     - como converter dado em número decimal
     - como converter dado em número de ponto flutuante

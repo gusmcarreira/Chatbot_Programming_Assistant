@@ -21,7 +21,7 @@ Importante notar que no exemplo temos a declaração de uma função "funcao_exe
 
 A função apenas é realizada ao chamar a mesma, o que é feito pelo nome da função seguida de parêntesis (linha 4).
 
-Sugestões:Função com parâmetros<sep>Escopo de uma função
+Sugestões:Função com parâmetros<sep>Retorno de uma função<sep>Escopo de uma função
 -#-
 Informação pode ser passada a funções como parâmetro/s. Parâmetros são especificados depois do nome da função (dentro dos parêntesis).
 
