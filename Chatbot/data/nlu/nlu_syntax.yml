@@ -1,0 +1,24 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_comments
+  examples: |
+    - como se faz um comentário
+    - o que são as frases começando com #
+    - me diz como fazer um comentário
+    - como escrevo informação sem python correr essa linha
+    - como comento uma linha
+    - para que servem os comentários
+    - porque há linhas contendo o símbolo #
+    - porque certas linhas têm uma hashtag
+    - porque certas linhas têm um #
+    - como faço para comentar uma linha
+
+- intent: ask_multi_comments
+  examples: |
+    - dá para comentar várias linhas
+    - como faço para comentar várias linhas
+    - porque há várias linhas a verde
+    - porque certas linhas têm """
+    - o que faço para comentar várias linhas ao mesmo tempo

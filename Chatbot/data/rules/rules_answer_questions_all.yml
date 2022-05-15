@@ -1,0 +1,479 @@
+version: "3.1"
+
+rules:
+# ======================================================================================================================
+# ===================================================== CONDITIONS =====================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (CONDITIONS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_cond_general
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONDITIONS - IF)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_cond_if
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for onee (CONDITIONS - IF)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_cond_if
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONDITIONS - ELSE)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_cond_else
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for onee (CONDITIONS - ELSE)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_cond_else
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONDITIONS - ELIF)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_cond_elif
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for onee (CONDITIONS - ELIF)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_cond_elif
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONDITIONS - INDENTATION)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_cond_indent
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ==================================================== INPUT/OUTPUT ====================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (INPUT)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_input
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (OUTPUT)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_output
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ====================================================== FUNCTIONS =====================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (FUNCTION)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_func_general
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for one (FUNCTION)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_func_general
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (FUNCTION WITH PARAMETERS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_func_parameters
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for one (FUNCTION WITH PARAMETERS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_func_parameters
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (FUNCTION RETURN)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_func_return
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (FUNCTION INDENTATION)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_func_indent
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ======================================================== LOOPS =======================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (LOOP)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_loop_general
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for one (LOOP)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_loop_general
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (LOOP FOR)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_loop_for
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for one (LOOP FOR)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_loop_for
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (LOOP WHILE)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_loop_while
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for one (LOOP WHILE)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_loop_while
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (LOOP INDENTATION)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_loop_indent
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ===================================================== MOTIVATION =====================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (WHY LEARN PROGRAMMING)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_motiv_programming
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (WHY LEARN PYTHON)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_motiv_python
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (WHAT CAN ONE DO WITH PYTHON)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_motiv_python_applications
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ===================================================== OPERATORS ======================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_arithmetic
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS - ADD)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_arithmetic_add
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS - SUB)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_arithmetic_sub
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS - MULTI)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_arithmetic_multi
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS - DIV)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_arithmetic_div
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS - REMAINING)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_arithmetic_rem
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS - EXP)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_arithmetic_exp
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (LOGIC OPERATORS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_logic
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (LOGIC OPERATORS - AND)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_logic_and
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (LOGIC OPERATORS - OR)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_logic_or
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (LOGIC OPERATORS - NOT)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_logic_not
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (COMPARISON OPERATORS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_comparison
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ====================================================== SYNTAX ========================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (COMMENTS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_comments
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (MULTILINE COMMENTS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_multi_comments
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ==================================================== VARIABLES =======================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (VARIABLES)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Give example anytime the user asks for one (VARIABLES)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_example_question_var
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (VARIABLE'S NAMES)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_name
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (VARIABLE'S TYPES)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_types
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (VARIABLE'S GET TYPE)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_get_type
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (STRINGS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_strings
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONVERT STRINGS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_strings_convert
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (INTS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_ints
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONVERT INTS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_ints_convert
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (FLOATS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_floats
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONVERT FLOATS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_floats_convert
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (BOOLS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_bools
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (ARRAYS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_arrays
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ====================================================== GENERAL =======================================================
+# ======================================================================================================================
+
+- rule: Student wants further help
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_ask_for_help
+  - intent: affirm
+  - action: utter_wants_help
+
+- rule: Student does not want further help
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_ask_for_help
+  - intent: deny
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start

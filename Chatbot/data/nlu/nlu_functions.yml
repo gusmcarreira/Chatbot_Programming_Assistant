@@ -1,0 +1,74 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_func_general
+  examples: |
+    - o que é uma função
+    - que quer dizer com função
+    - para que servem as funções
+    - porque devo usar funções
+    - me diz o que é uma função
+    - me explica o que se quer dizer com função
+    - o que é uma função em python
+    - funções
+    - função
+
+- intent: ask_example_func_general
+  examples: |
+    - me dá um exemplo de uma função
+    - me dá exemplo de funções
+    - qual um exemplo de função
+    - me da aí um exemplo de funções sem parâmetros
+    - qual um exemplo de função simples
+    - qual um exemplo de função sem parâmetros
+    - exemplo função
+    - exemplo funções
+
+- intent: ask_func_parameters
+  examples: |
+    - função com parâmetros
+    - o que é uma função com parâmetros
+    - como usar função com parâmetros
+    - onde se põem os parâmetros de uma função
+    - me explica o que é uma função com parâmetros
+    - que quer dizer como funções com parâmetros
+    - me diz como adicionar parâmetros às funções
+
+- intent: ask_example_func_parameters
+  examples: |
+    - me dá um exemplo de uma função com parâmetros
+    - me dá um exemplo de uma função com inputs
+    - me dá exemplo de funções com parâmetros
+    - qual um exemplo de função com parâmetros
+    - qual um exemplo de função com inputs
+    - qual um exemplo de função com input
+    - me da aí um exemplo de funções com parâmetros
+    - qual um exemplo de função com parâmetros
+    - exemplo função com parâmetros
+    - exemplo funções com parâmetros
+
+- intent: ask_func_return
+  examples: |
+    - o que é o retorno de uma função
+    - me explica o que é o retorno de uma função
+    - como retorno algo de uma função
+    - me diz como usar return
+    - como se usa a função para retornar um valor
+    - me mostra o que é o retorno de uma função
+    - me dá um exemplo de uma função com retorno
+    - me explica uma função com retorno
+    - mostra aí uma função com return
+
+- intent: ask_func_indent
+  examples: |
+    - escopo de uma função
+    - como se define o escopo de uma função
+    - que se quer dizer com escopos de funções
+    - o que é um escopo de uma função
+    - me diz o que é o escopo das função
+    - qual o escopo de uma função
+    - como defino o escopo de uma função
+    - o que é o escopo de uma função
+    - escopo função
+    - escopo funções

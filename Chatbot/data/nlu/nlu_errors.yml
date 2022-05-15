@@ -1,0 +1,68 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_name_error
+  examples: |
+    - quando ocorrem os NameErrors
+    - que são erros do tipo name
+    - que significa NameError
+    - quais as causas de name errors
+    - me diz as possiveis causas de erros do tipo name
+    - que causa um erro do tipo name
+    - que pode causar um NameError
+    - me dá exemplos de NameErrors
+    - tenho um erro NameError
+    - me ajuda como erro do tipo name
+    - me diz o que é um NameError
+    - NameError
+    - erro tipo name
+    - nameerror
+    - name error
+
+- intent: ask_syntax_error
+  examples: |
+    - quando ocorrem os SyntaxErrors
+    - me dá ajuda com o meu erro
+    - me ajuda no meu erro
+    - tenho um erro me ajuda
+    - quando ocorrem os SyntaxErrors
+    - que são erros de sintaxe
+    - que significa SyntaxErrors
+    - quais as causas de syntax errors
+    - me diz as possiveis causas de erros do tipo sintaxe
+    - que causa um erro do tipo sintaxe
+    - que pode causar um SyntaxError
+    - me dá exemplos de SyntaxErrors
+    - tenho um erro SyntaxError
+    - me ajuda como erro do tipo sintaxe
+    - me diz o que é um Syntaxerror
+    - SyntaxError
+    - erro tipo syntax
+    - erro tipo sintaxe
+    - syntaxerror
+    - erro de sintaxe
+    - sintaxe error
+    - syntax error
+
+- intent: ask_type_error
+  examples: |
+    - quando ocorrem os TypeErrors
+    - quando ocorrem os TypeErrors
+    - quando ocorrem os type errors
+    - que são erros de type
+    - que significa TypeErrors
+    - quais as causas de tipo errors
+    - me diz as possiveis causas de erros do tipo tipo
+    - que causa um erro do tipo type
+    - que pode causar um TypeError
+    - me dá exemplos de TypeErrors
+    - tenho um erro TypeError
+    - me ajuda como erro do tipo type
+    - me diz o que é um TypeError
+    - TypeErrors
+    - erro tipo type
+    - erro tipo tipo
+    - typeerror
+    - type error
+    - tipo error

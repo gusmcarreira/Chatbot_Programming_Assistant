@@ -1,0 +1,39 @@
+No mundo real os valores de alguns dados são informados pelo usuário e não pelo programador. Como dizemos ao Python que queremos que o usuário digite um dado? Utilizaremos a instrução input():
+
+Exemplo:
+
+<code>
+nome = input()
+saudacao = "Olá " + nome
+</code>
+
+Ao executar a primeira linha desse código, o Python aguardará até que o usuário digite algo no teclado e pressione a tecla ENTER. Apenas após isso ocorrer é que a segunda linha será executada e a concatenação realizada. Isso faz sentido, pois a variável nome guardará o que o usuário digitou no teclado, e somente de posse desse dado é que a concatenação deve ser realizada.
+
+Nota: a função input() sempre lê strings. Por isso, caso você deseje ler um número, deverá converter o dado retornado por essa função para o formato numérico apropriado.
+
+No entanto, ao executar o algoritmo anterior, nosso usuário após digitar seu nome no teclado não visualizará nada em sua tela.
+
+Sugestões:Saida de dados
+-#-
+Para permitir ao usuário vizualizar as variáveis na sua tela utilizaremos uma instrução conhecida por print().
+
+Exemplo:
+
+<code>
+nome = input()
+saudacao = "Olá " + nome
+print(saudacao)
+</code>
+
+Observe que dentro do parêntesis do print nós escrevemos o nome da variável que queremos que seu valor seja apresentado na tela. Assim, após a execução deste código e escrever o nome Davi, o usuário visualizará na tela: Olá Davi.
+
+Podemos também usar o print para apresentar uma string ou número diretamente:
+
+<code>
+print("Gostei desse livro")
+print(2)
+</code>
+
+Nota: Números e strings não podem ser apresentados num mesmo print, para tal é necessário converte o número em string:
+
+Sugestões:Entrada de dados<sep>Como converter dado em string

@@ -1,0 +1,172 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_op_arithmetic
+  examples: |
+    - que operações podem ser realizadas
+    - que operações aritméticas se podem fazer em python
+    - quais os simbolos dos operadores em python
+
+- intent: ask_op_arithmetic_add
+  examples: |
+    - como se faz a soma
+    - que simbolo se usa para fazer a soma
+    - que simbolo uso para fazer uma adição
+    - python operador de soma
+    - python operador de adição
+    - o que uso para fazer uma adição
+    - qual o operador da soma
+    - qual o operador para somar
+    - que operador uso para fazer a soma
+    - me dá um exemplo de soma
+    - me diz um exemplo de adição
+    - como se adicionarm dois valores
+    - como somo valores
+    - usa-se o \+ para somar
+    - uso o \+ para adicionar números
+    - como adiciono números
+
+- intent: ask_op_arithmetic_sub
+  examples: |
+    - como se faz a subtração
+    - que simbolo se usa para fazer a subtração
+    - que simbolo uso para fazer uma subtração
+    - python operador de subtração
+    - python operador de subtração
+    - o que uso para fazer uma subtração
+    - qual o operador da subtração
+    - qual o operador para subtrair
+    - que operador uso para fazer a subtração
+    - me dá um exemplo de subtração
+    - me diz um exemplo de como subtrair dois valores
+    - como se subtraem dois valores
+    - como subtraio valores
+    - como faço um valor menos o outro
+    - como faço a operação do menos
+    - para fazer menos uso o \-
+    - como faço um número menos o outro
+
+- intent: ask_op_arithmetic_multi
+  examples: |
+    - como se faz a multiplicação
+    - que simbolo se usa para fazer a multiplicação
+    - que simbolo uso para fazer uma multiplicação
+    - python operador de multiplicação
+    - python operador de multiplicação
+    - o que uso para fazer uma multiplicação
+    - qual o operador da multiplicação
+    - qual o operador para multiplicar
+    - que operador uso para fazer a multiplicação
+    - me dá um exemplo de multiplicação
+    - me diz um exemplo de como multiplicar dois valores
+    - como se multiplicam dois valores
+    - como multiplico valores
+    - como faço um valor vezes o outro
+    - como faço um valor x o outro
+    - como faço a operação do x
+    - para fazer menos uso o x
+
+- intent: ask_op_arithmetic_div
+  examples: |
+    - como se faz a divisão
+    - que simbolo se usa para fazer a divisão
+    - que simbolo uso para fazer uma divisão
+    - python operador de divisão
+    - python operador de divisão
+    - o que uso para fazer uma divisão
+    - qual o operador da divisão
+    - qual o operador para dividir
+    - que operador uso para fazer a divisão
+    - me dá um exemplo de divisão
+    - me diz um exemplo de como dividir dois números
+    - como se dividem dois valores
+    - como divido valores
+    - como faço um valor a dividir pelo outro
+
+- intent: ask_op_arithmetic_rem
+  examples: |
+    - como se obtém o resto de uma divisão
+    - que simbolo se usa para fazer o resto da divisão
+    - que simbolo uso para fazer saber se um número é múltiplo de outro
+    - como sei se um número é par
+    - python operador de resto de divisão
+    - para que serve o operador \%
+    - qual o operador do resto da divisão
+    - qual o operador para obter o resto
+    - que se quer dizer como múltiplo
+    - como sei se um número é múltiplo de 5
+    - como sei se o resultado da divisão é exato
+
+- intent: ask_op_arithmetic_exp
+  examples: |
+    - como se faz a exponenciação
+    - que simbolo uso para fazer o quadrado de um número
+    - como faço para fazer o raio ao quadrado
+    - para que serve o operador \*\*
+    - como faço o quadrado de um número
+
+- intent: ask_op_logic
+  examples: |
+    - que são operadores lógicos
+    - que operadores posso usar em com valores lógicos
+
+- intent: ask_op_logic_and
+  examples: |
+    - quando devemos usar o and
+    - para que serve o and
+    - como se usa o and
+    - me diz como usar o and
+    - como se escreve o and
+    - and
+    - como se usa o operador lógico and
+    - como se faz para dizer se as duas são verdade
+    - como faço para dizer que as duas têm de ser verdade
+    - em python como se faz o e lógico
+    - o que é o e lógico
+    - como faço quando quero que as duas afirmações sejam verdade
+    - as duas têm de ser verdade
+
+- intent: ask_op_logic_or
+  examples: |
+    - quando devemos usar o or
+    - para que serve o or
+    - como se usa o or
+    - me diz como usar o or
+    - como se escreve o or
+    - or
+    - como se usa o operador lógico or
+    - como se faz para dizer se apenas uma é verdade
+    - como faço para dizer que só uma tem de ser True
+    - em python como se faz o ou lógico
+    - o que é o ou lógico
+    - como faço quando quero que apenas uma das afirmações seja verdade
+    - apenas uma tem de ser True
+
+- intent: ask_op_logic_not
+  examples: |
+    - quando devemos usar o not
+    - para que serve o not
+    - como se usa o not
+    - me diz como usar o not
+    - como se escreve o not
+    - not
+    - como se usa o operador lógico not
+    - como se faz para dizer se tem de ser mentira
+    - em python como se faz o não lógico
+    - o que é o não lógico
+
+- intent: ask_op_comparison
+  examples: |
+    - menor
+    - menor ou igual
+    - maior
+    - maior ou igual
+    - igual
+    - operadores de comparação
+    - que operadores se podem usar em comparações
+    - como digo que um valor tem de ser maior que outro
+    - como faço para dizer maior ou igual
+    - como digo que um número tem de ser menor que outro
+    - me diz como dizer que duas variáveis têm de ser iguais
+    - como digo menor numa comparação

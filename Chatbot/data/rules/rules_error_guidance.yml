@@ -8,8 +8,8 @@ rules:
 
 # -------------------> INITIAL RULE  <------------------
 - rule: (EG) Activate - Prompt start error guidance?
-  condition:
-    - active_loop: null
+#  condition:
+#    - active_loop: null
   steps:
   - intent: EXTERNAL_ERROR_MESSAGE
   - action: form_eg_start

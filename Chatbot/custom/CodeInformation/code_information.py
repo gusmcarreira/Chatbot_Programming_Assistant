@@ -77,6 +77,12 @@ class CodeInformation(ast.NodeVisitor):
         for concept in node.body:
             self.visit(concept)
 
+    def visit_AugAssign(self, node):
+        op_meaning = self.operation_meaning1(ast.dump(node.op))
+        value = self.visit(node.value)
+        self.all_concepts_map.append(op_meaning + " de " + str(value[1]) + " a variável")
+        return
+
     # ------------------ FUNCTION CALLS -----------------
     def visit_Call(self, node):
         func_name_info = self.visit(node.func)

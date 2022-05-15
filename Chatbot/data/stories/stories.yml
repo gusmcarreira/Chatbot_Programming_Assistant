@@ -7,8 +7,67 @@ stories:
   - intent: greet
   - action: utter_greet
   - or:
-    - intent: ask_question
-    - intent: ask_example
+    # QUESTIONS ---------> CONDITIONS
+    - intent: ask_cond_general
+    - intent: ask_cond_if
+    - intent: ask_example_cond_if
+    - intent: ask_cond_else
+    - intent: ask_example_cond_else
+    - intent: ask_cond_elif
+    - intent: ask_example_cond_elif
+    - intent: ask_cond_indent
+    # QUESTIONS ---------> INPUT/OUTPUT
+    - intent: ask_input
+    - intent: ask_output
+    # QUESTIONS ---------> FUNCTIONS
+    - intent: ask_func_general
+    - intent: ask_example_func_general
+    - intent: ask_func_parameters
+    - intent: ask_example_func_parameters
+    - intent: ask_func_return
+    - intent: ask_func_indent
+    # QUESTIONS ---------> LOOPS
+    - intent: ask_loop_general
+    - intent: ask_example_loop_general
+    - intent: ask_loop_for
+    - intent: ask_example_loop_for
+    - intent: ask_loop_while
+    - intent: ask_example_loop_while
+    - intent: ask_loop_indent
+    # QUESTIONS ---------> MOTIVATION
+    - intent: ask_motiv_programming
+    - intent: ask_motiv_python
+    - intent: ask_motiv_python_applications
+    # QUESTIONS ---------> OPERATORS
+    - intent: ask_op_arithmetic
+    - intent: ask_op_arithmetic_add
+    - intent: ask_op_arithmetic_sub
+    - intent: ask_op_arithmetic_multi
+    - intent: ask_op_arithmetic_div
+    - intent: ask_op_arithmetic_rem
+    - intent: ask_op_arithmetic_exp
+    - intent: ask_op_logic
+    - intent: ask_op_logic_and
+    - intent: ask_op_logic_or
+    - intent: ask_op_logic_not
+    - intent: ask_op_comparison
+    # QUESTIONS ---------> SYNTAX
+    - intent: ask_comments
+    - intent: ask_multi_comments
+    # QUESTIONS ---------> VARIABLES
+    - intent: ask_question_var
+    - intent: ask_example_question_var
+    - intent: ask_question_var_name
+    - intent: ask_question_var_types
+    - intent: ask_question_var_get_type
+    - intent: ask_question_var_strings
+    - intent: ask_question_var_strings_convert
+    - intent: ask_question_var_ints
+    - intent: ask_question_var_ints_convert
+    - intent: ask_question_var_floats
+    - intent: ask_question_var_floats_convert
+    - intent: ask_question_var_bools
+    - intent: ask_question_var_arrays
   - action: action_answer_questions
   - action: utter_did_that_help
   - checkpoint: checkpoint_answer_question

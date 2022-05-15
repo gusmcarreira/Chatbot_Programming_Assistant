@@ -1,0 +1,107 @@
+version: "3.1"
+
+nlu:
+# ---------------- RASA EXAMPLE INTENTS --------------
+- intent: greet
+  examples: |
+    - olá
+    - oi
+    - bom dia
+    - boa tarde
+    - boas
+    - alô
+    - coé
+    - fala
+    - fala aí
+
+- intent: goodbye
+  examples: |
+    - adeus
+    - tchau
+    - até amanhã
+    - xau
+    - tem um bom dia
+    - até logo
+    - até mais tarde
+    - até já
+    - foi um prazer te conhecer
+    - prazer em te conhecer
+    - até mais
+    - valeu
+    - falou
+    - tchauzinho
+    - tchau
+    - vou vazar
+    - tô vazando
+    - estou fora
+    - vou Nessa
+
+- intent: affirm
+  examples: |
+    - yap
+    - sim
+    - s
+    - claro
+    - parece-me bem
+    - correto
+    - yes
+    - y
+    - oui
+    - isso
+    - afirmativo
+    - certo
+    - com certeza
+    - de acordo
+
+- intent: deny
+  examples: |
+    - não
+    - nop
+    - no
+    - nah
+    - n
+    - nunca
+    - não me parece
+    - nem pensar
+    - nem por isso
+    - nao
+    - some answer
+    - não sei
+
+- intent: bot_challenge
+  examples: |
+    - estou a falar com uma pessoa?
+    - estou a falar com um humano?
+    - estou a falar com uma mulher?
+    - estou a falar com um homem?
+    - estou a falar com um robô?
+    - estou a falar com um chatbot?
+    - estou a falar com um chatterbot?
+    - és uma pessoa?
+    - és um humano?
+    - és uma mulher?
+    - és um homem?
+    - és um robõ?
+    - és um chatbot?
+    - és um chatterbot?
+
+- intent: ask_help
+  examples: |
+    - para
+    - parar
+    - quero parar
+
+# ----------------------------------------------------
+- intent: ask_help
+  examples: |
+    - preciso ajuda no exercicio
+    - preciso de ajuda no exercicio
+    - me ajuda com o exercicio?
+    - como se faz o exercicio
+    - me ajuda no exercício
+    - nao sei fazer o exercicio
+    - não entendo o exercicio
+    - não percebo o exercício
+    - estou com dificuldade no exercicio
+    - não sei como fazer o algoritmo
+

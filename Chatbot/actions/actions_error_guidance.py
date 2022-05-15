@@ -83,7 +83,8 @@ class ActionEgCheckAnswer(Action):
         student_answer = tracker.get_slot(slot_eg_student_answer)
 
         # Check if user asked to stop
-        if student_answer.lower() == ("parar" or "para"):
+        if student_answer.lower() == "parar" or student_answer.lower() == "para":
+            dispatcher.utter_message(response="ERRO AJUDA PARADA")
             return [FollowupAction("utter_anything_else")]
 
         # ------------- ANSWER WAS CORRECT MOVE ONTO NEXT ONE -------------

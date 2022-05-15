@@ -27,6 +27,7 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: utter_can_ask_for_help
   - action: utter_anything_else
   - action: action_eg_reset_slot_start
 # ------------------------------------------------------
@@ -63,3 +64,34 @@ rules:
   - action: action_eh_check_answer
 
 #----------------------------------------------------
+
+# Verify that the student can ask for help
+- rule: (EH) Ask for help - Too early (I)
+#  condition:
+#  - active_loop: null
+  steps:
+  - intent: ask_help
+  - action: utter_check_ask_help
+
+- rule: (EH) Ask for help - Too early (II)
+  condition:
+  - active_loop: null
+  steps:
+  - action: utter_check_ask_help
+  - intent: deny
+  - action: utter_can_not_ask_for_help
+
+- rule: (EH) Ask for help - Can ask (I)
+#  condition:
+#  - active_loop: null
+  steps:
+  - intent: ask_help
+  - action: utter_check_ask_help
+
+- rule: (EH) Ask for help - Can ask (II)
+  condition:
+  - active_loop: null
+  steps:
+  - action: utter_check_ask_help
+  - intent: affirm
+  - action: action_eh_test_case

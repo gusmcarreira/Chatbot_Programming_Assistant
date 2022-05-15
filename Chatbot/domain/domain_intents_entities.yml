@@ -1,0 +1,90 @@
+version: "3.1"
+
+############################################ INTENTS ############################################
+intents:
+  # GENERAL INTENTS
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  # EXTERNAL MESSAGES
+  - EXTERNAL_ERROR_MESSAGE
+  - EXTERNAL_CODE_MESSAGE
+  # ASK EXERCISE HELP
+  - ask_help
+  # QUESTIONS ---------> CONDITIONS
+  - ask_cond_general
+  - ask_cond_if
+  - ask_example_cond_if
+  - ask_cond_else
+  - ask_example_cond_else
+  - ask_cond_elif
+  - ask_example_cond_elif
+  - ask_cond_indent
+  # QUESTIONS ---------> INPUT/OUTPUT
+  - ask_input
+  - ask_output
+  # QUESTIONS ---------> ERRORS
+  - ask_name_error
+  - ask_syntax_error
+  - ask_type_error
+  # QUESTIONS ---------> FUNCTIONS
+  - ask_func_general
+  - ask_example_func_general
+  - ask_func_parameters
+  - ask_example_func_parameters
+  - ask_func_return
+  - ask_func_indent
+  # QUESTIONS ---------> LOOPS
+  - ask_loop_general
+  - ask_example_loop_general
+  - ask_loop_for
+  - ask_example_loop_for
+  - ask_loop_while
+  - ask_example_loop_while
+  - ask_loop_indent
+  # QUESTIONS ---------> MOTIVATION
+  - ask_motiv_programming
+  - ask_motiv_python
+  - ask_motiv_python_applications
+  # QUESTIONS ---------> OPERATORS
+  - ask_op_arithmetic
+  - ask_op_arithmetic_add
+  - ask_op_arithmetic_sub
+  - ask_op_arithmetic_multi
+  - ask_op_arithmetic_div
+  - ask_op_arithmetic_rem
+  - ask_op_arithmetic_exp
+  - ask_op_logic
+  - ask_op_logic_and
+  - ask_op_logic_or
+  - ask_op_logic_not
+  - ask_op_comparison
+  # QUESTIONS ---------> SYNTAX
+  - ask_comments
+  - ask_multi_comments
+  # QUESTIONS ---------> VARIABLES
+  - ask_question_var
+  - ask_example_question_var
+  - ask_question_var_name
+  - ask_question_var_types
+  - ask_question_var_get_type
+  - ask_question_var_strings
+  - ask_question_var_strings_convert
+  - ask_question_var_ints
+  - ask_question_var_ints_convert
+  - ask_question_var_floats
+  - ask_question_var_floats_convert
+  - ask_question_var_bools
+  - ask_question_var_arrays
+
+############################################ ENTITIES ############################################
+entities:
+## ERROR GUIDANCE ##
+- error_type
+- error_message
+- code_message_answer
+- code_test_case
+- answer_concept_wanted
+

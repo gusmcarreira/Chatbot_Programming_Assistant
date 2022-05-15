@@ -1,0 +1,86 @@
+version: "3.1"
+
+rules:
+
+- rule: Answer question anytime the user asks one (NameError) # ------------> NameError
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_name_error
+  - action: action_answer_error_questions
+
+- rule: Answer question anytime the user asks one (SyntaxError) # ----------> SyntaxError
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_syntax_error
+  - action: action_answer_error_questions
+
+- rule: Answer question anytime the user asks one (TypeError) # -------------> TypeError
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_type_error
+  - action: action_answer_error_questions
+
+- rule: Student does not want more error causes # ---------------> Stop after first cause
+  condition:
+    - active_loop: null
+  steps:
+  - action: action_answer_error_questions
+  - intent: deny
+  - action: utter_did_that_help
+
+- rule: Give first followup error cause # -------------------> See a second possible cause
+  condition:
+  - active_loop: null
+  steps:
+  - action: action_answer_error_questions
+  - intent: affirm
+  - action: action_answer_error_questions_followup
+
+- rule: Give more followup errors causes # -----------------> See more followup causes
+  condition:
+  - active_loop: null
+  - slot_was_set:
+      - slot_error_cause_information: true
+  steps:
+  - action: action_answer_error_questions_followup
+  - intent: affirm
+  - action: action_answer_error_questions_followup
+
+- rule: Give last followup errors causes  # ----------------> Give last followup cause
+  condition:
+  - active_loop: null
+  - slot_was_set:
+      - slot_error_cause_information: false
+  steps:
+  - action: action_answer_error_questions_followup
+  - action: utter_did_that_help
+
+- rule: Student does not want more followup error causes # ----------------> Student does not want any more followup causes
+  condition:
+  - active_loop: null
+  - slot_was_set:
+      - slot_error_cause_information: true
+  steps:
+  - action: action_answer_error_questions_followup
+  - intent: deny
+  - action: utter_did_that_help
+
+- rule: Answer - student was clarified # ----------------> Answer helped
+  condition:
+  - active_loop: null
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+
+- rule: Answer - student was not clarified # --------------> Answer did not help
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_for_help

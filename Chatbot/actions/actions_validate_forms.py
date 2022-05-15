@@ -4,8 +4,6 @@ from rasa_sdk import Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 
-import re
-
 class ValidateFormEgStart(FormValidationAction):
     def name(self) -> Text:
         return "validate_form_eg_start"
@@ -17,10 +15,10 @@ class ValidateFormEgStart(FormValidationAction):
         wanted_intent = tracker.latest_message['intent'].get('name')
 
         if wanted_intent == "affirm":
-            # validation succeeded, set the value of the "cuisine" slot to value
             return {"slot_eg_start": True}
         elif wanted_intent == "deny":
-            # validation succeeded, set the value of the "cuisine" slot to value
+            #ERRO AJUDA PARADA
+            dispatcher.utter_message(response="ERRO AJUDA PARADA")
             return {"slot_eg_start": False}
         else:
             # validation failed, set this slot to None so that the
@@ -57,12 +55,14 @@ class ValidateFormEhAnswer(FormValidationAction):
     ) -> Dict[Text, Any]:
 
         wanted_situation = tracker.get_slot("slot_eh_situation")
+        student_answer = tracker.latest_message["text"]
+        wanted_intent = tracker.latest_message['intent'].get('name')
+
         if wanted_situation == "Conclusion":
-            wanted_intent = tracker.latest_message['intent'].get('name')
-            if wanted_intent != "affirm" or wanted_intent != "deny":
+            if wanted_intent != "affirm" and wanted_intent != "deny":
                 dispatcher.utter_message(text="Responda apenas sim ou não")
                 return {"slot_eg_start": None}
-        else:
-            student_answer = tracker.latest_message["text"]
+            else:
+                student_answer = wanted_intent
 
         return {"slot_eh_answer": student_answer}

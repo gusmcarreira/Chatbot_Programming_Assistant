@@ -1,0 +1,237 @@
+version: "3.1"
+
+nlu:
+- intent: ask_question_var
+  examples: |
+    - o que é uma variável?
+    - o que são variáveis?
+    - para que serve uma variável?
+    - para que servem as variáveis?
+    - como se usa uma variável?
+    - como se usam variáveis?
+    - qual a sintaxe de uma variável?
+    - qual a sintaxe das variáveis?
+    - variável
+    - variáveis
+
+- intent: ask_example_question_var
+  examples: |
+    - dá-me um exemplo de um nome de uma variável
+    - me dê um exemplo de uma variável
+    - me dá um exemplo de variável
+    - me dá um exemplo de uma variável
+    - como se inicializa uma variável
+    - como se inicializam variáveis
+    - como se cria uma variável
+    - como se criam variáveis
+    - como se declaram variáveis
+    - como se se declara uma variável
+    - exemplo variável
+    - examplo variáveis
+
+- synonym: operadores
+  examples: |
+    - \+
+    - \-
+    - \-
+
+- intent: ask_question_var_name
+  examples: |
+    - que nomes podemos dar às variáveis?
+    - que nome pode ter uma variável?
+    - que nome podem ter as variáveis?
+    - os nomes das variáveis podem ter números?
+    - os nomes das variáveis podem ter operadores?
+    - os nomes das variáveis podem ter espaços?
+    - como dar nome a variável?
+    - como dar nome a variáveis?
+    - como dar nomes a variáveis?
+    - me dá um exemplo de um nome de variável
+    - me dê um exemplo de nome de variável
+    - dás-me um exemplo de um nome de variável
+    - exemplos de nome de variáveis
+    - que nomes se podem dar ás variáveis
+    - que nomes podem ter as variáveis
+    - que nome pode ter uma variável
+    - que nome podemos dar às variáveis
+    - nomes de variáveis
+    - nome de variável
+    - que tipos pode ter uma variável
+    - que tipos podem ser os dados
+    - de que tipos podem ser os dados de uma variável
+    - quais são os tipos que uma variável pode ter
+    - quais os tipos de uma variável
+    - que tipos de variáveis existem
+    - tipo de variável
+    - tipos de variáveis
+
+- intent: ask_question_var_get_type
+  examples: |
+    - como se vê o tipo de uma variável
+    - como ver de que tipo é um dado
+    - como posso ver de que tipo é uma variável
+    - como ver o tipo de um dado de uma variável
+    - me diz como se obtém o tipo de dado de uma variável
+    - como verificar o tipo de uma variável
+    - como obter o tipo de uma variável
+    - como sabemos de que tipo é uma variável
+
+# ------------> STRINGS <------------
+- intent: ask_question_var_strings
+  examples: |
+    - o que é uma string
+    - o que são strings
+    - o que é string
+    - o que é um texto
+    - o que é um dado string
+    - que quer dizer com string
+    - que se quer dizer com string
+    - string
+    - strings
+    - me dá um exemplo de uma string
+    - me dá um exemplo de um texto
+    - qual o exemplo de um texto
+    - qual é um exemplo de um dado string
+    - me diz um exemplo de uma string
+    - exemplo string
+
+- intent: ask_question_var_strings_convert
+  examples: |
+    - como converter dado em string
+    - como se converte um float para string
+    - como se convertem floats em strings
+    - como se convertem ints em strings
+    - como se convertem inteiros em strings
+    - como se converte um número decimal para texto
+    - como converter um inteiro para string
+    - como se converte um número inteiro para texto
+    - me diz como converter dado em texto
+    - me ajuda a converter inteiro em string
+    - pode-me dizer como converto um número decimal em string
+
+# ------------> INTS <------------
+- intent: ask_question_var_ints
+  examples: |
+    - o que é um int
+    - o que é um inteiro
+    - o que são inteiros
+    - o que são ints
+    - que se quer dizer com inteiro
+    - o que é um dado inteiro
+    - que quer dizer com int
+    - que se quer dizer com inteiro
+    - int
+    - inteiro
+    - me dá um exemplo de um int
+    - me dá um exemplo de inteiros
+    - me diz um exemplo de ints
+    - me dá um exemplo de um inteiro
+    - qual o exemplo de um int
+    - qual é um exemplo de um dado inteiro
+    - me diz um exemplo de um int
+    - exemplo int
+    - exemplo inteiro
+
+- intent: ask_question_var_ints_convert
+  examples: |
+    - como converter dado em int
+    - como se converte um float para inteiro
+    - como se convertem strings em ints
+    - como se converte um número decimal para int
+    - como converter floats em inteiros
+    - como converter um texto para int
+    - como se converte uma string para inteiro
+    - me diz como converter dado em inteiro
+    - me ajuda a converter string em int
+    - pode-me dizer como converto um número decimal em inteiro
+
+# ------------> FLOATS <------------
+- intent: ask_question_var_floats
+  examples: |
+    - o que é um float
+    - o que são floats
+    - que são números de ponto flutuante
+    - o que é um número decimal
+    - o que são números decimais
+    - que se quer dizer com float
+    - o que é um dado float
+    - que quer dizer com número decimal
+    - que se quer dizer com número decimal
+    - flat
+    - número decimal
+    - número de ponto flutuante
+    - qual um exemplo de número de ponto flutuante
+    - me dá um exemplo de um float
+    - me diz um exemplo de floats
+    - me dá um exemplo de números decimais
+    - me dá um exemplo de um número decimal
+    - qual o exemplo de um float
+    - qual é um exemplo de um dado float
+    - me diz um exemplo de um número decimal
+    - exemplo float
+    - exemplo número decimal
+
+- intent: ask_question_var_floats_convert
+  examples: |
+    - como converter dado em float
+    - como converter dado em número decimal
+    - como converter dado em número de ponto flutuante
+    - como se converte um inteiro para float
+    - como se convertem strings em floats
+    - como se converte um int para número decimal
+    - como converter inteiros em números decimais
+    - como converter um texto para float
+    - como se converte uma string para float
+    - me diz como converter dado em float
+    - me ajuda a converter string em número decimal
+    - pode-me dizer como converto um inteiro em número decimal
+
+# ------------> BOOL <------------
+- intent: ask_question_var_bools
+  examples: |
+    - o que é uma variável booleana
+    - o que são variáveis booleanas
+    - que quer dizer com tipos booleanos
+    - o que é uma variável com tipo booleano
+    - que é bool
+    - o que são dados booleanos
+    - que quer dizer com bool
+    - que se quer dizer com booleanos
+    - bool
+    - booleanos
+    - me dá um exemplo de uma variável booleana
+    - me diz um exemplo de booleanos
+    - me dá um exemplo de dados booleanos
+    - me dá um exemplo de uma variável bool
+    - qual o exemplo de um booleano
+    - qual é um exemplo de um dado bool
+    - me diz um exemplo de um booleano
+    - qual um exemplo de variáveis booleanas
+    - exemplo bool
+    - exemplo booleanos
+    - exemplo booleanas
+
+# ------------> ARRAYS <------------
+- intent: ask_question_var_arrays
+  examples: |
+    - array
+    - lista
+    - o que é uma lista em python
+    - o que são arrays em python
+    - que quer dizer com array
+    - o que é uma variável com tipo lista
+    - que é uma lista
+    - o que são arrays
+    - que quer dizer com listas
+    - me dá um exemplo de uma lista
+    - me diz um exemplo de arrays
+    - me dá um exemplo de array
+    - me dá um exemplo de uma variável com lista
+    - qual o exemplo de um array
+    - qual é um exemplo de um dado lista
+    - me diz um exemplo de um array
+    - qual um exemplo de listas
+    - exemplo lista
+    - exemplo listas
+    - exemplo array
+    - exemplo arrays

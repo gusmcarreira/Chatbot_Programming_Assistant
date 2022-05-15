@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_input
+  examples: |
+    - o que é a entrada de um programa
+    - entradas de programas
+    - como se define a entrada de um algoritmo
+    - me dá um exemplo de input
+    - me dê um exemplo de como se usa input
+    - como se usa a função input()
+    - como se lê um dado do teclado
+    - como se usa a função input()
+    - o que é a função input
+    - me diz como ler um dado do teclado
+    - como se leêm dados do teclado
+    - dado do teclado
+    - dados do teclado
+    - entrada de dados
+
+- intent: ask_output
+  examples: |
+    - saida de dados
+    - exemplo de uso de função print
+    - como se usa a função print()
+    - que se quer dizer com saida de dados
+    - como se imprime valor
+    - como se mostra na tela um valor
+    - me diz como imprimo valor do teclado na tela
+    - me diz como imprimir dado
+    - como imprimo dado no visor
+    - como posso imprimir um valor no ecrã
+    - me mostra como mostrar valor na tela
+    - como se imprimem valores no ecrã

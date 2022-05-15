@@ -1,0 +1,106 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_loop_general
+  examples: |
+    - o que é um loop
+    - o que são repetições
+    - que quer dizer com repetição
+    - me diz o que é uma repetição em python
+    - em python o que é uma repetição
+    - o que são laços de repetição
+    - loop é a mesma coisa que repetição
+    - é repetição o mesmo que loop
+    - são laços de repetição a mesma coisa que loop
+
+- intent: ask_example_loop_general
+  examples: |
+    - como se faz uma repetição
+    - me dá um exemplo de uma repetição
+    - como se faz uma repetição
+    - como se declara uma repetição
+    - como declarar uma repetição
+    - como incializo uma repetição
+    - como se faz a inicialização de um loop
+    - que tipos de repetições já
+    - quais são os tipos de repetições
+
+- intent: ask_loop_for
+  examples: |
+    - for
+    - instrução for
+    - loop for
+    - for loop
+    - repetição for
+    - laço de repetição for
+    - o que é uma repetição for
+    - que é um loop for
+    - o que quer dizer com instrução for
+    - o que é um for loop
+    - o que é um laço de repetição for
+    - qual a sintaxe de uma repetição for
+    - qual é a sintaxe de um for loop
+    - como é a sintaxe de uma instrução for
+    - me diz qual a sintaxe de um laço de instrução for
+    - qual é a repetição mais comum
+    - qual é o tipo de loop mais comum
+
+- intent: ask_example_loop_for
+  examples: |
+    - exemplo for
+    - exemplo for loop
+    - exemplo loop for
+    - exemplo repetição for
+    - exemplo instrução for
+    - me dá um exemplo de um for loop
+    - como se declara uma repetição for
+    - como faço para inicializar um loop for
+    - como declaro uma instrução for
+
+- intent: ask_loop_while
+  examples: |
+    - while
+    - instrução while
+    - loop while
+    - while loop
+    - repetição while
+    - laço de repetição while
+    - o que é uma repetição while
+    - que é um loop while
+    - o que quer dizer com instrução while
+    - o que é um while loop
+    - o que é um laço de repetição while
+    - qual a sintaxe de uma repetição while
+    - qual é a sintaxe de um while loop
+    - como é a sintaxe de uma instrução while
+    - me diz qual a sintaxe de um laço de instrução while
+
+- intent: ask_example_loop_while
+  examples: |
+    - exemplo while
+    - exemplo while loop
+    - exemplo loop while
+    - exemplo repetição while
+    - exemplo instrução while
+    - me dá um exemplo de um while loop
+    - como se declara uma repetição while
+    - como faço para inicializar um loop while
+    - como declaro uma instrução while
+
+- intent: ask_loop_indent
+  examples: |
+    - escopo de uma repetição
+    - escopo de um loop
+    - escopo de laços de repetição
+    - como se define um escopo de um loop
+    - como faço para definir o que corre numa repetição
+    - como se define o escopo de uma repetição
+    - que se quer dizer com escopos de repetições
+    - o que é um escopo de uma repetição
+    - me diz o que é o escopo das repetições
+    - qual o escopo de uma repetição
+    - como defino o escopo de uma repetição
+    - o que é o escopo de uma repetição
+    - escopo repetição
+    - escopo repetições

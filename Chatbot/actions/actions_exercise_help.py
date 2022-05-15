@@ -21,7 +21,7 @@ slot_eh_second_try = "slot_eh_second_try"
 # --------------------------------------------
 
 # =================================================== TEST CASE ========================================================
-# Given x, what input should it produce? 
+# Given x, what input should it produce?
 class ActionEhTestCase(Action):
     def name(self) -> Text:
         return "action_eh_test_case"
@@ -29,7 +29,7 @@ class ActionEhTestCase(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         # --- TEST CASE information sent by the application ---
         # It is in a form of a string, eg, <input>2<sep><output>3
         test_case_information = tracker.get_slot(slot_eh_test_case).split("<sep>") # Separate inputs from outputs
@@ -67,12 +67,13 @@ class ActionEhConceptsOrder(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         # ------ Get all the concepts on the answer -------
         answer_code_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).all_concepts_map
         answer_code_concepts = [concept for concept in answer_code_concepts if concept]
-        dispatcher.utter_message(text="Muito bem, por fim proponho um desafio! Vou lhe dar todas as peças do meu algoritmo, que não quer dizer que seja a única maneira de realizar o exercício!")
-        dispatcher.utter_message(text="Analise as peças, ex, menos variáveis pode significar que realizei uma conversão de uma dado do teclado num só passo, enquanto que com mais variáveis posso tê-lo feito em 2. Depois de analisar, preocupe-se em selecinar as opções pela ordem que devem ser implementadas!")
+
+        dispatcher.utter_message(text="Muito bem, por fim proponho um desafio! Vou lhe dar todas as peças de UMA possível solução!")
+        dispatcher.utter_message(text="Analise as peças,  e selecione-as pela ordem que acha que devem ser implementadas!")
 
         dispatcher.utter_message(text=conceptsOptionsButtons(answer_code_concepts))
 
@@ -86,7 +87,7 @@ class ActionEhFurtherHelp(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         # dispatcher.utter_message(text="<code>Por vezes o nosso algoritmo corre mas não produz o que queriamos, aqui vão algumas dicas:\n\n" +
         #                          "1 - Veja se em vez de ter usado o nome da variável, não a envolveu em aspas tornando-a uma string\n\n" +
         #                          "2 - Verifique as suas variáveis, poderá estar por exemplo a fazer a subtração de (a - a), em vez de (a - b),  ou até a trocar a sua ordem fazendo (b - a)\n\n" +
@@ -95,9 +96,9 @@ class ActionEhFurtherHelp(Action):
         #                          "5 - Ao usar a função range, lembre-se que esta começa no 0 acabando 1 número ANTES do que o escolhido, ex: range(3), irá ser do 0 ao 2</code>")
 
         dispatcher.utter_message(text="Se tiver dificuldade em algum conceito em especifico, clique no seu botão:")
-        correct_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).concepts_map
-        correct_concepts = [concept for concept in correct_concepts if concept]
-        dispatcher.utter_message(buttons=returnButtons(correct_concepts))
+        # correct_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).concepts_map
+        # correct_concepts = [concept for concept in correct_concepts if concept]
+        # dispatcher.utter_message(buttons=returnButtons(correct_concepts))
         return []
 
 # ================================================= CHECK ANSWERS ======================================================
@@ -159,31 +160,10 @@ class ActionEhCheckAnswer(Action):
             student_answer = student_answer.split("<sep>") # Get each option
             student_answer = [concept for concept in student_answer if concept] #Remove empty strings
             # ------------------------------------
-            breaking_points = ["Concatenação", "Declaração de função", "[ESCOPO FUNÇÃO]",
-                               "[ESCOPO IF]", "Declaração de condicional (if)",
-                               "[ESCOPO ELIF]", "Declaração de condicional (elif)",
-                               "[ESCOPO ELSE]", "Declaração de condicional (else)",
-                               "[ESCOPO FOR]","Declaração de repetição FOR",
-                               "[ESCOPO WHILE]","Declaração de repetição WHILE",
-                               "Impressão (print) de dado"]
-
             right_choices = []
             wrong_choices = []
             decision_arr = []
-            var_groups = []
-            tmp_index = 0
 
-            for index_concept in range(len(correct_order)):
-                tmp_arr = []
-                if correct_order[index_concept] == "Declaração de variável":
-                    tmp_arr.append(correct_order[index_concept + 1])
-                    for int_index_concept in range(index_concept + 1, len(correct_order)):
-                        if correct_order[int_index_concept] in breaking_points:
-                            break
-                        elif correct_order[int_index_concept] == "Declaração de variável":
-                            tmp_arr.append(correct_order[int_index_concept + 1])
-                if tmp_arr:
-                    var_groups.append(tmp_arr)
 
             for index, concept in enumerate(correct_order):
                 if index >= len(student_answer):
@@ -194,27 +174,12 @@ class ActionEhCheckAnswer(Action):
                         right_choices.append(concept)
                         decision_arr.append("right")
                     else:
-                        if len(decision_arr) > 0:
-                            if (correct_order[index - 1] == "Declaração de variável") and (decision_arr[index - 1] == "right"):
-                                right = False
-                                for same_level_vars in var_groups:
-                                    if (concept in same_level_vars) and (student_answer[index] in same_level_vars):
-                                        right_choices.append(concept)
-                                        decision_arr.append("right")
-                                        right = True
-                                        break
-                                if not right:
-                                    wrong_choices.append(concept)
-                                    decision_arr.append("wrong")
-                            else:
-                                wrong_choices.append(concept)
-                                decision_arr.append("wrong")
-                        else:
-                            wrong_choices.append(concept)
-                            decision_arr.append("wrong")
+                        wrong_choices.append(concept)
+                        decision_arr.append("wrong")
 
-            show_answer = False
+            #show_answer = False
             if wrong_choices:
+                """
                 # First try
                 if not second_try:
                     if right_choices:
@@ -244,20 +209,20 @@ class ActionEhCheckAnswer(Action):
                             dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
                             show_answer = True
                 # Second try
-                else:
-                    dispatcher.utter_message(text="Hmm ainda não é bem isso, a resposta correta seria:")
-                    show_answer = True
+                else:"""
+                dispatcher.utter_message(text="Hmm ainda não é bem isso, a resposta correta seria:")
+                #show_answer = True
             else:
                 dispatcher.utter_message(text="Muito bem, é isso mesmo 👏👏, a resposta correta é portanto:")
-                show_answer = True
+                #show_answer = True
 
-            if show_answer:
-                dispatcher.utter_message(text=produceString(correct_order, True))
+            #if show_answer:
+            dispatcher.utter_message(text=produceString(correct_order, True))
 
-            if (not second_try) and (not show_answer):
-                return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_second_try, "True")]
+            #if (not second_try) and (not show_answer):
+            #    return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_second_try, "True")]
 
-            dispatcher.utter_message(text="Agora tente passar para código o que discutimos! Mas lembre-se que o que estava na tela das suas escolhas não representava exatamente código Python, cabe-lhe a si tratar disso!")
+            dispatcher.utter_message(text="Agora tente passar para código o que discutimos!")
             dispatcher.utter_message(text="A nossa conversa ajudou-o a saber como proceder? (sim, não)")
 
             return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_situation, "Conclusion")]

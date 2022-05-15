@@ -1,0 +1,22 @@
+Int, ou inteiro, é um número inteiro, positivo ou negativo, SEM DÉCIMAS, de tamanho ilimitado.
+
+Exemplo:
+
+<code>x = 20</code>
+
+Sugestões:Como converter uma string ou número decimal em inteiro?<sep>Como obter o tipo de um dado?
+-#-
+Para converter uma string ou uma float para um inteiro usa-se a função int().
+
+Exemplo:
+
+<code>
+# Converte float para inteiro
+x = 2.5
+s = int(x)
+print(s)
+</code>
+
+<code_print>2
+
+Sugestões:Como obter o tipo de um dado?

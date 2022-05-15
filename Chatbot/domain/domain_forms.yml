@@ -1,0 +1,25 @@
+version: "3.1"
+
+# ---------------------------------------- FORMS ----------------------------------------
+forms:
+
+  #################################### ERROR GUIDANCE ####################################
+  # Do you want to help with your error? (yes/no)
+  form_eg_start:
+    required_slots:
+        - slot_eg_start
+
+  form_eg_answer:
+    required_slots:
+        - slot_eg_answer
+  ########################################################################################
+  #################################### EXERCISE HELP #####################################
+  # Do you want help with the exercise? (yes/no)
+  form_eh_start:
+    required_slots:
+      - slot_eh_start
+
+  form_eh_answer:
+    required_slots:
+      - slot_eh_answer
+  ########################################################################################

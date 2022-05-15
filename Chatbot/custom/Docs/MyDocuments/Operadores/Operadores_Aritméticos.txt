@@ -1,0 +1,148 @@
+Além de armazenarem dados, um dos grandes ganhos no uso de variáveis é poder realizar operações em seus dados.
+
+Em python existem algumas particularidade na hora de realizar operações matemáticas, por vezes não são utilizados os mesmos simbolos que estamos acostumados:
+
+<code>
+Operador matemárico: Soma
+Símbolo da matemática: +
+Simbolo em programação: +
+</code>
+
+<code>
+Operador matemárico: Subtração
+Símbolo da matemática: -
+Simbolo em programação: -
+</code>
+
+<code>
+Operador matemárico: Multiplicação
+Símbolo da matemática: x
+Simbolo em programação: *
+</code>
+
+<code>
+Operador matemárico: Divisão
+Símbolo da matemática: ÷
+Simbolo em programação: /
+</code>
+
+<code>
+Operador matemárico: Potência
+Símbolo da matemática:
+Simbolo em programação: **
+</code>
+
+<code>
+Operador matemárico: Raiz
+Símbolo da matemática:
+Simbolo em programação: variavel**.5
+</code>
+
+Sugestões:Como se faz a soma?<sep>Como se faz a subtração?<sep>Como se faz a divisão?<sep>Como se faz a multiplicação?
+-#-
+A soma é feita com o operador (+)
+
+Exemplo:
+
+<code>
+numero1 = 10
+numero2 = 2.5
+resultado = numero1 + numero2
+	
+print(resultado)
+</code>
+
+<code_print>12.5
+-#-
+Para subtrair usa-se o operador (-)
+
+Exemplo:
+	
+<code>
+numero1 = 10
+numero2 = 8.5
+resultado = numero1 - numero2
+	
+print(resultado)
+</code>
+
+<code_print>1.5
+-#-
+Para multiplicar usa-se o operador (*)
+
+Exemplo:
+
+<code>
+numero1 = 5
+numero2 = 2
+resultado = numero1 * numero2
+	
+print(resultado)
+</code>
+
+<code_print>10
+-#-
+Para dividir, diferente do nosso dia-a-dia, usa-se o operador (/)
+
+Exemplo:
+
+<code>
+numero1 = 5
+numero2 = 2
+resultado = numero1 / numero2
+	
+print(resultado)
+</code>
+
+<code_print>2.5
+-#-
+A divisão ARREDONDANDO PARA BAIXO é feita com o operador (//)
+
+Exemplo:
+
+<code>
+numero1 = 5
+numero2 = 2
+resultado = numero1 // numero2
+	
+print(resultado)
+</code>
+
+<code_print>2
+-#-
+Ao dividirmos um número por outro, o resto da divisão pode ser zero ou não. Se for zero, a divisão é exata; e se não for, é não exata. O resto da divisão é obtido com o operador (%)
+
+Exemplo:
+	
+<code>
+numero1 = 5
+numero2 = 2
+resultado = numero1 % numero2
+	
+print(resultado)
+</code>
+
+<code_print>1
+
+Esta operação é útil, por exemplo, para saber se um número é para ou ímpar (se o número é multiplo de 2):
+
+<code>
+resultado = numero1 % 2
+</code>
+
+Se numero1 for par, então o resultado da operação acima será IGUAL a 0, caso contrário sera DIFERENTE de 0..
+-#-
+A exponenciação é feita com o operador (**)
+
+Exemplo:
+
+<code>
+numero1 = 5
+numero2 = 2
+# 5 ao quadrado (5 * 5)
+resultado = numero1 ** numero2
+	
+print(resultado)
+</code>
+
+<code_print>25

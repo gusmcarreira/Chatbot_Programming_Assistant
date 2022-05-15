@@ -1,0 +1,34 @@
+Uma variável em Python é uma forma de associar um nome a um valor. Pense em cada variável como uma caixa que guarda algo e que podemos a qualquer momento ir nela para recuperá-lo. Na programação, o que será guardado nas variáveis são dados necessários aos nossos programas.
+
+Exemplo:
+
+<code>
+base = 2
+altura = 5
+area = (base * altura) / 2
+</code>
+
+No exemplo acima, criamos uma variável chamada base à qual atribuímos o valor 2, uma variável altura, à qual atribuímos o valor 5, e uma variável area, à qual atribuímos um cálculo envolvendo a base e a altura. 
+
+O sinal de igualdade é necessário para dar a entender ao computador que você deseja criar uma variável e armazenar um dado nela.
+
+Sugestões:Que nomes se podem dar às variáveis?
+-#-
+Nomes de variáveis em Python podem conter caracteres alfanuméricos (a-z, A-Z, 0-9) e o _ (underscore). Por convenção, nomes de variáveis começam com letra minúscula.
+
+Exemplo:
+
+<code_print>area = 6.0
+area_circulo = 10
+area_circulo_1 = 23
+areaCirculo = 25
+
+Importante notar que os nomes não podem conter espaços nem caracteres especiais, para além do _ (underscore).
+
+Para além disso, existem palavras reservadas em Python (elas são parte do vocabulário da linguagem), que não podem ser usadas como nomes de variáveis:
+
+<code_print>and, as, assert, break, class, continue, def, del, elif, else, except,
+exec, finally, for, from, global, if, import, in, is, lambda, not, or,
+pass, print, raise, return, try, while, with, yield
+
+

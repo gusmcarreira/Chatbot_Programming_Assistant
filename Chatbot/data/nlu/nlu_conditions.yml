@@ -1,0 +1,131 @@
+version: "3.1"
+
+nlu:
+
+- intent: ask_cond_general
+  examples: |
+    - o que é uma condição
+    - que quer dizer com condicional
+    - o que são condicionais
+    - que é uma condicional
+    - para que serve as condições
+    - para que servem as condicionais
+    - que operações podem ser usadas nas condicionais
+    - que operações podem ser usadas nas condicionais
+    - quais são as operações de comparação suportadas
+    - condição
+    - condições
+    - condicional
+    - condicionais
+
+- intent: ask_cond_if
+  examples: |
+    - sintaxe da instrução if
+    - if
+    - instruções if
+    - instrução if
+    - condicional if
+    - condicionais if
+    - o que é um if
+    - o que é uma instrução if
+    - que são instruções if
+    - me diz qual a sintaxe de uma condicional if
+    - qual é a sintaxe para condicionais if
+    - o que é uma condição if
+
+- intent: ask_example_cond_if
+  examples: |
+    - dá-me um exemplo de uma instrução if
+    - qual um exemplo de uma condição
+    - me dê um exemplo de uma condicional
+    - me dá um exemplo de condicionais
+    - me dá um exemplo de uma condicional if
+    - como se inicializa um if
+    - como se inicializam condições if
+    - como se cria uma condicional if
+    - como se criam ifs
+    - como se declaram instruções if
+    - como se se declara uma condicional if
+    - exemplo condicionais if
+    - examplo condicional if
+    - examplo condições if
+    - examplo condição if
+
+- intent: ask_cond_else
+  examples: |
+    - sintaxe da instrução else
+    - else
+    - instruções else
+    - instrução else
+    - condicional else
+    - condicionais else
+    - o que é um else
+    - o que é uma instrução else
+    - que são instruções else
+    - me diz qual a sintaxe de uma condicional else
+    - qual é a sintaxe para condicionais else
+    - o que é uma condição else
+
+- intent: ask_example_cond_else
+  examples: |
+    - dá-me um exemplo de uma instrução else
+    - me dê um exemplo de uma condicional else
+    - me dá um exemplo de condicionais else
+    - me dá um exemplo de uma condicional else
+    - como se inicializa um else
+    - como se inicializam condições else
+    - como se cria uma condicional else
+    - como se criam elses
+    - como se declaram instruções else
+    - como se se declara uma condicional else
+    - exemplo condicionais else
+    - examplo condicional else
+    - examplo condições else
+    - examplo condição else
+
+- intent: ask_cond_elif
+  examples: |
+    - sintaxe da instrução else
+    - elif
+    - instruções elif
+    - instrução elif
+    - condicional elif
+    - condicionais elif
+    - o que é um elif
+    - o que é uma instrução elif
+    - que são instruções elif
+    - me diz qual a sintaxe de uma condicional elif
+    - qual é a sintaxe para condicionais elif
+    - o que é uma condição elif
+
+- intent: ask_example_cond_elif
+  examples: |
+    - dá-me um exemplo de uma instrução elif
+    - me dê um exemplo de uma condicional elif
+    - me dá um exemplo de condicionais elif
+    - me dá um exemplo de uma condicional elif
+    - como se inicializa um elif
+    - como se inicializam condições elif
+    - como se cria uma condicional elif
+    - como se criam elifs
+    - como se declaram instruções elif
+    - como se se declara uma condicional elif
+    - exemplo condicionais elif
+    - examplo condicional elif
+    - examplo condições elif
+    - examplo condição elif
+
+- intent: ask_cond_indent
+  examples: |
+    - escopo de uma condição
+    - como se define o escopo de uma condição
+    - que se quer dizer com escopos de condições
+    - o que é um escopo de uma condicional
+    - me diz o que é o escopo das condicionais
+    - qual o escopo de uma instrução if
+    - como defino o escopo de uma condicional else
+    - o que é o escopo de uma condicional elif
+    - escopo condição
+    - escopo condições
+    - escopo condicional
+    - escopo condicionais

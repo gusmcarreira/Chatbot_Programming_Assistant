@@ -1,0 +1,9 @@
+As operações de comparação suportadas em python são:
+
+<code_print>
+> (maior que)
+< (menor que)
+== (igualdade)
+>= (maior ou igual)
+<= (menor ou igual)
+!= (diferente)

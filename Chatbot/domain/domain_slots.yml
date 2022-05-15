@@ -1,0 +1,114 @@
+version: "3.1"
+
+# ------------------- SLOTS -------------------
+slots:
+  ## ANSWER QUESTIONS ##
+  slot_error_cause_information:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  ## ERROR GUIDANCE ##
+  slot_eg_start:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+  slot_eg_message:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: error_message
+
+  slot_eg_concept:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: error_type
+
+  slot_eg_question_index:
+    type: float
+    initial_value: 0
+    influence_conversation: false
+    mappings:
+    - type: custom
+    max_value: 10.0
+    min_value: 0.0
+
+  slot_eg_questions_list:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  slot_eg_answer:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_eg_answer
+
+  # Check if answer was given from a button
+  slot_eg_answer_from_option:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  slot_eg_more_questions:
+    type: bool
+    initial_value: true
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  ######################
+  ### EXERCISE HELP ####
+  slot_eh_start:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  slot_eh_answer:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_eh_answer
+
+  slot_eh_code_answer:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: code_message_answer
+
+  slot_eh_situation:
+      type: text
+      mappings:
+        - type: custom
+
+  slot_eh_test_case:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: code_test_case
+
+  slot_eh_second_try:
+    type: text
+    mappings:
+      - type: custom
+
+  slot_eh_concepts_options:
+    type: text
+    mappings:
+      - type: custom
+  ######################
