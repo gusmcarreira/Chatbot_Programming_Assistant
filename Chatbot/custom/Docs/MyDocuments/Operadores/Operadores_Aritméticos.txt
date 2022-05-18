@@ -6,39 +6,29 @@ Em python existem algumas particularidade na hora de realizar operações matem�
 Operador matemárico: Soma
 Símbolo da matemática: +
 Simbolo em programação: +
-</code>
 
-<code>
 Operador matemárico: Subtração
 Símbolo da matemática: -
 Simbolo em programação: -
-</code>
 
-<code>
 Operador matemárico: Multiplicação
 Símbolo da matemática: x
 Simbolo em programação: *
-</code>
 
-<code>
 Operador matemárico: Divisão
 Símbolo da matemática: ÷
 Simbolo em programação: /
-</code>
 
-<code>
 Operador matemárico: Potência
 Símbolo da matemática:
 Simbolo em programação: **
+
+Operador matemárico: Raiz quadrada
+Símbolo da matemática: √
+Simbolo em programação: variavel ** .5
 </code>
 
-<code>
-Operador matemárico: Raiz
-Símbolo da matemática:
-Simbolo em programação: variavel**.5
-</code>
-
-Sugestões:Como se faz a soma?<sep>Como se faz a subtração?<sep>Como se faz a divisão?<sep>Como se faz a multiplicação?
+Sugestões:Como se faz a soma?<sep>Como se faz a subtração?<sep>Como se faz a divisão?<sep>Como se faz a multiplicação?<sep>Como se faz a exponenciação?
 -#-
 A soma é feita com o operador (+)
 

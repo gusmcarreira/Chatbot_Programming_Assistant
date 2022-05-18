@@ -10,7 +10,7 @@ frase = 'sou um chatbot'
 
 Strings podem ser declaradas usando aspas simples ou duplas, o que é sempre necessário, se não for dessa forma o Python não compreenderá que você está armazenando um texto.
 
-Sugestões:Como converter um dado em string?<sep>Como obter o tipo de um dado?
+Sugestões:Como converter um dado em string?<sep>Como se faz uma concatenação?<sep>Como obter o tipo de um dado?
 -#-
 Para converter um dado para string usa-se a função str().
 
@@ -24,3 +24,22 @@ print(s)
 </code>
 
 Sugestões:Como obter o tipo de um dado?
+-#-
+Em geral, não é possível executar operações matemáticas com strings, mesmo se elas parecerem números, então coisas assim são ilegais:
+
+<code_print>'2'-'1'
+'ovos'/'fácil'
+'third'*'a charm'
+
+Mas há duas exceções, + e *.
+
+O operador + executa uma concatenação de strings, ou seja, une as strings pelas extremidades. Por exemplo:
+
+<code_print>
+>>> primeira = 'Olá'
+>>> segunda = 'Mundo'
+>>> terceira = primeira + segunda
+>>> terceira
+OláMundo
+
+O operador * também funciona em strings; ele executa a repetição. Por exemplo, 'Spam'*3 é 'SpamSpamSpam'. Se um dos valores for uma string, o outro tem de ser um número inteiro.

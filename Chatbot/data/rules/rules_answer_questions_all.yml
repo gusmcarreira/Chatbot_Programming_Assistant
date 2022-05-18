@@ -329,6 +329,14 @@ rules:
   - action: action_answer_questions
   - action: utter_did_that_help
 
+- rule: Answer question anytime the user asks one (ORDER OF OPERATORS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_order
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
 # ======================================================================================================================
 # ====================================================== SYNTAX ========================================================
 # ======================================================================================================================
@@ -406,6 +414,14 @@ rules:
     - active_loop: null
   steps:
   - intent: ask_question_var_strings_convert
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (CONCATENATION STRINGS)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_var_strings_concat
   - action: action_answer_questions
   - action: utter_did_that_help
 

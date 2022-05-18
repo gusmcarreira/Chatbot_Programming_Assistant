@@ -1,4 +1,4 @@
-Repetição (loop, ou laços de repetição) é a repetição de um comando, ou conjunto de instruções, até que uma dada condição seja satisfeita.
+Repetição (loop, iteração, ou laços de repetição) é a repetição de um comando, ou conjunto de instruções, até que uma dada condição seja satisfeita.
 
 Exemplo:
 
@@ -16,7 +16,7 @@ for numero in [1, 1, 2]:
 
 Existem dois tipos de repetições (loops): while e for.
 
-Sugestões:Instrução while<sep>Instrução for<sep>Escopo de uma repetição<sep>Operadores de comparação
+Sugestões:Instrução while<sep>Instrução for<sep>Escopo de uma repetição<sep>Operadores de comparação (relacionais)
 -#-
 A instrução while é um tipo de repetição em que um comando/s será executado ENQUANTO a condição for verdadeira. A sua declaração segue a sintaxe:
 
@@ -30,19 +30,20 @@ i = 0
 while i < 3:
   print(i)
   i = i + 1
+
+print("Olá")
 </code>
 
 <code_print>0
 1
 2
+Olá
 
-É importante notar a condição i < 3, seguida por pois pontos (:), e depois o bloco de código indentado (espaçado) que determina o escopo da instrução while (conjunto de instruções a serem realizados enquanto a condição é verdadeira).
+Você até pode ler a instrução while como se fosse uma tradução do inglês. Significa “Enquanto i for menor que 0, mostre o valor de i e então incremente i. Quando maior ou igual a 3, saia da repetição e execute a próxima instrução!”.
 
-Este contém dois comando, um que imprime o numero em i, e outro que vai adicionando 1 ao i, pois caso contrário a instrução nunca pararia de correr, pois i seria sempre menor que 3.
+Nota: o número 3 não é imprimido pois a condição só é verdade enquanto i for MENOR que 3, para o 3 ser impresso a condição teria de ser MENOR OU IGUAL (<=). E note também o incremento do valor de i, caso contrário a nossa repetição correria para sempre, pois i seria sempre menor que 3.
 
-Nota: o número 3 não é imprimido pois a condição só é verdade enquanto i for MENOR que 3, para o 3 ser impresso a condição teria de ser MENOR OU IGUAL (<=).
-
-Sugestões:Instrução for<sep>Escopo de uma repetição<sep>Operadores de comparação
+Sugestões:Instrução for<sep>Escopo de uma repetição<sep>Operadores de comparação (relacionais)
 -#-
 A instrução for é a mais comum instrução de repetição, que é usado com objetos iteráveis tais como listas e intervalos. A sua sintaxe é:
 
@@ -65,6 +66,7 @@ Outro exemplo:
 
 <code>
 cores = [azul, branco]
+
 for cor in cores:
   print(cor)
 </code>
@@ -75,7 +77,7 @@ amarelo
 
 Observação: Pode tentar ler como "por cada cor em cores", sendo que "cor" poderia ter qualquer outro nome de variável, por exemplo, i (como no primeiro exemplo), mas sempre ajuda ter um nome com significado.
 
-Sugestões:Instrução while<sep>Escopo de uma repetição<sep>Operadores de comparação
+Sugestões:Instrução while<sep>Escopo de uma repetição<sep>Operadores de comparação (relacionais)
 -#-
 O escopo de uma repetição é o bloco de código que será executado quando a sua condição se verifica.
 

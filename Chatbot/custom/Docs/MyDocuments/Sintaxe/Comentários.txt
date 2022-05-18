@@ -1,13 +1,13 @@
+Conforme os programas ficam maiores e mais complicados, eles são mais difíceis de ler. As linguagens formais são densas e muitas vezes é difícil ver um pedaço de código e compreender o que ele faz ou por que faz isso.
+
+Por essa razão, é uma boa ideia acrescentar notas aos seus programas para explicar em linguagem natural o que o programa está fazendo. Essas notas são chamadas de comentários, e começam com o símbolo #:
+
+<code_print# computa a percentagem da hora que passou
+percentagem = (minuto * 100) / 60
+
 Comentários podem ser usados para explicar código, tornar código mais legível, ou apenas para prevenir a execução de um dado código.
 
-Comentários em Python são feitos com o símbolo #, o que fará com que Python ignore essa LINHA.
-
-Exemplo:
-
-<code>
-#Isto é um comentário
-print("Olá, Mundo!")
-</code>
+Tudo do # ao fim da linha é ignorado – não tem efeito na execução do programa.
 
 Sugestões:Como se comenta várias linhas
 -#-

@@ -51,6 +51,7 @@ stories:
     - intent: ask_op_logic_or
     - intent: ask_op_logic_not
     - intent: ask_op_comparison
+    - intent: ask_op_order
     # QUESTIONS ---------> SYNTAX
     - intent: ask_comments
     - intent: ask_multi_comments
@@ -62,6 +63,7 @@ stories:
     - intent: ask_question_var_get_type
     - intent: ask_question_var_strings
     - intent: ask_question_var_strings_convert
+    - intent: ask_question_var_strings_concat
     - intent: ask_question_var_ints
     - intent: ask_question_var_ints_convert
     - intent: ask_question_var_floats

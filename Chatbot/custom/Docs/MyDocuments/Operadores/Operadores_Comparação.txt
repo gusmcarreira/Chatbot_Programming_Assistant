@@ -1,9 +1,14 @@
-As operações de comparação suportadas em python são:
+Os operadores relacionais, usados nas expressões booleanas, em python são:
 
-<code_print>
-> (maior que)
-< (menor que)
-== (igualdade)
->= (maior ou igual)
-<= (menor ou igual)
-!= (diferente)
+<code_print># x é igual a y
+x == y
+# x não é igual a y
+x != y
+# x é maior que y
+x > y
+# x é menor que y
+x < y
+# x é maior ou igual a y
+x >= y
+# x é menor ou igual a y
+x <= y

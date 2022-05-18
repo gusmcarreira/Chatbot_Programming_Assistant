@@ -58,6 +58,7 @@ dic_answers = {
     "ask_op_logic_or": [main_dir + "Operadores/Operadores_Lógicos.txt", 2],
     "ask_op_logic_not": [main_dir + "Operadores/Operadores_Lógicos.txt", 3],
     "ask_op_comparison": [main_dir + "Operadores/Operadores_Comparação.txt", 0],
+    "ask_op_order": [main_dir + "Operadores/Operadores_Ordem.txt", 0],
     # =====================================================================
 
     # =============================> SYNTAX <==============================
@@ -72,6 +73,7 @@ dic_answers = {
     "ask_question_var_get_type": [main_dir + "Variáveis/TiposDados.txt", 1],
     "ask_question_var_strings": [main_dir + "Variáveis/Strings.txt", 0],
     "ask_question_var_strings_convert": [main_dir + "Variáveis/Strings.txt", 1],
+    "ask_question_var_strings_concat" :[main_dir + "Variáveis/Strings.txt", 2] ,
     "ask_question_var_ints": [main_dir + "Variáveis/Int.txt", 0],
     "ask_question_var_ints_convert": [main_dir + "Variáveis/Int.txt", 1],
     "ask_question_var_floats": [main_dir + "Variáveis/Float.txt", 0],

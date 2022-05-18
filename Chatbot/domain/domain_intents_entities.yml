@@ -61,6 +61,7 @@ intents:
   - ask_op_logic_or
   - ask_op_logic_not
   - ask_op_comparison
+  - ask_op_order
   # QUESTIONS ---------> SYNTAX
   - ask_comments
   - ask_multi_comments
@@ -72,6 +73,7 @@ intents:
   - ask_question_var_get_type
   - ask_question_var_strings
   - ask_question_var_strings_convert
+  - ask_question_var_strings_concat
   - ask_question_var_ints
   - ask_question_var_ints_convert
   - ask_question_var_floats

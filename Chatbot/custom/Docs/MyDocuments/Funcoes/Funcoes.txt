@@ -4,7 +4,7 @@ Uma das principais formas de se criar componentes reusáveis nas linguagens de p
 
 A criação de uma função é dada pela seguinte sintaxe:
 
-<code_print> def nome_funcao():
+<code_print>def nome_funcao():
 
 Exemplo:
 
@@ -13,9 +13,11 @@ Exemplo:
 2   print("Olá da função")
 3
 4 funcao_exemplo()
-</code>
+5 funcao_exemplo()
 
-<code_print>Olá da função
+Olá da função
+Olá da função
+</code>
 
 Importante notar que no exemplo temos a declaração de uma função "funcao_exemplo" e o seu escopo (instruções a correr quando esta é chamada), que deve estar marcado pelo devido espaçamento (linha 2).
 
@@ -32,10 +34,10 @@ Podem ser usados quantos parâmetros quiser, mas tenha o cuidado dos separa com 
 Exemplo:
 
 <code>
-def exemplo_add_func(num1, num2):
-  print(num1 + num2)
-
-exemplo_add_func(1, 4)
+1 def exemplo_add_func(num1, num2):
+2   print(num1 + num2)
+3
+4 exemplo_add_func(1, 4)
 </code>
 
 <code_print>5
@@ -83,7 +85,6 @@ def exemplo_func(num1):
  | if num1 == 0:
  |  #Escopo outro if
  |  | print("Igual a 0")
-
 </code>
 
 Os escopos são portanto controlados pelo número de espaços. Sendo que o que está no escopo das condições/repetições apenas será executado se as suas condições forem verdadeiras.

@@ -14,21 +14,19 @@ O sinal de igualdade é necessário para dar a entender ao computador que você 
 
 Sugestões:Que nomes se podem dar às variáveis?
 -#-
-Nomes de variáveis em Python podem conter caracteres alfanuméricos (a-z, A-Z, 0-9) e o _ (underscore). Por convenção, nomes de variáveis começam com letra minúscula.
+Os programadores geralmente escolhem nomes significativos para as suas variáveis – eles documentam o uso da variável.
+
+Nomes de variáveis podem ser tão longos quanto você queira. Podem conter tanto letras como números, mas NÃO PODE COMEÇAR COM UM NÚMERO nem conter espaços. É legal usar letras maiúsculas, mas a convenção é usar apenas letras minúsculas para nomes de variáveis.
+
+Nenhum caractere especial (ex, $) a não ser o de sublinhar (_) pode aparecer em um nome. Muitas vezes é usado em nomes com várias palavras, como meu_nome ou variavel_com_texto.
 
 Exemplo:
 
 <code_print>area = 6.0
 area_circulo = 10
-area_circulo_1 = 23
+area_circulo1 = 23
 areaCirculo = 25
-
-Importante notar que os nomes não podem conter espaços nem caracteres especiais, para além do _ (underscore).
 
 Para além disso, existem palavras reservadas em Python (elas são parte do vocabulário da linguagem), que não podem ser usadas como nomes de variáveis:
 
-<code_print>and, as, assert, break, class, continue, def, del, elif, else, except,
-exec, finally, for, from, global, if, import, in, is, lambda, not, or,
-pass, print, raise, return, try, while, with, yield
-
-
+<code_print>and, del, from, None, True, as, elif, global, nonlocal, try, assert, else, if, not, while, break, except, import, or, with, class, False, in, pass, yield, continue, finally, is, raise, def, for, lambda, return

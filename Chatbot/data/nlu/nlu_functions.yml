@@ -18,6 +18,7 @@ nlu:
 
 - intent: ask_example_func_general
   examples: |
+    - como se declara uma função
     - me dá um exemplo de uma função
     - me dá exemplo de funções
     - qual um exemplo de função
@@ -31,7 +32,6 @@ nlu:
   examples: |
     - função com parâmetros
     - o que é uma função com parâmetros
-    - como usar função com parâmetros
     - onde se põem os parâmetros de uma função
     - me explica o que é uma função com parâmetros
     - que quer dizer como funções com parâmetros
@@ -39,6 +39,7 @@ nlu:
 
 - intent: ask_example_func_parameters
   examples: |
+    - como se declara uma função com parâmetros
     - me dá um exemplo de uma função com parâmetros
     - me dá um exemplo de uma função com inputs
     - me dá exemplo de funções com parâmetros

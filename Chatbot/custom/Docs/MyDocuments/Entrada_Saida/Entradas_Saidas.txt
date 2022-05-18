@@ -1,4 +1,4 @@
-No mundo real os valores de alguns dados são informados pelo usuário e não pelo programador. Como dizemos ao Python que queremos que o usuário digite um dado? Utilizaremos a instrução input():
+No mundo real os valores de alguns dados são informados pelo usuário e não pelo programador. Como dizemos ao Python que queremos que o usuário digite um dado? Utilizaremos a função integrada chamada input():
 
 Exemplo:
 
@@ -10,8 +10,6 @@ saudacao = "Olá " + nome
 Ao executar a primeira linha desse código, o Python aguardará até que o usuário digite algo no teclado e pressione a tecla ENTER. Apenas após isso ocorrer é que a segunda linha será executada e a concatenação realizada. Isso faz sentido, pois a variável nome guardará o que o usuário digitou no teclado, e somente de posse desse dado é que a concatenação deve ser realizada.
 
 Nota: a função input() sempre lê strings. Por isso, caso você deseje ler um número, deverá converter o dado retornado por essa função para o formato numérico apropriado.
-
-No entanto, ao executar o algoritmo anterior, nosso usuário após digitar seu nome no teclado não visualizará nada em sua tela.
 
 Sugestões:Saida de dados
 -#-

@@ -165,10 +165,39 @@ nlu:
     - maior
     - maior ou igual
     - igual
+    - operadores de comparação (relacionais)
     - operadores de comparação
+    - operadores relacionais
+    - me diz quais são os operadores relacionais disponiveis
+    - que operadores relacionais existem
+    - quais são os operadores usados em comparações
     - que operadores se podem usar em comparações
     - como digo que um valor tem de ser maior que outro
     - como faço para dizer maior ou igual
     - como digo que um número tem de ser menor que outro
     - me diz como dizer que duas variáveis têm de ser iguais
     - como digo menor numa comparação
+    - auais os operadores relacacionais (comparação)
+
+- intent: ask_op_order
+  examples: |
+    - que ordem seguem os operadores em Python
+    - que ordem seguem os operadores matemáticos em Python
+    - que ordem seguem os operadores aritméticos em Python
+    - que ordem seguem os operadores em Python
+    - qual a ordem em que os operadores matemáticos seguem em python
+    - qual a ordem dos operadores matemáticos em python
+    - os operadores matemáticos seguem alguma ordem em python
+    - me diz a ordem dos operadores matemáticos em python
+    - que ordem devo seguir numa operação matemática
+    - as operações matemáticas seguem alguma ordem
+    - os operadores num equação seguem alguma ordem
+    - me diz como escrevo uma equação matemática
+    - como faço quando uma equação contém mais que um operador
+    - que é a ordem de avaliação dos operadores
+    - que ordem seguem os operadores matemáticos
+    - em que ordem devo escrever os operadores
+    - qual é a precedência dos operadores
+    - qual é a precedência dos operadores matemáticos
+    - me diz qual é a precedência dos operadores
+    - qual a ordem em que os operdares matemáticos são avaliados

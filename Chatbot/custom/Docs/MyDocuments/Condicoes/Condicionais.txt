@@ -1,8 +1,6 @@
-Uma condição ou condicional é uma capacidade importantíssima de uma linguagem de programação, pois é o que permite a capacidade de tomar decisões baseadas em certas condições.
+Para escrever programas úteis, quase sempre precisamos da capacidade de verificar condições e mudar o comportamento do programa de acordo com elas. Instruções condicionais nos dão esta capacidade.
 
 Por exemplo, o levantamento de dinheiro num multibanco passa por uma condição: o valor desejado deve ser menor ou igual ao saldo da conta. Em outras palavras, só pode levantar o que possui.
-
-No exemplo do banco, comparamos se a variável que guarda o valor solicitado para saque é MAIOR OU IGUAL ao valor guardado na variável que armazena o saldo bancário.
 
 A linguagem Python usa algumas palavras-chave para indicar execução condicional de código: if, elif (else if), else.
 
@@ -20,25 +18,23 @@ A sintaxe de uma condição ou instrução if em Python é:
 
 <code>if variável operador variável:</code>
 
-Constituído pela palavra-chave if, duas variáveis para comparação, o operador dessa comparação, e finalizando com dois pontos (:).
-
-As verificações de uma condição SEMPRE resultam em verdadeiro ou falso. A escolha entre um ou outro dependerá do valor das variáveis.
+A expressão booleana depois do if é chamada de condição. Se for verdadeira, a instrução endentada é executada. Se não, nada acontece.
 
 Exemplo:
 
 <code>
-saldo = 100
-levantamento = 50
+1 saldo = 100
+2 levantamento = 50
+3
+4 if saldo >= levantamento:
+5   print("Possível levantar dinheiro")
 
-if saldo >= levantamento:
-  print("Possível levantar dinheiro")
+Possível levantar dinheiro
 </code>
-
-<code_print>Possível levantar dinheiro
 
 A comparação acima resultará em verdadeiro (True), pois o saldo é maior que o levantamento. Quando essa situação ocorre, o conjunto de instruções que pertencem à condição serão executadas (escopo da condição).
 
-Sugestões:Sintaxe da instrução elif<sep>Sintaxe da instrução else<sep>Escopo de uma condição<sep>Operadores de comparação
+Sugestões:Sintaxe da instrução elif<sep>Sintaxe da instrução else<sep>Escopo de uma condição<sep>Operadores de comparação (relacionais)
 -#-
 O uso do if não resolve todos os nosso problemas, pois quando a comparação de uma condição não for verdadeira também pode ser preciso realizar alguma ação. Em casos como esse podemos utilizar uma instrução conhecida por "else".
 
@@ -49,46 +45,48 @@ A sintaxe de uma condição ou instrução else em Python é:
 Exemplo:
 
 <code>
-saldo = 12
-levantamento = 35
+1 saldo = 12
+2 levantamento = 35
+3
+4 if saldo >= levantamento:
+5   print("Sucesso!")
+6 else:
+7   print("Sem sucesso!")
 
-if saldo >= levantamento:
-  print("Sucesso!")
-else:
-  print("Sem sucesso!")
+Sem sucesso!
 </code>
 
-<code_print>Sem sucesso!
+Tenha atenção que ao usar o else não se escreve uma comparação, e isto faz sentido, pois o seu escopo SEMPRE será executado quando a comparação do if e elif/s resultar em falso.
 
-Tenha atenção que ao usaar o else não se escreve uma comparação, e isto faz sentido, pois o seu escopo SEMPRE será executado quando a comparação do if e elif/s resultar em falso.
-
-Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução elif<sep>Escopo de uma condição<sep>Operadores de comparação
+Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução elif<sep>Escopo de uma condição<sep>Operadores de comparação (relacionais)
 -#-
-Poderá também ser necessário várias condições, ou seja, condições em cadeia (um após o outro). Em casos como esse podemos utilizar uma instrução conhecida como "elif".
+Poderá também ser necessário várias condições, ou seja, condições em cadeia (uma após a outra). Em casos como esse podemos utilizar uma instrução conhecida como "elif".
 
 A sintaxe de uma condição ou instrução elif em Python é:
 
 <code>elif variável operador variável:</code>
 
-Exemplo
+Exemplo:
 
 <code>
-saldo = 100
-levantamento = 100
+1 saldo = 100
+2 levantamento = 100
+3
+4 if saldo > levantamento:
+5   print("Sucesso!")
+6 elif saldo == levantamento:
+7   print("Sucesso! Conta ficou a 0")
+8 else:
+9   print("Sem sucesso!")
 
-if saldo > levantamento:
-  print("Sucesso!")
-elif saldo == levantamento:
-  print("Sucesso! Conta ficou a 0")
-else:
-  print("Sem sucesso!")
+Sucesso! Conta ficou a 0
 </code>
 
-<code_print>Sucesso! Conta ficou a 0
+Não há nenhum limite para o número de instruções elif. Se houver uma cláusula else, ela deve estar no fim, mas não é preciso haver uma.
 
-Não está limitado a uma única instrução elif, pode utilizar várias.
+Cada condição é verificada em ordem. Se a primeira for falsa, a próxima é verificada, e assim por diante. Se uma delas for verdadeira, o ramo correspondente é executado e a instrução é encerrada. Mesmo se mais de uma condição for verdade, só o primeiro ramo verdadeiro é executado.
 
-Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução else<sep>Escopo de uma condição<sep>Operadores de comparação
+Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução else<sep>Escopo de uma condição<sep>Operadores de comparação (relacionais)
 -#-
 O escopo (de uma condição) é o bloco de código que será executado quando a sua condição se verifica.
 

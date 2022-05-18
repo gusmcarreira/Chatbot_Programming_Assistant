@@ -32,9 +32,11 @@ nlu:
     - me diz qual a sintaxe de uma condicional if
     - qual é a sintaxe para condicionais if
     - o que é uma condição if
+    - o que é um if statement
 
 - intent: ask_example_cond_if
   examples: |
+    - - me dê um exemplo de uma condicional if
     - dá-me um exemplo de uma instrução if
     - qual um exemplo de uma condição
     - me dê um exemplo de uma condicional
@@ -47,9 +49,14 @@ nlu:
     - como se declaram instruções if
     - como se se declara uma condicional if
     - exemplo condicionais if
-    - examplo condicional if
-    - examplo condições if
-    - examplo condição if
+    - exemplo condicional if
+    - exemplo condições if
+    - exemplo condição if
+    - exemplo instrução if
+    - exemplo de if
+    - exemplo if
+    - if exemplo
+
 
 - intent: ask_cond_else
   examples: |
@@ -65,6 +72,8 @@ nlu:
     - me diz qual a sintaxe de uma condicional else
     - qual é a sintaxe para condicionais else
     - o que é uma condição else
+    - o que é um else statement
+    - sintaxe da instrução else
 
 - intent: ask_example_cond_else
   examples: |
@@ -72,6 +81,7 @@ nlu:
     - me dê um exemplo de uma condicional else
     - me dá um exemplo de condicionais else
     - me dá um exemplo de uma condicional else
+    - me dê um exemplo de uma condicional else
     - como se inicializa um else
     - como se inicializam condições else
     - como se cria uma condicional else
@@ -79,9 +89,13 @@ nlu:
     - como se declaram instruções else
     - como se se declara uma condicional else
     - exemplo condicionais else
-    - examplo condicional else
-    - examplo condições else
-    - examplo condição else
+    - exemplo condicional else
+    - exemplo condições else
+    - exemplo condição else
+    - exemplo instrução else
+    - exemplo de else
+    - exemplo else
+    - else exemplo
 
 - intent: ask_cond_elif
   examples: |
@@ -97,9 +111,12 @@ nlu:
     - me diz qual a sintaxe de uma condicional elif
     - qual é a sintaxe para condicionais elif
     - o que é uma condição elif
+    - o que é um elif statement
+    - sintaxe da instrução elif
 
 - intent: ask_example_cond_elif
   examples: |
+    - exemplo de elif
     - dá-me um exemplo de uma instrução elif
     - me dê um exemplo de uma condicional elif
     - me dá um exemplo de condicionais elif
@@ -111,9 +128,13 @@ nlu:
     - como se declaram instruções elif
     - como se se declara uma condicional elif
     - exemplo condicionais elif
-    - examplo condicional elif
-    - examplo condições elif
-    - examplo condição elif
+    - exemplo condicional elif
+    - exemplo condições elif
+    - exemplo condição elif
+    - exemplo instrução elif
+    - exemplo de elif
+    - exemplo elif
+    - elif exemplo
 
 - intent: ask_cond_indent
   examples: |
@@ -125,7 +146,9 @@ nlu:
     - qual o escopo de uma instrução if
     - como defino o escopo de uma condicional else
     - o que é o escopo de uma condicional elif
+    - o que é a indentação de uma condicional elif
     - escopo condição
     - escopo condições
     - escopo condicional
     - escopo condicionais
+    - edentação de uma condicional

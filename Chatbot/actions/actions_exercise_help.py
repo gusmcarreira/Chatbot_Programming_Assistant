@@ -95,8 +95,18 @@ class ActionEhFurtherHelp(Action):
         #                          "4 - Quando faz uma concatenação lembre-se que, se for preciso, tem de ser você a colocar espaço entre as palavras, ex, (x = 'Olá' + 'Chabot'), vai gerar 'OláChatbot', pois não inseri um espaço no inicio/final de nenhuma das strings \n\n" +
         #                          "5 - Ao usar a função range, lembre-se que esta começa no 0 acabando 1 número ANTES do que o escolhido, ex: range(3), irá ser do 0 ao 2</code>")
 
-        dispatcher.utter_message(text="Se tiver dificuldade em algum conceito em especifico, clique no seu botão:")
-        # correct_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).concepts_map
+        dispatcher.utter_message(text="Aqui vão algumas sugestões de perguntas que possam ajudar:")
+        concepts_involved = codeInformation(tracker.get_slot(slot_eh_answer_code)).concepts_questions_arr
+        concepts_involved_str = "<code>"
+
+        if concepts_involved:
+            for index, concept in enumerate(concepts_involved):
+                if index != len(concepts_involved) - 1:
+                    concepts_involved_str = concepts_involved_str + concept + "\n\n"
+                else:
+                    concepts_involved_str = concepts_involved_str + concept + "</code>"
+
+        dispatcher.utter_message(text=concepts_involved_str)
         # correct_concepts = [concept for concept in correct_concepts if concept]
         # dispatcher.utter_message(buttons=returnButtons(correct_concepts))
         return []

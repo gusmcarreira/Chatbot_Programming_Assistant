@@ -111,6 +111,25 @@ nlu:
     - me ajuda a converter inteiro em string
     - pode-me dizer como converto um número decimal em string
 
+- intent: ask_question_var_strings_concat
+  examples: |
+    - o que é a concatenção
+    - me diz o que é a concatenação
+    - me dá um exemplo de concatenação
+    - não sei o que é a concatenação
+    - não sei como se faz a concatenação
+    - como se faz uma concatenação
+    - como fazer uma concatenação
+    - diz aí como se faz a concatenação
+    - que operador se usa para uma concatenação
+    - como se juntam duas strings
+    - como faço append de strins
+    - como se juntam dois textos
+    - como faço o apend de textos
+    - me diz como fazer concatenação de textos
+    - como junto duas frases
+    - como se põem duas frases juntas
+
 # ------------> INTS <------------
 - intent: ask_question_var_ints
   examples: |
@@ -153,6 +172,7 @@ nlu:
   examples: |
     - o que é um float
     - o que são floats
+    - o que é um número de ponto flutuate
     - que são números de ponto flutuante
     - o que é um número decimal
     - o que são números decimais
@@ -171,6 +191,7 @@ nlu:
     - qual o exemplo de um float
     - qual é um exemplo de um dado float
     - me diz um exemplo de um número decimal
+    - me dá um exemplo de um número de ponto flutuante
     - exemplo float
     - exemplo número decimal
 
