@@ -4,7 +4,7 @@ Opções_Iniciais:AND<sep>and<sep>And<end>
 ----------------------------------------------------------------------------------<end>
 Resposta:and<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Os operadores "and" e "or" devem ser sempre escritos com letras minúsculas!<end>
+Explicação:Os operadores lógicos "and" e "or" devem ser sempre escritos com letras minúsculas!<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>

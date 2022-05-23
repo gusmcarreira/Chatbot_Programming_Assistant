@@ -14,6 +14,13 @@ rules:
   - intent: EXTERNAL_ERROR_MESSAGE
   - action: form_eg_start
   - active_loop: form_eg_start
+
+- rule: (EG) Activate - Prompt start error guidance II?
+#  condition:
+#    - active_loop: null
+  steps:
+  - action: form_eg_start
+  - active_loop: form_eg_start
 # ------------------------------------------------------
 
 # ----------------> DOES NOT WANT HELP <----------------

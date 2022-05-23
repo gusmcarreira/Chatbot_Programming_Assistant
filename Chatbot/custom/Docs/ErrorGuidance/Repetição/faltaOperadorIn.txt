@@ -19,6 +19,6 @@ Checkpoint:A declaração de uma repetição for segue algumas regras, nomeadame
 
 <code_print>-- uma variável de indexação (o nosso x);
 -- o objeto que desejamos iterar (as nossas cores);
--- e ENTRE ESTES DOIS deve estar o operadore in.
+-- e ENTRE ESTES DOIS deve estar o operador in.
 
 Olhando agora para o seu algoritmo, veja se sempre segue esta sintaxe!.<end>

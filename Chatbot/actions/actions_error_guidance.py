@@ -108,8 +108,6 @@ class ActionEgCheckAnswer(Action):
                 return [SlotSet(slot_eg_student_answer, None), SlotSet(slot_eg_answer_from_option, True), ActiveLoop("form_eg_answer")]
             # --> There are no options
             else:
-                # Not correct message -> "Almost"
-                dispatcher.utter_message(text="Quase!")
                 # Send student answer/explanation
                 concise_answer = returnParameter("Explicação:", current_question)
                 dispatcher.utter_message(text=concise_answer)

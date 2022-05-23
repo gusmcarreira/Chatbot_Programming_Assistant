@@ -8,10 +8,17 @@ rules:
 
 # -------------------> INITIAL RULE  <------------------
 - rule: (EH) Activate - Prompt start exercise help?
-  condition:
-    - active_loop: null
+#  condition:
+#    - active_loop: null
   steps:
   - intent: EXTERNAL_CODE_MESSAGE
+  - action: form_eh_start
+  - active_loop: form_eh_start
+
+- rule: (EH) Activate - Prompt start exercise help II?
+#  condition:
+#    - active_loop: null
+  steps:
   - action: form_eh_start
   - active_loop: form_eh_start
 # ------------------------------------------------------

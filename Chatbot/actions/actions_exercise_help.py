@@ -32,33 +32,37 @@ class ActionEhTestCase(Action):
 
         # --- TEST CASE information sent by the application ---
         # It is in a form of a string, eg, <input>2<sep><output>3
+
         test_case_information = tracker.get_slot(slot_eh_test_case).split("<sep>") # Separate inputs from outputs
-        # == INPUTS ==
-        test_case_inputs = test_case_information[0].split("<input>")
-        test_case_inputs = [i for i in test_case_inputs if i] # Removing empty strings
-        # == OUTPUTS ==
-        test_case_outputs = test_case_information[1].split("<output>")
-        test_case_outputs = [i for i in test_case_outputs if i] # Removing empty strings
 
-        dispatcher.utter_message(text="Lembre-se se a qualquer momento quiser parar, diga PARAR")
-        dispatcher.utter_message(text="O primeiro passo é ver se compreende corretamente o que o seu algoritmo deve produzir!")
+        if test_case_information[0]:
+            # == INPUTS ==
+            test_case_inputs = test_case_information[0].split("<input>")
+            test_case_inputs = [i for i in test_case_inputs if i] # Removing empty strings
+            # == OUTPUTS ==
+            test_case_outputs = test_case_information[1].split("<output>")
+            test_case_outputs = [i for i in test_case_outputs if i] # Removing empty strings
 
-        # Text language according to amount of inputs fosse (1) / fossem (more than one)
-        if len(test_case_inputs) == 1:
-            dispatcher.utter_message(text="Se a entrada dada ao algoritmo fosse: '" + test_case_inputs[0] + "'")
+            dispatcher.utter_message(text="Lembre-se se a qualquer momento quiser parar, diga PARAR")
+            dispatcher.utter_message(text="O primeiro passo é ver se compreende corretamente o que o seu algoritmo deve produzir!")
+
+            # Text language according to amount of inputs fosse (1) / fossem (more than one)
+            if len(test_case_inputs) == 1:
+                dispatcher.utter_message(text="Se a entrada dada ao algoritmo fosse: '" + test_case_inputs[0] + "'")
+            else:
+                entries = "'" + test_case_inputs[0] + "'"
+                index = 1
+                while index < len(test_case_inputs):
+                    entries = entries + ", '" + test_case_inputs[index] + "'"
+                    index += 1
+                dispatcher.utter_message(text="Se as entradas dadas ao algoritmo fossem: " + entries)
+
+            dispatcher.utter_message(text="Qual seria a sua saida? Se achar que é mais que uma separe-as com um ponto e vírgula (;)")
+
+            # Save required information to use in later functions (SlotSet) and start form to ask for answer (FollowupAction)
+            return [SlotSet(slot_eh_situation, "Test Case"), SlotSet(slot_eh_student_answer, None), SlotSet(slot_eh_test_case, [test_case_inputs, test_case_outputs]), FollowupAction("form_eh_answer")]
         else:
-            entries = "'" + test_case_inputs[0] + "'"
-            index = 1
-            while index < len(test_case_inputs):
-                entries = entries + ", '" + test_case_inputs[index] + "'"
-                index += 1
-            dispatcher.utter_message(text="Se as entradas dadas ao algoritmo fossem: " + entries)
-
-        dispatcher.utter_message(text="Qual seria a sua saida? Se achar que é mais que uma separe-as com um ponto e vírgula (;)")
-
-        # Save required information to use in later functions (SlotSet) and start form to ask for answer (FollowupAction)
-        return [SlotSet(slot_eh_situation, "Test Case"), SlotSet(slot_eh_student_answer, None), SlotSet(slot_eh_test_case, [test_case_inputs, test_case_outputs]), FollowupAction("form_eh_answer")]
-
+            return [FollowupAction("action_eh_concepts_order")]
 # ================================================ ORDER CONCEPTS ======================================================
 class ActionEhConceptsOrder(Action):
     def name(self) -> Text:
@@ -72,8 +76,8 @@ class ActionEhConceptsOrder(Action):
         answer_code_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).all_concepts_map
         answer_code_concepts = [concept for concept in answer_code_concepts if concept]
 
-        dispatcher.utter_message(text="Muito bem, por fim proponho um desafio! Vou lhe dar todas as peças de UMA possível solução!")
-        dispatcher.utter_message(text="Analise as peças,  e selecione-as pela ordem que acha que devem ser implementadas!")
+        dispatcher.utter_message(text="Vou-lhe agora propor um desafio! Vou lhe dar todas as peças de UMA possível solução!")
+        dispatcher.utter_message(text="Analise as peças, selecione-as por ordem que acha que devem ser implementadas, e no final clique em enviar!")
 
         dispatcher.utter_message(text=conceptsOptionsButtons(answer_code_concepts))
 
@@ -130,7 +134,8 @@ class ActionEhCheckAnswer(Action):
         # Check if user asked to stop
         if (student_answer.lower() == "parar") or (student_answer.lower() == "para"):
             return [FollowupAction("utter_anything_else")]
-
+        elif tracker.latest_message['intent'].get('name') == "EXTERNAL_ERROR_MESSAGE":
+            return [ActiveLoop(None), SlotSet(slot_eh_student_answer, None), FollowupAction("form_eg_start")]
         # """""""""""""""""""""""""""" TEST CASES """"""""""""""""""""""""""""
         if answer_situation == "Test Case":
             student_answer = student_answer.split(";")
@@ -154,8 +159,7 @@ class ActionEhCheckAnswer(Action):
                 dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
                 dispatcher.utter_message(text=produceString(test_case_slot[1], False))
                 dispatcher.utter_message(
-                    text="Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
-
+                    text = "Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
             return [FollowupAction("action_eh_concepts_order")]
         # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -187,40 +191,8 @@ class ActionEhCheckAnswer(Action):
                         wrong_choices.append(concept)
                         decision_arr.append("wrong")
 
-            #show_answer = False
             if wrong_choices:
-                """
-                # First try
-                if not second_try:
-                    if right_choices:
-                        wanted_num_clues = round(len(wrong_choices) / 3) # To add a third of the wrong answers as a clue
-                        if wanted_num_clues != 0:
-                            dispatcher.utter_message(text="Não é bem isso, tente outra vez mas agora com uma ajudinha:")
-                            dispatcher.utter_message(text=returnOptions(decision_arr, wanted_num_clues, correct_order))
-                            dispatcher.utter_message(text=conceptsOptionsButtons(correct_order))
-                            if wanted_num_clues == 1:
-                                dispatcher.utter_message(text="Adicionei 1 peça aquelas que já tinha acertado, tente agora!")
-                            else:
-                                dispatcher.utter_message(text="Adicionei algumas peças aquelas que acertou, tente agora!")
-                        else:
-                            dispatcher.utter_message(text="Quase! A resposta correta seria: ")
-                            show_answer = True
-                    else:
-                        wanted_num_clues = round(len(wrong_choices) / 3)
-                        if wanted_num_clues != 0:
-                            dispatcher.utter_message(text="Está com algumas dificuldade, vá outra vez mas agora com uma ajudinha:")
-                            dispatcher.utter_message(text=returnOptions(decision_arr, wanted_num_clues, correct_order))
-                            dispatcher.utter_message(text=conceptsOptionsButtons(correct_order))
-                            if wanted_num_clues == 1:
-                                dispatcher.utter_message(text="Adicionei 1 peça, tente agora!")
-                            else:
-                                dispatcher.utter_message(text="Adicionei algumas peças, tente agora!")
-                        else:
-                            dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
-                            show_answer = True
-                # Second try
-                else:"""
-                dispatcher.utter_message(text="Hmm ainda não é bem isso, a resposta correta seria:")
+                dispatcher.utter_message(text="Hmm não é bem isso, a resposta correta seria:")
                 #show_answer = True
             else:
                 dispatcher.utter_message(text="Muito bem, é isso mesmo 👏👏, a resposta correta é portanto:")
@@ -232,7 +204,7 @@ class ActionEhCheckAnswer(Action):
             #if (not second_try) and (not show_answer):
             #    return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_second_try, "True")]
 
-            dispatcher.utter_message(text="Agora tente passar para código o que discutimos!")
+            dispatcher.utter_message(text="O seu último desafio é transformar isto em código!")
             dispatcher.utter_message(text="A nossa conversa ajudou-o a saber como proceder? (sim, não)")
 
             return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_situation, "Conclusion")]
@@ -254,12 +226,6 @@ def returnButtons(options):
         payload = ('"' + option + '"')
         buttons.append({"title": option, "payload": payload})
     return buttons
-
-dic_meaning_empty = {"Declaração de variável": "var",
-                     "Impressão (print) de ...": "print",
-                     "Conversão de dado para texto (string)": "conv",
-                     "Conversão de dado para inteiro (int)": "conv",
-                     "Conversão de dado para número decimal (float": "conv"}
 
 def returnOptions(rightArr, numAdd, arrAnswer):
     arrIndexes = []

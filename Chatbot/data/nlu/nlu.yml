@@ -13,6 +13,13 @@ nlu:
     - coé
     - fala
     - fala aí
+    - hi
+    - hello
+    - tudo bom
+    - e aí
+    - como vai
+    - boas
+    - tudo bem
 
 - intent: goodbye
   examples: |
@@ -84,24 +91,3 @@ nlu:
     - és um robõ?
     - és um chatbot?
     - és um chatterbot?
-
-- intent: ask_help
-  examples: |
-    - para
-    - parar
-    - quero parar
-
-# ----------------------------------------------------
-- intent: ask_help
-  examples: |
-    - preciso ajuda no exercicio
-    - preciso de ajuda no exercicio
-    - me ajuda com o exercicio?
-    - como se faz o exercicio
-    - me ajuda no exercício
-    - nao sei fazer o exercicio
-    - não entendo o exercicio
-    - não percebo o exercício
-    - estou com dificuldade no exercicio
-    - não sei como fazer o algoritmo
-
