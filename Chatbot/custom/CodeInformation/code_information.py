@@ -206,11 +206,15 @@ class CodeInformation(ast.NodeVisitor):
             if var_right[2] == "str":
                 # Append concept question to array
                 self.append_questions("concatenação")
-
                 op_meaning = "concatenação de variável COM texto"
                 op_type = "string"
             else:
                 op_meaning = self.operation_meaning(op)
+                self.append_questions(op_meaning)
+                if var_right[2] == "float" or var_right[2] == "float":
+                    op_type = "float"
+                else:
+                    op_type = "int"
         # ---> OPERAÇÃO COM CONSTANT E VARIÁVEL <---
         elif var_left[0] == "Constant" and var_right[0] == "Name":
             if var_right[2] == "str":
