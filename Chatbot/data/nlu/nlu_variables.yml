@@ -3,16 +3,28 @@ version: "3.1"
 nlu:
 - intent: ask_question_var
   examples: |
+    - o que e uma variavel
     - o que é uma variável?
+    - o que é uma variavel?
     - o que são variáveis?
+    - o que são variaveis?
+    - o que sao variaveis?
     - para que serve uma variável?
+    - para que serve uma variavel?
     - para que servem as variáveis?
+    - para que servem as variaveis?
     - como se usa uma variável?
+    - como se usa uma variavel?
     - como se usam variáveis?
+    - como se usam variaveis?
     - qual a sintaxe de uma variável?
+    - qual a sintaxe de uma variavel?
     - qual a sintaxe das variáveis?
+    - qual a sintaxe das variaveis?
     - variável
+    - variavel
     - variáveis
+    - variaveis
 
 - intent: ask_example_question_var
   examples: |
