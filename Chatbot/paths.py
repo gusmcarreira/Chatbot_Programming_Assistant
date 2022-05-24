@@ -34,8 +34,8 @@ dic_answers = {
 
     # ==============================> LOOPS <==============================
     "ask_loop_general": [main_dir + "Repetições/Loops.txt", 0],
-    "ask_loop_for": [main_dir + "Repetições/Loops.txt", 1],
-    "ask_loop_while": [main_dir + "Repetições/Loops.txt", 2],
+    "ask_loop_while": [main_dir + "Repetições/Loops.txt", 1],
+    "ask_loop_for": [main_dir + "Repetições/Loops.txt", 2],
     "ask_loop_indent": [main_dir + "Repetições/Loops.txt", 3],
     # =====================================================================
 
