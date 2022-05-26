@@ -7,3 +7,6 @@ venv/
 ./Chatbot/.rasa
 ./Chatbot/.rasa/
 .rasa/
+./Chatbot/__pycache__/
+./Chatbot/actions/__pycache__/
+./Chatbot/custom/CodeInformation/__pycache__/
