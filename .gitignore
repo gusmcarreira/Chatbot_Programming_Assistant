@@ -1,3 +1,5 @@
 ./Chatbot/venv
 ./Chatbot/venv/
 venv/
+.idea/
+.rasa/
