@@ -78,7 +78,7 @@ dic_answers = {
     "ask_question_var_ints_convert": [main_dir + "Variáveis/Int.txt", 1],
     "ask_question_var_floats": [main_dir + "Variáveis/Float.txt", 0],
     "ask_question_var_floats_convert": [main_dir + "Variáveis/Float.txt", 1],
-    "ask_question__var_bools": [main_dir + "Variáveis/Bool.txt", 0],
+    "ask_question_var_bools": [main_dir + "Variáveis/Bool.txt", 0],
     "ask_question_var_arrays": [main_dir + "Variáveis/Array.txt", 0],
     # =====================================================================
 }
