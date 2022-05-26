@@ -145,7 +145,7 @@ class ActionEgFollowUpConcept(Action):
         else:
             wanted_question = returnParameter("Checkpoint:", wanted_question)
             dispatcher.utter_message(text=wanted_question)
-            return [FollowupAction("action_restart")]
+            return [FollowupAction("action_restart"), FollowupAction("utter_did_that_help")]
 
 
 # Function to check if the answer is in the user's message
