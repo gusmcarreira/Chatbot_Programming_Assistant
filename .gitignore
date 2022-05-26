@@ -1,5 +1,9 @@
 ./Chatbot/venv
 ./Chatbot/venv/
 venv/
+./Chatbot/.idea
+./Chatbot/.idea/
 .idea/
+./Chatbot/.rasa
+./Chatbot/.rasa/
 .rasa/
