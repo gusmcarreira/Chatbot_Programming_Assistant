@@ -17,9 +17,9 @@ responses:
   - text: "A resposta ajudou?"
 
   utter_goodbye:
-  - text: "Adeus 👋"
-  - text: "Até já 👋"
-  - text: "Até logo 👋"
+  - text: "Adeus 👋 qualquer coisa sabe onde me encontrar!"
+  - text: "Até já 👋 qualquer coisa sabe onde me encontrar!"
+  - text: "Até logo 👋 qualquer coisa sabe onde me encontrar!"
 
   utter_iamabot:
   - text: "Na verdade sou um Chatbot 🤖!"
@@ -30,8 +30,7 @@ responses:
     - text: "Posso ajudá-lo em algo mais?"
 
   utter_please_rephrase:
-  - text: "Desculpe, estou com dificuldade em entender o que quer. Tente escrever de forma diferente, e lembre-se que eu o consigo
-  ajudar em perguntas sobre conceitos, tais como, 'o que é um if?', ou de dar exemplos, por exemplo 'me dê um exemplo de um for loop'."
+  - text: "Desculpe, estou com dificuldade em entender o que quer 🤕. Prometo adicionar ao meu vocabulário, mas por enquanto peço que escreva de forma diferente 😔"
 
   utter_congratulate:
   - text: "Boa, continue assim!"
@@ -45,17 +44,16 @@ responses:
 
   # utter_ask_<form_name>_<slot_name>
   utter_ask_form_eg_start_slot_eg_start:
-    - text: "Parece estar com alguns problemas, gostaria de uma ajudinha? (sim/não)"
+    - text: "Parece estar com alguns problemas no seu código. Proponho um pequeno diálogo, o que diz? (sim/não)"
 
   utter_ask_form_eh_start_slot_eh_start:
-    - text: "Parece estar há algum tempo preso neste exercício, proponho um diálogo que talvez o ajude a perceber melhor o exercício e o que ele envolve, o que diz? (sim/não)"
+    - text: "Parece estar há algum tempo preso neste exercício, proponho um diálogo que talvez o ajude a perceber melhor o que ele envolve, o que diz? (sim/não)"
 
   utter_are_you_sure:
   - text: "Tem a certeza?"
 
   utter_ask_for_help:
-  - text: "Desculpe, vou treinar para a próxima conseguir ajudar 😔. Gostaria de mandar mensagem ao professor com a sua dúvida?"
-  - text: "Desculpe, vou estudar mais para a próxima conseguir ajudar 😔. Gostaria de mandar mensagem ao professor com a sua dúvida?"
+  - text: "Desculpe, vou tentar melhorar para a próxima conseguir ajudar 😔. Gostaria de mandar mensagem ao professor com a sua dúvida?"
 
   utter_wants_help:
   - text: "Acima do editor de programação tem um botão chamado 'Pedir ajuda' clique nele e é só escrever a sua dúvida!"

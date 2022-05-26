@@ -74,6 +74,10 @@ nlu:
     - nao
     - some answer
     - não sei
+    - por enquanto não, obrigado
+    - para já não
+    - por enquanto não
+    - para já não obrigado
 
 - intent: bot_challenge
   examples: |
