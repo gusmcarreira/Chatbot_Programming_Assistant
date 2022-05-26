@@ -7,8 +7,10 @@ bin-release/
 # Other files and folders
 .settings/
 ./Chatbot/venv
+./Chatbot/venv/
 .idea
 ./Chatbot/.rasa
+./Chatbot/.rasa/
 
 # Executables
 *.swf
