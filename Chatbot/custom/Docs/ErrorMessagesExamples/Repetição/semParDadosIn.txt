@@ -1,0 +1,25 @@
+Veja o código abaixo:
+
+<code>
+1  # Falta informação para comparação
+2  for in:
+3    ...
+
+1  # Falta objeto para iterar
+2  for x in:
+3    ...
+
+1  # Falta variavel de indexação
+2  for in range(2):
+3    ...
+
+1  # SINTAXE CORRETA
+2  for x in range(2):
+3    ...
+</code>
+
+A sintaxe de uma instrução "for" necessita de 3 elementos, uma variavel de indexação (o nosso x), o operador "in", e um objeto que desejamos iterar (range(2)).
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu código e procure pela declaração de um "for" onde esteja em falta ambos ou apenas um desses elementos.
+
+Sugestões:Instrução for<sep>Operadores de comparação (relacionais)

@@ -1,0 +1,27 @@
+Veja o código abaixo (NOTA: o mesmo pode acontecer nas condicionais if/elif/else ou declaração/chamada de uma função):
+
+<code>
+1  # Sem : (dois pontos)
+2  while x >= 10
+3    ...
+
+1  # MANEIRA CORRETA
+2  # Com : (dois pontos)
+3  while x >= 10:
+4    ...
+
+1  # Sem : (dois pontos)
+2  for x in range(10)
+3    ...
+
+1  # SINTAXE CORRETA
+2  # Com : (dois pontos)
+3  for x in range(10):
+4    ...
+</code>
+
+As instruções "while" e "for" sempre necessitam de ser finalizadas com : (dois pontos), caso contrário resulta em erro.
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu código e procure pela declaração de um for/while onde estejam em falata : (dois pontos).
+
+Sugestões:Instrução for<sep>Instrução while

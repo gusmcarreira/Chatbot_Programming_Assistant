@@ -1,0 +1,24 @@
+Veja o código abaixo (NOTA: o mesmo pode acontecer nas condicionais if/elif):
+
+<code>
+1  # Falta parêntesis de fechadura
+2  while x >= (1 + y:
+3    ...
+
+1  # Falta parêntesis de abertura
+2  # while com condição
+3  while x >= 1 + y):
+4    ...
+
+1  # Falta parêntesis de fechadura
+2  for x in range(10:
+3    ...
+
+1  # SINTAXE CORRETA
+2  for x in range(10):
+3    ...
+</code>
+
+Repare como todas essas declarações de laços de repetição têm um erro, pois estão em falta um parêntesis (abertura ou fechamento).
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure pela declaração de um while/for onde verifique que falta um parêntesis. Acontece principalemnte quando usamos vários parêntesis seguidos, tenha isso em atenção, onde eles são abertos e fechados.

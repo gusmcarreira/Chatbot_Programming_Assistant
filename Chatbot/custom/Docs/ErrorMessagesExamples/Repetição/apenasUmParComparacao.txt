@@ -1,0 +1,26 @@
+Veja o código abaixo (NOTA: o mesmo pode acontecer nas condicionais if/elif):
+
+<code>
+1  # Apenas uma informação
+2  while x:
+3    ...
+
+1  # Apenas uma informação
+2  while x >=:
+3    ...
+
+1  # Apenas uma informação
+2  while >= range(10):
+3    ...
+
+1  # SINTAXE CORRETA
+2  # Condição com duas informações
+3  while x >= range(10):
+4    ...
+</code>
+
+Por vezes por confusão com as declarações das variáveis (que usam apenas uma = (igualdade)), ou apenas por distracção, usamos apenas uma = (igualdade) quando se trata de condições, sendo que "igual a" é feito com duas == (igualdades).
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu código e procure pela declaração de uma instrução while onde estejam em falta uma = (igualdade).
+
+Sugestões:Operadores de comparação (relacionais)

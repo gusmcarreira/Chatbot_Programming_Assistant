@@ -6,6 +6,7 @@ actions:
 - action_answer_questions                         #-> Answer student questions         # =========== GENERAL ==========
 - action_eg_reset_slot_start                      #-> Reset slots
 - validate_form_eg_start                          #-> Check for yes or no              # ======= ERROR GUIDANCE =======
+- validate_form_eg_answer
 - action_eg_start                                 #-> Start error guidance
 - action_eg_check_answer                          #-> Check student answers
 - action_eg_followup_concept                      #-> Send following questions
@@ -17,3 +18,5 @@ actions:
 - action_eh_test_case
 - action_answer_error_questions
 - action_answer_error_questions_followup
+- action_eg_error_message_example
+- validate_form_teacher_help

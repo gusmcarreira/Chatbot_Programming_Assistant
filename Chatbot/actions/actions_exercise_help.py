@@ -10,6 +10,7 @@ import random
 from paths import guide_docs_dir
 from custom.CodeInformation.code_information import CodeInformation
 
+import json
 # ---------------- Slots Used ----------------
 slot_eh_answer_code = "slot_eh_code_answer"
 slot_eh_student_answer = "slot_eh_answer"
@@ -135,7 +136,9 @@ class ActionEhCheckAnswer(Action):
         if (student_answer.lower() == "parar") or (student_answer.lower() == "para"):
             return [FollowupAction("utter_anything_else")]
         elif tracker.latest_message['intent'].get('name') == "EXTERNAL_ERROR_MESSAGE":
-            return [ActiveLoop(None), SlotSet(slot_eh_student_answer, None), FollowupAction("form_eg_start")]
+            student_answer = student_answer.split("/EXTERNAL_ERROR_MESSAGE")[1]
+            student_answer = json.loads(student_answer)
+            return [ActiveLoop(None), SlotSet(slot_eh_student_answer, None), SlotSet("slot_eg_concept", student_answer["error_type"]), SlotSet("slot_eg_message", student_answer["error_message"]),FollowupAction("utter_start_error_guidance")]
         # """""""""""""""""""""""""""" TEST CASES """"""""""""""""""""""""""""
         if answer_situation == "Test Case":
             student_answer = student_answer.split(";")
@@ -158,8 +161,10 @@ class ActionEhCheckAnswer(Action):
             else:
                 dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
                 dispatcher.utter_message(text=produceString(test_case_slot[1], False))
-                dispatcher.utter_message(
-                    text = "Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
+                if produceString(test_case_slot[1], False).isnumeric():
+                    dispatcher.utter_message(text = "Dica: Quando se trata de um valor númerico, atente no enunciado, pois este ou especifica o valor, ou o cálculo para chegar a este.")
+                else:
+                    dispatcher.utter_message(text = "Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
             return [FollowupAction("action_eh_concepts_order")]
         # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

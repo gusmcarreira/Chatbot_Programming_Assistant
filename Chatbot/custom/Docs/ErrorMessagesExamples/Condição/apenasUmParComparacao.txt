@@ -1,0 +1,27 @@
+Alguns exemplos de razões deste erro (NOTA: o mesmo pode acontecer nas repetições):
+
+<code>
+1  if x:
+2    ...
+3  elif x ==:
+4    ...
+5  elif == x:
+6    ...
+</code>
+
+Nas linhas acima, todas as declarações das instruções contêm um erro. As instruções if/elif são compostas por "if/elif informação operador informação:".
+
+Repare que a condição é composta por pelo menos um operador (ex, >=, <, ==) e duas informações (ex, variável, numero, string), pois necessitamos de comparar algo.
+
+<code>
+1  if x == 1:
+2    ...
+3  elif x == 2:
+4    ...
+5  elif 3 == x:
+6    ...
+</code>
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure por uma condição onde esteja a faltar uma um lado da comparação.
+
+Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução elif<sep>Operadores de comparação

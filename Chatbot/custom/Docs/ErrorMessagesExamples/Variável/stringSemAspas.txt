@@ -1,0 +1,23 @@
+O seu erro é frequente de acontecer, alguns exemplos deste:
+
+<code>
+1  # Falta " (aspa de abertura)
+2  texto = Monitor"
+3
+4  # Falta " (aspa de fechamento)
+5  texto = "Monitor
+6
+7  # Será lida como variavel
+8  # pois não está involvida em aspas
+8  texto = Monitor
+9
+10  # CORRETO
+11  # Ambas as aspas
+12  texto = "Monitor"
+</code>
+
+Note que as aspas, por vezes apagadas sem querer, ou não incluidas por distração, são um elemento importante de um texto (string), que necessitam de ser envolvidas com uma " (aspa) de CADA LADO.
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu procure no seu código por um texto (string) onde falte uma " (aspa), ou de abertura ou de fechamento.
+
+Sugestões:O que é uma string

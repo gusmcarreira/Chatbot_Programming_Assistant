@@ -13,6 +13,9 @@ intents:
   - EXTERNAL_CODE_MESSAGE
   # ASK EXERCISE HELP
   - ask_help
+  # ASK FOR HELP UNDERSTANDING AN ERROR MESSAGE
+  - ask_error_message
+  - ask_help_error
   # QUESTIONS ---------> CONDITIONS
   - ask_cond_general
   - ask_cond_if

@@ -38,6 +38,9 @@ nlu:
     - como se criam variáveis
     - como se declaram variáveis
     - como se se declara uma variável
+    - como declarar variavel
+    - como atribuir valor a variavel
+    - como posso dar uma número a uma variavel
     - exemplo variável
     - examplo variáveis
 
@@ -49,6 +52,12 @@ nlu:
 
 - intent: ask_question_var_name
   examples: |
+    - nomes de variaveis
+    - que quer dizer com palavras reservadas
+    - quais as regras para os nomes das variaveis
+    - me diz que palavras não podem estar no nome de uma variavel
+    - palavras reservadas
+    - palavras reservadas em Python
     - que nomes podemos dar às variáveis?
     - que nome pode ter uma variável?
     - que nome podem ter as variáveis?
@@ -184,6 +193,7 @@ nlu:
   examples: |
     - o que é um float
     - o que são floats
+    - o que são números decimais
     - o que é um número de ponto flutuate
     - que são números de ponto flutuante
     - o que é um número decimal
@@ -192,7 +202,7 @@ nlu:
     - o que é um dado float
     - que quer dizer com número decimal
     - que se quer dizer com número decimal
-    - flat
+    - float
     - número decimal
     - número de ponto flutuante
     - qual um exemplo de número de ponto flutuante

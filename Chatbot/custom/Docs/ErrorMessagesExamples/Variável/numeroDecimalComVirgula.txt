@@ -1,0 +1,17 @@
+O seu erro é frequente de acontecer:
+
+<code>
+1  # INCORRETO
+2  # , (vírgula)
+3  numero_decimal = 10,3
+4
+5  # CORRETO
+6  # . (ponto)
+7  numero_decimal = 10.3
+</code>
+
+Lembre-se que Python segue a regra Americana ao usar um . (ponto) nos números decimais (float).
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu procure no seu código por um número decimal que tenha uma , (virgula) ao invés de um um . (ponto).
+
+Sugestões:O que é um float

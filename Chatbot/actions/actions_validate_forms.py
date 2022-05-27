@@ -14,7 +14,6 @@ class ValidateFormEgStart(FormValidationAction):
     ) -> Dict[Text, Any]:
 
         wanted_intent = tracker.latest_message['intent'].get('name')
-
         if wanted_intent == "affirm":
             return {"slot_eg_start": True}
         elif wanted_intent == "deny":
@@ -22,14 +21,32 @@ class ValidateFormEgStart(FormValidationAction):
             dispatcher.utter_message(response="ERRO AJUDA PARADA")
             return {"slot_eg_start": False}
         elif wanted_intent == "EXTERNAL_CODE_MESSAGE":
-            #print(tracker.latest_message['intent'].get('name'))
-            return [FollowupAction("form_eh_start")]
-            #return {"slot_eg_start": tracker.latest_message["text"]}
+            dispatcher.utter_message(text='Gostaria de um diálogo sobre a possivel causa do seu erro (sim/não)')
         else:
+            dispatcher.utter_message(text='Se quiser falar de outra coisa responda "não", se quiser a ajuda diga com o seu erro diga "sim"')
             # validation failed, set this slot to None so that the
             # user will be asked for the slot again
             return {"slot_eg_start": None}
 
+
+class ValidateFormEgAnswer(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_form_eg_answer"
+
+    async def extract_slot_eg_answer(
+            self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> Dict[Text, Any]:
+
+        wanted_intent = tracker.latest_message['intent'].get('name')
+        student_answer = tracker.latest_message["text"]
+
+        if wanted_intent == "EXTERNAL_CODE_MESSAGE":
+            dispatcher.utter_message(response="utter_remember_help")
+            dispatcher.utter_message(response="utter_back_to_error")
+            dispatcher.utter_message(text='Qual seria então a sua resposta? Se quiser parar este diálogo diga "parar"')
+            return {"slot_eg_answer": None}
+        else:
+            return {"slot_eg_answer": student_answer}
 
 class ValidateFormEhStart(FormValidationAction):
     def name(self) -> Text:
@@ -46,9 +63,6 @@ class ValidateFormEhStart(FormValidationAction):
         elif wanted_intent == "deny":
             # validation succeeded, set the value of the "cuisine" slot to value
             return {"slot_eh_start": False}
-        elif wanted_intent == "EXTERNAL_ERROR_MESSAGE":
-            # print(tracker.latest_message['intent'].get('name'))
-            return [FollowupAction("form_eg_start")]
         else:
             # validation failed, set this slot to None so that the
             # user will be asked for the slot again
@@ -65,10 +79,30 @@ class ValidateFormEhAnswer(FormValidationAction):
         wanted_situation = tracker.get_slot("slot_eh_situation")
         student_answer = tracker.latest_message["text"]
         wanted_intent = tracker.latest_message['intent'].get('name')
+
         if wanted_situation == "Conclusion":
             if wanted_intent != "affirm" and wanted_intent != "deny" and wanted_intent != "EXTERNAL_ERROR_MESSAGE":
                 dispatcher.utter_message(text="Responda apenas sim ou não")
                 return {"slot_eh_answer": None}
-            else:
-                student_answer = wanted_intent
+
         return {"slot_eh_answer": student_answer}
+
+class ValidateFormTeacherHelp(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_form_teacher_help"
+
+    async def extract_slot_teacher_help(
+            self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> Dict[Text, Any]:
+
+        student_answer = tracker.latest_message["text"]
+        question_parameter = "pergunta:"
+        wanted_intent = tracker.latest_message['intent'].get('name')
+
+        if question_parameter in student_answer.lower():
+            dispatcher.utter_message(text="Anotado! Passerei a dúvida ao profressor logo que possível!")
+            return {"slot_teacher_help": student_answer}
+
+        elif wanted_intent != "deny":
+            dispatcher.utter_message(text='Para enviar a dúvida começe a sua frase com "Pergunta:" se já não quiser diga "não"')
+            return {"slot_teacher_help": None}

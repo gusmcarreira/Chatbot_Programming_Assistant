@@ -117,8 +117,24 @@ stories:
   - intent: affirm
   - action: utter_ask
 
-- story: Wants further help
+- story: Wants further help (says yes to anything else)
   steps:
   - checkpoint: checkpoint_more_help
   - intent: affirm
-  - action: utter_wants_help
+  - action: utter_send_question_teacher
+  - action: form_teacher_help
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: affirm
+  - action: utter_ask
+
+- story: Wants further help (says no to anything else)
+  steps:
+  - checkpoint: checkpoint_more_help
+  - intent: affirm
+  - action: utter_send_question_teacher
+  - action: form_teacher_help
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
+  - intent: deny
+  - action: utter_goodbye

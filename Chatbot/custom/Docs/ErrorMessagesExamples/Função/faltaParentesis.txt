@@ -1,0 +1,41 @@
+Algumas possiveis razões deste erro:
+
+<code>
+1  # Sem parêntesis de fechamento
+2  def minha_funcao(:
+3    ...
+
+1  # Sem parêntesis de abertura
+2  def minha_funcao):
+3    ...
+
+1  # Sem parêntesis
+2  def minha_funcao:
+3    ...
+
+1  # MANEIRA CORRETA
+2  def minha_funcao():
+3    ...
+</code>
+
+Ou até na chamada de uma função:
+
+<code>
+3  # Sem parêntesis de fechamento
+4  minha_funcao(
+
+3  # Sem parêntesis de abertura
+4  minha_funcao()
+
+3  # Sem parêntesis
+4  minha_funcao
+
+3  # MANEIRA CORRETA
+4  minha_funcao()
+</code>
+
+A declaração de uma função (primeiros exemplos) com ou sem parâmetros sempre inclui dois parêtesis. O mesmo para as chamadas de funções (segundos exemplos).
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure pela declaração/chamada de uma função que não contenha os dois parêtesis.
+
+Sugestões:Função simples<sep>Função com parâmetros

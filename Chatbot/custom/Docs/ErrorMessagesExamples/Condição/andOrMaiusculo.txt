@@ -1,0 +1,20 @@
+Este erro é facil de detetar (NOTA: o mesmo pode acontecer nas repetições):
+
+<code>
+1  # or com letras maiusculas
+2  if x == 1 OR x == 2:
+3    ...
+4  # and com letra maiuscula
+5  elif x == 3 And y == 4:
+6    ...
+7    ...
+8  # and escrito corretamente
+9  elif x == 5 and y == 5:
+10    ...
+</code>
+
+No código acima, as linhas 2 e 5 contêm um erro pois é preciso ter em atenção que o "and" e "or" são escritos ambos APENAS com letras MINUSCULAS.
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu procure no seu código por um or/and que não tenha TODAS as letras MINUSCULAS.
+
+Sugestões:Operador and<sep>Operador or<sep>Operadores lógicos

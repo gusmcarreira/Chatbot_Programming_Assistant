@@ -1,0 +1,18 @@
+Veja o código abaixo:
+
+<code>
+1  # Sem operador in
+2  for x range(10):
+3    ...
+
+1  # SINTAXE CORRETA
+2  # Com operador in
+3  for x in range(10):
+4    ...
+</code>
+
+Uma instrução "for" sempre necessita do operador "in", para iterar um array, lista, string, ou, neste caso, range..
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu código e procure pela declaração de um for onde esteja em falata o operador "in".
+
+Sugestões:Instrução for

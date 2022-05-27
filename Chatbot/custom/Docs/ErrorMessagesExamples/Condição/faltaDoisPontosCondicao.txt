@@ -1,0 +1,25 @@
+Repare no código abaixo (NOTA: o mesmo pode acontecer nas repetições ou declaração/chamada de uma função):
+
+<code>
+1  x = "oi"
+2  # Repare na ausência dos dois pontos
+3  if x == "oi"
+4    print("Olá")
+</code>
+
+O erro acima está na linha 3, pois não é finalizada com : (dois pontos). É frequente nos esquecermos deste pormenor!
+
+<code>
+1  # Sintaxe correta
+2  if x == "oi":
+3    print("Olá vai bem?")
+4  # Também com as outras
+5  elif x == "Tudo bom":
+6    print("Boa!")
+7  else:
+8    print("Não entendi")
+</code>
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure por uma instrução if/elif/else onde falte os : (dois pontos).
+
+Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução elif<sep>Sintaxe da instrução else<sep>Operadores de comparação

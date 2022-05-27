@@ -18,7 +18,7 @@ Qual é o primeiro elemento que lhe parece estar em falta?<end>
 ----------------------------------------------------------------------------------<end>
 Resposta:x<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:O primeiro dado que falta no código, é a noss variável de indexação, neste caso o "x".<end>
+Explicação:O primeiro dado que falta no código, é a nossa variável de indexação, neste caso o "x".<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>

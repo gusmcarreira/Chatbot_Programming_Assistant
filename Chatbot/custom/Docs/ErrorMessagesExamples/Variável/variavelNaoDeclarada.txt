@@ -1,0 +1,26 @@
+Esta mensagem significa que está a usar uma variável que não foi declarada:
+
+<code>
+1  numero1 = 1
+3
+4  # numero2 não existe
+5  resultado = numero1 + numero2
+6  print(resultado)
+</code>
+
+Note que estou a tentar usar a variavel "numero2", mas não a declarei. Outras possiveis razões devem-se a escrever o nome da variável incorretamente:
+
+<code>
+1  numero1 = 1
+2  numero_um = 1
+3  numeroUM = 1
+4  numeroUm = 1
+5  NUMERO_UM = 1
+6  Numero_um = 1
+</code>
+
+Pode ser dificil de reparar, mas todas as variáveis acima são variáveis diferente, pois o nome das variáveis é algo bem sensivel, mesmo que a diferença seja apenas um pormenor como a diferença de uma maiuscula.
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu procure no seu código por uma variável que esteja a ser dada com não declarada, seja porque não a declarou ou porque escrevreu o seu nome diferente.
+
+Sugestões:Nomes de variaveis

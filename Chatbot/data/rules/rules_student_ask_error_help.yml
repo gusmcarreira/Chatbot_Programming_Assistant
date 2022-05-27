@@ -1,0 +1,52 @@
+version: "3.1"
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"""
+# !!!!!!!! ERROR GUIDANCE !!!!!!!!"""
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"""
+
+rules:
+
+# ==================== WANTS HELP BUT DOES NOT GIVE THE ERROR MESSAGE ================
+# Start Rule - Aks what the error message is
+- rule: (EG) Student asks error help without giving the message
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_help_error
+  - action: utter_what_error_message
+
+#
+- rule: (EG) Student gives the error message when prompt to
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_what_error_message
+  - intent: ask_error_message
+  - action: action_eg_error_message_example
+  - action: utter_did_that_help
+
+- rule: (EG) Student says yes when prompt to give the error message
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_what_error_message
+  - intent: affirm
+  - action: utter_copy_error_message
+
+- rule: (EG) Student then gives the message
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_copy_error_message
+  - intent: ask_error_message
+  - action: action_eg_error_message_example
+  - action: utter_did_that_help
+
+- rule: (EG) Student then gives the message
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_error_message
+  - action: action_eg_error_message_example
+  - action: utter_did_that_help
+# ===================== WANTS HELP DIRECTLY BY GIVING THE ERROR MESSAGE =================

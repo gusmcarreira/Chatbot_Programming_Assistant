@@ -1,0 +1,27 @@
+Repare no código abaixo:
+
+<code>
+1  x = "oi"
+2
+3  if x == "oi":
+4    print("Olá")
+5  # Repare no uso de uma condição
+6  else x != "oi":
+7    print("Adeus")
+</code>
+
+O erro acima está na linha 6, pois contém uma instrução else com uma condição. Contrário às instruções if/elif, a instrução else não pode ter uma comparação, pois esta sempre será executada quando as outras as condições das outras instruções não se verificam!
+
+<code>
+1  x = "oi"
+2
+3  if x == "oi":
+4    print("Olá")
+5  # Agora sem condição
+6  else:
+7    print("Adeus")
+</code>
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure por uma instrução else que tenha uma condição.
+
+Sugestões:Sintaxe da instrução else

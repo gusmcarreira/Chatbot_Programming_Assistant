@@ -1,0 +1,18 @@
+Veja o código abaixo (NOTA: o mesmo pode acontecer nas condicionais if/elif):
+
+<code>
+1  # while sem condição
+2  while:
+3    ...
+
+1  # SINTAXE CORRETA
+2  # while com condição
+3  while i > 6:
+4    ...
+</code>
+
+Uma instrução while para poder correr necessita de uma condição para que o seu escopo possa correr. Nesse caso a condição é "i > 6"
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu código e procure pela declaração de um while onde esteja em falata uma condição.
+
+Sugestões:Instrução while<sep>Operadores de comparação (relacionais)

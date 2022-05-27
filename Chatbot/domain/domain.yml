@@ -17,9 +17,9 @@ responses:
   - text: "A resposta ajudou?"
 
   utter_goodbye:
-  - text: "Adeus 👋 qualquer coisa sabe onde me encontrar!"
-  - text: "Até já 👋 qualquer coisa sabe onde me encontrar!"
-  - text: "Até logo 👋 qualquer coisa sabe onde me encontrar!"
+  - text: "Adeus 👋 qualquer coisa sabe onde me encontrar! Para fechar a janela basta clicar no X, por baixo da janela."
+  - text: "Até já 👋 qualquer coisa sabe onde me encontrar! Para fechar a janela basta clicar no X, por baixo da janela."
+  - text: "Até logo 👋 qualquer coisa sabe onde me encontrar! Para fechar a janela basta clicar no X, por baixo da janela."
 
   utter_iamabot:
   - text: "Na verdade sou um Chatbot 🤖!"
@@ -42,12 +42,14 @@ responses:
   utter_present_answer:
   - text: "Pode pergunta! 😁"
 
+  utter_start_error_guidance:
+  - text: "Parece estar com alguns problemas no seu código. Proponho um pequeno diálogo, o que diz? (sim/não)"
   # utter_ask_<form_name>_<slot_name>
-  utter_ask_form_eg_start_slot_eg_start:
-    - text: "Parece estar com alguns problemas no seu código. Proponho um pequeno diálogo, o que diz? (sim/não)"
+#  utter_ask_form_eg_start_slot_eg_start:
+#    - text: "Parece estar com alguns problemas no seu código. Proponho um pequeno diálogo, o que diz? (sim/não)"
 
-  utter_ask_form_eh_start_slot_eh_start:
-    - text: "Parece estar há algum tempo preso neste exercício, proponho um diálogo que talvez o ajude a perceber melhor o que ele envolve, o que diz? (sim/não)"
+  utter_remember_help:
+    - text: '<code_print>Só relembrar que se precisar de ajuda no exercício me mande um "Me ajuda no exercício?"'
 
   utter_are_you_sure:
   - text: "Tem a certeza?"
@@ -70,3 +72,19 @@ responses:
 
   utter_can_ask_for_help:
   - text: "Certo! Lembre-se que pode sempre voltar a pedir ajuda 'me ajuda no exercício?'"
+
+  utter_what_error_message:
+  - text: "Pode copiar e colar aqui essa mensagem de erro? (Se forem várias diga uma de cada vez)"
+  - text: "Me diz só qual a mensagem de erro? (Se forem várias diga uma de cada vez)"
+  - text: "Pode colar aqui essa mensagem de erro? (Se forem várias diga uma de cada vez)"
+  - text: "Me diz qual é a mensagem de erro? (Se forem várias diga uma de cada vez)"
+  - text: "Me diz só qual é a mensagem de erro? (Se forem várias diga uma de cada vez)"
+
+  utter_copy_error_message:
+  - text: "Me diga então se faz favor 👾"
+
+  utter_back_to_error:
+  - text: "De volta ao erro..."
+
+  utter_send_question_teacher:
+    - text: 'Para mandar a mensagem por favor começe a frase com "Pergunta:"'

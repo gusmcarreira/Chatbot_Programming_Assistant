@@ -1,0 +1,27 @@
+Algumas possiveis razões deste erro:
+
+<code>
+1  # Sem vírgula a separar
+2  def minha_funcao(par1 par2 par3):
+3    ...
+
+1  # MANEIRA CORRETA
+2  def minha_funcao(par1, par2, par3):
+3    ...
+</code>
+
+Ou até na chamada de uma função:
+
+<code>
+4  # Sem vírgula a separar
+5  minha_funcao(1 2 3):
+
+4  # MANEIRA CORRETA
+5  def minha_funcao(1, 2, 3):
+</code>
+
+Quando queremos passar parâmetros a uma função, eles têm de ser todos separados por uma , (vírgula).
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure pela declaração/chamada de uma função que tenha parâmetros onde falte uma vírgula entre eles.
+
+Sugestões:Função com parâmetros

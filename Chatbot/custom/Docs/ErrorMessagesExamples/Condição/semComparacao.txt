@@ -1,0 +1,25 @@
+Este erro deve-se a algo do género (NOTA: o mesmo pode acontecer nas repetições):
+
+<code>
+1  x = 3
+2  # if sem condição
+3  if:
+4    print("Maior que 0")
+5  else:
+6    print("Menor que 0")
+</code>
+
+No exemplo acima, a linha 3 contém o erro pois, contrário à instrução else, as instruções if e elif necessitam de uma condição.
+
+<code>
+1  x = 3
+2  # if com condição
+3  if x >= 0:
+4    print("Maior ou igual a 0")
+5  else:
+6    print("Menor que 0")
+</code>
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure por uma instrução if/elif sem comparação.
+
+Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução elif<sep>Sintaxe da instrução else<sep>Operadores de comparação

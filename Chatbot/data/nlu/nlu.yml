@@ -42,6 +42,8 @@ nlu:
     - tô vazando
     - estou fora
     - vou Nessa
+    - sai
+    - some
 
 - intent: affirm
   examples: |
@@ -78,6 +80,10 @@ nlu:
     - para já não
     - por enquanto não
     - para já não obrigado
+    - não tem
+    - não há uma
+    - não encontro
+    - não sei qual é
 
 - intent: bot_challenge
   examples: |

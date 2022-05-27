@@ -66,3 +66,91 @@ nlu:
     - typeerror
     - type error
     - tipo error
+
+# ============================ Questions for a specific error message =============================
+- intent: ask_help_error
+  examples: |
+    - me ajuda no erro
+    - me dá uma ajuda nesse erro
+    - me dá uma ajuda com esse erro
+    - me ajuda nesse erro
+    - não estou entendendo esse erro
+    - me diz como resolver este erro
+    - como posso resolver este erro
+    - que erro é este
+    - ajuda-me com este erro
+    - me pode ajudar nesse erro
+    - me pode ajudar com este erro
+    - diz-me como resolvo este erro
+    - não estou entendendo essa mensagem de erro
+    - que quer dizer esta mensagem de erro
+    - me dá um exemplo de um erro destes
+    - esta mensagem de erro não estou entendendo
+    - não estou entendendo este erro
+    - este erro não estou entendendo
+
+- regex: help error message
+  examples: |
+    - .*\s*\"*\s*(A instrução else não pode ter uma comparação)\s*\"*\s*.*
+    - .*\s*\"*\s*(Em uma condição é preciso comparar um par de informações\, mas você escreveu apenas um dado)\s*\"*\s*.*
+    - .*\s*\"*\s*(Ao utilizar if ou elif você precisa incluir uma comparação\. Por exemplo\: if x \=\= a\, onde x \=\= a é a comparação)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você utilizou um operador and ou or\, mas escreveu eles maiúsculo)\s*\"*\s*.*
+    - .*\s*\"*\s*(A comparação de uma condição deve ser feita com dois sinais de \=\= \(igualdade\)\, mas você utilizou apenas um =)\s*\"*\s*.*
+    - .*\s*\"*\s*(Em uma condição é preciso incluir : \(dois pontos\) ao término da instrução\. Por exemplo\: if idade \> 18)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você esqueceu de um parêntesis na declaração\/uso de uma função)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você esqueceu de uma \, \(vírgula\) para separar os parâmetros de uma função)\s*\"*\s*.*
+    - .*\s*\"*\s*(Ao criar uma função é preciso incluir \: \(dois pontos\) ao término da instrução\. Por exemplo\: def nome\-funcao\(\)\:)\s*\"*\s*.*
+    - .*\s*\"*\s*(Repetições precisam ter um \: no final da linha em que são criadas\. Exemplo\: for x in range\(5\)\:)\s*\"*\s*.*
+    - .*\s*\"*\s*(Em um while é preciso comparar um par de informações\, mas você escreveu apenas um dado\. Exemplo correto\: while x \<\= 10\:)\s*\"*\s*.*
+    - .*\s*\"*\s*(Ao utilizar while você precisa incluir uma comparação\. Por exemplo\: while x \<\= 10, onde x \<\= 10 é a comparação)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você utilizou um operador and ou or\, mas escreveu eles em maiúsculo)\s*\"*\s*.*
+    - .*\s*\"*\s*(A comparação de um while deve ser feita com dois sinais de \=\= \(igualdade\), mas você utilizou apenas um \=)\s*\"*\s*.*
+    - .*\s*\"*\s*(Em uma repetição é preciso incluir \: \(dois pontos\) ao término da instrução\. Por exemplo\: for x in range\(10\)\:)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você não utilizou o operador in para iterar sobre uma lista\, array\, range ou string)\s*\"*\s*.*
+    - .*\s*\"*\s*(Faltou um par de dados no uso do operador in\. Por exemplo\: for x in range\(2\). Onde\, x e range são os dados necessários para iteração)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você escreveu a sintaxe do while sem uma comparação)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você esqueceu de abrir ou fechar um parêntesis)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você declarou uma string\, mas esqueceu de incluir as duas aspas \(abertura e fechamento\))\s*\"*\s*.*
+    - .*\s*\"*\s*(Você declarou uma variável com número decimal e utilizou \, \(vírgula\) quando deveria ter usado \. \(ponto\))\s*\"*\s*.*
+    - .*\s*\"*\s*(Você declarou uma variável com dois \=\= \(igualdades\) quando deveria ter usado apenas um \=)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você utilizou espaço no nome de uma variável e isso não é permitido)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você tentou utilizar uma variável que não foi declarada)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você utilizou uma condição e está comparando as variáveis\/valores com apenas uma igualdade)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você utilizou uma condição e não informou a variável\/valor em uma comparação)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você não incluiu o sinal de comparação \(\>\, \<\, \>\=\, \<\=\, \=\= ou \!\=\) na condição)\s*\"*\s*.*
+    - .*\s*\"*\s*(Você escreveu uma condição\, repetição ou função e não incluiu os \: \(dois pontos\))\s*\"*\s*.*
+    - .*\s*\"*\s*(Você escreveu uma função ou a chamada à uma função e não colocou o parêntesis de abertura e\/ou fechamento \(\))\s*\"*\s*.*
+    - .*\s*\"*\s*(Você escreveu uma String e não incluiu as aspas corretamente)\s*\"*\s*.*
+
+- intent: ask_error_message
+  examples: |
+    - Você declarou uma string, mas esqueceu de incluir as duas aspas (abertura e fechamento) não entendo não estou entendendo esse.
+    - Você declarou uma variável com número decimal e utilizou , (vírgula) quando deveria ter usado . (ponto)
+    - Você declarou uma variável com dois == (igualdades) quando deveria ter usado apenas um =
+    - Você utilizou espaço no nome de uma variável e isso não é permitido
+    - Você tentou utilizar uma variável que não foi declarada
+    - A instrução else não pode ter uma comparação
+    - Em uma condição é preciso comparar um par de informações, mas você escreveu apenas um dado
+    - Ao utilizar if ou elif você precisa incluir uma comparação. Por exemplo: if x == a, onde x == a é a comparação
+    - Você utilizou um operador and ou or, mas escreveu eles maiúsculo
+    - A comparação de uma condição deve ser feita com dois sinais de == (igualdade), mas você utilizou apenas um =
+    - Em uma condição é preciso incluir : (dois pontos) ao término da instrução. Por exemplo: if idade > 18
+    - Você esqueceu de um parêntesis na declaração/uso de uma função
+    - Você esqueceu de uma , (vírgula) para separar os parâmetros de uma função
+    - Ao criar uma função é preciso incluir : (dois pontos) ao término da instrução. Por exemplo: def nome-funcao():
+    - Repetições precisam ter um : no final da linha em que são criadas. Exemplo: for x in range(5):
+    - Em um while é preciso comparar um par de informações, mas você escreveu apenas um dado. Exemplo correto: while x <= 10:
+    - Ao utilizar while você precisa incluir uma comparação. Por exemplo: while x <= 10, onde x <= 10 é a comparação
+    - Você utilizou um operador and ou or, mas escreveu eles em maiúsculo
+    - A comparação de um while deve ser feita com dois sinais de == (igualdade), mas você utilizou apenas um =
+    - Em uma repetição é preciso incluir : (dois pontos) ao término da instrução. Por exemplo: for x in range(10):
+    - Você não utilizou o operador in para iterar sobre uma lista, array, range ou string
+    - Faltou um par de dados no uso do operador in. Por exemplo: for x in range(2). Onde, x e range são os dados necessários para iteração
+    - Você escreveu a sintaxe do while sem uma comparação
+    - Você esqueceu de abrir ou fechar um parêntesis
+    - Você utilizou uma condição e está comparando as variáveis/valores com apenas uma igualdade
+    - Você utilizou uma condição e não informou a variável/valor em uma comparação
+    - Você não incluiu o sinal de comparação (>, <, >=, <=, == ou !=) na condição
+    - Você escreveu uma condição, repetição ou função e não incluiu os : (dois pontos)
+    - Você escreveu uma função ou a chamada à uma função e não colocou o parêntesis de abertura e/ou fechamento ()
+    - Você escreveu uma String e não incluiu as aspas corretamente

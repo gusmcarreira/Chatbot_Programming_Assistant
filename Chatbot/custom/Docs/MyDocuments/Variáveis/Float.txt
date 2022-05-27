@@ -1,4 +1,4 @@
-Float, ou número decimal, é um número, positivo ou negativo, que contém uma ou mais décimas.
+Float, número decimal, ou número de ponto flutuante, é um número, positivo ou negativo, que contém uma ou mais décimas.
 
 Exemplo:
 

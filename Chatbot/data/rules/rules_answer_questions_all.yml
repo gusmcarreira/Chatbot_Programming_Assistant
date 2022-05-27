@@ -483,7 +483,20 @@ rules:
   steps:
   - action: utter_ask_for_help
   - intent: affirm
-  - action: utter_wants_help
+  - action: utter_send_question_teacher
+  - action: form_teacher_help
+  - active_loop: form_teacher_help
+
+- rule: Student wants further help
+  condition:
+    - active_loop: form_teacher_help
+  steps:
+  - action: form_teacher_help
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+  - action: utter_anything_else
+  - action: action_eg_reset_slot_start
 
 - rule: Student does not want further help
   condition:

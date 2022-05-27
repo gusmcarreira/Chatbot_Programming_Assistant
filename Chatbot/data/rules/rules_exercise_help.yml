@@ -8,51 +8,48 @@ rules:
 
 # -------------------> INITIAL RULE  <------------------
 - rule: (EH) Activate - Prompt start exercise help?
-#  condition:
-#    - active_loop: null
+  condition:
+  - active_loop: null
   steps:
   - intent: EXTERNAL_CODE_MESSAGE
-  - action: form_eh_start
-  - active_loop: form_eh_start
+  - action: utter_remember_help
 
-- rule: (EH) Activate - Prompt start exercise help II?
-#  condition:
-#    - active_loop: null
-  steps:
-  - action: form_eh_start
-  - active_loop: form_eh_start
-# ------------------------------------------------------
-
-# ----------------> DOES NOT WANT HELP <----------------
-- rule: (EH) Exit Form - Student does not want to start exercise help
+- rule: Remember help is available (While prompt to start error help)
   condition:
-  - active_loop: form_eh_start
-  - slot_was_set:
-    - slot_eh_start: false
+  - active_loop: form_eg_start
   steps:
-  - action: form_eh_start
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: utter_can_ask_for_help
-  - action: utter_anything_else
-  - action: action_eg_reset_slot_start
+  - intent: EXTERNAL_CODE_MESSAGE
+  - action: utter_remember_help
+  - action: utter_back_to_error
+  - action: form_eg_start
+  - active_loop: form_eg_start
 # ------------------------------------------------------
+
+# Verify that the student can ask for help
+- rule: (EH) Ask for help - Too early (I)
+  condition:
+  - active_loop: null
+  steps:
+  - intent: ask_help
+  - action: utter_check_ask_help
+
+- rule: (EH) Ask for help - Too early (II)
+  condition:
+  - active_loop: null
+  steps:
+  - action: utter_check_ask_help
+  - intent: deny
+  - action: utter_can_not_ask_for_help
+
+- rule: (EH) Ask for help - Can ask (II)
+  condition:
+  - active_loop: null
+  steps:
+  - action: utter_check_ask_help
+  - intent: affirm
+  - action: action_eh_test_case
 
 # --------------------> WANTS HELP <--------------------
-- rule: (EH) Exit Form - Student wants help
-  condition:
-  - active_loop: form_eh_start
-  - slot_was_set:
-    - slot_eh_start: true
-  steps:
-  - action: form_eh_start
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_eh_test_case
-  - action: action_eg_reset_slot_start
-
 - rule: (EH) Activate Answer Loop
   condition:
   - active_loop: null
@@ -69,36 +66,4 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: action_eh_check_answer
-
 #----------------------------------------------------
-
-# Verify that the student can ask for help
-- rule: (EH) Ask for help - Too early (I)
-#  condition:
-#  - active_loop: null
-  steps:
-  - intent: ask_help
-  - action: utter_check_ask_help
-
-- rule: (EH) Ask for help - Too early (II)
-  condition:
-  - active_loop: null
-  steps:
-  - action: utter_check_ask_help
-  - intent: deny
-  - action: utter_can_not_ask_for_help
-
-- rule: (EH) Ask for help - Can ask (I)
-#  condition:
-#  - active_loop: null
-  steps:
-  - intent: ask_help
-  - action: utter_check_ask_help
-
-- rule: (EH) Ask for help - Can ask (II)
-  condition:
-  - active_loop: null
-  steps:
-  - action: utter_check_ask_help
-  - intent: affirm
-  - action: action_eh_test_case

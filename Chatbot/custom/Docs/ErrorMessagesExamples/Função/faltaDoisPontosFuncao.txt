@@ -1,0 +1,17 @@
+Este erro é fácil de detetar mas frequente de acontecer (NOTA: o mesmo pode acontecer nas condicionais if/elif/else ou repetições):
+
+<code>
+1  # Falta de : (dois pontos)
+2  def minha_funcao()
+3    ...
+
+1  # MANEIRA CORRETA
+2  def minha_funcao():
+3    ...
+</code>
+
+A declaração de uma função SEMPRE necessita de finalizar com : (dois pontos).
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure pela declaração de uma função onde falte : (dois pontos).
+
+Sugestões:Função com parâmetros

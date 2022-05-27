@@ -115,6 +115,7 @@ nlu:
 
 - intent: ask_op_logic_and
   examples: |
+    - operador and
     - quando devemos usar o and
     - para que serve o and
     - como se usa o and
@@ -131,6 +132,7 @@ nlu:
 
 - intent: ask_op_logic_or
   examples: |
+    - operador or
     - quando devemos usar o or
     - para que serve o or
     - como se usa o or
@@ -147,6 +149,7 @@ nlu:
 
 - intent: ask_op_logic_not
   examples: |
+    - operador not
     - quando devemos usar o not
     - para que serve o not
     - como se usa o not

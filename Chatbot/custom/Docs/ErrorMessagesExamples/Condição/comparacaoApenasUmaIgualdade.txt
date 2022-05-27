@@ -1,0 +1,25 @@
+Note o código abaixo (NOTA: o mesmo pode acontecer nas repetições):
+
+<code>
+1  x = 3
+2  # Apenas uma igualdade
+3  if x = 3:
+4    print("x igual a 3")
+5  else:
+6    print("x diferente de 3")
+</code>
+
+No exemplo acima, a linha 3 contém o erro pois, contrário à declaração de uma variável que usa apenas um = (igualdade), quando quer fazer uma condição em que ex "se x for igual a 3" são usadas duas == (igualdades).
+
+<code>
+1  x = 3
+2  # Agora com duas igualdades
+3  if x == 3:
+4    print("x igual a 3")
+5  else:
+6    print("x diferente de 3")
+</code>
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu analise o seu erro e procure por uma condição que contenha apenas um = (igualdade).
+
+Sugestões:Operadores de comparação

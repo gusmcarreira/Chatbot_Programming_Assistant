@@ -47,7 +47,6 @@ class ActionAnswerQuestions(Action):
 
         # Check for suggestions (of next questions to ask)
         answer, suggestions = check_sugestions(answer)
-
         # SEND ANSWER TO STUDENT
         dispatcher.utter_message(text=answer)
 

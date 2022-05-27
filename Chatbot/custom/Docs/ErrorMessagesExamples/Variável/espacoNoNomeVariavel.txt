@@ -1,0 +1,35 @@
+O seu erro deve-se à primeira razão dos seguintes erros nos nomes das variáveis:
+
+<code>
+1 # Espaço no nome da variável
+2  numero dois = 2
+3
+4  # Contém caractere especial
+5  $numeroUm = 1
+7
+8  # Palavra reservada
+9  and = 3
+10
+11  # Começa com número
+12  1var_tres = 4
+</code>
+
+Em geral as regras para os nomes das variáveis são:
+
+<code_print>1 - Não pode COMEÇAR com um número
+2 - Nenhum caractere especial (ex, $) a não ser o de sublinhar (_) pode aparecer em um nome
+3 - Não pode conter espaços entre as palavras da variável
+4 - Não pode ser uma das palavras reservadas de Python
+
+Exemplos de nomes legais
+
+<code>
+area = 6.0
+area_circulo = 10
+area_circulo1 = 23
+areaCirculo = 25
+</code>
+
+Normalmente o erro será destacado a vermelho. Se isso não aconteceu procure no seu código por uma variável que contenha um ESPAÇO no seu nome.
+
+Sugestões:Nomes de variaveis<sep>Palavras reservadas

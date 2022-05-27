@@ -12,6 +12,15 @@ rules:
 #    - active_loop: null
   steps:
   - intent: EXTERNAL_ERROR_MESSAGE
+  - action: utter_start_error_guidance
+  - action: form_eg_start
+  - active_loop: form_eg_start
+
+- rule: (EG) Activate - Prompt start error guidance? (Whist having the help of exercise open)
+#  condition:
+#    - active_loop: form_eh_answer
+  steps:
+  - action: utter_start_error_guidance
   - action: form_eg_start
   - active_loop: form_eg_start
 
