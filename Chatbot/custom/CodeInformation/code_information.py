@@ -159,7 +159,8 @@ class CodeInformation(ast.NodeVisitor):
             self.all_concepts_map.append(print_meaning)
         elif self.func_natural_meaning(func_name):
             # Append concept question to array
-            self.append_questions("func_name")
+            print(func_name)
+            self.append_questions(func_name)
             return ["Call", self.func_natural_meaning(func_name), func_name]
         else:
             if func_args:

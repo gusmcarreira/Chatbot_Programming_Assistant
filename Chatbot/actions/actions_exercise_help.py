@@ -32,17 +32,25 @@ class ActionEhTestCase(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         # --- TEST CASE information sent by the application ---
-        # It is in a form of a string, eg, <input>2<sep><output>3
+        test_case_information = tracker.get_slot(slot_eh_test_case)
 
-        test_case_information = tracker.get_slot(slot_eh_test_case).split("<sep>") # Separate inputs from outputs
+        # It is in a form of a string, eg, <input>2<sep><output>3
+        if isinstance(test_case_information, str):
+            test_case_information = tracker.get_slot(slot_eh_test_case).split("<sep>") # Separate inputs from outputs
 
         if test_case_information[0]:
             # == INPUTS ==
-            test_case_inputs = test_case_information[0].split("<input>")
-            test_case_inputs = [i for i in test_case_inputs if i] # Removing empty strings
+            if isinstance(test_case_information[0], str):
+                test_case_inputs = test_case_information[0].split("<input>")
+                test_case_inputs = [i for i in test_case_inputs if i] # Removing empty strings
+            else:
+                test_case_inputs = test_case_information[0]
             # == OUTPUTS ==
-            test_case_outputs = test_case_information[1].split("<output>")
-            test_case_outputs = [i for i in test_case_outputs if i] # Removing empty strings
+            if isinstance(test_case_information[1], str):
+                test_case_outputs = test_case_information[1].split("<output>")
+                test_case_outputs = [i for i in test_case_outputs if i] # Removing empty strings
+            else:
+                test_case_outputs = test_case_information[1]
 
             dispatcher.utter_message(text="Lembre-se se a qualquer momento quiser parar, diga PARAR")
             dispatcher.utter_message(text="O primeiro passo é ver se compreende corretamente o que o seu algoritmo deve produzir!")
@@ -161,7 +169,7 @@ class ActionEhCheckAnswer(Action):
             else:
                 dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
                 dispatcher.utter_message(text=produceString(test_case_slot[1], False))
-                if produceString(test_case_slot[1], False).isnumeric():
+                if produceString(test_case_slot[1], False).replace("<code_print>", "").replace("\n", "").isdigit():
                     dispatcher.utter_message(text = "Dica: Quando se trata de um valor númerico, atente no enunciado, pois este ou especifica o valor, ou o cálculo para chegar a este.")
                 else:
                     dispatcher.utter_message(text = "Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
