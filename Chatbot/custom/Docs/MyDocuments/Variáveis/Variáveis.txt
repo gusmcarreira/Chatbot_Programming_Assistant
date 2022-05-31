@@ -3,30 +3,38 @@ Uma variável em Python é uma forma de associar um nome a um valor. Pense em ca
 Exemplo:
 
 <code>
-base = 2
-altura = 5
-area = (base * altura) / 2
+1  base = 2
+2  altura = 5
+3  area = (base * altura) / 2
 </code>
 
-No exemplo acima, criamos uma variável chamada base à qual atribuímos o valor 2, uma variável altura, à qual atribuímos o valor 5, e uma variável area, à qual atribuímos um cálculo envolvendo a base e a altura. 
+No exemplo acima, criamos uma variável chamada base à qual atribuímos o valor 2, uma variável altura, à qual atribuímos o valor 5, e uma variável area, à qual atribuímos um cálculo envolvendo a base e a altura.
 
-O sinal de igualdade é necessário para dar a entender ao computador que você deseja criar uma variável e armazenar um dado nela.
+O sinal de igualdade é necessário para dar a entender ao computador que você deseja criar uma variável e armazenar um dado nela. Não se esqueça que se, ao utilizar uma variável, a envolve em aspas ("), ela passa a ser uma string!
 
 Sugestões:Que nomes se podem dar às variáveis?
 -#-
-Os programadores geralmente escolhem nomes significativos para as suas variáveis – eles documentam o uso da variável.
+Os programadores geralmente escolhem nomes significativos para as suas variáveis/funções – eles documentam o uso da variável.
 
-Nomes de variáveis podem ser tão longos quanto você queira. Podem conter tanto letras como números, mas NÃO PODE COMEÇAR COM UM NÚMERO nem conter espaços. É legal usar letras maiúsculas, mas a convenção é usar apenas letras minúsculas para nomes de variáveis.
+<code_print> OS NOMES PODEM:
 
-Nenhum caractere especial (ex, $) a não ser o de sublinhar (_) pode aparecer em um nome. Muitas vezes é usado em nomes com várias palavras, como meu_nome ou variavel_com_texto.
+-- Ser tão longos quanto você queira
+-- Conter letras e números
+-- Conter maiusculas e minusculas (a convenção é usar apenas letras minúsculas para nomes de variaveis)
+-- Conter o caractere de sublinha (_)</code_print>
+
+<code_print>OS NOMES NÃO PODEM:
+
+-- COMEÇAR com um número
+-- Conter espaços
+-- Conter algum caractere especial (ex, $) a não ser o de sublinhar (_)
+-- Ser uma palavra reservada (elas são parte do vocabulário da linguagem):
+
+and, del, from, None, True, as, elif, global, nonlocal, try, assert, else, if, not, while, break, except, import, or, with, class, False, in, pass, yield, continue, finally, is, raise, def, for, lambda, return</code_print>
 
 Exemplo:
 
 <code_print>area = 6.0
 area_circulo = 10
 area_circulo1 = 23
-areaCirculo = 25
-
-Para além disso, existem palavras reservadas em Python (elas são parte do vocabulário da linguagem), que não podem ser usadas como nomes de variáveis:
-
-<code_print>and, del, from, None, True, as, elif, global, nonlocal, try, assert, else, if, not, while, break, except, import, or, with, class, False, in, pass, yield, continue, finally, is, raise, def, for, lambda, return
+areaCirculo = 25</code_print>

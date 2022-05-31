@@ -4,3 +4,4 @@ nlu:
 # No examples to avoid predicting a user's answer as one of them
 - intent: EXTERNAL_ERROR_MESSAGE
 - intent: EXTERNAL_CODE_MESSAGE
+- intent: EXTERNAL_CODE_INFO

@@ -33,7 +33,7 @@ class ActionAnswerQuestions(Action):
                 if word != "example":
                     question_intent = question_intent + word + "_"
             question_intent = question_intent[:-1]
-    
+
         # Get text from file (dic_answers --> paths.py)
         path_to_file = dic_answers[question_intent][0]
         index_info_wanted = dic_answers[question_intent][1]
@@ -49,7 +49,6 @@ class ActionAnswerQuestions(Action):
         answer, suggestions = check_sugestions(answer)
         # SEND ANSWER TO STUDENT
         dispatcher.utter_message(text=answer)
-
         # SEND SUGGESTIONS IF ANY
         if suggestions:
             dispatcher.utter_message(text="Algumas sugestões:")

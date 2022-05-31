@@ -1,0 +1,35 @@
+version: "3.1"
+
+# ======================================================================================================================
+# ========================================================  TIPS =======================================================
+# ======================================================================================================================
+responses:
+  utter_947713cc-17bf-11eb-adc1-0242ac120002:
+  - text: 'Dica: Não necessita de fazer nada, apenas "Executar".'
+
+  utter_76e4017f-6006-476f-8b47-88b0e33dbf84:
+  - text: "Dica: lembre-se que apenas strings são envolvidas em aspas."
+
+  utter_73e1e529-5972-4ab0-bc80-bf2859d45f2b:
+  - text: "Dica: lembre-se de usar o texto exato do enunciado (maiúsculas, pontos, acentos, e espaços. Se, ao fazer uma concatenação com o “+” não colocar um espaço no final de uma string ou no inicio de outra, elas não terão nenhum espaço entre elas."
+
+  utter_f369a1f7-c333-4c23-81ac-89639608eb35:
+  - text: "Dica: será bastante PARECIDO ao “Concatenando strings - I”!"
+
+  utter_c8c40972-17c0-11eb-adc1-0242ac120002:
+  - text: "Dica: volte ao exercício do “Concatenando strings - I”, será bastante parecido!"
+
+  utter_4ad830c8-9c86-481a-93d7-8d91a08e36ce:
+  - text: "Dica: Não se esqueça de imprimir o dado!"
+
+  utter_c61d439b-5131-4377-b08a-5704d554e7ea:
+  - text: "Dica: Soma é feito com números, mas a concatenação com o “+” terá de ser entre textos (strings). Não se esqueça de verificar se o enunciado especifica alguma string, nesse caso tenha cuidado de escrever exatamente como pedido (acentos, pontos, maiúsculas, espaços)."
+
+  utter_43789fa2-b614-4e03-a8c8-1494b3e3d9e0:
+  - text: "Dica: antecessor (numero que vem antes - soma), sucessor (numero que vem depois - subtração), repare nas entradas e saídas á esquerda."
+
+  utter_fc14f42a-fbfd-4503-b688-1f2102cc4ac9:
+  - text: "Dica: valor = (quantidadeDias * 90) + (quilometragemTotal * 12)"
+
+  utter_33e2bda7-f130-4320-bb85-78b76a2db5cc:
+  - text: "Dica: hiponetusa² = cateto_um² + cateto_dois², simplificando fica, hipotenusa = √ (cateto_um² + cateto_dois²)"

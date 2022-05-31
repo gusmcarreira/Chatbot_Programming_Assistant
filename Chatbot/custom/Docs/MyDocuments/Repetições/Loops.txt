@@ -3,16 +3,17 @@ Repetição (loop, iteração, ou laços de repetição) é a repetição de um 
 Exemplo:
 
 <code>
-print("Números: ")
+1  print("Números: ")
 
-for numero in [1, 1, 2]:
-  print(numero)
-</code>
+2  for numero in [1, 1, 2]:
+3    print(numero)
 
-<code_print>Números:
+Números:
 1
 1
 2
+</code>
+
 
 Existem dois tipos de repetições (loops): while e for.
 
@@ -20,7 +21,7 @@ Sugestões:Instrução while<sep>Instrução for<sep>Escopo de uma repetição<s
 -#-
 A instrução while é um tipo de repetição em que um comando/s será executado ENQUANTO a condição for verdadeira. A sua declaração segue a sintaxe:
 
-<code_print>while condição:
+<code_print>while condição:</code_print>
 
 Exemplo:
 
@@ -37,7 +38,7 @@ print("Olá")
 <code_print>0
 1
 2
-Olá
+Olá</code_print>
 
 Você até pode ler a instrução while como se fosse uma tradução do inglês. Significa “Enquanto i for menor que 0, mostre o valor de i e então incremente i. Quando maior ou igual a 3, saia da repetição e execute a próxima instrução!”.
 
@@ -47,33 +48,33 @@ Sugestões:Instrução for<sep>Escopo de uma repetição<sep>Operadores de compa
 -#-
 A instrução for é a mais comum instrução de repetição, que é usado com objetos iteráveis tais como listas e intervalos. A sua sintaxe é:
 
-<code_print>for var_de_indexação in objeto_a_iterar:
+<code_print>for var_de_indexação in objeto_a_iterar:</code_print>
 
 Exemplo:
 
 <code>
-for i in range(3):
-  print(i)
+1  for i in range(3):
+2    print(i)
 </code>
 
 <code_print>0
 1
-2
+2</code_print>
 
 A função range é como que uma lista de números começando em 0. No exemplo acima é então uma lista de 3 números (0, 1 e 2).
 
 Outro exemplo:
 
 <code>
-cores = [azul, branco]
+1  cores = [azul, branco]
+2
+3  for cor in cores:
+4    print(cor)
 
-for cor in cores:
-  print(cor)
-</code>
-
-<code_print>azul
+azul
 branco
 amarelo
+</code>
 
 Observação: Pode tentar ler como "por cada cor em cores", sendo que "cor" poderia ter qualquer outro nome de variável, por exemplo, i (como no primeiro exemplo), mas sempre ajuda ter um nome com significado.
 

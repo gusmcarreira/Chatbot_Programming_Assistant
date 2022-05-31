@@ -20,3 +20,5 @@ actions:
 - action_answer_error_questions_followup
 - action_eg_error_message_example
 - validate_form_teacher_help
+- action_question_suggestions
+- action_question_tip

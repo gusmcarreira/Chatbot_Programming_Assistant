@@ -89,8 +89,10 @@ dict_error_message = {
     "Você declarou uma string, mas esqueceu de incluir as duas aspas (abertura e fechamento)": main_dir_error_messages_explanation + "Variável/stringSemAspas.txt",
     "Você declarou uma variável com número decimal e utilizou , (vírgula) quando deveria ter usado . (ponto)": main_dir_error_messages_explanation + "Variável/numeroDecimalComVirgula.txt",
     "Você declarou uma variável com dois == (igualdades) quando deveria ter usado apenas um =": main_dir_error_messages_explanation + "Variável/declaracaoVariavelComDoisIguais.txt",
+    "Você está atribuindo um valor à uma variável com duas igualdades (==), quando deveria utilizar apenas uma igualdade. Por exemplo: x = 2": main_dir_error_messages_explanation + "Variável/declaracaoVariavelComDoisIguais.txt",
     "Você utilizou espaço no nome de uma variável e isso não é permitido": main_dir_error_messages_explanation + "Variável/espacoNoNomeVariavel.txt",
     "Você tentou utilizar uma variável que não foi declarada": main_dir_error_messages_explanation + "Variável/variavelNaoDeclarada.txt",
+    "Você tentou utilizar uma função ou variável que não existe": main_dir_error_messages_explanation + "Variável/variavelNaoDeclarada.txt",
     # =====================================================================
     # ===========================> CONDITIONS <============================
     "A instrução else não pode ter uma comparação": main_dir_error_messages_explanation + "Condição/comparacaoElse.txt",
@@ -125,3 +127,14 @@ dict_error_message = {
     "Você escreveu uma função ou a chamada à uma função e não colocou o parêntesis de abertura e/ou fechamento ()": main_dir_error_messages_explanation + "Função/faltaParentesis.txt",
     "Você escreveu uma String e não incluiu as aspas corretamente": main_dir_error_messages_explanation + "Variável/stringSemAspas.txt",
 }
+
+arr_dicas = ["947713cc-17bf-11eb-adc1-0242ac120002",
+             "76e4017f-6006-476f-8b47-88b0e33dbf84",
+             "73e1e529-5972-4ab0-bc80-bf2859d45f2b",
+             "f369a1f7-c333-4c23-81ac-89639608eb35",
+             "c8c40972-17c0-11eb-adc1-0242ac120002",
+             "4ad830c8-9c86-481a-93d7-8d91a08e36ce",
+             "c61d439b-5131-4377-b08a-5704d554e7ea",
+             "43789fa2-b614-4e03-a8c8-1494b3e3d9e0",
+             "fc14f42a-fbfd-4503-b688-1f2102cc4ac9",
+             "33e2bda7-f130-4320-bb85-78b76a2db5cc"]

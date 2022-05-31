@@ -11,12 +11,12 @@ Para converter uma string ou uma float para um inteiro usa-se a função int().
 Exemplo:
 
 <code>
-# Converte float para inteiro
-x = 2.5
-s = int(x)
-print(s)
-</code>
+1  # Converte float para inteiro
+2  x = 2.5
+3  s = int(x)
+4  print(s)
 
-<code_print>2
+2
+</code>
 
 Sugestões:Como obter o tipo de um dado?

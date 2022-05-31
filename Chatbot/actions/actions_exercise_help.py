@@ -19,6 +19,7 @@ slot_eh_test_case = "slot_eh_test_case"
 slot_eh_concepts_options = "slot_eh_concepts_options"
 slot_eh_question_ask = "slot_eh_question_ask"
 slot_eh_second_try = "slot_eh_second_try"
+slot_eh_question_id = "slot_eh_question_id"
 # --------------------------------------------
 
 # =================================================== TEST CASE ========================================================
@@ -38,7 +39,7 @@ class ActionEhTestCase(Action):
         if isinstance(test_case_information, str):
             test_case_information = tracker.get_slot(slot_eh_test_case).split("<sep>") # Separate inputs from outputs
 
-        if test_case_information[0]:
+        if test_case_information:
             # == INPUTS ==
             if isinstance(test_case_information[0], str):
                 test_case_inputs = test_case_information[0].split("<input>")
@@ -53,20 +54,32 @@ class ActionEhTestCase(Action):
                 test_case_outputs = test_case_information[1]
 
             dispatcher.utter_message(text="Lembre-se se a qualquer momento quiser parar, diga PARAR")
-            dispatcher.utter_message(text="O primeiro passo é ver se compreende corretamente o que o seu algoritmo deve produzir!")
 
+            #dispatcher.utter_message(text="O primeiro passo é ver se compreende corretamente o que o seu algoritmo deve produzir!")
+            dispatcher.utter_message(text="""
+               <text>Primeiro vamos aos Test Cases (tabela à direita com "entradas" - input() - e "saidas" - print()). Por vezes se houver um pormenor ou outro que não entenda apenas pelo enunciado, é bom olhar para eles porquê? \n\nQuando clica no botão "Executar" o que acontece, é que para verificar se o seu algoritmo está correto são passadas ao programa entradas, e se ele gerar as saídas esperadas então o seu código estará correto.\n\nEntão eles lhe darão uma ideia que transformações/cálculos terão de acontecer.</text>""")
             # Text language according to amount of inputs fosse (1) / fossem (more than one)
+            test_case_string = "<text>"
+
             if len(test_case_inputs) == 1:
-                dispatcher.utter_message(text="Se a entrada dada ao algoritmo fosse: '" + test_case_inputs[0] + "'")
+                test_case_string = test_case_string + "Um exemplo, se a entrada fosse:\n\n" + test_case_inputs[0]
             else:
                 entries = "'" + test_case_inputs[0] + "'"
                 index = 1
                 while index < len(test_case_inputs):
                     entries = entries + ", '" + test_case_inputs[index] + "'"
                     index += 1
-                dispatcher.utter_message(text="Se as entradas dadas ao algoritmo fossem: " + entries)
 
-            dispatcher.utter_message(text="Qual seria a sua saida? Se achar que é mais que uma separe-as com um ponto e vírgula (;)")
+                test_case_string = test_case_string + "Um exemplo, se as entradas fossem:\n\n" + entries
+
+
+            if len(test_case_outputs) == 1:
+                test_case_string = test_case_string + "\n\nQual diria ser as sua saida?"
+            else:
+                test_case_string = test_case_string + "\n\nQual diria serem as suas saidas? Separe-as com um ponto e vírgula (;)"
+
+            test_case_string = test_case_string + "</text>"
+            dispatcher.utter_message(text=test_case_string)
 
             # Save required information to use in later functions (SlotSet) and start form to ask for answer (FollowupAction)
             return [SlotSet(slot_eh_situation, "Test Case"), SlotSet(slot_eh_student_answer, None), SlotSet(slot_eh_test_case, [test_case_inputs, test_case_outputs]), FollowupAction("form_eh_answer")]
@@ -110,15 +123,15 @@ class ActionEhFurtherHelp(Action):
 
         dispatcher.utter_message(text="Aqui vão algumas sugestões de perguntas que possam ajudar:")
         concepts_involved = codeInformation(tracker.get_slot(slot_eh_answer_code)).concepts_questions_arr
-        concepts_involved_str = "<code>"
+        concepts_involved_str = "<code_print>"
 
         if concepts_involved:
             for index, concept in enumerate(concepts_involved):
                 if index != len(concepts_involved) - 1:
-                    concepts_involved_str = concepts_involved_str + concept + "\n\n"
+                    concepts_involved_str = concepts_involved_str + concept + "\n\n\n"
                 else:
-                    concepts_involved_str = concepts_involved_str + concept + "</code>"
-
+                    concepts_involved_str = concepts_involved_str + concept
+        concepts_involved_str = concepts_involved_str + "</code_print>"
         dispatcher.utter_message(text=concepts_involved_str)
         # correct_concepts = [concept for concept in correct_concepts if concept]
         # dispatcher.utter_message(buttons=returnButtons(correct_concepts))
@@ -139,6 +152,7 @@ class ActionEhCheckAnswer(Action):
         answer_situation = tracker.get_slot(slot_eh_situation)
         # Get student's answer
         student_answer = tracker.get_slot(slot_eh_student_answer)
+        question_id = tracker.get_slot(slot_eh_question_id)
 
         # Check if user asked to stop
         if (student_answer.lower() == "parar") or (student_answer.lower() == "para"):
@@ -169,10 +183,15 @@ class ActionEhCheckAnswer(Action):
             else:
                 dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
                 dispatcher.utter_message(text=produceString(test_case_slot[1], False))
-                if produceString(test_case_slot[1], False).replace("<code_print>", "").replace("\n", "").isdigit():
-                    dispatcher.utter_message(text = "Dica: Quando se trata de um valor númerico, atente no enunciado, pois este ou especifica o valor, ou o cálculo para chegar a este.")
+
+                if question_id:
+                    utter_string = "utter_" + question_id
+                    dispatcher.utter_message(response=utter_string)
                 else:
-                    dispatcher.utter_message(text = "Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
+                    if produceString(test_case_slot[1], False).replace("<code_print>", "").replace("</code_print>", "").replace("\n", "").isdigit():
+                        dispatcher.utter_message(text = "Dica: Quando se trata de um valor númerico, atente no enunciado, pois este ou especifica o valor, ou o cálculo para chegar a este.")
+                    else:
+                        dispatcher.utter_message(text = "Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
             return [FollowupAction("action_eh_concepts_order")]
         # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -190,7 +209,6 @@ class ActionEhCheckAnswer(Action):
             right_choices = []
             wrong_choices = []
             decision_arr = []
-
 
             for index, concept in enumerate(correct_order):
                 if index >= len(student_answer):
@@ -218,9 +236,8 @@ class ActionEhCheckAnswer(Action):
             #    return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_second_try, "True")]
 
             dispatcher.utter_message(text="O seu último desafio é transformar isto em código!")
-            dispatcher.utter_message(text="A nossa conversa ajudou-o a saber como proceder? (sim, não)")
 
-            return [SlotSet(slot_eh_student_answer, None), FollowupAction("form_eh_answer"), SlotSet(slot_eh_situation, "Conclusion")]
+            return [SlotSet(slot_eh_student_answer, None), FollowupAction("utter_did_that_help"), SlotSet(slot_eh_situation, "Conclusion")]
         # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         # """""""""""""""""""""""""""" CONCLUSION """"""""""""""""""""""""""""
         elif answer_situation == "Conclusion":
@@ -298,5 +315,5 @@ def produceString(arr_wanted, wants_order=False):
             str_arr_wanted = str_arr_wanted + str(index) + " - " + concept + "\n"
         else:
             str_arr_wanted = str_arr_wanted + concept + "\n"
-
+    str_arr_wanted = str_arr_wanted + "</code_print>"
     return str_arr_wanted

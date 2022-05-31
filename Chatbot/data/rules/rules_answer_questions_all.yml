@@ -1,6 +1,53 @@
 version: "3.1"
 
 rules:
+
+- rule: Aks the user to rephrase when the message as low confidence
+  condition:
+  - active_loop: null
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: action_question_suggestions
+
+- rule: No tips - when not in programming question
+  condition:
+  - active_loop: null
+  - slot_was_set:
+    - slot_eh_code_answer: null
+  steps:
+  - intent: ask_tips
+  - action: utter_no_help
+
+- rule: Give tips - when in programming question
+  condition:
+  - active_loop: null
+  - slot_was_set:
+    - slot_eh_code_answer: true
+  steps:
+  - intent: ask_tips
+  - action: action_question_tip
+  - action: utter_did_that_help
+
+- rule: No suggestions - when not in programming question
+  condition:
+  - active_loop: null
+  - slot_was_set:
+    - slot_eh_code_answer: null
+  steps:
+  - intent: ask_suggestions
+  - action: utter_no_help
+
+- rule: Give suggestions - when in programming question
+  condition:
+  - active_loop: null
+  - slot_was_set:
+    - slot_eh_code_answer: true
+  steps:
+  - intent: ask_suggestions
+  - action: action_question_suggestions
+  - action: utter_did_that_help
+
 # ======================================================================================================================
 # ===================================================== CONDITIONS =====================================================
 # ======================================================================================================================

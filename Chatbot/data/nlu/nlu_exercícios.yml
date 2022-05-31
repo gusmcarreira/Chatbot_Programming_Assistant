@@ -27,4 +27,48 @@ nlu:
     - como se faz este exerecicio
     - exerecicio
     - não entendi o que fazer neste exerecicio
+
+- intent: ask_suggestions
+  examples: |
+    - me dá sugestões
+    - me dá uma sugestão de pergunta
+    - me diz o que este exercício inclui
+    - me dá sugestões de pergunta
+    - que perguntas devo fazer neste exercício
+    - alguma sugestões
+    - me dá algumas sugestões de perguntas
+    - dá me sugestões
+    - que perguntas posso fazer para este esxercício
+    - dá me uma sugestão de pergunta
+    - sugestões
+    - sugestão
+
+- regex: tip
+  examples: |
+    - .*\s*\"*\s*([d|D]ica)\s*\"*\s*.*
+- intent: ask_tips
+  examples: |
+    - me dá uma dica
+    - dica
+    - dicas
+    - me dá dicas
+    - pode me dar uma dica
+    - pode me dar dicas
+    - me dá uma dica para resolver essa questão
+    - me dá dica para o exercicio
 # ----------------------------------------------------
+
+- intent: ask_testcases
+  examples: |
+    - o que é um test case
+    - para que servem os casos de teste
+    - me diz porque preciso de testcases
+    - que sõ casos teste
+    - testcases
+    - test cases
+    - TestCases
+    - Test Cases
+    - Testcases
+    - Test cases
+    - casos de teste
+    - casos teste

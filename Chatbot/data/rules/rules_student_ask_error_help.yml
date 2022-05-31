@@ -15,7 +15,16 @@ rules:
   - intent: ask_help_error
   - action: utter_what_error_message
 
-#
+# Does not have a message or does not want to give one
+- rule: (EG) Student asks error help but does not have one
+  condition:
+    - active_loop: null
+  steps:
+  - action: utter_what_error_message
+  - intent: deny
+  - action: utter_logic_errors
+  - action: utter_anything_else
+
 - rule: (EG) Student gives the error message when prompt to
   condition:
     - active_loop: null
@@ -49,4 +58,3 @@ rules:
   - intent: ask_error_message
   - action: action_eg_error_message_example
   - action: utter_did_that_help
-# ===================== WANTS HELP DIRECTLY BY GIVING THE ERROR MESSAGE =================

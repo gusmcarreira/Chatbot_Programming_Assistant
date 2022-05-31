@@ -11,14 +11,13 @@ slots:
         conditions:
           - active_loop: form_teacher_help
 
-  ## ANSWER QUESTIONS ##
+  ## ERROR GUIDANCE ##
   slot_error_cause_information:
     type: list
     influence_conversation: true
     mappings:
       - type: custom
 
-  ## ERROR GUIDANCE ##
   slot_eg_start:
     type: bool
     influence_conversation: true
@@ -95,7 +94,7 @@ slots:
 
   slot_eh_code_answer:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
       - type: from_entity
         entity: code_message_answer
@@ -111,10 +110,11 @@ slots:
       - type: from_entity
         entity: code_test_case
 
-  slot_eh_second_try:
+  slot_eh_question_id:
     type: text
     mappings:
-      - type: custom
+      - type: from_entity
+        entity: code_question_id
 
   slot_eh_concepts_options:
     type: text

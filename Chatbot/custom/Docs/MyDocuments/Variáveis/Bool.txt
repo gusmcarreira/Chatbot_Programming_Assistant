@@ -5,15 +5,15 @@ Pense em uma lâmpada, ela está acesa ou apagada. Você está com ou sem Intern
 Exemplo:
 
 <code>
-1 lampada_acesa = True
-2 conectado_internet = False
+1  lampada_acesa = True
+2  conectado_internet = False
 </code>
 
 Vejamos agora exemplos de operações lógicas (booleanas):
 
 <code>
-1 a = 4 > 0
-2 print(a)
+1  a = 4 > 0
+2  print(a)
 
 True
 </code>

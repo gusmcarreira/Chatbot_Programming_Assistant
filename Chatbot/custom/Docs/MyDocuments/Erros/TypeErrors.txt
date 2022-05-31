@@ -1,6 +1,6 @@
 Os programas são formados por dados de diferentes tipos: números, booleanos, String, entre outros. TypeError é retornado quando se tenta realizar operações misturando tipos diferentes.
 
-<code_print>Estará a tentar realizar a soma entre números e Strings?
+<code_print>Estará a tentar realizar a soma entre números e Strings?</code_print>
 
 Exemplo:
 
@@ -22,7 +22,7 @@ x = “4”
 soma = y + int(x)
 </code>
 -#-
-<code_print>Estará a tentar concatenar números a uma String?
+<code_print>Estará a tentar concatenar números a uma String?</code_print>
 
 <code>
 y = 33
@@ -40,7 +40,7 @@ y = 33
 x = “A minha idade é ” + str(y)
 </code>
 -#-
-<code_print>Estará a tentar ter acesso a um índice invalido de um vetor?
+<code_print>Estará a tentar ter acesso a um índice invalido de um vetor?</code_print>
 
 <code>
 y = [1, 2, 3, 4]
@@ -50,7 +50,7 @@ print(y[posicao])
 
 Para acessar o elemento de um array devemos informar o seu índice que é do tipo numérico. No exemplo nós informamos uma STRING 1, e não o número 1.
 -#-
-<code_print>Estará a tentar utilizar uma variável como função?
+<code_print>Estará a tentar utilizar uma variável como função?</code_print>
 
 <code>
 y = “Olá”

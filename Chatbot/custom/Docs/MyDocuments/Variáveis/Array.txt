@@ -3,23 +3,21 @@ Listas, por vezes também referidas de array, são variáveis em que se guardam 
 Exemplo:
 
 <code>
-cores = ["vermelho", "amarelo", "laranja"]
-print(cores)
+1  cores = ["vermelho", "amarelo", "laranja"]
+2  print(cores)
+
+["vermelho", "amarelo", "laranja"]
 </code>
 
-<code_print>["vermelho", "amarelo", "laranja"]
-
-Para aceder a um dos seus valores basta fazer cores[indice que queremos].
+Para aceder a um dos seus valores basta fazer cores[indice que queremos]. Não se esqueça que os indices começam no 0!
 
 Exemplo:
 
 <code>
-cores = ["vermelho", "amarelo", "laranja"]
-print(cores[1])
+1  cores = ["vermelho", "amarelo", "laranja"]
+2  print(cores[1])
+
+amarelo
 </code>
-
-<code_print>amarelo
-
-Não se esqueça que os indices começam no 0!
 
 Sugestões:Como obter o tipo de um dado?

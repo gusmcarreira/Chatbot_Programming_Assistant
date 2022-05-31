@@ -1,6 +1,6 @@
 SyntaxError ocorre quando você escreve uma instrução incorretamente, violando alguma das regras da linguagem de programação. Como consequência o Python não conseguirá executar o seu algoritmo e irá notificá-lo que houve um erro de sintaxe.
 
-<code_print>Faltará : (dois pontos) em condições, repetições, ou função?
+<code_print>Faltará : (dois pontos) em condições, repetições, ou função?</code_print>
 
 <code>
 while True
@@ -9,19 +9,19 @@ while True
 
 Ao esquecer de utilizar o : na linha em que a repetição ou condição é declarada. Lembre-se, o : indica que o que virá a seguir é o escopo desses recursos, sem ele o Python não conseguirá compreender essa informação e notificará do problema.
 -#-
-<code_print>Estará a declarar uma String sem aspas de abertura OU fechamento?
+<code_print>Estará a declarar uma String sem aspas de abertura OU fechamento?</code_print>
 
 <code>nome = "Leonardo</code>
 
 As Strings precisam de ser declaradas com aspas no fim E no inicio.
 -#-
-<code_print>Estará a esquecer-se dos parêntesis de fechamento ou abertura?
+<code_print>Estará a esquecer-se dos parêntesis de fechamento ou abertura?</code_print>
 
 <code>print("Frase de exemplo"</code>
 
 Cada parêntesis de abertura precisa ter o seu parêntesis de fechamento, e vice-versa.
 -#-
-<code_print>Estará a esquecer-se de incluir uma vírgula para separar elementos de um array?
+<code_print>Estará a esquecer-se de incluir uma vírgula para separar elementos de um array?</code_print>
 
 <code>x = [1 2]</code>
 
@@ -33,7 +33,7 @@ Solução:
 x = [1, 2]
 </code>
 -#-
-<code_print>Estará a esquecer-se de incluir números numa operação matemática?
+<code_print>Estará a esquecer-se de incluir números numa operação matemática?</code_print>
 
 <code>x = 2 +</code>
 

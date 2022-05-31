@@ -7,10 +7,10 @@ O tipo de uma variável é dado pela função type().
 Exemplo:
 
 <code>
-x = 5
-print(type(5))
-</code>
+1  x = 5
+2  print(type(5))
 
-<code_print> <class 'int'>
+<class 'int'>
+</code>
 
 Sugestões:O que é uma string<sep>O que é um int<sep>O que é um float<sep>O que é uma variável booleana<sep>O que é uma lista

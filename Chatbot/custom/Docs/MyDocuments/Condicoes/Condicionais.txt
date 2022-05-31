@@ -16,7 +16,7 @@ Sugestões:Sintaxe da instrução if<sep>Sintaxe da instrução elif<sep>Sintaxe
 -#-
 A sintaxe de uma condição ou instrução if em Python é:
 
-<code>if variável operador variável:</code>
+<code_print>if variável operador variável:</code_print>
 
 A expressão booleana depois do if é chamada de condição. Se for verdadeira, a instrução endentada é executada. Se não, nada acontece.
 
@@ -40,7 +40,7 @@ O uso do if não resolve todos os nosso problemas, pois quando a comparação de
 
 A sintaxe de uma condição ou instrução else em Python é:
 
-<code>else:</code>
+<code_print>else:</code_print>
 
 Exemplo:
 
@@ -64,7 +64,7 @@ Poderá também ser necessário várias condições, ou seja, condições em cad
 
 A sintaxe de uma condição ou instrução elif em Python é:
 
-<code>elif variável operador variável:</code>
+<code_print>elif variável operador variável:</code_print>
 
 Exemplo:
 

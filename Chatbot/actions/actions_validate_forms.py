@@ -23,7 +23,7 @@ class ValidateFormEgStart(FormValidationAction):
         elif wanted_intent == "EXTERNAL_CODE_MESSAGE":
             dispatcher.utter_message(text='Gostaria de um diálogo sobre a possivel causa do seu erro (sim/não)')
         else:
-            dispatcher.utter_message(text='Se quiser falar de outra coisa responda "não", se quiser a ajuda diga com o seu erro diga "sim"')
+            dispatcher.utter_message(text='Se quiser falar de outra coisa responda "não", se quiser ajuda com o seu erro diga "sim"')
             # validation failed, set this slot to None so that the
             # user will be asked for the slot again
             return {"slot_eg_start": None}
@@ -106,3 +106,6 @@ class ValidateFormTeacherHelp(FormValidationAction):
         elif wanted_intent != "deny":
             dispatcher.utter_message(text='Para enviar a dúvida começe a sua frase com "Pergunta:" se já não quiser diga "não"')
             return {"slot_teacher_help": None}
+
+        else:
+            return {"slot_teacher_help": student_answer}

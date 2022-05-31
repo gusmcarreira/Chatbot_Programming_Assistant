@@ -2,8 +2,7 @@ Além de armazenarem dados, um dos grandes ganhos no uso de variáveis é poder 
 
 Em python existem algumas particularidade na hora de realizar operações matemáticas, por vezes não são utilizados os mesmos simbolos que estamos acostumados:
 
-<code>
-Operador matemárico: Soma
+<code_print>Operador matemárico: Soma
 Símbolo da matemática: +
 Simbolo em programação: +
 
@@ -26,7 +25,7 @@ Simbolo em programação: **
 Operador matemárico: Raiz quadrada
 Símbolo da matemática: √
 Simbolo em programação: variavel ** .5
-</code>
+</code_print>
 
 Sugestões:Como se faz a soma?<sep>Como se faz a subtração?<sep>Como se faz a divisão?<sep>Como se faz a multiplicação?<sep>Como se faz a exponenciação?
 -#-
@@ -35,56 +34,56 @@ A soma é feita com o operador (+)
 Exemplo:
 
 <code>
-numero1 = 10
-numero2 = 2.5
-resultado = numero1 + numero2
-	
-print(resultado)
-</code>
+1  numero1 = 10
+2  numero2 = 2.5
+3  resultado = numero1 + numero2
+4
+5  print(resultado)
 
-<code_print>12.5
+12.5
+</code>
 -#-
 Para subtrair usa-se o operador (-)
 
 Exemplo:
 	
 <code>
-numero1 = 10
-numero2 = 8.5
-resultado = numero1 - numero2
-	
-print(resultado)
-</code>
+1  numero1 = 10
+2  numero2 = 8.5
+3  resultado = numero1 - numero2
+4
+5  print(resultado)
 
-<code_print>1.5
+1.5
+</code>
 -#-
 Para multiplicar usa-se o operador (*)
 
 Exemplo:
 
 <code>
-numero1 = 5
-numero2 = 2
-resultado = numero1 * numero2
-	
-print(resultado)
+1  numero1 = 5
+2  numero2 = 2
+3  resultado = numero1 * numero2
+4
+5  print(resultado)
 </code>
 
-<code_print>10
+<code_print>10</code_print>
 -#-
 Para dividir, diferente do nosso dia-a-dia, usa-se o operador (/)
 
 Exemplo:
 
 <code>
-numero1 = 5
-numero2 = 2
-resultado = numero1 / numero2
-	
-print(resultado)
-</code>
+1  numero1 = 5
+2  numero2 = 2
+3  resultado = numero1 / numero2
+4
+5  print(resultado)
 
-<code_print>2.5
+2.5
+</code>
 -#-
 A divisão ARREDONDANDO PARA BAIXO é feita com o operador (//)
 
@@ -98,7 +97,7 @@ resultado = numero1 // numero2
 print(resultado)
 </code>
 
-<code_print>2
+<code_print>2</code_print>
 -#-
 Ao dividirmos um número por outro, o resto da divisão pode ser zero ou não. Se for zero, a divisão é exata; e se não for, é não exata. O resto da divisão é obtido com o operador (%)
 
@@ -112,27 +111,26 @@ resultado = numero1 % numero2
 print(resultado)
 </code>
 
-<code_print>1
+<code_print>1</code_print>
 
-Esta operação é útil, por exemplo, para saber se um número é para ou ímpar (se o número é multiplo de 2):
+Esta operação é útil, por exemplo, para saber se um número é para ou ímpar (ou múltiplo de um número):
 
 <code>
 resultado = numero1 % 2
 </code>
 
-Se numero1 for par, então o resultado da operação acima será IGUAL a 0, caso contrário sera DIFERENTE de 0..
+Se numero1 for par, então o resultado da operação acima será IGUAL a 0, caso contrário sera DIFERENTE de 0. O mesmo acontece para saber se um número é múltiplo do outro.
 -#-
 A exponenciação é feita com o operador (**)
 
 Exemplo:
 
 <code>
-numero1 = 5
-numero2 = 2
-# 5 ao quadrado (5 * 5)
-resultado = numero1 ** numero2
-	
-print(resultado)
-</code>
+1  numero1 = 5
+3  # 5 ao quadrado = 5 levantado a 2
+4  resultado = numero1 ** 2
+5
+6  print(resultado)
 
-<code_print>25
+25
+</code>

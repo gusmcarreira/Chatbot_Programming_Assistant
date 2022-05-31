@@ -70,6 +70,7 @@ nlu:
 # ============================ Questions for a specific error message =============================
 - intent: ask_help_error
   examples: |
+    - me ajuda com o erro
     - me ajuda no erro
     - me dá uma ajuda nesse erro
     - me dá uma ajuda com esse erro
@@ -92,7 +93,7 @@ nlu:
 - regex: help error message
   examples: |
     - .*\s*\"*\s*(A instrução else não pode ter uma comparação)\s*\"*\s*.*
-    - .*\s*\"*\s*(Em uma condição é preciso comparar um par de informações\, mas você escreveu apenas um dado)\s*\"*\s*.*
+    - .*\s*\"*\s*(Em uma condição é preciso comparar um par de informações, mas você escreveu apenas um dado)\s*\"*\s*.*
     - .*\s*\"*\s*(Ao utilizar if ou elif você precisa incluir uma comparação\. Por exemplo\: if x \=\= a\, onde x \=\= a é a comparação)\s*\"*\s*.*
     - .*\s*\"*\s*(Você utilizou um operador and ou or\, mas escreveu eles maiúsculo)\s*\"*\s*.*
     - .*\s*\"*\s*(A comparação de uma condição deve ser feita com dois sinais de \=\= \(igualdade\)\, mas você utilizou apenas um =)\s*\"*\s*.*

@@ -25,21 +25,15 @@ print(s)
 
 Sugestões:Como obter o tipo de um dado?
 -#-
-Em geral, não é possível executar operações matemáticas com strings, mesmo se elas parecerem números, então coisas assim são ilegais:
+Para a concatenação de strings é usado o operador "+"", que une as strings pelas extremidades. Por exemplo:
 
-<code_print>'2'-'1'
-'ovos'/'fácil'
-'third'*'a charm'
+<code>
+1  primeira = 'Olá'
+2  segunda = 'Mundo'
+3  terceira = primeira + segunda
+4  print(terceira)
 
-Mas há duas exceções, + e *.
-
-O operador + executa uma concatenação de strings, ou seja, une as strings pelas extremidades. Por exemplo:
-
-<code_print>
->>> primeira = 'Olá'
->>> segunda = 'Mundo'
->>> terceira = primeira + segunda
->>> terceira
 OláMundo
+</code>
 
-O operador * também funciona em strings; ele executa a repetição. Por exemplo, 'Spam'*3 é 'SpamSpamSpam'. Se um dos valores for uma string, o outro tem de ser um número inteiro.
+As palavras estão juntas, pois não foi colocado um espaço no fim da primeira nem no inicio da segunda.

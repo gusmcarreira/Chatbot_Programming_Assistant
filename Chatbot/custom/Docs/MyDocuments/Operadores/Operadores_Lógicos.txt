@@ -1,6 +1,6 @@
 Em Python os operadores lógicos mais importantes são:
 
-<code>
+<code_print>
 and
 ("e" lógico)
 
@@ -12,7 +12,7 @@ False and False resulta em False
 or
 ("ou" lógico)
 
-True or False resulta em True
+True or True resulta em True
 True or False resulta em True
 False or True resulta em True
 False or False resulta em False
@@ -22,7 +22,7 @@ not
 
 not False resulta em True
 not True resulta em False
-</code>
+</print>
 
 Sugestões:Quando devemos usar o and?<sep>Quando devemos usar o or?<sep>Quando devemos usar o not?
 -#-
@@ -31,10 +31,12 @@ O and é usado quando queremos usar um "e" lógico.
 Exemplo:
 
 <code>
-x = 2
+1  x = 2
+2
+3  if x > 1 and x < 3:
+4    print("x maior que 1 E x menor que 3")
 
-if x > 1 and x < 3:
-  print("x maior que 1 E x menor que 3")
+x maior que 1 E x menor que 3
 </code>
 
 Quando usamos o and, AS DUAS comparações TÊM DE SER VERDADE para o que o que está depois da condição seja executado.
@@ -46,10 +48,12 @@ O or é usado quando queremos usar um "ou" lógico.
 Exemplo:
 
 <code>
-x = 2
+1  x = 2
+2
+3  if x > 1 or x > 3:
+4    print("x maior que 1 OU x maior que 3")
 
-if x > 1 or x > 3:
-  print("x maior que 1 OU x maior que 3")
+x maior que 1 OU x maior que 3
 </code>
 
 Quando usamos o or, APENAS UMA das comparações TEM DE SER VERDADE para o que o que está depois da condição seja executado. No exemplo acima o print seria executado pois, uma das comparações é verdadeira.
@@ -61,10 +65,12 @@ O not é usado quando queremos usar um "não" lógico.
 Exemplo:
 
 <code>
-x = 2
+1  x = 2
+2
+3  if not x > 3:
+4    print("x NÃO é maior que 3")
 
-if not x > 3:
-  print("x NÃO é maior que 3")
+x NÃO é maior que 3
 </code>
 
 Para que o que vem depois de uma condição seja executado, a comparação tem de ser VERDADE. No exemplo em cima estamo a dizer que se x NÃO for maior que 3, então imprime "x NÃO é maior que 3".

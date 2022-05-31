@@ -11,8 +11,11 @@ intents:
   # EXTERNAL MESSAGES
   - EXTERNAL_ERROR_MESSAGE
   - EXTERNAL_CODE_MESSAGE
+  - EXTERNAL_CODE_INFO
   # ASK EXERCISE HELP
   - ask_help
+  - ask_tips
+  - ask_suggestions
   # ASK FOR HELP UNDERSTANDING AN ERROR MESSAGE
   - ask_error_message
   - ask_help_error
@@ -92,4 +95,5 @@ entities:
 - code_message_answer
 - code_test_case
 - answer_concept_wanted
+- code_question_id
 

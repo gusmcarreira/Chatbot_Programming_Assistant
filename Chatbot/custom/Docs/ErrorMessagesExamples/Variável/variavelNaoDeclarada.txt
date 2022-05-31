@@ -1,4 +1,4 @@
-Esta mensagem significa que está a usar uma variável que não foi declarada:
+Esta mensagem significa que está a usar uma variável (ou função) que não foi declarada:
 
 <code>
 1  numero1 = 1

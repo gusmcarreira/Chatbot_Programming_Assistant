@@ -7,6 +7,13 @@ version: "3.1"
 rules:
 
 # -------------------> INITIAL RULE  <------------------
+- rule: Don't do anything on code information
+  condition:
+  - active_loop: null
+  steps:
+  - intent: EXTERNAL_CODE_INFO
+  - action: action_listen
+
 - rule: (EH) Activate - Prompt start exercise help?
   condition:
   - active_loop: null
@@ -26,9 +33,20 @@ rules:
 # ------------------------------------------------------
 
 # Verify that the student can ask for help
+- rule: (EH) Student is not in a programming questions
+  condition:
+  - active_loop: null
+  - slot_was_set:
+      -  slot_eh_code_answer: null
+  steps:
+  - intent: ask_help
+  - action: utter_no_help
+
 - rule: (EH) Ask for help - Too early (I)
   condition:
   - active_loop: null
+  - slot_was_set:
+      -  slot_eh_code_answer: true
   steps:
   - intent: ask_help
   - action: utter_check_ask_help
@@ -36,6 +54,8 @@ rules:
 - rule: (EH) Ask for help - Too early (II)
   condition:
   - active_loop: null
+  - slot_was_set:
+      - slot_eh_code_answer: true
   steps:
   - action: utter_check_ask_help
   - intent: deny
@@ -44,6 +64,8 @@ rules:
 - rule: (EH) Ask for help - Can ask (II)
   condition:
   - active_loop: null
+  - slot_was_set:
+      -  slot_eh_code_answer: true
   steps:
   - action: utter_check_ask_help
   - intent: affirm

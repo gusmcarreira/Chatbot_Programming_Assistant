@@ -185,6 +185,7 @@ nlu:
 - intent: ask_op_order
   examples: |
     - que ordem seguem os operadores em Python
+    - ordem dos operadores
     - que ordem seguem os operadores matemáticos em Python
     - que ordem seguem os operadores aritméticos em Python
     - que ordem seguem os operadores em Python

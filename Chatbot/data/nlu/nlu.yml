@@ -85,6 +85,7 @@ nlu:
     - não encontro
     - não sei qual é
 
+
 - intent: bot_challenge
   examples: |
     - estou a falar com uma pessoa?

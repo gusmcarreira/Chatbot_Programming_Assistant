@@ -4,6 +4,11 @@ nlu:
 
 - intent: ask_input
   examples: |
+    - o que é uma entrada
+    - que são entradas
+    - me diz o que é uma entrada
+    - me diz para que serve uma entrada
+    - me diz o que são entradas
     - o que é a entrada de um programa
     - entradas de programas
     - como se define a entrada de um algoritmo
@@ -22,6 +27,10 @@ nlu:
 - intent: ask_output
   examples: |
     - saida de dados
+    - me diz o que são saidas
+    - me diz o que é uma saida
+    - o que é uma saida
+    - o que são saidas
     - exemplo de uso de função print
     - como se usa a função print()
     - que se quer dizer com saida de dados

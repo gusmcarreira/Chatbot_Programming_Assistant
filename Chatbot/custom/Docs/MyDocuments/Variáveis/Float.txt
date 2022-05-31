@@ -13,12 +13,12 @@ Para converter um inteiro para float usa-se a função float().
 Exemplo:
 
 <code>
-# Converte inteiro para float
-x = 2
-s = float(x)
-print(s)
-</code>
+1  # Converte inteiro para float
+2  x = 2
+3  s = float(x)
+4  print(s)
 
-<code_print>2.0
+2.0
+</code>
 
 Sugestões:Como obter o tipo de um dado?

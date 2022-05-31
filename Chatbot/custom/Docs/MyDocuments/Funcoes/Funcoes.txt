@@ -4,7 +4,7 @@ Uma das principais formas de se criar componentes reusáveis nas linguagens de p
 
 A criação de uma função é dada pela seguinte sintaxe:
 
-<code_print>def nome_funcao():
+<code_print>def nome_funcao():</code_print>
 
 Exemplo:
 
@@ -27,7 +27,7 @@ Sugestões:Função com parâmetros<sep>Retorno de uma função<sep>Escopo de um
 -#-
 Informação pode ser passada a funções como parâmetro/s. Parâmetros são especificados depois do nome da função (dentro dos parêntesis).
 
-<code_print>def nome_funcao(par1, par2):
+<code_print>def nome_funcao(par1, par2):</code_print>
 
 Podem ser usados quantos parâmetros quiser, mas tenha o cuidado dos separa com uma vírgula (,).
 
@@ -40,7 +40,7 @@ Exemplo:
 4 exemplo_add_func(1, 4)
 </code>
 
-<code_print>5
+<code_print>5</code_print>
 
 O exemplo acima é de uma função "exemplo_add_func" com dois parâmetros "num1" e "num2". Quando a função é chamada, passamos dois argumentos, que podem depois ser usados dentro da função, no seu escopo.
 
@@ -62,7 +62,7 @@ resultado_total = 1 + exemplo_func(1)
 print(resultado_total)
 </code>
 
-<code_print>3
+<code_print>3</code_print>
 
 No exemplo acima estamos a imprimir o resultado de 1 + o retorno da nossa função (que neste caso é 1 mais o parâmetro que lhe demos (1)).
 
