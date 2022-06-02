@@ -56,13 +56,12 @@ class ActionEhTestCase(Action):
             dispatcher.utter_message(text="Lembre-se se a qualquer momento quiser parar, diga PARAR")
 
             #dispatcher.utter_message(text="O primeiro passo é ver se compreende corretamente o que o seu algoritmo deve produzir!")
-            dispatcher.utter_message(text="""
-               <text>Primeiro vamos aos Test Cases (tabela à direita com "entradas" - input() - e "saidas" - print()). Por vezes se houver um pormenor ou outro que não entenda apenas pelo enunciado, é bom olhar para eles porquê? \n\nQuando clica no botão "Executar" o que acontece, é que para verificar se o seu algoritmo está correto são passadas ao programa entradas, e se ele gerar as saídas esperadas então o seu código estará correto.\n\nEntão eles lhe darão uma ideia que transformações/cálculos terão de acontecer.</text>""")
-            # Text language according to amount of inputs fosse (1) / fossem (more than one)
+            dispatcher.utter_message(text='<text>Primeiro vamos aos Test Cases (tabela à direita com "entradas" - input() - e "saidas" - print()). \n\nPor vezes se houver um pormenor ou outro que não entenda apenas pelo enunciado, é bom olhar para eles.\n\nA minha sugestão seria MENTALMENTE substituir os input() pelas entradas, e tentar perceber se acha que o seu código iria gerar a saida correta')
+
             test_case_string = "<text>"
 
             if len(test_case_inputs) == 1:
-                test_case_string = test_case_string + "Um exemplo, se a entrada fosse:\n\n" + test_case_inputs[0]
+                test_case_string = test_case_string + "\nUm exemplo, se a entrada fosse:\n\n" + test_case_inputs[0]
             else:
                 entries = "'" + test_case_inputs[0] + "'"
                 index = 1
@@ -184,13 +183,13 @@ class ActionEhCheckAnswer(Action):
                 dispatcher.utter_message(text="Não é bem isso, a resposta correta seria:")
                 dispatcher.utter_message(text=produceString(test_case_slot[1], False))
 
-                if question_id:
-                    utter_string = "utter_" + question_id
-                    dispatcher.utter_message(response=utter_string)
+                # if question_id:
+                #     utter_string = "utter_" + question_id
+                #     dispatcher.utter_message(response=utter_string)
+                # else:
+                if produceString(test_case_slot[1], False).replace("<code_print>", "").replace("</code_print>", "").replace("\n", "").isdigit():
+                    dispatcher.utter_message(text = "Dica: Quando se trata de um valor númerico, atente no enunciado, pois este ou especifica o valor, ou o cálculo para chegar a este.")
                 else:
-                    if produceString(test_case_slot[1], False).replace("<code_print>", "").replace("</code_print>", "").replace("\n", "").isdigit():
-                        dispatcher.utter_message(text = "Dica: Quando se trata de um valor númerico, atente no enunciado, pois este ou especifica o valor, ou o cálculo para chegar a este.")
-                    else:
                         dispatcher.utter_message(text = "Dica: Ao resolver o exercício tenha atenção se o enunciado especifica algum texto que o algoritmo deve imprimir, pois a falta de um pormenor, como um acento ou dois pontos, vai produzir a saida errada!")
             return [FollowupAction("action_eh_concepts_order")]
         # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

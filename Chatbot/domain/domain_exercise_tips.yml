@@ -4,32 +4,323 @@ version: "3.1"
 # ========================================================  TIPS =======================================================
 # ======================================================================================================================
 responses:
+  # ---------------------------> VARIÁVEIS <----------------------------
+  # Olá mundo!
   utter_947713cc-17bf-11eb-adc1-0242ac120002:
-  - text: 'Dica: Não necessita de fazer nada, apenas "Executar".'
+  - text: 'Dica: O objetivo deste exercício é apenas ver como as coisas funcionam. Não precisa de modificar nada apenas “Executar”. Não se esqueça de sempre ler os comentários, podem ter algo que lhe dê jeito 😉'
 
+  # Pequeno problema
   utter_76e4017f-6006-476f-8b47-88b0e33dbf84:
-  - text: "Dica: lembre-se que apenas strings são envolvidas em aspas."
+  - text: 'Dica: O objetivo é imprimir o valor da VARIÁVEL, o que quero dizer? Existe uma diferença entre utilizar uma string e uma VARIÁVEL! (sem … "") 🤫'
 
+  # Concatenando strings - l
   utter_73e1e529-5972-4ab0-bc80-bf2859d45f2b:
-  - text: "Dica: lembre-se de usar o texto exato do enunciado (maiúsculas, pontos, acentos, e espaços. Se, ao fazer uma concatenação com o “+” não colocar um espaço no final de uma string ou no inicio de outra, elas não terão nenhum espaço entre elas."
+  - text: '<text>Dica:
 
+
+          —> Concatenação é a palavra fina para a ação de juntar textos.
+
+
+          —> Ao fazer questões onde um dos textos é descrito lembre-se de duas coisa: terá de usar EXATAMENTE o mesmo texto referido no enunciado (maiúsculas, pontos, acentos, e espaços);
+
+
+          —> Quando faz uma concatenação com o "+", se não colocar no final da primeira ou no inicio da segunda um espaço elas serão juntas e não irá produzir o que a questão pretende, exemplo:
+
+
+          1   texto1 = "Sou o"
+
+          2   texto2 = "Monitor"
+
+
+          >> Sou oMonitor</text>'
+
+  # Concatenando strings - ll
   utter_f369a1f7-c333-4c23-81ac-89639608eb35:
-  - text: "Dica: será bastante PARECIDO ao “Concatenando strings - I”!"
+  - text: 'Dica: será bastante PARECIDO ao "Concatenando strings - I"! A única diferença é que terá de fazer a concatenação entre dois dados do teclado ✌️'
 
+  # Bingo
   utter_c8c40972-17c0-11eb-adc1-0242ac120002:
-  - text: "Dica: volte ao exercício do “Concatenando strings - I”, será bastante parecido!"
+  - text: 'Dica: volte ao exercício do "Concatenando strings - I", será BASTANTE parecido!! 👾'
 
+  # Soma
+  utter_71b67722-4639-4fcf-be03-574356d5b70a:
+    - text: 'Dica: Terá de criar uma segunda variável (ex, numeroDois…) com os mesmo dados daquela que já está presente. Fazer a soma das dos dois NÚMEROS e por fim imprimir o resultado na tela 👍'
+
+  # Convertendo de metros para centímetros
   utter_4ad830c8-9c86-481a-93d7-8d91a08e36ce:
-  - text: "Dica: Não se esqueça de imprimir o dado!"
+  - text: '<text>Aqui vão três dicas:
 
+
+          —> a função input() retorna uma STRING mas um cálculo é feito com NÚMEROS;
+
+
+          —> Para converter metros em centímetros, MULTIPLIQUE os metros por 100;
+
+
+          —> Não se esqueça de imprimir o dado!</text>'
+
+  # Soma - II
   utter_c61d439b-5131-4377-b08a-5704d554e7ea:
-  - text: "Dica: Soma é feito com números, mas a concatenação com o “+” terá de ser entre textos (strings). Não se esqueça de verificar se o enunciado especifica alguma string, nesse caso tenha cuidado de escrever exatamente como pedido (acentos, pontos, maiúsculas, espaços)."
+  - text: '<text>Aqui vão três dicas:
 
+
+          —> a função input() retorna um texto (STRING) mas um cálculo é feito com NÚMEROS;
+
+
+          —> A concatenação é feita entre textos (STRINGS);
+
+
+          —> Não se esqueça de verificar se o enunciado especifica alguma string, nesse caso tenha cuidado de escrever exatamente como pedido (acentos, pontos, maiúsculas, espaços).</text>'
+
+  # Qual o antecessor e o sucessor
   utter_43789fa2-b614-4e03-a8c8-1494b3e3d9e0:
   - text: "Dica: antecessor (numero que vem antes - soma), sucessor (numero que vem depois - subtração), repare nas entradas e saídas á esquerda."
 
-  utter_fc14f42a-fbfd-4503-b688-1f2102cc4ac9:
-  - text: "Dica: valor = (quantidadeDias * 90) + (quilometragemTotal * 12)"
+  # Área do círculo
+  utter_38bd2aec-f62f-475e-b010-20af623db20e:
+    - text: '<text>Aqui vão as minhas dicas:
 
+
+            —> A função input() retorna uma STRING;
+
+
+            —> Os cálculos terão de ser feitos entre NUMEROS;
+
+
+            —> O raio é METADE (divisão ✌️) do diâmetro;
+
+
+            —> A equação da area do círculo está no enunciado;
+
+
+            —> Para saber como fazer o quadrado de um número, me pergunte "Como fazer o quadrado de um número?"</text>'
+
+  # Diferença do produto
+  utter_c7cd8e92-da1a-412a-a0b3-4498d031545a:
+    - text: '<text>Hmm 🤔nesta questão não vou ser uma grande ajuda, as minhas dicas são:
+
+
+            —> Não se esqueça que a função input() lê uma STRING mas para os cálculos você quer NÚMEROS
+
+
+            —> Tenha grande atenção no enunciado, ele diz-lhe as variáveis que deve criar (A, B, C, D, X, Y, e talvez uma que guarde o valor de X - Y) e o que elas devem conter.</text>'
+
+  # Alugando um veículo
+  utter_fc14f42a-fbfd-4503-b688-1f2102cc4ac9:
+  - text: 'Dica, o resultado que quer é dado pela "(quantidadeDias multiplicada por 90) + (quilometragemTotal multiplicado por 12)"! Em que "quantidadeDias" e "quilometragemTotal" serão dados do teclado.'
+
+  # Cálculo da hipotenusa
   utter_33e2bda7-f130-4320-bb85-78b76a2db5cc:
-  - text: "Dica: hiponetusa² = cateto_um² + cateto_dois², simplificando fica, hipotenusa = √ (cateto_um² + cateto_dois²)"
+  - text: '<text>Dicas:
+
+
+            —> hiponetusa² = cateto_um² + cateto_dois², simplificado fica, hipotenusa = √ (cateto_um² + cateto_dois²)
+
+
+            —> para saber como fazer a raiz quadrada me pergunte "Como fazer a raiz quadrada?"
+
+
+            —> para saber como fazer um valor ao quadrado me pergunte "Como obter o quadrado de um numero?"</text>'
+
+  # ---------------------------> CONDIÇÕES<----------------------------
+
+  # Digitou a letra a?
+  utter_88bd1120-54da-4e5f-837a-c92adf5b5ea8:
+    - text: 'Dica: Penso que apenas faltará algo na condição..."==" significa "igual a", então "letra" terá de ser "igual" a quê para correr o que está no escopo da condição? Pode sempre ler o título desta questão 😉'
+
+  # Rápido demais?
+  utter_047fe3c5-f517-4f50-8e42-42d1f633aeba:
+    - text: '<text>Hmm dicas para esta 🤔 diria:
+
+
+            —> A função input() retorna uma STRING, algo lhe terá de ser feito para a transformar em número
+
+
+            —> SE a velocidade for MAIOR que 100 (100 é um número, não o envolva em aspas)
+
+
+            —> Veja o que tem de ser imprimido quando a condição se verifica. Use EXATAMENTE (maiúsculas, minúsculas, acentos, pontos, espaços), a string mencionada no enunciado.</text>'
+
+  # Digitou o número 5?
+  utter_d213e854-5ccf-4f2e-a9bd-60320f79330c:
+    - text: '<text>Dicas:
+
+
+            —> A função input() retorna uma STRING, algo lhe terá de ser feito para a transformar em número
+
+
+            —> SE o dado do teclado é IGUAL ao numero 5 (5 é um número, não o envolva em aspas)
+
+
+            —> A concatenação apenas pode ser feita entre STRINGS, terá de fazer o que disse no 1º ponto mas ao contrário
+
+
+            —> Veja o que tem de ser imprimido quando a condição se verifica. Use EXATAMENTE (maiúsculas, minúsculas, acentos, pontos, espaços), a string mencionada no enunciado.</text>'
+
+  # Pequeno problema
+  utter_d3f96e29-b446-4706-af49-e9abd0febcd2:
+    - text: '<text>Dicas:
+
+
+            —> A função input() retorna uma STRING, algo lhe terá de ser feito para a transformar em número
+
+
+            —> Falta-lhe 3 elementos na condição, para saber mais me pergunte (Sintaxe de uma instrução if)
+
+
+            —> Veja o que tem de ser imprimido quando a condição se verifica. Use EXATAMENTE (maiúsculas, minúsculas, acentos, pontos, espaços), a string mencionada no enunciado.
+
+
+            Dica extra...MAIOR que...</text>'
+
+  # Qual é o sexo - Parte 1
+  utter_25024c58-e46c-4d43-a089-d9c24e96d4ed:
+    - text: 'A minha dica para esta questão é simples...reveja a questão "Digitou a letra a?" 😉'
+
+  # Fui aprovado?
+  utter_da8487c1-a381-438e-963a-6f5a8b3a152e:
+    - text: 'Dica: Tenha bastante atenção no enunciado e na linha da declaração da condição, não lhe parece faltar algo? Se ainda não entendeu me pergunte (Sintaxe de uma instrução if)'
+
+  # Quantos estudantes foram aprovados
+  utter_ecd37459-f7bb-49a2-80d0-c2b26ca332ef:
+    - text: '<text>Dicas:
+
+
+            —> A função input() retorna uma STRING, algo lhe terá de ser feito para a transformar em número (serão 3 dados do teclado)
+
+
+            —> Diria que tem de criar algo (antes da condição) para guardar o número de aprovados, adicionar 1 a esse numero quando a sua nota é MAIOR OU IGUAL a 6 (precisará de uma condição para cada dado do teclado)
+
+
+            —> E por fim imprimir o numer de aprovados (lembre-se que este valor será impresso quer a condição seja verdade ou não)</text>'
+
+  # Fui aprovado? - Parte II
+  utter_7dc16a56-7e81-4fc7-9ba8-90c913fb8108:
+    - text: '<text>Hmm 🤔 agora está interessante, já entra o "else", diria que os pontos principais são:
+
+
+            —> Se a nota for MAIOR OU IGUAL a 6 imprima uma string (terá de ser EXATAMENTE como a que está no enunciado, atenção nas maiúsculas)
+
+
+            —> Se a condição anterior não se verificar imprima something ELSE (terá de ser EXATAMENTE como a que está no enunciado, atenção nas maiúsculas)</text>'
+
+  # Menor de 2 - Parte I
+  utter_2916d33e-6045-40f2-88da-6742231e4cf4:
+    - text: '<text>No editor estão já as variáveis definidas e convertidas, para completar a questão terá de fazer duas coisas:
+
+
+            —> Na declaração do if..."numero" terá de ser MENOR do que o quê?
+
+
+            —> O que terá de ser feito caso o "numero" NÃO seja menor (ou seja se ele for MAIOR) que o outro elemento?</text>'
+
+  # Fui aprovado - parte III
+  utter_26d8deb3-3e65-4129-8927-6173aaec54a7:
+    - text: 'Dica: A média é calculada somando-se todos os valores de um conjunto de dados (os valores dos nosso dados lidos do teclado) e dividindo-se pelo número de elementos deste conjunto (que serão então dois, pois são DOIS valores). Se quiser exemplos me pergunte "Como se calcula a média?"'
+
+  # Números em ordem crescente
+  utter_116a15b2-5e51-41bc-9cc2-3504b4c8f49e:
+    - text: '<text>Ok vamos a isto:
+
+
+            1º     Para imprimir os números em ordem crescente, diria para:
+
+
+            1.1º   Verificar se numero1 MAIOR que numero2
+
+
+            1.2º   Se a condição se verificar então faz um print(numero1, numero2), que será o mesmo que concatenar com o "+"
+
+
+            1.3º   Se não se verificar, inverte a ordem dos números no print
+
+
+            2º Se fizer a concatenação com o "+" ao invés de fazer com "," (virgula) "print(x, y)", lembre-se de adicionar um espaço entre else "numero1 + " " + numero2", para o qual terá de converter os números em strings.</text>'
+
+  # Múltiplo de 5
+  utter_f2fce5f8-6e9a-4807-bec5-901e821c1318:
+    - text: '<text>Dicas:
+
+
+            —> Se não souber como me pergunta "Como sei se um número é múltiplo de outro?"
+
+
+            —> Se o seu código não der o exercício como errado mas não devolve nenhum erro, verifique se as strings que que quer imprimir são EXATAMENTE as que o enunciado refere (maiúsculas, minúsculas, acentos, espaços)</text>'
+
+  # Menor de três
+  utter_d850c341-937f-4436-902e-0bbb5d0f7eb3:
+    - text: '<text>Dicas:
+
+
+          —> SE numero1 MENOR que numero2 "E" numero1 MENOR que numero3 (então numero1 será o menor)
+
+
+          —> SE numero2 MENOR que numero1 "E" numero2 MENOR que numero3 (então numero2 será o menor)
+
+
+          —> SE nenhuma das outras for verdade então o menor será o numero3</text>
+
+
+         Se não souber o que é um "e" lógico, me pergunte "o que é um e lógico?"'
+
+  # Qual é o sexo - Parte II
+  utter_8425f9da-bf08-4a91-8f57-82158eaf1acb:
+    - text: 'Se não entender o que o enunciado quer dizer com "OU", me pergunte "o que é um ou lógico?"'
+
+  # Digitou a letra a? - Parte II
+  utter_271061cf-9e0b-4206-9382-2b55138bcb91:
+    - text: 'Dica: Você que verificar se a letra é um a MINÚSCULO ou MAIÚSCULO 😉'
+
+  # Rápido demais? - Parte II
+  utter_fed3aea4-c17a-4800-98ff-73943cd62247:
+    - text: '<text>De forma simples diria:
+
+
+            —> Você quer dois dados do teclado (velocidade e local), lembre-se que input() retorna uma STRING e você quer que UM deles seja um NÚMERO
+
+
+            —> Depois quer então verificar se a velocidade é MAIOUR ou IGUAL a 100 e se o local é na "rua". Observe as entradas e saídas esperadas na tabela à sua esquerda (se quiser saber mais o que é um TestCase me pergunte "O que é um TestCase")</text>'
+
+  # Código secreto
+  utter_e7cd1250-dcaa-464e-9b07-cbcbf658226f:
+    - text: '<text>Dicas:
+
+
+            —> Se o seu código for dado como errado e não devolver nenhum erro, verifique se as letras estão escritas com MAIÚSCULAS e se a frase que está a imprimir é EXATAMENTE a do enunciado (maiúsculas, minúsculas, e espaços)
+
+
+            —> Se não souber como fazer um "e" lógico me pergunte "o que é um e lógico?"</text>'
+
+  # Código secreto - Parte II
+  utter_91e0c9e7-69c7-4a8f-b84d-00b52be3f1d3:
+    - text: 'Dica: Reveja a questão do "Código secreto", é bastante parecido mas falta 🤔 something "else"...😉'
+
+  # É vogal?
+  utter_560a0bc3-0d5d-42a7-a6c1-0dba987bfc6a:
+    - text: '<text>Dicas:
+
+
+            —> Você quer imprimir um texto se o dado do teclado for uma vogal, ou seja "a" OU "e" OU "i" OU "o" OU "u".
+
+
+            —> Se não for, imprimir outro texto.</text>
+
+
+            Se tiver dúvidas no que é um "ou" lógico me pergunte, "o que é um ou lógico"'
+
+  # Aumento no salário
+  utter_73d29cd6-e65e-461a-b08b-02afc519b784:
+    - text: '<text>Hmm interessante 🤔:
+
+
+            —> Diria para declarar uma variável, no inicio para guardar o valor do aumento;
+
+
+            —> Nas suas condições você quer alterar o valor da variável do aumento para o valor pretendido ("30%" será 0.3, "10%" será 0.1, e "5%" será 0.05)
+
+
+            —> No final, antes de imprimir o salario ajustado, quererá adicionar o valor do aumento, para tal o seu cálculo seria algo como (salario + salario * aumento)</text>'
+
+  # ----------------------------> FUNÇÕES <------------------------------
+
+  # ---------------------------> REPETIÇÕES <----------------------------

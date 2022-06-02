@@ -6,6 +6,10 @@ main_dir = "custom/Docs/MyDocuments/"
 main_dir_error_messages_explanation = "custom/Docs/ErrorMessagesExamples/"
 
 dic_answers = {
+    # ===========================> CONDITIONS <============================
+    "ask_question_testcases": [main_dir + "InfoTecnico/CasosTeste.txt", 0],
+    "ask_question_average": [main_dir + "InfoTecnico/Media.txt", 0],
+    # =====================================================================
 
     # ===========================> CONDITIONS <============================
     "ask_cond_general": [main_dir + "Condicoes/Condicionais.txt", 0],
@@ -54,6 +58,7 @@ dic_answers = {
     "ask_op_arithmetic_div": [main_dir + "Operadores/Operadores_Aritméticos.txt", 4],
     "ask_op_arithmetic_rem": [main_dir + "Operadores/Operadores_Aritméticos.txt", 6],
     "ask_op_arithmetic_exp": [main_dir + "Operadores/Operadores_Aritméticos.txt", 7],
+    "ask_op_square_root": [main_dir + "Operadores/Operadores_Aritméticos.txt", 8],
     "ask_op_logic": [main_dir + "Operadores/Operadores_Lógicos.txt", 0],
     "ask_op_logic_and": [main_dir + "Operadores/Operadores_Lógicos.txt", 1],
     "ask_op_logic_or": [main_dir + "Operadores/Operadores_Lógicos.txt", 2],
@@ -128,13 +133,72 @@ dict_error_message = {
     "Você escreveu uma String e não incluiu as aspas corretamente": main_dir_error_messages_explanation + "Variável/stringSemAspas.txt",
 }
 
-arr_dicas = ["947713cc-17bf-11eb-adc1-0242ac120002",
-             "76e4017f-6006-476f-8b47-88b0e33dbf84",
-             "73e1e529-5972-4ab0-bc80-bf2859d45f2b",
-             "f369a1f7-c333-4c23-81ac-89639608eb35",
-             "c8c40972-17c0-11eb-adc1-0242ac120002",
-             "4ad830c8-9c86-481a-93d7-8d91a08e36ce",
-             "c61d439b-5131-4377-b08a-5704d554e7ea",
-             "43789fa2-b614-4e03-a8c8-1494b3e3d9e0",
-             "fc14f42a-fbfd-4503-b688-1f2102cc4ac9",
-             "33e2bda7-f130-4320-bb85-78b76a2db5cc"]
+arr_dicas = [
+    # Olá mundo!
+    "947713cc-17bf-11eb-adc1-0242ac120002",
+    # Pequeno problema
+    "76e4017f-6006-476f-8b47-88b0e33dbf84",
+    # Concatenando strings - l
+    "73e1e529-5972-4ab0-bc80-bf2859d45f2b",
+    # Concatenando strings - ll
+    "f369a1f7-c333-4c23-81ac-89639608eb35",
+    # Bingo
+    "c8c40972-17c0-11eb-adc1-0242ac120002",
+    # Soma
+    "71b67722-4639-4fcf-be03-574356d5b70a",
+    # Convertendo de metros para centímetros
+    "4ad830c8-9c86-481a-93d7-8d91a08e36ce",
+    # Soma - II
+    "c61d439b-5131-4377-b08a-5704d554e7ea",
+    # Qual o antecessor e o sucessor
+    "43789fa2-b614-4e03-a8c8-1494b3e3d9e0",
+    # Área do círculo
+    "38bd2aec-f62f-475e-b010-20af623db20e",
+    # Diferença do produto
+    "c7cd8e92-da1a-412a-a0b3-4498d031545a",
+    # Alugando um veículo
+    "fc14f42a-fbfd-4503-b688-1f2102cc4ac9",
+    # Cálculo da hipotenusa
+    "33e2bda7-f130-4320-bb85-78b76a2db5cc",
+    # Digitou a letra a?
+    "88bd1120-54da-4e5f-837a-c92adf5b5ea8",
+    # Rápido demais
+    "047fe3c5-f517-4f50-8e42-42d1f633aeba",
+    # Digitou o número 5?
+    "d213e854-5ccf-4f2e-a9bd-60320f79330c",
+    # Pequeno problema
+    "d3f96e29-b446-4706-af49-e9abd0febcd2",
+    # Qual é o sexo - Parte 1
+    "25024c58-e46c-4d43-a089-d9c24e96d4ed",
+    # Fui aprovado?
+    "da8487c1-a381-438e-963a-6f5a8b3a152e",
+    # Quantos estudantes foram aprovados
+    "ecd37459-f7bb-49a2-80d0-c2b26ca332ef",
+    # Fui aprovado? - Parte II
+    "7dc16a56-7e81-4fc7-9ba8-90c913fb8108",
+    # Menor de 2 - Parte I
+    "2916d33e-6045-40f2-88da-6742231e4cf4",
+    # Fui aprovado - parte III
+    "26d8deb3-3e65-4129-8927-6173aaec54a7",
+    # Números em ordem crescente
+    "116a15b2-5e51-41bc-9cc2-3504b4c8f49e",
+    # Múltiplo de 5
+    "f2fce5f8-6e9a-4807-bec5-901e821c1318",
+    # Menor de três
+    "d850c341-937f-4436-902e-0bbb5d0f7eb3",
+    # Qual é o sexo - Parte II
+    "8425f9da-bf08-4a91-8f57-82158eaf1acb",
+    # Digitou a letra a? - Parte II
+    "271061cf-9e0b-4206-9382-2b55138bcb91",
+    # Rápido demais? - Parte II
+    "fed3aea4-c17a-4800-98ff-73943cd62247",
+    # Código secreto
+    "e7cd1250-dcaa-464e-9b07-cbcbf658226f",
+    # Código secreto - Parte II
+    "91e0c9e7-69c7-4a8f-b84d-00b52be3f1d3",
+    # É vogal?
+    "560a0bc3-0d5d-42a7-a6c1-0dba987bfc6a",
+    # Aumento no salário
+    "73d29cd6-e65e-461a-b08b-02afc519b784",
+    #
+    "",]

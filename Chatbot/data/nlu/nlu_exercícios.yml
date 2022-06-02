@@ -58,7 +58,7 @@ nlu:
     - me dá dica para o exercicio
 # ----------------------------------------------------
 
-- intent: ask_testcases
+- intent: ask_question_testcases
   examples: |
     - o que é um test case
     - para que servem os casos de teste
@@ -72,3 +72,19 @@ nlu:
     - Test cases
     - casos de teste
     - casos teste
+
+- intent: ask_question_average
+  examples: |
+    - como se calcula a média
+    - me diz como fazer a media
+    - como faço a media
+    - media
+    - me diz ai como fazer a media
+    - como faço para fazer a media
+    - o que é a media
+    - me diz o que é a media
+    - pode me dizer o que é a media
+    - media de dados
+    - nao sei fazer a media
+    - nao sei como obter a media
+    - nao entendo como fazer a media

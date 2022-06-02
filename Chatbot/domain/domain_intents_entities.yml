@@ -62,6 +62,7 @@ intents:
   - ask_op_arithmetic_div
   - ask_op_arithmetic_rem
   - ask_op_arithmetic_exp
+  - ask_op_square_root
   - ask_op_logic
   - ask_op_logic_and
   - ask_op_logic_or
@@ -86,6 +87,9 @@ intents:
   - ask_question_var_floats_convert
   - ask_question_var_bools
   - ask_question_var_arrays
+  # QUESTIONS ---------> EXTRA
+  - ask_question_testcases
+  - ask_question_average
 
 ############################################ ENTITIES ############################################
 entities:

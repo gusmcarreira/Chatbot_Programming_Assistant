@@ -336,6 +336,14 @@ rules:
   - action: action_answer_questions
   - action: utter_did_that_help
 
+- rule: Answer question anytime the user asks one (ARITHMETIC OPERATORS - SQUARE ROOT)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_square_root
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
 - rule: Answer question anytime the user asks one (LOGIC OPERATORS)
   condition:
     - active_loop: null
@@ -517,6 +525,34 @@ rules:
     - active_loop: null
   steps:
   - intent: ask_question_var_arrays
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+# ======================================================================================================================
+# ======================================================= EXTRA ========================================================
+# ======================================================================================================================
+
+- rule: Answer question anytime the user asks one (TestCases)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_testcases
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (Square Root)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_op_square_root
+  - action: action_answer_questions
+  - action: utter_did_that_help
+
+- rule: Answer question anytime the user asks one (Average)
+  condition:
+    - active_loop: null
+  steps:
+  - intent: ask_question_average
   - action: action_answer_questions
   - action: utter_did_that_help
 

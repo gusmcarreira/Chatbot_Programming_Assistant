@@ -27,7 +27,7 @@ Símbolo da matemática: √
 Simbolo em programação: variavel ** .5
 </code_print>
 
-Sugestões:Como se faz a soma?<sep>Como se faz a subtração?<sep>Como se faz a divisão?<sep>Como se faz a multiplicação?<sep>Como se faz a exponenciação?
+Sugestões:Como se faz a soma?<sep>Como se faz a subtração?<sep>Como se faz a divisão?<sep>Como se faz a multiplicação?<sep>Como se faz a exponenciação?<sep>Ordem dos operadores
 -#-
 A soma é feita com o operador (+)
 
@@ -42,6 +42,8 @@ Exemplo:
 
 12.5
 </code>
+
+Sugestões:Ordem dos operadores
 -#-
 Para subtrair usa-se o operador (-)
 
@@ -56,6 +58,8 @@ Exemplo:
 
 1.5
 </code>
+
+Sugestões:Ordem dos operadores
 -#-
 Para multiplicar usa-se o operador (*)
 
@@ -70,6 +74,8 @@ Exemplo:
 </code>
 
 <code_print>10</code_print>
+
+Sugestões:Ordem dos operadores
 -#-
 Para dividir, diferente do nosso dia-a-dia, usa-se o operador (/)
 
@@ -84,6 +90,8 @@ Exemplo:
 
 2.5
 </code>
+
+Sugestões:Ordem dos operadores
 -#-
 A divisão ARREDONDANDO PARA BAIXO é feita com o operador (//)
 
@@ -98,6 +106,8 @@ print(resultado)
 </code>
 
 <code_print>2</code_print>
+
+Sugestões:Ordem dos operadores
 -#-
 Ao dividirmos um número por outro, o resto da divisão pode ser zero ou não. Se for zero, a divisão é exata; e se não for, é não exata. O resto da divisão é obtido com o operador (%)
 
@@ -113,15 +123,23 @@ print(resultado)
 
 <code_print>1</code_print>
 
-Esta operação é útil, por exemplo, para saber se um número é para ou ímpar (ou múltiplo de um número):
+Esta operação é útil, por exemplo, para saber se um número é para ou ímpar (ou apenas múltiplo de um número):
 
 <code>
 resultado = numero1 % 2
 </code>
 
 Se numero1 for par, então o resultado da operação acima será IGUAL a 0, caso contrário sera DIFERENTE de 0. O mesmo acontece para saber se um número é múltiplo do outro.
+
+Sugestões:Ordem dos operadores
 -#-
-A exponenciação é feita com o operador (**)
+<text>A exponenciação é feita com o operador (**), ou seja:
+
+Se quisermos o quadrado de x, fazemos "x ** 2"
+Se quisermos o cubo de x, fazemos "x ** 3"
+...
+</text>
+
 
 Exemplo:
 
@@ -134,3 +152,26 @@ Exemplo:
 
 25
 </code>
+
+Sugestões:Como se faz a raiz quadrada?<sep>Ordem dos operadores
+-#-
+<text>A raiz quadrada obtém-se com o mesmo operador que a exponenciação (**), mas:
+
+Enquanto que se quisermos o quadrado de x, fazemos "x ** 2"
+Para obter a RAIZ QUADRADA de x, fazemos "x ** 0.5"
+...
+</text>
+
+Exemplo:
+
+<code>
+1  numero1 = (10 + 15) ** 0.5
+2  # Será o mesmo que pedir a raiz quadrada de 25
+3  print(resultado)
+
+5
+</code>
+
+Adicionei um exemplo com parêntesis para lhe chamar a atenção em um aspeto. Se não tivesse parêteses a raiz quadrada iria se feita apenas ao número 15, pois tem maior precedência que a soma.
+
+Sugestões:Como se obtém o quadrado de um número?<sep>Ordem dos operadores

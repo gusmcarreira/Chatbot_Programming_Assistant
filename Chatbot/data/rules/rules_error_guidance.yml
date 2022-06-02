@@ -13,38 +13,47 @@ rules:
   steps:
   - intent: EXTERNAL_ERROR_MESSAGE
   - action: utter_start_error_guidance
-  - action: form_eg_start
-  - active_loop: form_eg_start
+#action: form_eg_start
+#active_loop: form_eg_start
 
-- rule: (EG) Activate - Prompt start error guidance? (Whist having the help of exercise open)
+#rule: (EG) Activate - Prompt start error guidance? (Whist having the help of exercise open)
 #  condition:
 #    - active_loop: form_eh_answer
-  steps:
-  - action: utter_start_error_guidance
-  - action: form_eg_start
-  - active_loop: form_eg_start
+#  steps:
+#  - action: utter_start_error_guidance
+#  - action: form_eg_start
+#  - active_loop: form_eg_start
 
-- rule: (EG) Activate - Prompt start error guidance II?
+#rule: (EG) Activate - Prompt start error guidance II?
 #  condition:
 #    - active_loop: null
-  steps:
-  - action: form_eg_start
-  - active_loop: form_eg_start
+#  steps:
+#action: form_eg_start
+#active_loop: form_eg_start
+
 # ------------------------------------------------------
 
 # ----------------> DOES NOT WANT HELP <----------------
-- rule: (EG) Exit Form - Student does not want to start error guidance (confirms)
+#- rule: (EG) Exit Form - Student does not want to start error guidance (confirms)
+#  condition:
+#  - active_loop: form_eg_start
+#  - slot_was_set:
+#    - slot_eg_start: false
+#  steps:
+#  - action: form_eg_start
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  - action: utter_anything_else
+#  - action: action_eg_reset_slot_start
+
+- rule: (EG) Does not want to start error guidance
   condition:
-  - active_loop: form_eg_start
-  - slot_was_set:
-    - slot_eg_start: false
+    - active_loop: null
   steps:
-  - action: form_eg_start
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
+  - action: utter_start_error_guidance
+  - intent: deny
   - action: utter_anything_else
-  - action: action_eg_reset_slot_start
 
 - rule: (EG) Say what when the student wants to ask anything else (if they say yes)
   condition:
@@ -66,25 +75,17 @@ rules:
 # ------------------------------------------------------
 
 # --------------------> WANTS HELP <--------------------
-- rule: (EG) Exit Form - Student wants help
-  condition:
-  - active_loop: form_eg_start
-  - slot_was_set:
-    - slot_eg_start: true
-  steps:
-  - action: form_eg_start
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_eg_start
-  - action: action_eg_reset_slot_start
-
-- rule: (EG) Activate - Start asking questions
+- rule: (EG) Student wants help
   condition:
     - active_loop: null
+#  condition:
+#  - active_loop: form_eg_start
+#  - slot_was_set:
+#    - slot_eg_start: true
   steps:
+  - action: utter_start_error_guidance
+  - intent: affirm
   - action: action_eg_start
-  - action: action_eg_reset_slot_start
   - action: form_eg_answer
   - active_loop: form_eg_answer
 

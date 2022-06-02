@@ -97,6 +97,11 @@ nlu:
     - que se quer dizer como múltiplo
     - como sei se um número é múltiplo de 5
     - como sei se o resultado da divisão é exato
+    - como sei se um número é múltiplo do outro
+    - me diz como fazer para saber se um dado é multiplo do outro
+    - multiplo
+    - o que quer dizer com multiplo
+    - me diz o que significa multiplo
 
 - intent: ask_op_arithmetic_exp
   examples: |
@@ -105,6 +110,15 @@ nlu:
     - como faço para fazer o raio ao quadrado
     - para que serve o operador \*\*
     - como faço o quadrado de um número
+    - como fazer o quadrado de um número
+    - como obter o quadrado de um numero
+    - quadrado de número
+    - quadradao numero
+    - número ao quadrado
+    - numero quadrado
+    - me diz como obter o quadrado de um numero
+    - diz ai como faço para obter o quadrado de um numero
+    - como faço o quadrado de um numero
 
 - intent: ask_op_logic
   examples: |
@@ -129,6 +143,9 @@ nlu:
     - o que é o e lógico
     - como faço quando quero que as duas afirmações sejam verdade
     - as duas têm de ser verdade
+    - o que é um e lógico
+    - como fazer e em python
+    - me diz como faço e
 
 - intent: ask_op_logic_or
   examples: |
@@ -144,8 +161,11 @@ nlu:
     - como faço para dizer que só uma tem de ser True
     - em python como se faz o ou lógico
     - o que é o ou lógico
+    - o que é um ou lógico
     - como faço quando quero que apenas uma das afirmações seja verdade
     - apenas uma tem de ser True
+    - como fazer ou em python
+    - me diz como faço ou
 
 - intent: ask_op_logic_not
   examples: |
@@ -181,6 +201,22 @@ nlu:
     - me diz como dizer que duas variáveis têm de ser iguais
     - como digo menor numa comparação
     - auais os operadores relacacionais (comparação)
+    - quais são os operadores relacionais
+    - operadores relacionais
+    - me diz quais são os operadores relacionais
+
+- regex: square root
+  examples: |
+    - .*\s*(raiz quadrada)\s*.*
+
+- intent: ask_op_square_root
+  examples: |
+    - como fazer a raiz quadrada
+    - me diz como posso obter a raiz quandrada
+    - me diz aí como fazer a raiz quadrada
+    - raiz quadrada
+    - como faço raiz quadrada
+    - como fazer raiz quadradaw
 
 - intent: ask_op_order
   examples: |

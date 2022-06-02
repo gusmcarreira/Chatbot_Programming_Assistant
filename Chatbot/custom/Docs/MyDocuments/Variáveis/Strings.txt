@@ -37,3 +37,16 @@ OláMundo
 </code>
 
 As palavras estão juntas, pois não foi colocado um espaço no fim da primeira nem no inicio da segunda.
+
+Poderá ainda fazer a concatenação diretamente no print(), sem ter de converter nem adicinar espaços:
+
+<code>
+1  primeira = 'Meu número preferido é:'
+2  segunda = 6
+3  # Usado uma , (vírgula) para os separar
+4  print(primeira, segunda)
+
+Meu número preferido é: 6
+</code>
+
+Ele automaticamente adiciona um espaço entre os elementos e converte os números en strings. Mas CUIDADO, apenas pode fazer isto diretamente na função print()!
