@@ -62,6 +62,7 @@ class ActionEhTestCase(Action):
 
             if len(test_case_inputs) == 1:
                 test_case_string = test_case_string + "\nUm exemplo, se a entrada fosse:\n\n" + test_case_inputs[0]
+
             else:
                 entries = "'" + test_case_inputs[0] + "'"
                 index = 1
@@ -84,6 +85,7 @@ class ActionEhTestCase(Action):
             return [SlotSet(slot_eh_situation, "Test Case"), SlotSet(slot_eh_student_answer, None), SlotSet(slot_eh_test_case, [test_case_inputs, test_case_outputs]), FollowupAction("form_eh_answer")]
         else:
             return [FollowupAction("action_eh_concepts_order")]
+
 # ================================================ ORDER CONCEPTS ======================================================
 class ActionEhConceptsOrder(Action):
     def name(self) -> Text:

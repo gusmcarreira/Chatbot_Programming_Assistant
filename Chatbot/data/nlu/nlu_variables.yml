@@ -134,6 +134,9 @@ nlu:
 
 - intent: ask_question_var_strings_concat
   examples: |
+    - concatenar
+    - concatenacao
+    - como concatenar
     - o que é a concatenção
     - me diz o que é a concatenação
     - me dá um exemplo de concatenação

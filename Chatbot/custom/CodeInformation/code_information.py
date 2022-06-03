@@ -190,7 +190,6 @@ class CodeInformation(ast.NodeVisitor):
             if var_left_value == "str" and var_right_value == "str":
                 # Append concept question to array
                 self.append_questions("concatenação")
-
                 op_meaning = "concatenação de variáveis"
                 op_type = "string"
             # --> OPERAÇÃO <--
@@ -218,7 +217,7 @@ class CodeInformation(ast.NodeVisitor):
                     op_type = "int"
         # ---> OPERAÇÃO COM CONSTANT E VARIÁVEL <---
         elif var_left[0] == "Constant" and var_right[0] == "Name":
-            if var_right[2] == "str":
+            if self.var_map[var_right[1]] == "str":
                 # Append concept question to array
                 self.append_questions("concatenação")
                 op_meaning = "concatenação de texto COM variável"
@@ -236,13 +235,13 @@ class CodeInformation(ast.NodeVisitor):
             isvar_left = var_left[0] == "Name"
             isvar_right = var_right[0] == "Name"
             if not isvar_left:
-                if isvar_left[2] == "str":
+                if self.var_map[isvar_left[1]] == "str":
                     # Append concept question to array
                     self.append_questions("concatenação")
                     op_meaning = "concatenação de texto COM variável"
                     op_type = "string"
             else:
-                if isvar_right[2] == "str":
+                if self.var_map[isvar_right[1]] == "str":
                     # Append concept question to array
                     self.append_questions("concatenação")
                     op_meaning = "concatenação de texto COM variável"
@@ -252,7 +251,7 @@ class CodeInformation(ast.NodeVisitor):
             self.append_questions(op_meaning)
         # ---> OPERAÇÃO COM CONSTANTES <---
         else:
-            if var_left[2] == "str" and var_right[2] == "str":
+            if self.var_map[var_left[1]] == "str" and self.var_map[var_right[1]] == "str":
                 # Append concept question to array
                 self.append_questions("concatenação")
                 op_meaning = "concatenação de texto COM variável"
