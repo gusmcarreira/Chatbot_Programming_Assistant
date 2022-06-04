@@ -69,7 +69,7 @@ rules:
   steps:
   - action: utter_check_ask_help
   - intent: affirm
-  - action: action_eh_test_case
+  - action: action_eh_concepts_order
 
 # --------------------> WANTS HELP <--------------------
 - rule: (EH) Activate Answer Loop

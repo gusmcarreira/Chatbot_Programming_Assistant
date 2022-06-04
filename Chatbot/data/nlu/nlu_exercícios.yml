@@ -3,6 +3,7 @@ version: "3.1"
 nlu:
 - intent: ask_help
   examples: |
+    - me ajuda
     - preciso ajuda no exercicio
     - preciso de ajuda no exercicio
     - me ajuda com o exercicio?

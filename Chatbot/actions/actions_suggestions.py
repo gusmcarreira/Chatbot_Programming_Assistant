@@ -43,8 +43,10 @@ class ActionQuestionSuggestions(Action):
 
         question_id = tracker.get_slot(slot_eh_question_id)
         if question_id in arr_dicas:
+            dispatcher.utter_message(text="Talvez também dê jeito uma dica:")
             buttons = [{"title": "Dica", "payload": "Dica"}]
             dispatcher.utter_message(buttons=buttons)
+            dispatcher.utter_message(text="Lembre-se que pode pedir a dica e as sugestões desde o inicio da questão!")
 
 class ActionQuestionTip(Action):
     def name(self) -> Text:

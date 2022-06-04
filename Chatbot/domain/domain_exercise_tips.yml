@@ -126,7 +126,10 @@ responses:
 
   # Digitou a letra a?
   utter_88bd1120-54da-4e5f-837a-c92adf5b5ea8:
-    - text: 'Dica: Penso que apenas faltará algo na condição..."==" significa "igual a", então "letra" terá de ser "igual" a quê para correr o que está no escopo da condição? Pode sempre ler o título desta questão 😉'
+    - text: 'Dica: Penso que apenas faltará algo na declaração da condição..."==" significa "igual a...".
+
+
+    Então "letra" terá de ser "igual a ..." quê para correr o que está no escopo da condição? Pode sempre ler o título desta questão 😉'
 
   # Rápido demais?
   utter_047fe3c5-f517-4f50-8e42-42d1f633aeba:

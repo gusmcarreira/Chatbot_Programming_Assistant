@@ -50,7 +50,10 @@ responses:
 #    - text: "Parece estar com alguns problemas no seu código. Proponho um pequeno diálogo, o que diz? (sim/não)"
 
   utter_remember_help:
-    - text: '<ajuda>Só relembrar que se precisar de ajuda no exercício me mande um "Me ajuda no exercício?"</ajuda>'
+    - text: '<ajuda>Só relembrar que se precisar de ajuda no exercício me mande um "Me ajuda no exercício?".
+
+
+    Já resolvi alguns problemas que tinha, espero que não desista de me pedir ajuda 😬</ajuda>'
 
   utter_are_you_sure:
   - text: "Tem a certeza?"

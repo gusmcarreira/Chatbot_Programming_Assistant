@@ -39,7 +39,7 @@ class ActionEhTestCase(Action):
         if isinstance(test_case_information, str):
             test_case_information = tracker.get_slot(slot_eh_test_case).split("<sep>") # Separate inputs from outputs
 
-        if test_case_information:
+        if test_case_information and test_case_information[0]:
             # == INPUTS ==
             if isinstance(test_case_information[0], str):
                 test_case_inputs = test_case_information[0].split("<input>")
@@ -99,7 +99,8 @@ class ActionEhConceptsOrder(Action):
         answer_code_concepts = codeInformation(tracker.get_slot(slot_eh_answer_code)).all_concepts_map
         answer_code_concepts = [concept for concept in answer_code_concepts if concept]
 
-        dispatcher.utter_message(text="Vou-lhe agora propor um desafio! Vou lhe dar todas as peças de UMA possível solução!")
+        dispatcher.utter_message(text="Vou-lhe então propor um desafio! Vou lhe dar todas as peças do equeleto de UMA possível solução!")
+        dispatcher.utter_message(text="Não lhe dará a exata resposta (principalmente o que pertence aos escopos das funcões, condições, ...) mas lhe dará o esqueleto de uma!")
         dispatcher.utter_message(text="Analise as peças, selecione-as por ordem que acha que devem ser implementadas, e no final clique em enviar!")
 
         dispatcher.utter_message(text=conceptsOptionsButtons(answer_code_concepts))
