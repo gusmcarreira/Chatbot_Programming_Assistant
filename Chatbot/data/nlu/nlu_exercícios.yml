@@ -89,3 +89,47 @@ nlu:
     - nao sei fazer a media
     - nao sei como obter a media
     - nao entendo como fazer a media
+
+- intent: ask_question_centimeters
+  examples: |
+    - converter para cemtimetros
+    - converter para centimetros
+    - converter metros para centimetros
+    - converter metros em centimetros
+    - como converto dado para centimetros
+    - me diz como converter metros em centimetros
+    - diz ai como converto metro para centimetro
+    - convertendo de metros para centimetros
+
+- intent: ask_question_circle_area
+  examples: |
+    - como se faz a área do circulo
+    - area do circulo
+    - como calculo a area de um circulo
+    - me diz como calcular a area de um circulo
+    - me dá a equação da area de um circulo
+
+- intent: ask_question_consonant
+  examples: |
+    - me diz o que é uma vogal
+    - vogal
+    - o que e uma vogal
+    - diz ai o que e uma vogal
+    - que quer dizer com vogal
+    - me diz o que é uma consoante
+    - consoante
+    - o que e uma consoante
+    - diz ai o que e uma consoante
+    - que quer dizer com consoante
+
+- intent: ask_question_hypotenuse
+  examples: |
+    - hipotenusa
+    - como faço a hipotenusa
+    - como faço para calcular a hipotenusa
+    - equação da hipotenusa
+    - como se calcula a hipotenusa
+    - catetos
+    - como calcular a hipotenusa
+    - me diz qual a formula da hipotenusa
+    - me diz como fazer a hipotenusa

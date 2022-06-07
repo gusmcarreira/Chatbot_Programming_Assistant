@@ -199,7 +199,7 @@ class ActionEhCheckAnswer(Action):
 
         # """"""""""""""""""""""" ORDER CONCEPTS """""""""""""""""""""""""""""
         elif answer_situation == "Concepts Order":
-            second_try = tracker.get_slot(slot_eh_second_try) # Check if it is the second try
+            # second_try = tracker.get_slot(slot_eh_second_try) # Check if it is the second try
             # ----------- CORRECT ANSWER ---------
             correct_order = codeInformation(code_answer).all_concepts_map
             correct_order = [concept for concept in correct_order if concept]

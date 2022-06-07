@@ -8,7 +8,11 @@ main_dir_error_messages_explanation = "custom/Docs/ErrorMessagesExamples/"
 dic_answers = {
     # ===========================> CONDITIONS <============================
     "ask_question_testcases": [main_dir + "InfoTecnico/CasosTeste.txt", 0],
-    "ask_question_average": [main_dir + "InfoTecnico/Media.txt", 0],
+    "ask_question_average": [main_dir + "Calculos/Media.txt", 0],
+    "ask_question_centimeters": [main_dir + "Calculos/MetrosParaCentimetros.txt", 0],
+    "ask_question_circle_area": [main_dir + "Calculos/AreaCirculo.txt", 0],
+    "ask_question_consonant": [main_dir + "Calculos/Vogais_Consoantes.txt", 0],
+    "ask_question_hypotenuse": [main_dir + "Calculos/Hipotenusa.txt", 0],
     # =====================================================================
 
     # ===========================> CONDITIONS <============================

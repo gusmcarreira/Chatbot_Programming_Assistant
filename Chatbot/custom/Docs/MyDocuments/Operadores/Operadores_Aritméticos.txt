@@ -140,38 +140,32 @@ Se quisermos o cubo de x, fazemos "x ** 3"
 ...
 </text>
 
-
 Exemplo:
 
-<code>
-1  numero1 = 5
-3  # 5 ao quadrado = 5 levantado a 2
-4  resultado = numero1 ** 2
-5
-6  print(resultado)
+<code>1  numero1 = 5
+2  resultado = numero1 ** 2
+3
+4  print(resultado)
 
-25
-</code>
+>> 25</code>
 
 Sugestões:Como se faz a raiz quadrada?<sep>Ordem dos operadores
 -#-
 <text>A raiz quadrada obtém-se com o mesmo operador que a exponenciação (**), mas:
 
 Enquanto que se quisermos o quadrado de x, fazemos "x ** 2"
-Para obter a RAIZ QUADRADA de x, fazemos "x ** 0.5"
-...
-</text>
+Para obter a RAIZ QUADRADA de x, fazemos "x ** 0.5"</text>
 
 Exemplo:
 
-<code>
-1  numero1 = (10 + 15) ** 0.5
-2  # Será o mesmo que pedir a raiz quadrada de 25
+<code>1  numero1 = (10 + 15) ** 0.5
+2  # Raiz quadrada de 25
 3  print(resultado)
 
-5
-</code>
+>> 5</code>
 
-Adicionei um exemplo com parêntesis para lhe chamar a atenção em um aspeto. Se não tivesse parêteses a raiz quadrada iria se feita apenas ao número 15, pois tem maior precedência que a soma.
+<text>Adicionei um exemplo com parêntesis para lhe chamar a atenção em um aspeto.
+
+Se não tivesse parêteses a raiz quadrada iria se feita apenas ao número 15, pois tem maior precedência que a soma.</text>
 
 Sugestões:Como se obtém o quadrado de um número?<sep>Ordem dos operadores

@@ -119,6 +119,8 @@ nlu:
 
 - intent: ask_question_var_strings_convert
   examples: |
+    - str
+    - str\(\)
     - como converter um dado em string
     - como converter dado em string
     - como se converte um float para string
@@ -179,6 +181,8 @@ nlu:
 
 - intent: ask_question_var_ints_convert
   examples: |
+    - int
+    - int\(\)
     - como converter um dado em inteiro
     - como converter dado em int
     - como se converte um float para inteiro
@@ -222,6 +226,8 @@ nlu:
 
 - intent: ask_question_var_floats_convert
   examples: |
+    - float
+    - float\(\)
     - como converter um dado em número decimal
     - como converter dado em float
     - como converter dado em número decimal

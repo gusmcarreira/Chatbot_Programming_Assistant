@@ -1,0 +1,15 @@
+<text>Para calcular a área do círculo devemos utilizar a seguinte fórmula:
+
+A = π * r²
+
+Onde,
+π: constante Pi (3,14)
+r: raio
+
+Lembre-se que o raio (r) corresponde à distância entre o centro e a extremidade do círculo.
+
+Já o diâmetro é um segmento de reta que passa pelo centro do círculo, dividindo-o em duas metades iguais.
+
+Dito isso, o raio equivale a metade do diâmetro (r = d / 2).</text>
+
+Sugestões:Como fazer a raiz quadrada?

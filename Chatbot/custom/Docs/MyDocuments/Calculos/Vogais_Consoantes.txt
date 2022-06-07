@@ -1,0 +1,7 @@
+<text>O alfabeto português possui 26 letras, 5 são vogais e 21 consoantes.
+
+Vogais:
+a, e, i, o, u
+
+Consoantes:
+b, c, d, f, g, h, j, k, l, m, n, p, q, r, s, t, v, w, x, y, z</text>

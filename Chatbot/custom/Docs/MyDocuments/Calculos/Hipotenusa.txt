@@ -1,0 +1,9 @@
+<text>Hipotenusa ao quadrado é igual à soma dos catetos ao quadrado:
+
+hiponetusa² = cateto_um² + cateto_dois²
+
+Simplificando,
+
+hipotenusa = √ (cateto_um² + cateto_dois²)</text>
+
+Sugestões:Como fazer a raiz quadrada?<sep>Como obter o quadrado de um numero?

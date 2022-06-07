@@ -90,6 +90,10 @@ intents:
   # QUESTIONS ---------> EXTRA
   - ask_question_testcases
   - ask_question_average
+  - ask_question_centimeters
+  - ask_question_circle_area
+  - ask_question_consonant
+  - ask_question_hypotenuse
 
 ############################################ ENTITIES ############################################
 entities:

@@ -1,0 +1,6 @@
+<text>Para converter metros em centímetros, bastará multiplicar os metros por 100.
+
+1m * 100 = 100cm
+10m * 100 = 1000cm
+1000m * 100 = 10000 cm
+...</text>

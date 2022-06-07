@@ -2,17 +2,18 @@
 
 Ou seja, se executasse um programa num outro editor, ele lhe iria pedir um dado por input() e depois executar o resto do algoritmo.
 
-Aqui quando prime "Executar", para verificar se o seu código está correto, entradas (tabela à esquerda) são dadas ao programa (pela aplicação, não por você), e se o seu programa imprimir a saida correta então a questão é dada como correta!
-</text>
+Aqui quando prime "Executar", para verificar se o seu código está correto, entradas (tabela à esquerda) são dadas ao programa (pela aplicação, não por você), e se o seu programa imprimir a saida correta então a questão é dada como correta!</text>
 
 Exemplo:
 
-<code_print># Entrada: 5
-# Saida esperada: 10
+<code_print>1  # Entrada: 5
+2  # Saida esperada: 10
+3
+4  # Código a testar
+5  numero = input()
+6  dobro_numero = numero * 2
+7  print(dobro_numero)
+8
+9  >> 10</code_print>
 
-# Código a testar
-numero = input()
-dobro_numero = numero * 2
-print(numero)
-
-# Se MENTALMENTE substituir "numero" por 5 repara que o print iria imprimir o numero 10, ou seja, esta questão estaria correta, pois iria gerar a saida esperada!</code_print>
+# Se MENTALMENTE substituir "numero" por 5 repara que o print iria imprimir o numero 10, ou seja, esta questão estaria correta, pois iria gerar a saida esperada!

@@ -2,14 +2,22 @@ version: "3.1"
 
 # ------------------- SLOTS -------------------
 slots:
+  slot_tip_given:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      value: true
+      intent: ask_tips
+
   ## SEND QUESTION TO TEACHER ##
   slot_teacher_help:
     type: text
     influence_conversation: false
     mappings:
-      - type: custom
-        conditions:
-          - active_loop: form_teacher_help
+    - type: custom
+      conditions:
+      - active_loop: form_teacher_help
 
   ## ERROR GUIDANCE ##
   slot_error_cause_information:
