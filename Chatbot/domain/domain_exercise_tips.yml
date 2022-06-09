@@ -7,44 +7,121 @@ responses:
   # ---------------------------> VARIÁVEIS <----------------------------
   # Olá mundo!
   utter_947713cc-17bf-11eb-adc1-0242ac120002:
-  - text: 'Dica: O objetivo deste exercício é apenas ver como as coisas funcionam. Não precisa de modificar nada apenas “Executar”. Não se esqueça de sempre ler os comentários, podem ter algo que lhe dê jeito 😉'
+  - text: 'Dica: O objetivo deste exercício é apenas ver como as coisas funcionam. Não precisa de modificar nada apenas “Executar”. Não se esqueça de sempre ler os comentários, podem ter algo que lhe dê jeito 😉
+
+
+  Se chegou a alterar o que estava inicialmente no editor, aqui vai (pode apenas copiar e colar):
+
+
+  <code_print># Iremos te ajudar na primeira questão. NÃO MODIFIQUE NADA NO CÓDIGO, APENAS LEIA :)
+
+  # Seu algoritmo sempre precisará ler uma ou mais informações do teclado (são as entradas). Para isso você utilizará a instrução input()
+
+
+  texto = input()
+
+
+  # O seu algoritmo deverá produzir uma saída com a resposta da questão. Espera-se que essa saída seja igual à saída esperada (veja na Tabela à esquerda).
+
+  # Para isso você deve utilizar a instrução print(), informando dentro do parêntesis a variável/valor que será apresentado ao usuário
+
+  # Neste exemplo simples você irá apenas apresentar o que foi lido do teclado com a instrução input e que está salvo na variável texto.
+
+
+  print(texto)</code_print>'
 
   # Pequeno problema
   utter_76e4017f-6006-476f-8b47-88b0e33dbf84:
-  - text: 'Dica: O objetivo é imprimir o valor da VARIÁVEL, o que quero dizer? Existe uma diferença entre utilizar uma string e uma VARIÁVEL! (sem … "") 🤫'
+  - text: '<text>Dicas:
+
+
+  —> O objetivo é imprimir o valor da VARIÁVEL, o que quero dizer? Existe uma diferença entre utilizar uma string (texto) e uma VARIÁVEL! (sem … "") 🤫
+
+
+  —> Não precisa adicionar nada, apenas alterar!
+
+
+  Se apagou o que se encontrava no editor era o seguinte (pode apenas copiar e colar):
+
+
+  nome = input()
+
+  print("nome")</text>'
 
   # Concatenando strings - l
   utter_73e1e529-5972-4ab0-bc80-bf2859d45f2b:
-  - text: '<text>Dica:
+  - text: '<text>Dicas:
 
 
-          —> Concatenação é a palavra fina para a ação de juntar textos.
+          —> Tenha atenção nos TestCases à sua esquerda porquê? Se subsituir o seu dado do teclado MENTALMENTE pela entrada, a saida diz qual deveria ser o resultado.
 
 
-          —> Ao fazer questões onde um dos textos é descrito lembre-se de duas coisa: terá de usar EXATAMENTE o mesmo texto referido no enunciado (maiúsculas, pontos, acentos, e espaços);
+          —> Não precisa adicionar nada, apenas ALTERAR!
 
 
-          —> Quando faz uma concatenação com o "+", se não colocar no final da primeira ou no inicio da segunda um espaço elas serão juntas e não irá produzir o que a questão pretende, exemplo:
+          —> Veja com atenção a concatenação e substitui MENTALMENTE o input() por uma das entradas da tabela à esquerda. Veja se o resultado seria exatamante igual ao da saida esperda, se a frase seria igual.
 
 
-          1   texto1 = "Sou o"
-
-          2   texto2 = "Monitor"
+          —> Veja com atenção a concatenação e tente MENTALMENTE entender qual seria a saida ao imaginar qual seria o resultado de concatenar as variaveis exatamente na ordem em que estão e se é essa a saida esperada.
 
 
-          >> Sou oMonitor</text>'
+          Exemplo:</text>
+
+
+          <code_print># Substitua MENTALEMENTE por "abc"
+
+          texto = input()
+
+          textoBase = "Você digitou: "
+
+
+          # Seria então "abc" + "Você digitou: "
+
+          concatenacao = texto + textoBase
+
+
+          # Resultaria em "abcVocê digitou: "
+
+          # É essa a saida esperada?
+
+          print(concatenacao)</code_print>'
 
   # Concatenando strings - ll
   utter_f369a1f7-c333-4c23-81ac-89639608eb35:
-  - text: 'Dica: será bastante PARECIDO ao "Concatenando strings - I"! A única diferença é que terá de fazer a concatenação entre dois dados do teclado ✌️'
+  - text: 'Dica: será BASTANTE parecido ao "Concatenando strings - I"! A única diferença é que terá de fazer a concatenação entre dois dados do teclado ✌️'
 
   # Bingo
   utter_c8c40972-17c0-11eb-adc1-0242ac120002:
-  - text: 'Dica: volte ao exercício do "Concatenando strings - I", será BASTANTE parecido!! 👾'
+  - text: '<text>Dicas:
+
+
+  —> Volte ao exercício do "Concatenando strings - I", será BASTANTE parecido!! 👾
+
+
+  —> Lembre-se que quando o enunciado especifica um texto para imprimir, terá de ser EXATAMENTE IGUAL (maiúsculas, minúsculas, acentos, pontos, espaços)
+
+
+  Nota Importante: Se não adicinar um espaço no final de um texto a concatenação não irá adicinar nenhum espaço entre os dois textos. Então eles serão colados um ao outro e não irão gerar a saida esperada.</text>'
 
   # Soma
   utter_71b67722-4639-4fcf-be03-574356d5b70a:
-    - text: 'Dica: Terá de criar uma segunda variável (ex, numeroDois…) com os mesmo dados daquela que já está presente. Fazer a soma das dos dois NÚMEROS e por fim imprimir o resultado na tela 👍'
+    - text: '<text>Dica: Terá de criar uma segunda variável (ex, numeroDois…) com os mesmo dados daquela que já está presente. Fazer a soma das dos dois NÚMEROS e por fim imprimir o resultado na tela 👍
+
+
+    Aqui vai caso tenha apagado o que estava no editor (pode apenas copiar e colar no editor):</text>
+
+
+    <code_print># Iremos te ajudar, a leitura de números do teclado necessita que eles sejam convertidos de String para int.
+
+    # Para isso nós utilizaremos a instrução int():
+
+
+    numeroUmString = input()
+
+    numeroUm = int( numeroUmString )
+
+
+    # Agora é com você, continue o procedimento que falta para concluir o algoritmo."</code_print>'
 
   # Convertendo de metros para centímetros
   utter_4ad830c8-9c86-481a-93d7-8d91a08e36ce:
@@ -64,17 +141,17 @@ responses:
   - text: '<text>Aqui vão três dicas:
 
 
-          —> a função input() retorna um texto (STRING) mas um cálculo é feito com NÚMEROS;
+          —> a função input() retorna um texto (STRING) mas um cálculo é feito com NÚMEROS (INT), terá entao de ... os números;
 
 
-          —> A concatenação é feita entre textos (STRINGS);
+          —> A concatenação é feita entre textos (STRINGS) o que significa que terá de ... o número para o concatenar ao texto;
 
 
           —> Não se esqueça de verificar se o enunciado especifica alguma string, nesse caso tenha cuidado de escrever exatamente como pedido (acentos, pontos, maiúsculas, espaços).</text>'
 
   # Qual o antecessor e o sucessor
   utter_43789fa2-b614-4e03-a8c8-1494b3e3d9e0:
-  - text: "Dica: antecessor (numero que vem antes - soma), sucessor (numero que vem depois - subtração), repare nas entradas e saídas á esquerda."
+  - text: "Dica: antecessor (numero que vem antes -> soma), sucessor (numero que vem depois -> subtração). A ajuda no exercício lhe dará um esqueleto de uma possivel resposta!"
 
   # Área do círculo
   utter_38bd2aec-f62f-475e-b010-20af623db20e:
@@ -100,7 +177,7 @@ responses:
     - text: '<text>Hmm 🤔nesta questão não vou ser uma grande ajuda, as minhas dicas são:
 
 
-            —> Não se esqueça que a função input() lê uma STRING mas para os cálculos você quer NÚMEROS
+            —> Não se esqueça que a função input() lê uma STRING mas para os cálculos você quer NÚMEROS;
 
 
             —> Tenha grande atenção no enunciado, ele diz-lhe as variáveis que deve criar (A, B, C, D, X, Y, e talvez uma que guarde o valor de X - Y) e o que elas devem conter.</text>'
@@ -126,17 +203,44 @@ responses:
 
   # Digitou a letra a?
   utter_88bd1120-54da-4e5f-837a-c92adf5b5ea8:
-    - text: '<text>Dica: Penso que apenas faltará algo na declaração da condição..."==" significa "igual a...".
+    - text: '<text>Dica:
 
 
-    Então "letra" terá de ser "igual a ..." quê para correr o que está no escopo da condição? Pode sempre ler o título desta questão 😉</text>'
+            —> Não precisa alterar nada apenas ADICINAR ao que já esta no editor;
+
+
+            —> Penso que apenas faltará algo na declaração da condição..."==" significa "igual a...".
+
+
+            —> Então "letra" terá de ser "igual a ..." quê para correr o que está no escopo da condição? Pode sempre ler o título desta questão 😉
+
+
+            —> Não se esqueça tambem do pormenor que terá de vir a seguir à tal letra!
+
+
+            Se apagou o que estava no editor, aqui vai (pode copiar e colar no editor):</text>
+
+
+            <code_print># Iremos te ajudar nessa primeira questão
+
+            # Primeiro é preciso ler a letra do teclado:
+
+
+            letra = input()
+
+
+            # Na sequência você deve verificar se a letra é igual ao a:
+
+
+            if letra ==
+                print(""Você digitou a"")</code_print>'
 
   # Rápido demais?
   utter_047fe3c5-f517-4f50-8e42-42d1f633aeba:
     - text: '<text>Hmm dicas para esta 🤔 diria:
 
 
-            —> A função input() retorna uma STRING, algo lhe terá de ser feito para a transformar em número
+            —> A função input() retorna uma STRING, algo lhe terá de ser feito para a transformar em número!
 
 
             —> SE a velocidade for MAIOR que 100 (100 é um número, não o envolva em aspas)
@@ -174,7 +278,7 @@ responses:
             —> Veja o que tem de ser imprimido quando a condição se verifica. Use EXATAMENTE (maiúsculas, minúsculas, acentos, pontos, espaços), a string mencionada no enunciado.
 
 
-            Dica extra...MAIOR que...</text>'
+            Dica extra..."se algo" for MAIOR que "outro algo"...</text>'
 
   # Qual é o sexo - Parte 1
   utter_25024c58-e46c-4d43-a089-d9c24e96d4ed:
@@ -182,7 +286,13 @@ responses:
 
   # Fui aprovado?
   utter_da8487c1-a381-438e-963a-6f5a8b3a152e:
-    - text: 'Dica: Tenha bastante atenção no enunciado e na linha da declaração da condição, não lhe parece faltar algo? Se ainda não entendeu me pergunte (Sintaxe de uma instrução if)'
+    - text: '<text>Dicas:
+
+
+            —> Tenha bastante atenção no enunciado e na linha da declaração da condição, não lhe parece faltar algo? Se ainda não entendeu me pergunte (Sintaxe de uma instrução IF)
+
+
+            —> Não se esqueça que algures tem de ser lido um dado do teclado</text>'
 
   # Quantos estudantes foram aprovados
   utter_ecd37459-f7bb-49a2-80d0-c2b26ca332ef:
@@ -232,20 +342,23 @@ responses:
             1.1º   Verificar se numero1 MAIOR que numero2
 
 
-            1.2º   Se a condição se verificar então faz um print(numero1, numero2), que será o mesmo que concatenar com o "+"
+            1.2º   Se a condição se verificar então faz um print(numero1, numero2), que será o mesmo que concatenar com o "+" sem precisar de adicionar um espaço
 
 
-            1.3º   Se não se verificar, inverte a ordem dos números no print
+            1.3º   Se não se verificar, inverte a ordem dos números no print "print(numero2, numero1)"
 
 
-            2º Se fizer a concatenação com o "+" ao invés de fazer com "," (virgula) "print(x, y)", lembre-se de adicionar um espaço entre else "numero1 + " " + numero2", para o qual terá de converter os números em strings.</text>'
+            2º Se fizer a concatenação com o "+" ao invés de fazer com "," (virgula) "print(x, y)", lembre-se de adicionar um espaço entre else "numero1 + " " + numero2", para o qual terá de converter os números em strings.
+
+
+            2.1º Note também que concatenar com virgula (,) apenas é possivel dentro da própria função "print"</text>'
 
   # Múltiplo de 5
   utter_f2fce5f8-6e9a-4807-bec5-901e821c1318:
     - text: '<text>Dicas:
 
 
-            —> Se não souber como me pergunta "Como sei se um número é múltiplo de outro?"
+            —> Se não souber como, me pergunta "Como sei se um número é múltiplo de outro?"
 
 
             —> Se o seu código não der o exercício como errado mas não devolve nenhum erro, verifique se as strings que que quer imprimir são EXATAMENTE as que o enunciado refere (maiúsculas, minúsculas, acentos, espaços)</text>'
@@ -272,7 +385,7 @@ responses:
 
   # Digitou a letra a? - Parte II
   utter_271061cf-9e0b-4206-9382-2b55138bcb91:
-    - text: 'Dica: Você que verificar se a letra é um a MINÚSCULO ou MAIÚSCULO 😉'
+    - text: 'Dica: Você que verificar se a letra é um a MINÚSCULO "OU" MAIÚSCULO 😉. Se não entender o que quero dizer com "OU", me pergunte "o que é um ou lógico?"'
 
   # Rápido demais? - Parte II
   utter_fed3aea4-c17a-4800-98ff-73943cd62247:

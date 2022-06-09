@@ -22,3 +22,4 @@ actions:
 - validate_form_teacher_help
 - action_question_suggestions
 - action_question_tip
+- action_question_suggestions_or_tip

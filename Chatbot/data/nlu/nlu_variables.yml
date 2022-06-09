@@ -159,6 +159,8 @@ nlu:
 # ------------> INTS <------------
 - intent: ask_question_var_ints
   examples: |
+    - variavel numerica
+    - variavel com numero
     - o que é um int
     - o que é um inteiro
     - o que são inteiros

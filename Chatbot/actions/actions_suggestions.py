@@ -17,8 +17,39 @@ slot_eh_question_id = "slot_eh_question_id"
 slot_tip_given = "slot_tip_given"
 # --------------------------------------------
 
-# =================================================== TEST CASE ========================================================
-# Given x, what input should it produce?
+class ActionQuestionSuggestionsOrTip(Action):
+    def name(self) -> Text:
+        return "action_question_suggestions_or_tip"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        tip_given = tracker.get_slot(slot_tip_given)
+
+        question_id = tracker.get_slot(slot_eh_question_id)
+
+
+        code_answer = tracker.get_slot(slot_eh_answer_code)
+        concepts_involved = codeInformation(code_answer).concepts_questions_arr
+        concepts_involved_str = "<code_print>"
+
+        if concepts_involved:
+            for index, concept in enumerate(concepts_involved):
+                if index != len(concepts_involved) - 1:
+                    concepts_involved_str = concepts_involved_str + concept + "\n\n"
+                else:
+                    concepts_involved_str = concepts_involved_str + concept + "</code_print>"
+
+        dispatcher.utter_message(text="Aqui vão algumas sugestões de perguntas que possam ajudar:")
+        dispatcher.utter_message(text=concepts_involved_str)
+
+        if question_id in arr_dicas:
+            if not tip_given:
+                utter_string = "utter_" + question_id
+                dispatcher.utter_message(response=utter_string)
+                return [SlotSet(slot_tip_given, True)]
+
 class ActionQuestionSuggestions(Action):
     def name(self) -> Text:
         return "action_question_suggestions"

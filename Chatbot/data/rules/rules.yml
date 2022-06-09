@@ -22,4 +22,4 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_please_rephrase
-  - action: action_question_suggestions
+  - action: action_question_suggestions_or_tip
