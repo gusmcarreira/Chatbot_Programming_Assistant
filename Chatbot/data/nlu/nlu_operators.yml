@@ -105,6 +105,11 @@ nlu:
 
 - intent: ask_op_arithmetic_exp
   examples: |
+    - potência
+    - como se faz uma potêcia
+    - como se faz a potência
+    - como faço para obter a potencia
+    - me diz como fazer a potencia
     - como se faz a exponenciação
     - que simbolo uso para fazer o quadrado de um número
     - como faço para fazer o raio ao quadrado
@@ -216,7 +221,7 @@ nlu:
     - me diz aí como fazer a raiz quadrada
     - raiz quadrada
     - como faço raiz quadrada
-    - como fazer raiz quadradaw
+    - como fazer raiz quadrada
 
 - intent: ask_op_order
   examples: |
