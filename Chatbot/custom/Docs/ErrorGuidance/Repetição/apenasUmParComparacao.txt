@@ -14,16 +14,20 @@ Que é suposto gerar a seguinte saida:
 1
 2
 3
-4
+4</code_print>
 
 Qual é o detalhe que está em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:4<sep>quatro<end>
+Opções_Iniciais:segundo dado<sep>; (ponto e vírgula)<sep>() (parêntesis)<end>
+----------------------------------------------------------------------------------<end>
+Resposta:segundo dado<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:O pormenor que está em falta é o segundo dado da comparação, que neste caso é o número 4!<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Quando usamos um while, é necessário fazer uma comparação entre DOIS dados, no caso do exemplo, entre o x e o número 4!
+Checkpoint:Quando usamos um while, é necessário fazer uma comparação entre DOIS dados, no caso do exemplo, entre o x e o número 4! Ou seja, ficaria:
+
+<code_print>while x <= 4:</code_print>
 
 Veja se sempre seguiu essa sintaxe no seu código.<end>

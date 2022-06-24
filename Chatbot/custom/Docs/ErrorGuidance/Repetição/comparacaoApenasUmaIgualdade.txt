@@ -1,9 +1,8 @@
-Pergunta:O seu erro parece estar na declaração de uma repetição while. Dado o seguinte código:
+Pergunta:O seu erro parece estar na declaração de uma repetição while. Consegue achar o que falta no código:
 
-<code>
-x = 4
+<code>x = 4
 
-while x 4 :
+while x = 4 :
   print(x)
   x += 1
 </code>
@@ -12,32 +11,14 @@ Que é suposto gerar a seguinte saida:
 
 <code_print>maçã
 banana
-laranja
-
-Consegue decifrar o que está em falta?<end>
+laranja</code_print><end>
 ----------------------------------------------------------------------------------<end>
-Resposta:Operador de comparação<end>
+Opções_Iniciais:() parêntesis<sep>== (duas igualdades)<sep>= uma igualdade<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Se disse um operador de comparação, então acertou!<end>
-----------------------------------------------------------------------------------<end>
--###-
-----------------------------------------------------------------------------------<end>
-Pergunta:E, talvez um pouco mais complicado, qual é o pormenor que está agora em falta?
-
-<code>
-x = 4
-
-while x = 4 :
-  print(x)
-  x += 1
-</code><end>
-----------------------------------------------------------------------------------<end>
-Resposta:=<sep>igual<sep>igualdade<end>
-----------------------------------------------------------------------------------<end>
-Explicação:Se disse um = (igualdade) entã acertou!<end>
+Resposta:= uma igualdade<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
 Checkpoint:Por vezes é normal baralharmos variáveis e comparações, não se esqueça que nas comparações usam-se DOIS sinais de igualdade (==)!
 
-Agora olhando para o seu algoritmo, veja se sempre segue esta sintaxe!<end>
+Agora olhando para o seu algoritmo, veja sempre usa DUAS igualdades nas suas condições!<end>

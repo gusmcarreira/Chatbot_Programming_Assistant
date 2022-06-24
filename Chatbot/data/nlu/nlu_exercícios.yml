@@ -76,6 +76,7 @@ nlu:
 
 - intent: ask_question_average
   examples: |
+    - formula da media
     - como se calcula a média
     - me diz como fazer a media
     - como faço a media
@@ -92,6 +93,7 @@ nlu:
 
 - intent: ask_question_centimeters
   examples: |
+    - formula para converter metros em centímetros
     - converter para cemtimetros
     - converter para centimetros
     - converter metros para centimetros
@@ -103,11 +105,17 @@ nlu:
 
 - intent: ask_question_circle_area
   examples: |
+    - diametro do circulo
+    - raio do circulo
+    - diametro
+    - raio
+    - me diz o que é o diametro
     - como se faz a área do circulo
     - area do circulo
     - como calculo a area de um circulo
     - me diz como calcular a area de um circulo
     - me dá a equação da area de um circulo
+    - formula da area
 
 - intent: ask_question_consonant
   examples: |
@@ -124,6 +132,7 @@ nlu:
 
 - intent: ask_question_hypotenuse
   examples: |
+    - formula da hipotenusa
     - hipotenusa
     - como faço a hipotenusa
     - como faço para calcular a hipotenusa
@@ -133,3 +142,19 @@ nlu:
     - como calcular a hipotenusa
     - me diz qual a formula da hipotenusa
     - me diz como fazer a hipotenusa
+
+- regex: numero
+  examples: |
+    - \s*\d\s*
+
+- intent: ask_question_range
+  examples: |
+    - funcao range
+    - range
+    - range()
+    - como imprimo os primeiros 5 numeros
+    - como somar 10 numeros
+    - para que serve a funcao range
+    - como uso a funcao range
+    - me diz como usar a funcao range
+    - diz aí como usar range

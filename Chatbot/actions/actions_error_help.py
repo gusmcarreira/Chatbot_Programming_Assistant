@@ -62,8 +62,11 @@ class ActionEgErrorMessageExample(Action):
 
         real_error_message = re.search(regex_string, error_message)
 
-        if real_error_message:
-            real_error_message = real_error_message.group()
+        if real_error_message or error_message in dict_error_message:
+            if real_error_message:
+                real_error_message = real_error_message.group()
+            else:
+                real_error_message = error_message
             for message in dict_error_message:
                 tmp_message = unidecode(message).lower()
                 for ele in ponctuation:

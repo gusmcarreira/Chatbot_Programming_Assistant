@@ -93,6 +93,7 @@ nlu:
     - não entendo o erro
     - nao sei onde esta o erro
     - olá, não identifico o erro ajuda, por favor rsrs
+    - qual é o erro do código
 
 
 - regex: help error message
@@ -160,3 +161,4 @@ nlu:
     - Você escreveu uma condição, repetição ou função e não incluiu os : (dois pontos)
     - Você escreveu uma função ou a chamada à uma função e não colocou o parêntesis de abertura e/ou fechamento ()
     - Você escreveu uma String e não incluiu as aspas corretamente
+    - variável que não foi declarada

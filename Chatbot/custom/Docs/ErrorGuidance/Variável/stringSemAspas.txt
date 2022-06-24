@@ -4,8 +4,19 @@ Opções_Iniciais:var1 = Olá<sep>var1 = "Olá"<sep>var1 = "Olá<sep>var1 = Olá
 ----------------------------------------------------------------------------------<end>
 Resposta:var1 = "Olá"<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:A resposta correta é aquela que envolve (dos dois lados) a string em aspas "Olá".<end>
+Explicação:A diferença entre cada uma das opções está nas aspas, um erro bastante comum é esquecermo-nos de usar as aspas, ou ainda mais comum, uma delas.<end>
+----------------------------------------------------------------------------------<end>
+-###-
+Pergunta: Outro problema pode estar a aconter, dado a seguinte variável que lhe parece estar errado?
+
+<code_print>minha variavel = 3</code_print><end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:nenhuma maiúscula<sep>não pode conter variáveis numericas<sep>não pode ter mais que uma palavra<sep>espaço no seu nome<end>
+----------------------------------------------------------------------------------<end>
+Resposta:espaço no seu nome<end>
+----------------------------------------------------------------------------------<end>
+Explicação:O nome de uma variável NÃO pode conter espaços! Para saber mais me pergunte "nomes de variaveis"<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:A diferença entre cada uma das opções está nas aspas, um erro bastante comum é esquecermo-nos de usar as aspas, ou ainda mais comum, uma delas. Olhando com atenção para o seu algoritmo veja se não lhe terá escapado um desses diabinhos 😈!<end>
+Checkpoint:Olhando com atenção para o seu algoritmo veja se não lhe terá escapado um desses diabinhos de aspas 😈! Ou então, se deu um nome ilegal a uma variável!<end>

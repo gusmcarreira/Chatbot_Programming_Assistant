@@ -8,4 +8,4 @@ Explicação:Uma variável não pode conter espaços no seu nome!<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint: Por vezes nem nos apercebemos que deixamos um espaço entre as palavras do nome da nossa variável. Veja se talvez tenha sido esse o seu erro.<end>
+Checkpoint: Por vezes nem nos apercebemos que deixamos um espaço entre as palavras do nome da nossa variável. Veja se talvez tenha sido esse o seu erro. Para saber mais me pergunte "nomes de variaveis"<end>

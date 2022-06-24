@@ -1,7 +1,6 @@
 Pergunta:O seu erro parece estar na declaração de uma repetição while. Digamos que temos o seguinte código:
 
-<code>
-x = 0
+<code>x = 0
 
 while :
   print(x)
@@ -10,12 +9,14 @@ while :
 
 O que lhe parece estar em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:comparação<end>
+Opções_Iniciais:declaração de variável<sep> == (duas igualdades)<sep>condição<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Em falta está a comparação!<end>
+Resposta:condição<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Em falta está a condição!<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
 Checkpoint:Uma repetição while precisa sempre incluir uma comparação que no caso acima seria, por exemplo, "while x < 4:".
 
-Verifique se está a fazer uma comparação no/nos seus whiles.<end>
+Verifique se está a fazer uma condição no/nos seus whiles.<end>

@@ -1,33 +1,16 @@
-Pergunta:O seu erro parece estar numa condição. Dado o seguinte código:
+Pergunta:Talvez um pouco complicado mas qual é o pormenor que lhe parece estar em falta no código abaixo?
 
 <code>x = 4
-
-if x 4 :
-  print("É verdade!")</code>
-
-Que é suposto gerar a seguinte saida:
-
-<code_print>É verdade!
-
-Consegue decifrar o que está em falta?<end>
-----------------------------------------------------------------------------------<end>
-Resposta:operador de comparação<end>operador==<sep>operador de igualdade<sep>dois iguais<sep>duas igualdades<end>
-----------------------------------------------------------------------------------<end>
-Explicação:Se disse um operador de comparação, então está correto!<end>
-----------------------------------------------------------------------------------<end>
--###-
-Pergunta:E, talvez um pouco mais complicado, qual é o pormenor que está agora em falta?
-
-<code>
-x = 4
 
 if x = 4 :
   print("É verdade!")
 </code><end>
 ----------------------------------------------------------------------------------<end>
-Resposta:=<sep>igual<sep>um igual<sep>uma igualdade<end>
+Opções_Iniciais:declaração de segunda variável<sep> = (igualdade)<sep>; (ponto e vírugla)<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Se disse = (uma igualdade), ou seja "if x == 4:" então está correto!<end>
+Resposta:igualdade<end>
+----------------------------------------------------------------------------------<end>
+Explicação:Para ficar correto seria "if x == 4:" com DUAS igualdades!<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>

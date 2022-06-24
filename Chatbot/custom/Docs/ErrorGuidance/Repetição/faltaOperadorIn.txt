@@ -1,15 +1,15 @@
 Pergunta:O seu erro parece estar na declaração de uma repetição for. Dado o seguinte código:
 
-<code>
-cores = ["vermelho", "preto", "azul"]
+<code>cores = ["vermelho", "preto", "azul"]
 
 for x  cores:
-  print(x)
-</code>
+  print(x)</code>
 
 Sabe dizer o que falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:in<sep>operador in<end>
+Opções_Iniciais:declaração de variável<sep>== (dias igualdades)<sep>operador in<end>
+----------------------------------------------------------------------------------<end>
+Resposta:operador in<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:Em falta está o operador "in" depois do "x" e antes de "cores". A forma correta seria então "for x in cores:"<end>
 ----------------------------------------------------------------------------------<end>
@@ -19,6 +19,6 @@ Checkpoint:A declaração de uma repetição for segue algumas regras, nomeadame
 
 <code_print>-- uma variável de indexação (o nosso x);
 -- o objeto que desejamos iterar (as nossas cores);
--- e ENTRE ESTES DOIS deve estar o operador in.
+-- e ENTRE ESTES DOIS deve estar o operador in.</code_print>
 
 Olhando agora para o seu algoritmo, veja se sempre segue esta sintaxe!.<end>

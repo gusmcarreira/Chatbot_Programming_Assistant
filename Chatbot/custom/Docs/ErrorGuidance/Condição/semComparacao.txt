@@ -1,4 +1,4 @@
-Pergunta:O seu erro ser numa condição. Vou-lhe propor um desafio! Dado o código:
+Pergunta:O seu erro parece ser numa condição. Vou-lhe propor um desafio! Dado o código:
 
 <code>x = 0
 
@@ -7,15 +7,13 @@ if:
 else:
   print("X não é igual a 0!")</code>
 
-Que é suposto gerar a seguinte saida:
-
-<code_print>X é igual a 0!
-
 Sabe dizer o que está em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:x == 0<sep>x==0<sep>comparação<end>
+Opções_Iniciais:declaração de variável<sep>x == 0 (condição)<sep>= (igualdade)<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:A resposta correta é a comparação, ou mais especificamente, x == 0.<end>
+Resposta:x == 0 (condição)<end>
+----------------------------------------------------------------------------------<end>
+Explicação:A resposta correta é a comparação, ou mais especificamente, x == 0<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>

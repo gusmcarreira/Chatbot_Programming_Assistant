@@ -1,21 +1,15 @@
-Pergunta:O seu erro parece estar na declaração de uma função. Para declarar uma função é necessário a palavra-chave "def" e o nome da função. Para além disso diga (por ordem e todos seguidos) quais os sinais de pontuação que seguem o nome da função?<end>
-----------------------------------------------------------------------------------<end>
-Resposta:():<end>
-----------------------------------------------------------------------------------<end>
-Opções:();<sep>:;<sep>():<sep>(),<end>
-----------------------------------------------------------------------------------<end>
-Explicação:A palavra chave "def" e o nome da função são seguidos pelo uso de () dois parêtesis (abertura e fechamento) e de : dois pontos.<end>
-----------------------------------------------------------------------------------<end>
--###-
-----------------------------------------------------------------------------------<end>
-Pergunta:Agora dando como exemplo o nome "nome_funcao", como faria a sua declaração?<end>
+Pergunta:<text>O seu erro parece ser na declaração de uma função.
+
+Dando como exemplo o nome "nome_funcao", como faria a declaração desta função?</text><end>
 ----------------------------------------------------------------------------------<end>
 Resposta:def nome_funcao():<end>
 ----------------------------------------------------------------------------------<end>
-Opções:def nome_funcao()<sep>def nome_funcao(:<sep>def nome_funcao(:<sep>def nome_funcao():<end>
+Opções:def nome_funcao()<sep>def nome_funcao():<sep>def nome_funcao(:<sep>def nome_funcao):<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:A opção correta seria "def nome_funcao():"<end>
+Explicação:<text>A opção correta seria "def nome_funcao():"
+
+A declaração de uma função sempre acaba com DOIS parêntesis seguindos pos dois pontos (:)</text><end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Veja agora no seu código se segue esta sintaxe. Tenha especial atenção na utilização dos dois parêtesis, é normal que por vezes nos esqueçamos deles, ou ainda mais comum, de usar o de fechamento!<end>
+Checkpoint:Veja agora no seu código se segue esta sintaxe. Tenha especial atenção na utilização dos DOIS parêtesis, é normal que por vezes nos esqueçamos deles, ou ainda mais comum, de usar o de fechamento!<end>

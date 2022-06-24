@@ -1,15 +1,13 @@
-Pergunta:O seu erro parece estar na declaração de uma repetição. Veja com atenção e tente decifrar o que falta no seguinte código:
+Pergunta:O seu erro parece estar na declaração de uma repetição. Veja com atenção e tente decifrar o pormenor em falta no código:
 
-<code>
-cores = ["vermelho", "preto", "azul"]
+<code>cores = ["vermelho", "preto", "azul"]
 
 for x in cores
-  print(x)
-</code>
-
-Consegue decifrar o pequeno pormenor que está em falta?<end>
+  print(x)</code><end>
 ----------------------------------------------------------------------------------<end>
-Resposta::<sep>dois pontos<end>
+Opções_Iniciais:() parêntesis<sep>declaração de variável<sep>: (dois pontos)<end>
+----------------------------------------------------------------------------------<end>
+Resposta:: (dois pontos)<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:Estão em falta os dois pontos depois de "for x in cores", seria então "for x in cores:"<end>
 ----------------------------------------------------------------------------------<end>

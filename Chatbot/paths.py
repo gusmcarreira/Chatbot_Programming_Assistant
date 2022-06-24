@@ -101,6 +101,7 @@ dict_error_message = {
     "Você está atribuindo um valor à uma variável com duas igualdades (==), quando deveria utilizar apenas uma igualdade. Por exemplo: x = 2": main_dir_error_messages_explanation + "Variável/declaracaoVariavelComDoisIguais.txt",
     "Você utilizou espaço no nome de uma variável e isso não é permitido": main_dir_error_messages_explanation + "Variável/espacoNoNomeVariavel.txt",
     "Você tentou utilizar uma variável que não foi declarada": main_dir_error_messages_explanation + "Variável/variavelNaoDeclarada.txt",
+    "variável que não foi declarada": main_dir_error_messages_explanation + "Variável/variavelNaoDeclarada.txt",
     "Você tentou utilizar uma função ou variável que não existe": main_dir_error_messages_explanation + "Variável/variavelNaoDeclarada.txt",
     # =====================================================================
     # ===========================> CONDITIONS <============================

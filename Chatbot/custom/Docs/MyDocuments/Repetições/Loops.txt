@@ -94,13 +94,8 @@ while num1 < 3:
 | print("Escopo correto")
 | num1 = num1 + 1
 
-while num1 < 3:
-| print("Menor que 3")
-| #Número de espaços
-| #diferente (erro)
-|   print("Escopo incorreto")
-|  num1 = num1 + 1
-</code>
+# Fora do escopo
+print("Estou for do escopo")</code>
 
 Os escopos são portanto controlados pelo número de espaços. Sendo que uma repetição pode por ela conter mais repetições, ou condições que contêm também o seu escopo.
 

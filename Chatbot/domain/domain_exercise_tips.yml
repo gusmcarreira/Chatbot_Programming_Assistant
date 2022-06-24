@@ -440,6 +440,144 @@ responses:
 
             —> No final, antes de imprimir o salario ajustado, quererá adicionar o valor do aumento, para tal o seu cálculo seria algo como (salario + salario * aumento)</text>'
 
-  # ----------------------------> FUNÇÕES <------------------------------
-
   # ---------------------------> REPETIÇÕES <----------------------------
+  # Qual o problema?
+  utter_2990e824-ddea-4a97-abc9-bf59816099b0:
+    - text: '<text>Hmm 🤔 o erro que tem de resolver parece ser a falta de um pormenor necessitário para declarar um laço de repetição "for".
+
+
+    Mais especificamente o mesmo pormenor necessitário para finalizar a declaração de if/elif/else.
+
+
+    Se tiver em dúvida qual pormenor é, me pergunte "sintaxe de um laço de repetição for"</text>'
+
+  # Qual o problema? Parte II
+  utter_d103e4a4-612f-4081-9892-fc733de584a1:
+    - text: '<text>Se ler bem a o enunciado repara que ele diz "ao término apresentar a mensagem: Finalizou".
+
+
+    Ou seja, "Finalizou" tem de ser imprimido DEPOIS do laço de repetição acabar, ou seja, FORA do seu esocopo.
+
+
+    Para saber mais me pergunte "escopo de um laço de repetição"</text>'
+
+  # Meu primeiro for
+  utter_94511a38-5f2c-4fc3-90f5-f0255628c310:
+    - text: '<text>"Olá" sera o input do seu algortimo, essa parte já está feita com a função input().
+
+
+    Foque-se no que quer IMPRIMIR!</text>'
+
+  # Leitura de palavras
+  utter_3191595a-7493-4980-999e-c874b0b8d468:
+    - text: '<text>Precisa de se focar em três pontos:
+
+
+    -- Deixe a variável "palavra" como está, ou seja, palavra = "". Porquê? Porque ela será precisa na declaração do while, mas para já não quer que seja um dado do teclado!
+
+
+    -- Dentro do while volte a declara uma variável com o mesmo nome da anterior "palavra" mas agora com um dado do teclado!
+
+
+    -- Enquanto "palavra" não for "sair" imprima o valor de "palavra"
+
+
+    A leitura do teclado já está farto de saber. O que precisa de fazer é imprimir esse dado, atribuido à variável "palavra" DENTRO DO ESCOPO do "while"
+
+
+    Para saber mais me pergunte "escopo de um laço de repetição"</text>'
+
+  # Leitura de números
+  utter_54466229-1f8e-4a04-a9bf-ee985c506af1:
+    - text: '<text>Hmm interessante 🤔:
+
+
+    Esta questão me parece MUITO parecida à anterior mas com duas grandes diferenças
+
+
+    -- Agora em vez de palavra quer um "número" e como o ex anterior terá de lhe dar um dado que seja positivo, ex "numero = 0"
+
+
+    -- Em vez de ser até a palavra não ser "sair" é até o número ser negativo, ou seja, repetir o laço de repetição enquanto "numero" for MAIOR OU IGUAL a 0!
+
+
+    -- A função input() lê um STRING do teclado, no entanto, agora quer um número. Terá então de fazer algo a esse dado para o transformar em número!</text>'
+
+  # Soma dois
+  utter_9c77ea7d-073f-4c16-9514-759309eb1b98:
+    - text: '<text>Queremos então usar um "for":
+
+
+    -- Primeiro você quer declarar um "for" e quer repeti-lo por 4 vezes, para isso use a função range(). Para saber mais me pergunte "para que serve a função range"
+
+
+    -- Parecido ao escopo do "while" da questão anterior, você quer ter uma variavel que leia do teclado um NÚMERO, não se esqueça que input() lê uma string!
+
+
+    -- Antes de imprimir o dado, terá de lhe somar 2!</text>'
+
+  # Qual o problema? Parte III
+  utter_cd7a719f-27b9-4ff6-9686-5710aa86ee86:
+    - text: '<text>Esta questão é daquelas que pode ir por vários caminhos, eu diria para:
+
+
+    -- Usar um "for" em vez do "while", onde manteria EXATAMENTE o que está no seu escopo, apenas alteraria a sua declaração
+
+
+    -- Se fez a questão anterior e estiver com dúvidas, a declaração do "for" é como a dessa questão, mas agora quer repetir por 5 vezes!</text>'
+
+  # 5 próximos números
+  utter_ede1464f-2d78-4a3a-b800-989156985da8:
+    - text: 'Bastante parecida com a questão anterior, mas agora quer ADICIONAR-LHE 1 valor ANTES de a imprimir!'
+
+  # Soma dos 100 primeiros inteiros
+  utter_6629a6e9-a50b-48d1-92fb-88163d1af784:
+    - text: '<text>Interessanteee 🥴
+
+
+    -- Basntanteee parecido com a questão anterior mas com uns detalhes diferentes!
+
+
+    -- Precisa de criar uma outra variavel para guardar o resultado, lhe dê incialmente o numero 0!
+
+
+    -- Dentro do laço de repetição (que terá de ser repetido po 100 vezes) sempre adicione 1 valor ao numero (numero += 1 ou numero = numero + 1)
+
+
+    -- Faça o mesmo com a variavel do resultado mas em vez de adicionar-lhe 1 valor, adiciona-lhe a variável do "número"
+
+
+    -- Não se esqueça que apenas quer imprimir o resultado no FINAL do laço de repetição, ou seja, fora do seu escopo!</text>'
+
+  # Quais números são negativos?
+  utter_c4e98001-f1fb-4de3-979e-55718edb92d2:
+    - text: '<text>Uma junção de condicionais com laços de repetição!
+
+
+    -- Irá querer declarar uma variável inicial com para guardar a quantidade de números negativos (ex, "resultado"). Lhe dê o valor inicial de 0.
+
+
+    -- Diria para usar o laço de repetição "for" que terá de repetir por 5 vezes!
+
+
+    -- Dentro do laço de repetição quererá:
+
+    -> ler um dado do teclado e fazer-lhe algo para o transformar em número
+
+    -> verificar se o numero é negativo (MENOR que 0)
+
+    -> se for negativo adicionar 1 valor ao "resultado"
+
+
+    -- No final de acabarem as 5 vezes quer imprimir o "resultado"
+
+
+    Espero ter ajudado!!</text>'
+
+  # 10
+  # Loop dos ímpares
+#  utter_5f230b6d-1083-409e-90a3-32b2657cda6d:
+#    - text:
+
+  # 11
+  # ----------------------------> FUNÇÕES <------------------------------

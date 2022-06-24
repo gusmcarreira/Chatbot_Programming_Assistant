@@ -1,13 +1,14 @@
 Pergunta:O seu erro parece referir-se às variáveis, digamos que lhe apresento o código abaixo:
 
-<code>
-var1="Olá"
-print(var1, var2)
-</code>
+<code>var1="Olá "
+concatenacao = var1 + var2
+print(concatenacao)</code>
 
 Estou a pedir para imprimir a variavél "var1" e a variável "var2", no entanto o que lhe parece faltar?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:declaração da var2<sep>declaração da variável var2<sep>declaração da segunda variável<end>
+Opções_Iniciais:: (dois pontos)<sep>espaço no final do texto<sep>declaração da variável var2<end>
+----------------------------------------------------------------------------------<end>
+Resposta:declaração da variável var2<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:Em falta está a declaração da segunda variável "var2", ou seja, estou a pedir para imprimir uma variável que não existe!<end>
 ----------------------------------------------------------------------------------<end>
@@ -15,9 +16,7 @@ Explicação:Em falta está a declaração da segunda variável "var2", ou seja,
 ----------------------------------------------------------------------------------<end>
 Checkpoint:Veja agora no seu código se existe alguma variável que esteja a utilizar mas não exista, por vezes isto também se deve a um erro de escrita tenha atenção nisso, por exemplo:
 
-<code>
-var1 = "Olá"
-print(var_1)
-</code>
+<code>var1 = "Olá"
+print(var_1)</code>
 
-Veja como "var1" e "var_1"  são variáveis diferentes, ou até mesmo se fosse "var1" e "vAr1", tenha cuidado o nome das variáveis é muito sensível!<end>
+Veja como "var1" e "var_1"  são variáveis diferentes, ou até mesmo se fosse "var1" e "vAr1", tenha cuidado os nomes das variáveis são muito sensíveis!<end>

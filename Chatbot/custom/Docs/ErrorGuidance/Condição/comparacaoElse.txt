@@ -1,15 +1,15 @@
 Pergunta:O seu erro parece estar numa condição. A instrução if e elif têm algo em comum que a instrução else não tem. Sabe o que é?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:comparação<end>
+Opções_Iniciais:: (dois pontos)<sep>condição<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Se disse o uso de uma comparação então está correto!<end>
+Resposta:condição<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
 Checkpoint:A grande diferença do if/elif para com o else, está que no else não se usa uma comparação, por exemplo:
 
-<code>
-x = 0
+<code>x = 0
+
 if x == 1:
   print("X é igual a 1!")
 else:

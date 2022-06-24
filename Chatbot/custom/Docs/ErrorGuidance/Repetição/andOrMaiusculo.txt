@@ -6,6 +6,6 @@ Resposta:and<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Checkpoint:Os operadores "and" e "or" devem ser sempre escritos com letras minúsculas!
+Checkpoint:Os operadores "and", "or", e "not" devem ser sempre escritos com letras minúsculas!
 
 Atentado agora no seu código veja se terá sempre seguido esta sintaxe.<end>

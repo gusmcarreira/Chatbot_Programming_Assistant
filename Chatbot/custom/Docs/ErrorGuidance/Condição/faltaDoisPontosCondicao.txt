@@ -9,7 +9,9 @@ if x == 4
 
 Consegue descobrir o pequeno pormenor que está em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta::<sep>dois pontos<end>
+Opções_Iniciais:= (igualdade)<sep>declaração de variável<sep>: (dois pontos)<end>
+----------------------------------------------------------------------------------<end>
+Resposta:: (dois pontos)<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:A resposta seria os dois pontos!<end>
 ----------------------------------------------------------------------------------<end>

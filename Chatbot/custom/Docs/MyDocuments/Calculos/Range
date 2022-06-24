@@ -1,0 +1,22 @@
+De maneira simplificada a função range(n) lhe dará todos os números de 0 a n.
+
+Exemplo:
+
+<code>1  # Imprimir os primeiros 5 números
+2  for i in range(5):
+3      print(i)
+
+
+>>0
+1
+2
+3
+4
+5
+</code>
+
+<text>!!Muito importante!!
+
+-- Se for a usar o, que no exemplo, é o i, então lembre-se que o i começa sempre no 0!
+
+-- Em range(n) o n é o número de vezes que quer repetir o laço de repetição "for"</text>

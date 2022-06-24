@@ -11,6 +11,7 @@ responses:
   utter_greet:
   - text: "Olá 👋! Em que posso ajudar?"
   - text: "Olá 👋! Em que posso ser útil?"
+  - text: "Oié 👋! Me diga então, em que posso ajudar?"
 
   utter_did_that_help:
   - text: "A resposta foi esclarecedora?"
@@ -45,15 +46,16 @@ responses:
   utter_start_error_guidance:
   - text: "<ajuda>Parece estar com alguns problemas no seu código. Proponho um pequeno diálogo, o que diz? (sim/não)</ajuda>"
   - text: "<ajuda>Reparei que está com um erro no seu algoritmo. Proponho um pequeno diálogo, o que diz? (sim/não)</ajuda>"
+  - text: "<ajuda>Reparei que está com um erro no seu algoritmo. Proponho um pequeno diálogo, o que diz? (sim/não)</ajuda>"
   # utter_ask_<form_name>_<slot_name>
 #  utter_ask_form_eg_start_slot_eg_start:
 #    - text: "Parece estar com alguns problemas no seu código. Proponho um pequeno diálogo, o que diz? (sim/não)"
 
   utter_remember_help:
-    - text: '<ajuda>Só relembrar que se precisar de ajuda no exercício me mande um "Me ajuda no exercício?".
+    - text: '<ajuda>OII 👋! Só relembrar que se precisar de ajuda no exercício me mande um "Me ajuda no exercício?".
 
 
-    Já resolvi alguns problemas que tinha, espero que não desista de me pedir ajuda 😬</ajuda>'
+    Não se esqueça que pode também pedir sugestões de perguntas (relacionadas à resposta da questão 🥸) e uma DICA (olhe que por vezes é bem útil 🤭)</ajuda>'
 
   utter_are_you_sure:
   - text: "Tem a certeza?"

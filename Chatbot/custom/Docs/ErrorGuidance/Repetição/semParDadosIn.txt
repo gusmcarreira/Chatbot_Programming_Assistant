@@ -1,38 +1,31 @@
 Pergunta:O seu erro parece estar na declaração de uma repetição for. Dado o código:
 
-<code>
-frutas = ["maçã", "banana", "laranja"]
+<code>frutas = ["maçã", "banana", "laranja"]
 
 for in :
-  print(x)
+  print(fruta)
 </code>
 
-Que é suposto gerar a seguinte saida:
-
-<code_print>
-maçã
-banana
-laranja
-
-Qual é o primeiro elemento que lhe parece estar em falta?<end>
+O que lhe parece estar em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:x<end>
+Opções_Iniciais:declaração de variável<sep>dois dados para comparação<sep>() parêntesis<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:O primeiro dado que falta no código, é a nossa variável de indexação, neste caso o "x".<end>
+Resposta:dois dados para comparação<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
-Pergunta:E qual é o último dado que está em falta?<end>
-----------------------------------------------------------------------------------<end>
-Resposta:frutas<end>
-----------------------------------------------------------------------------------<end>
-Explicação:Neste caso, o que nos falta é o objeto que desejamos iterar, neste caso o array "frutas".<end>
-----------------------------------------------------------------------------------<end>
--###-
-----------------------------------------------------------------------------------<end>
-Checkpoint:É importante que a declaração de um for loop tenha uma determinada comparação em que:
+Checkpoint:É importante que a declaração de um for loop tenha uma determinada condição em que:
 
-<code_print>-- de um lado temos a variaveis de indexação;
--- e do outro o objeto que desejamos iterar.
+<code_print>-- de um lado temos a variaveis de indexação
+-- e do outro o objeto que desejamos iterar
+-- e ENTRE ESTES DOIS deve estar o operador in.
 
-Veja, tendo em atenção neste aspeto, se segue esta sintaxe no seu algoritmo e se sempre tem dois dados de comparação.<end>
+No exemplo ficaria:
+
+# Por cada fruta em frutas
+for fruta in frutas:
+    print(fruta)
+
+Poderá usar qualquer outro nome ao invés de "fruta", por exemplo "x", mas é sempre melhor usar nomes descritivos da ação</code_print>
+
+Veja, tendo em atenção neste aspeto, se segue esta sintaxe no seu algoritmo e se sempre tem dois dados nas condições.<end>

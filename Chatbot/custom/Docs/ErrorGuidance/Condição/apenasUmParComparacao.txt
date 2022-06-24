@@ -1,7 +1,6 @@
 Pergunta:O seu erro parece estar numa condição. Vou-lhe propor um desafio! Dado o seguinte código:
 
-<code>
-x = 0
+<code>x = 0
 
 if x ==  :
   print("É verdade!")
@@ -9,11 +8,13 @@ if x ==  :
 
 Que é suposto gerar a seguinte saida:
 
-<code_print>É verdade!
+<code_print>É verdade!</code_print>
 
 Qual é o detalhe que está em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:0<sep>um zero<sep>zero<end>
+Opções_Iniciais:segundo dado<sep>; (ponto e vírgula)<sep>() (parêntesis)<end>
+----------------------------------------------------------------------------------<end>
+Resposta:segundo dado<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:No código acima falta o segundo dado da comparação, que neste caso é um 0!<end>
 ----------------------------------------------------------------------------------<end>

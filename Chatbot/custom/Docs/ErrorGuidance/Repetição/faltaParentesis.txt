@@ -16,9 +16,11 @@ Que é suposto gerar a seguinte saida:
 3
 4
 
-Qual é o detalhe que está em falta? Um...<end>
+Qual é o detalhe que está em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:)<sep>parêtesis<end>
+Opções_Iniciais:declaração de variável<sep>= (igualdade)<sep>parêntesis de fechamento  )<end>
+----------------------------------------------------------------------------------<end>
+Resposta:parêntesis de fechamento  )<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:Se olharmos com atenção vemos que falta um parêtesis, mais especificamente o de fechamento antes dois dois pontos, seria então "while x < (4 + 1) :"<end>
 ----------------------------------------------------------------------------------<end>

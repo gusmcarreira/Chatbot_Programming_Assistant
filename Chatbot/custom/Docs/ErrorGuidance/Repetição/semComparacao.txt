@@ -1,33 +1,23 @@
-Pergunta:O seu erro parece estar na declaração de uma repetição while. Dado o código:
+Pergunta:O seu erro parece estar na declaração de uma repetição while. O que lhe parece estar em falta no código:
 
-<code>
-x = 0
+<code>x = 0
 
-while <= :
+while :
   print(x)
-  x += 1
-</code>
-
-Que é suposto gerar a seguinte saida:
-
-<code_print>0
-1
-2
+  x += 1</code>
 
 Qual é o primeiro elemento que lhe parece estar em falta?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:x<end>
+Opções_Iniciais:declaração de variável<sep>condição<sep>() parêntesis<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:Em falta está a varável "x".<end>
+Resposta:condição<end>
 ----------------------------------------------------------------------------------<end>
--###-
+Explicação:A declaração de um laço de repetição "while" sempre precisa de uma condição, ou seja, duas variáveis para comparação e um operador de comparação. A forma correta do exemplo seria:
+
+<code_print>x = 0
+
+while :
+  print(x)
+  x += 1</code_print><end>
 ----------------------------------------------------------------------------------<end>
-Pergunta:E qual é o outro elemento que está em falta?<end>
-----------------------------------------------------------------------------------<end>
-Resposta:3<sep>três<end>
-----------------------------------------------------------------------------------<end>
-Explicação:Por fim, falta-nos o nosso outro dado da comparação, ou seja o 3.<end>
-----------------------------------------------------------------------------------<end>
--###-
-----------------------------------------------------------------------------------<end>
-Checkpoint:Quando declaramos um while, precisamos de fazer uma comparação entre DOIS dados. Veja agora, olhando para o seu código, se sempre faz isso.<end>
+Checkpoint:Veja agora, olhando para o seu código, se sempre faz isso.<end>

@@ -1,16 +1,14 @@
-Pergunta:O seu erro parece ser na declaração de uma repetição while. Dado o seguinte código:
+Pergunta:O seu erro parece ser na declaração de uma repetição while. Consegue decifrar o pequeno pormenor que está em falta no código:
 
-<code>
-x = 4
+<code>x = 4
 
 while x < 4
   print(x)
-  x += 1
-</code>
-
-Consegue decifrar o pequeno pormenor que está em falta?<end>
+  x += 1</code><end>
 ----------------------------------------------------------------------------------<end>
-Resposta::<sep>dois pontos<end>
+Opções_Iniciais:() parêntesis<sep>declaração de variável<sep>: (dois pontos)<end>
+----------------------------------------------------------------------------------<end>
+Resposta:: (dois pontos)<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:Estão em falta os dois pontos depois do "while x < 4", seria então "while x < 4:"<end>
 ----------------------------------------------------------------------------------<end>

@@ -45,6 +45,9 @@ nlu:
     - me diz qual a sintaxe de um laço de instrução for
     - qual é a repetição mais comum
     - qual é o tipo de loop mais comum
+    - sintaxe de um laço de repetição for
+    - sintaxe de um for loop
+    - sintaxe de uma repetição for
 
 - intent: ask_example_loop_for
   examples: |
@@ -75,6 +78,9 @@ nlu:
     - qual é a sintaxe de um while loop
     - como é a sintaxe de uma instrução while
     - me diz qual a sintaxe de um laço de instrução while
+    - sintaxe de um laço de repetição while
+    - sintaxe de um while loop
+    - sintaxe de uma repetição while
 
 - intent: ask_example_loop_while
   examples: |
@@ -104,3 +110,5 @@ nlu:
     - o que é o escopo de uma repetição
     - escopo repetição
     - escopo repetições
+    - escopo de um laço de repetição
+    - escopo de laços de repeticao

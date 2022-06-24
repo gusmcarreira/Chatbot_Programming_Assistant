@@ -10,6 +10,7 @@ nlu:
 
 - intent: ask_op_arithmetic_add
   examples: |
+    - como fazer somas de variáveis
     - como se faz a soma
     - que simbolo se usa para fazer a soma
     - que simbolo uso para fazer uma adição
@@ -106,6 +107,7 @@ nlu:
 - intent: ask_op_arithmetic_exp
   examples: |
     - potência
+    - potencia
     - como se faz uma potêcia
     - como se faz a potência
     - como faço para obter a potencia
