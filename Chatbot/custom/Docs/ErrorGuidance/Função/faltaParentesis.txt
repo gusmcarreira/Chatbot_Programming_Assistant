@@ -1,14 +1,23 @@
-Pergunta:<text>O seu erro parece ser na declaração de uma função.
+Pergunta:<text>O seu erro parece ser na declaração/uso de uma função. Se ainda não aprendeu como declarar uma função foque-se na parte do uso de funções, um exemplo de um uso é quando chama a função input.
 
-Dando como exemplo o nome "nome_funcao", como faria a declaração desta função?</text><end>
+Dando como exemplo o nome "nome_funcao", como faria a declaração desta função e a sua respetiva chamada?</text><end>
 ----------------------------------------------------------------------------------<end>
-Resposta:def nome_funcao():<end>
+Resposta:def nome_funcao():  nome_funcao()<end>
 ----------------------------------------------------------------------------------<end>
-Opções:def nome_funcao()<sep>def nome_funcao():<sep>def nome_funcao(:<sep>def nome_funcao):<end>
+Opções_Inciais:def nome_funcao()   nome_funcao<sep>def nome_funcao():  nome_funcao()<sep>def nome_funcao(:  nome_funcao(<sep>def nome_funcao):  nome_funcao)<end>
 ----------------------------------------------------------------------------------<end>
-Explicação:<text>A opção correta seria "def nome_funcao():"
+Explicação:<text>A opção correta seria "def nome_funcao():" e "nome_funcao()" respetivamente
 
-A declaração de uma função sempre acaba com DOIS parêntesis seguindos pos dois pontos (:)</text><end>
+A declaração de uma função sempre acaba com DOIS parêntesis seguindos pos dois pontos "():"
+
+A chamada de uma função já o fez várias vezes com a função input(), que é sempre seguida por DOIS parêntesis.
+-- Este erro acontece por vezes acontece com coisas mais complexas:
+
+    Ex: int(input()
+
+    Repare que não fechei o parêtesis da função "int"
+
+    Resposta: int(input())</text><end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>

@@ -2,7 +2,7 @@ Pergunta:Dando como exemplo o nome "nome_funcao", como faria a sua declaração 
 ----------------------------------------------------------------------------------<end>
 Resposta:def nome_funcao():<end>
 ----------------------------------------------------------------------------------<end>
-Opções:def nome_funcao()<sep>def nome_funcao(:<sep>def nome_funcao<sep>def nome_funcao():<end>
+Opções_Iniciais:def nome_funcao()<sep>def nome_funcao(:<sep>def nome_funcao<sep>def nome_funcao():<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:A função ficaria:
 

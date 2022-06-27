@@ -2,7 +2,7 @@ Pergunta:Imaginemos que queremos declarar a função "exemplo_funcao" com dois p
 ----------------------------------------------------------------------------------<end>
 Resposta:def exemplo(parametro_um, parametro_dois):<end>
 ----------------------------------------------------------------------------------<end>
-Opções:def exemplo(par1 par2):<sep>def exemplo(par1, par2):<end>
+Opções_Iniciais:def exemplo(par1 par2):<sep>def exemplo(par1, par2):<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
