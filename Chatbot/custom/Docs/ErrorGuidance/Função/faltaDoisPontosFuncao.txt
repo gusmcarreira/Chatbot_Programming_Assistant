@@ -1,8 +1,8 @@
 Pergunta:Dando como exemplo o nome "nome_funcao", como faria a sua declaração desta função?<end>
 ----------------------------------------------------------------------------------<end>
-Resposta:def nome_funcao():<end>
-----------------------------------------------------------------------------------<end>
 Opções_Iniciais:def nome_funcao()<sep>def nome_funcao(:<sep>def nome_funcao<sep>def nome_funcao():<end>
+----------------------------------------------------------------------------------<end>
+Resposta:def nome_funcao():<end>
 ----------------------------------------------------------------------------------<end>
 Explicação:A função ficaria:
 

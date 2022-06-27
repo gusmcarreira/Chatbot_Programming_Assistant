@@ -1,14 +1,20 @@
 Pergunta:<text>O seu erro parece ser na declaração/uso de uma função. Se ainda não aprendeu como declarar uma função foque-se na parte do uso de funções, um exemplo de um uso é quando chama a função input.
 
-Dando como exemplo o nome "nome_funcao", como faria a declaração desta função e a sua respetiva chamada?</text><end>
-----------------------------------------------------------------------------------<end>
-Resposta:def nome_funcao():  nome_funcao()<end>
-----------------------------------------------------------------------------------<end>
-Opções_Inciais:def nome_funcao()   nome_funcao<sep>def nome_funcao():  nome_funcao()<sep>def nome_funcao(:  nome_funcao(<sep>def nome_funcao):  nome_funcao)<end>
-----------------------------------------------------------------------------------<end>
-Explicação:<text>A opção correta seria "def nome_funcao():" e "nome_funcao()" respetivamente
+Dando como exemplo o nome "nome_funcao", como faria a declaração desta função e a sua respetiva chamada?
 
-A declaração de uma função sempre acaba com DOIS parêntesis seguindos pos dois pontos "():"
+(Ignore os "||")</text><end>
+----------------------------------------------------------------------------------<end>
+Opções_Iniciais:def nome_funcao() || nome_funcao<sep>
+def nome_funcao(): || nome_funcao()<sep>
+def nome_funcao(: || nome_funcao(<end>
+----------------------------------------------------------------------------------<end>
+Resposta:def nome_funcao(): || nome_funcao()<end>
+----------------------------------------------------------------------------------<end>
+Explicação:<text>A opção correta seria "def nome_funcao():" e "nome_funcao()" respetivamente</text><end>
+----------------------------------------------------------------------------------<end>
+-###-
+----------------------------------------------------------------------------------<end>
+Checkpoint:<text>A declaração de uma função sempre acaba com DOIS parêntesis seguindos pos dois pontos "():"
 
 A chamada de uma função já o fez várias vezes com a função input(), que é sempre seguida por DOIS parêntesis.
 -- Este erro acontece por vezes acontece com coisas mais complexas:
@@ -17,8 +23,6 @@ A chamada de uma função já o fez várias vezes com a função input(), que é
 
     Repare que não fechei o parêtesis da função "int"
 
-    Resposta: int(input())</text><end>
-----------------------------------------------------------------------------------<end>
--###-
-----------------------------------------------------------------------------------<end>
-Checkpoint:Veja agora no seu código se segue esta sintaxe. Tenha especial atenção na utilização dos DOIS parêtesis, é normal que por vezes nos esqueçamos deles, ou ainda mais comum, de usar o de fechamento!<end>
+    Resposta: int(input())
+
+Veja agora no seu código se segue esta sintaxe. Tenha especial atenção na utilização dos DOIS parêtesis, é normal que por vezes nos esqueçamos deles, ou ainda mais comum, de usar o de fechamento!</text><end>

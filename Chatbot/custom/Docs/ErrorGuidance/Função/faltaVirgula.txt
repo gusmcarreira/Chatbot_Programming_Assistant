@@ -1,8 +1,8 @@
 Pergunta:Imaginemos que queremos declarar a função "exemplo_funcao" com dois parâmetros "par1" e "par2", como o faria?
 ----------------------------------------------------------------------------------<end>
-Resposta:def exemplo(parametro_um, parametro_dois):<end>
-----------------------------------------------------------------------------------<end>
 Opções_Iniciais:def exemplo(par1 par2):<sep>def exemplo(par1, par2):<end>
+----------------------------------------------------------------------------------<end>
+Resposta:def exemplo(parametro_um, parametro_dois):<end>
 ----------------------------------------------------------------------------------<end>
 -###-
 ----------------------------------------------------------------------------------<end>
