@@ -2,6 +2,10 @@ version: "3.1"
 
 nlu:
 
+- regex: help
+  examples: |
+    - \s*NameError\s*
+
 - intent: ask_name_error
   examples: |
     - quando ocorrem os NameErrors
@@ -19,6 +23,7 @@ nlu:
     - erro tipo name
     - nameerror
     - name error
+    - File "/home/lsoaresesilva/www/32bits-backend/JXYYD2.py", line 6, in <module> x = srt(A-B) NameError: name 'srt' is not defined 2 4 1
 
 - intent: ask_syntax_error
   examples: |
