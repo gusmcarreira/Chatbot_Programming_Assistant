@@ -574,10 +574,156 @@ responses:
 
     Espero ter ajudado!!</text>'
 
-  # 10
   # Loop dos ímpares
-#  utter_5f230b6d-1083-409e-90a3-32b2657cda6d:
+  utter_5f230b6d-1083-409e-90a3-32b2657cda6d:
+    - text: 'O primeiro passo já está farto de fazer...conversão...leitura de dado do teclado...
+
+
+    Usando um "while" loop tem de ter 3 coisas em atenção.
+
+
+    -- Primeiro quer que o loop corra enquanto o numero1 é MENOR OU IGUAL ao numero2
+
+
+    -- Quer depois verificar se um número é ímpar! Um número é impar se "numero % 2" NÃO for igual a 0!
+
+
+    -- Por fim não se esqueça que se não aumentar o valor de numero1 o laço de repetição será infinito!
+
+
+    Tenha atenção nos comandos que estão dentro e fora dos escopos! A parte da terceira dica, por exemplo, deve estar fora do escopo da condicional mas ainda dentro do escopo do laço de repetição.'
+
+
+  # Quantas vezes o número apareceu?
+  utter_1897f890-d6f7-4b38-9300-a851527f94c7:
+    - text: 'Hmm 🤔 para esta questão diria:
+
+
+    -- Depois de criar um variavel que converte/guarda o dado do teclado, crie também uma para guardar o numero de vezes que apareceu o número, ex "vezes = 0"
+
+
+    -- Depois criará então um "for" no "range" de 10
+
+
+    -- Dentro do laço de repetição irá ter de criar uma outra variavel para guardar um outro NUMERO do teclado
+
+
+    -- Finalmente, se o nosso número inicial for igual ao novo número, acrescente 1 ao valor de vezes (vezes += 1 ou vezes = vezes + 1)
+
+
+    No fim de tudo (fora do escopo do "for") imprima as vezes que o número apareceu'
+
+  # Enquanto for par
+  utter_264b4010-4433-4287-b8b5-5323cf343276:
+    - text: 'De forma simples:
+
+
+    -- Crie uma variavel inicial que guarde um NUMERO do teclado
+
+
+    -- Depois a condição do seu "while" deve sempre verificar se o numero é par (um número é par se... numero % 2 for IGUAL a 0)
+
+
+    -- Dentro do nosso "while" queremos imprimir o número e voltar a ler um novo NUMERO do teclado que atribuitmos à MESMA VARIÁVEL criada inicialmente!'
+
+  # Intervalo de números
+  utter_531b5909-a3ec-4b5a-b26a-573476e3f89b:
+    - text: 'Terá então dois numeros (ex, numero1 e numero2), na sua condição deve verificar se numero1 ainda é MENOR OU IGUAL ao numero2 se sim:
+
+
+    -- Imprima o valor, que será a variavel com o numero mais baixo
+
+
+    -- Adicione 1 a a essa variável (pois assim o nosso while seria infinito)'
+
+  # Qual o problema? Parte IV
+  utter_91c2d2d8-a6e5-4a0b-bcb5-eb5cdff46362:
+    - text: 'Repare bem na condição e no caso teste:
+
+
+    -- IMAGINE um 10 no lugar do "contador"
+
+
+    -- O while vai correr, pois queremos imprimir os números enquanto forem menor ou iguais a 15
+
+
+    -- Mas queremos apenas correr 5 vezes, no entanto estamos a subtrair 1 ao contador, o que irá acontecer? Ele será infinito, nós queremos é ir em direção ao 15'
+
+  # Loop dos ímpares - parte II
+#  utter_1b9ac405-7c48-49fd-a69e-7cca8bd3deb1:
+#    - text: 'A minha sugestão seria para adicinar um passo '
+#
+#  #
+#  utter_:
+#    - text:
+#
+#  #
+#  utter_:
+#    - text:
+#
+#  #
+#  utter_:
+#    - text:
+#
+#  #
+#  utter_:
+#    - text:
+#
+#  #
+#  utter_:
 #    - text:
 
-  # 11
   # ----------------------------> FUNÇÕES <------------------------------
+  # Algoritmo incompleto
+  utter_b4b2dbd5-8daa-4a08-831d-7825541630ae:
+    - text: 'Se lembra, quando quer usar uma variável tem de chamar seu nome...igual a uma função que para correr tem de ser...'
+
+  # Pequeno problema - Parte I
+  utter_498abfe8-88fe-4751-bfc6-8586c031b278:
+    - text: 'Hmmm 🤔 é essa a palavra-chave para definir uma função?'
+
+  # Pequeno problema - Parte II
+  utter_4e2eec5c-b05b-4726-8923-c21b26c3fe37:
+    - text: 'Duas coisas faltam no código, e são problemas iguais...
+
+
+    -- Se lembre que se uma função necessita ter parâmetro/s, também os temos de incluir na sua chamada!'
+
+  # Pequeno problema - Parte III
+  utter_3395b0cf-8026-47fc-aeb2-a19e81f5820b:
+    - text: 'Esta questão se refere a um problema bastante comum 😈!
+
+
+    Repare o que falta na linha da declaração da função, que já é usada na chamada da função...'
+
+  # Pequeno problema - Parte IV
+  utter_5c06e2eb-ef37-4472-823c-2b42be68f8c9:
+    - text: 'A função não está a devolver nada...'
+
+  # Pequeno problema - Parte V
+  utter_230cb853-d80f-4c1e-8747-ea50aa10ca54:
+    - text: 'Imprimir "resultado"?? Mas de onde vem isso? E número não deveria ser...um número? 🤯'
+
+  # Função de soma
+  utter_af7c06b8-2235-4d80-9a76-a7debfc5fa9b:
+    - text: 'Será bastante parecido ao "Pequeno problema - Parte V", mas usado DOIS parâmetros ao invés do 2!'
+
+  # Transformar em função
+  utter_03c361f9-4e09-43fe-bdd3-a5eea7c69d3f:
+    - text: 'Mesmo raciocíno que "Função de soma", mas devolvendo a MÉDIA e não a soma!'
+
+  # Conversor de temperaturas
+  utter_2a8f5c9d-cc2e-4d25-b455-29b99a48c1b8:
+    - text: 'Volte à questão da "Pequeno problema - Parte V", será o mesmo mas substituindo a soma pela equação do texto (5 * (fahrenheit - 32) / 9)'
+
+#  # Multiplicação
+#  utter_e928aa90-8ee9-42da-ac46-e86917e1ab77:
+#    - text:
+#
+#  #
+#  utter_:
+#    - text:
+#
+#  #
+#  utter_:
+#    - text:
