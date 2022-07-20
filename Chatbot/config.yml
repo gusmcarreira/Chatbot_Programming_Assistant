@@ -12,7 +12,8 @@ pipeline:
  # See https://rasa.com/docs/rasa/tuning-your-model for more information.
    - name: WhitespaceTokenizer
    - name: RegexFeaturizer
-   - name: LexicalSyntacticFeaturizer
+   #- name: LexicalSyntacticFeaturizer
+   - name: CountVectorsFeaturizer
    - name: CountVectorsFeaturizer
      analyzer: char_wb
      min_ngram: 1
@@ -20,7 +21,7 @@ pipeline:
    - name: DIETClassifier
      epochs: 100
      constrain_similarities: true
-   - name: EntitySynonymMapper
+   #- name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100
      constrain_similarities: true
